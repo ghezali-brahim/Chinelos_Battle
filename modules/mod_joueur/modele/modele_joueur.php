@@ -6,6 +6,7 @@ if (!defined('TEST_INCLUDE'))
 
 class Joueur extends Participant
 {
+    //Player
 
     protected $_id_user;
     protected $_username;
@@ -49,8 +50,8 @@ class Joueur extends Participant
             $this->_username = $resultat['username'];
             $this->_argent   = $resultat['argent'];
 
-            // Recuperation des personnages du joueur
-            $requete = "SELECT * FROM personnage WHERE id_user = :id_user";
+            // Recuperation de la liste des équipes
+            $requete = "SELECT id_equipe FROM equipe WHERE id_user = :id_user";
             try {
                 $reponse = self::$database->prepare($requete);
                 $reponse->execute(
@@ -60,12 +61,14 @@ class Joueur extends Participant
             } catch (PDOException $e) {
                 echo 'Echec lors de la connexion : ' . $e->getMessage();
             }
-            $listePersonnages   = $reponse->fetchall();
-            $this->_personnages = array();
+            $listeEquipes   = $reponse->fetchall();
+            $this->_equipes = array();
 
-            foreach ($listePersonnages as $value) {
-                array_push($this->_personnages, new Personnage($value));
+            foreach ($listeEquipes as $id_equipe) {
+                $equipe = Equipe::createEquipeFromBD($id_equipe['id_equipe']);
+                array_push($this->_equipes, $equipe);
             }
+
         }
 
 
@@ -74,46 +77,41 @@ class Joueur extends Participant
     /** Ajoute un personnage au joueur courant
      * Verifie si le personnage n'appartient pas déja au joueur
      * Modifie l'id_user du personnage pour mettre celui du joueur courant
+     *
      * @param $personnage
      */
     //TODO IMPORTANT IL FAUT FAIRE EN SORTE D'ENLEVER LE PERSONNAGE DEPUIS SON ANCIEN PARTICIPANT
     function addPersonnage($personnage)
     {
-        if (!in_array($personnage, $this->_personnages)) {
-            $personnage->setIdUser($this->_id_user);
-            array_push($this->_personnages, $personnage);
-        }
-        else {
-            echo 'Erreur: le personnage que vous souhaité ajouté appartient déja au joueur' . $this->_username;
-        }
-
+        $this->_equipes[0]->addPersonnage($personnage);
     }
 
     /** Rafraichit le joueur depuis la bdd
      *
      */
-    function refresh(){
+    function refresh()
+    {
         // TODO: Implement refresh() method.
     }
 
     /** Appel la fonction mère pour l'affichage de la liste des personnages
      * @return mixed|string
      */
-    function _toString()
+    function __toString()
     {
-        return "Identifiant joueur: " . $this->_id_user . parent::_toString();
+        return "Identifiant joueur: " . $this->_id_user . parent::__toString();
     }
 
 
     public function getParticipant()
     {
         return array(
-            'id_user'     => $this->_id_user,
-            'username'    => $this->_username,
-            'argent'      => $this->_argent,
-            'personnages' => $this->_personnages
+            'id_user'  => $this->_id_user,
+            'username' => $this->_username,
+            'argent'   => $this->_argent,
+            'equipes'  => $this->_equipes
         );
     }
 }
 
-?>
+

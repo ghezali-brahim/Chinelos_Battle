@@ -1,61 +1,105 @@
+body {
 
-body { 
-	font-family:"Arial";
 }
+
 h1 {
-font-size:40px;
-}
-header { 
-     height: 150px;
-	 position: relative center;
-     background: #121212 ;
-     border: 2px rgb(100,100,100) outset;
-}
-header, nav, footer {
-	 margin: 0 auto 0 auto;
-	 width: 750px;
+    font-size: 40px;
 }
 
+header {
+    height: 150px;
+    position: relative;
+    border: 2px rgb(100, 100, 100) outset;
+    background: url("img/header.jpg");
+}
+
+header, nav, footer {
+    margin: 0 auto 0 auto;
+    width: 1000px;
+}
 
 nav {
-	background: grey;
-     height: 25px;
-     text-shadow: 2px 2px 4px black;
-     border: 2px rgb(100,100,100) outset;
+    background: grey;
+    height: 25px;
+    text-shadow: 2px 2px 4px black;
+    border: 2px rgb(100, 100, 100) outset;
 }
+
 nav a {
-	color: white;
-	 letter-spacing: 0.1em;
-     display: block; 
-     float: left; 
-     height: 25px;
-     padding: 0px 5px 0px 5px;
-     text-align: center;
-     text-transform: uppercase;
-     text-decoration: none;
-     border: 1px rgb(100,100,100) inset;
+    color: white;
+    letter-spacing: 0.1em;
+    display: block;
+    float: left;
+    height: 25px;
+    padding: 0 5px 0 5px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px rgb(100, 100, 100) inset;
 }
 
 /* Corps de la page */
- section {
-	text-align:center;
-	margin: 0 auto 0 auto;
-	width: 750px;
-	background: #ededed ;
-	border: 2px rgb(100,100,100) outset;
-	text-align: left;
-	height:auto;
-	height-min:500px;
+section {
+    text-align: center;
+    margin: 0 auto 0 auto;
+    width: 1000px;
+    background: #ededed;
+    border: 2px rgb(100, 100, 100) outset;
+    height: auto;
+    min-height: 500px;
 }
+
 section form {
-	text-align:center;
+    text-align: center;
 }
+
+#tableau {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 12px;
+    margin: 10px 0;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+#listePerso {
+    font-weight: normal;
+    text-decoration: underline;
+    padding: 8px;
+    color: #039;
+}
+
+#tableau th {
+    font-size: 13px;
+    font-weight: normal;
+    padding: 8px;
+    background: #b9c9fe repeat-x;
+    border-top: 2px solid #d3ddff;
+    border-bottom: 1px solid #fff;
+    color: #039;
+}
+
+#tableau td {
+    padding: 8px;
+    border-bottom: 1px solid #fff;
+    color: #669;
+    border-top: 1px solid #fff;
+    background: #e8edff url('http://1.bp.blogspot.com/_xDpoN6UfFFY/S-J2f5yBC3I/AAAAAAAACbY/zWXYXsR-w5E/s1600/gradback.png') repeat-x;
+}
+
+#tableau tfoot tr td {
+    background: #e8edff;
+    font-size: 16px;
+    color: #99c;
+    text-align: center;
+}
+
 /*bas de page */
- footer {
-	 color: white;
-     height: 150px;
-     text-align: center; 
-     border: 2px rgb(100,100,100) outset;
-	 background: url("img/header.jpg");
+footer {
+    color: white;
+    height: 150px;
+    text-align: center;
+    border: 2px rgb(100, 100, 100) outset;
+    background: url("img/header.jpg");
 
 }

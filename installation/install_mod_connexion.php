@@ -14,4 +14,3 @@ $connexion->query($reqTableUsers);
 $reqAlter = "ALTER TABLE `mod_connexion_users` ADD INDEX(`login`)";
 $connexion->query($reqAlter);
 */
-?>

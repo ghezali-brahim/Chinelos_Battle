@@ -1,5 +1,5 @@
 <?php
-echo'		</section>
+echo '		</section>
 		<footer>
 		</footer>
 	</body>

@@ -5,31 +5,27 @@ if (!defined('TEST_INCLUDE'))
 
 abstract class  Participant extends DBMapper
 {
-
-    protected $_personnages;
+    protected $_equipes;
 
     abstract function addPersonnage($personnage);
+
     abstract function getParticipant();
+
     abstract function refresh();
-    /**
-     * @return mixed
-     */
 
-    function _toString(){
-        $listeIdPersonnages = array();
-        for ($i = 0; $i < count($this->_personnages); $i++) {
-            array_push($listeIdPersonnages, $this->_personnages[ $i ]->getIdPersonnage());
-        }
-        $listeIdPersonnagesStrings = implode("; ", $listeIdPersonnages);
-
-        return " | ID Personnages :" . $listeIdPersonnagesStrings;
-    }
-    public function getPersonnages()
+    function getEquipeOne()
     {
-        return $this->_personnages;
+        return $this->_equipes[0];
     }
 
+    function __toString()
+    {
+        return "; " . $this->_equipes[0]->__toString();
+    }
 
+    public function getEquipes()
+    {
+        return $this->_equipes;
+    }
 }
 
-?>

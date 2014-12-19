@@ -3,7 +3,7 @@ echo '<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>TP4</title>
+		<title>Chinelos Battle !</title>
 		<link rel="stylesheet" type="text/css" href="style.css" title="style" />
 	</head>
 	<body>
@@ -14,4 +14,3 @@ echo '<!DOCTYPE html>
 			<span><a href="index.php?module=connexion&action=connexion">Connexion</a></span>
 		</nav>
 		<section>';
-?>
