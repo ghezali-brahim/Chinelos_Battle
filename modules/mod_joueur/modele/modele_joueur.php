@@ -112,6 +112,10 @@ class Joueur extends Participant
             'equipes'  => $this->_equipes
         );
     }
+	//Fait le 
+	public function getNiveauTotalJoueur(){
+		return $this->_equipes[0]->getNiveauTotalPersos();
+	}
 }
 
 

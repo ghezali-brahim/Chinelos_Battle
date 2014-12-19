@@ -39,8 +39,16 @@ class ModJoueurVueJoueur
     }
 
     static function afficherEquipes($equipes){
+
+	$i=0;
         foreach($equipes as $equipe){
+		if($i==0){
+			echo "<h3><u> Equipes :</u></h3>";
+		}else{
+			echo "<h3><u> Disponible :</u></h3>";
+		}
             self::afficherEquipe($equipe);
+		$i++;
         }
     }
     static function afficherEquipe($equipe){
@@ -66,25 +74,28 @@ class ModJoueurVueJoueur
         <th> Defense </th>
         <th> ID Equipe </th>
 	</tr>';
-        foreach ($personnages as $value) {
 
-            $persoX = $value->getPersonnage();
-            echo "<tr>\n";
-            echo "<td>" . $persoX['id_personnage'] . "</td>\n";
-            echo "<td>" . $persoX['nom'] . "</td>\n";
-            echo "<td>" . $persoX['element'] . "</td>\n";
-            echo "<td>" . $persoX['niveau'] . "</td>\n";
-            echo "<td>" . $persoX['experience'] . "</td>\n";
-            echo "<td>" . $value->getIdAttaques() . "</td>\n";
-            echo "<td>" . $persoX['hp'] . "</td>\n";
-            echo "<td>" . $persoX['mp'] . "</td>\n";
-            echo "<td>" . $persoX['puissance'] . "</td>\n";
-            echo "<td>" . $persoX['defense'] . "</td>\n";
-            echo "<td>" . $persoX['id_equipe'] . "</td>\n";
-            echo "</tr>";
+        foreach ($personnages as $value) {
+	
+        $persoX = $value->getPersonnage();
+        echo "<tr>\n";
+	echo '<td><input type="button" onclick="javascript:document.location.href=\'index.php?module=joueur&action=transferer&id_personnage='.$persoX['id_personnage'].'\'" value="'.$persoX['id_personnage'].'"/></td>';
+        echo "<td>" . $persoX['nom'] . "</td>\n";
+        echo "<td>" . $persoX['element'] . "</td>\n";
+        echo "<td>" . $persoX['niveau'] . "</td>\n";
+        echo "<td>" . $persoX['experience'] . "</td>\n";
+        echo "<td>" . $value->getIdAttaques() . "</td>\n";
+        echo "<td>" . $persoX['hp'] . "</td>\n";
+        echo "<td>" . $persoX['mp'] . "</td>\n";
+        echo "<td>" . $persoX['puissance'] . "</td>\n";
+        echo "<td>" . $persoX['defense'] . "</td>\n";
+        echo "<td>" . $persoX['id_equipe'] . "</td>\n";
+        echo "</tr>";
         }
 
         echo "</table>";
     }
+
+
 }
 

@@ -627,6 +627,13 @@ class Personnage extends DBMapper
         echo "</table>";
     }
 
+	//RAJOUTER LE 
+    public function getIdEquipes(){
+
+		return $this->_id_equipe;
+	}
+
+
     public function getIdAttaques()
     {
         // Creation d'une liste des id des attaques ($listeAttaquesString)

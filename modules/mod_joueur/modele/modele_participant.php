@@ -17,6 +17,33 @@ abstract class  Participant extends DBMapper
     {
         return $this->_equipes[0];
     }
+	//FAIT LE
+	function transferer($personnage){
+	if($personnage==null){
+		throw new Exception('personnage inconnu');
+	}
+		if( $personnage->getIdEquipes()==$this->_equipes[0]->getIdEquipes() ){
+			$this->_equipes[0]->removePersonnage($personnage);
+			$this->_equipes[1]->addPersonnage($personnage);
+		}else if( $personnage->getIdEquipes() == $this->_equipes[1]->getIdEquipes() ){
+			$this->_equipes[1]->removePersonnage($personnage);
+			$this->_equipes[0]->addPersonnage($personnage);
+		}else{
+			throw new Exception('transfert impossible');
+		}
+	
+	}
+	//RAjouter le 
+	public function getPersonnageWithID($id_personnage){
+		
+		$personnage = $this->_equipes[0]->getPersonnage($id_personnage);
+		if($personnage==null){
+			$personnage = $this->_equipes[1]->getPersonnage($id_personnage);
+		}
+
+		return $personnage;
+
+	}
 
     function __toString()
     {

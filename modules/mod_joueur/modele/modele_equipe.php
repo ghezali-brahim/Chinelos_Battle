@@ -64,12 +64,13 @@ class  Equipe extends DBMapper
         else {
             throw new Exception('Erreur: le personnage que vous souhaité ajouté appartient déja à l\'equipe :' . $this->_id_equipe);
         }
-
     }
-
+	//A ETE MODIFIER LE IF
     function removePersonnage($personnage)
     {
-        if (!array_search($personnage, $this->_personnages)) {
+	//echo 'supprimer : '.$personnage->afficher().'';
+	//echo '<h3>'.$this->__toString().'</h3>';
+        if (!in_array($personnage, $this->_personnages)) {
             throw new Exception('le personnage que vous souhaité retirer de l\'equipe n\'est pas dans cette equipe');
         }
         else {
@@ -142,4 +143,9 @@ class  Equipe extends DBMapper
 
         return $somme;
     }
+	// FAIT LE
+	public function getIdEquipes(){
+		return $this->_id_equipe;
+	}
+
 }
