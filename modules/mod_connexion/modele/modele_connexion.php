@@ -40,6 +40,7 @@ class ModConnexionModeleConnexion extends DBMapper
         return $id_user;
     }
 
+
     public static function deconnexion()
     {
         session_destroy();

@@ -94,6 +94,42 @@ section form {
     text-align: center;
 }
 
+/* Affichage equipe */
+.equipe .personnage {
+    display: inline-block;
+    padding: auto;
+}
+
+/* Affichage personnage */
+.personnage {
+    background-color: bisque;
+    border: 2px solid black;
+    width: 220px;
+    margin: auto;
+    padding: 5px 5px 5px 5px;
+}
+
+.personnage img {
+    border: 2px inset #444444;
+}
+
+.personnage progress {
+    display: inline-block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200px;
+    height: 20px;
+    padding: 3px 3px 2px 3px;
+    background: #333;
+    background: -webkit-linear-gradient(#2d2d2d, #444);
+    background: -moz-linear-gradient(#2d2d2d, #444);
+    background: -o-linear-gradient(#2d2d2d, #444);
+    background: linear-gradient(#2d2d2d, #444);
+    border: 1px solid rgba(0, 0, 0, .5);
+    border-radius: 15px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .2);
+}
+
 /*bas de page */
 footer {
     color: white;

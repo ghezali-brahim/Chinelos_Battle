@@ -18,7 +18,7 @@ class ModConnexionControleurConnexion
         if (isset ($_SESSION ['id_user']) && $_SESSION['id_user'] != NULL) {
             echo 'Vous êtes bien connecté en tant que ' . $_SESSION ['username'];
             echo '<br>';
-            echo '<a href="index.php?module=joueur&action=afficher">Afficher joueur</a><br/>';
+            echo '<a href="index.php?module=joueur">Afficher joueur</a><br/>';
             echo '<a href="index.php?module=joueur&action=combat">Afficher combat</a><br/>';
             $controleur = new ModConnexionControleurConnexion();
             $controleur->deconnexion();

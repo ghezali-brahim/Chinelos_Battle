@@ -2,15 +2,15 @@
 if (!defined('TEST_INCLUDE'))
     die ("Vous n'avez pas accès directement à ce fichier");
 
-//require_once MOD_BPATH.DIR_SEP."modele/modele_participant.php";
-
 class Attaque extends DBMapper
 {
 
     protected $_id_attaque;
     protected $_nom;
     protected $_degats; // ( en pourcentage )
-    protected $_pm_used;
+    protected $_mp_used;
+
+    //protected $_element; // A voir
 
 
     function __construct($id_attaque)
@@ -28,20 +28,31 @@ class Attaque extends DBMapper
         }
         $attaqueElements = $reponse->fetch();
         if ($attaqueElements == NULL) {
-            throw new Exception('l\'id "' . $id_attaque . '" attaque incorrecte.');
+            throw new Exception("L'identifiant element :" . $id_attaque . " est une attaque inconnu.");
         }
 
         $this->_id_attaque = $attaqueElements['id_attaque'];
         $this->_nom        = $attaqueElements['nom'];
         $this->_degats     = $attaqueElements['degats'];
-        $this->_pm_used    = $attaqueElements['pm_used'];
+        $this->_mp_used    = $attaqueElements['mp_used'];
     }
 
+    /**
+     * Cette fonction rajoute une attaque dans la Base de donnée
+     * avec les valeurs rentré en paramètre
+     *
+     * Si aucun paramètre en entrée, valeur par défault:
+     * array("attaqueX",10,3)
+     *
+     * @param array ($nom, $degats, $mp_used)
+     *
+     * @return Attaque : Attaque qui a été créer
+     */
     static function createAttaque(
         $attaqueElements = array(
             'nom'     => "attaqueX",
             'degats'  => 10,
-            'pm_used' => 3))
+            'mp_used' => 3))// Si aucun parametre
     {
         //ICI on récupère l'id attaque max
         $requete = "SELECT max(id_attaque) FROM attaque";
@@ -60,7 +71,7 @@ class Attaque extends DBMapper
         $attaqueElements = array_merge($id_attaque, $attaqueElements);
 
         //ICI on créer l'attaque dans la base de donnée
-        $requete = "INSERT INTO attaque VALUES(:id_attaque, :nom, :degats, :pm_used)";
+        $requete = "INSERT INTO attaque VALUES(:id_attaque, :nom, :degats, :mp_used)";
         try {
             $reponse = self::$database->prepare($requete);
             $reponse->execute($attaqueElements);
@@ -72,33 +83,56 @@ class Attaque extends DBMapper
         return new Attaque($attaqueElements['id_attaque']);
     }
 
-    /**
-     * @return mixed
+    /** Retourne l'identifiant de l'attaque
+     * @return integer : Identifiant attaque
      */
-    public function getIdAttaque()
+    function getIdAttaque()
     {
         return $this->_id_attaque;
     }
 
-    /**
-     * @return mixed
+    /** Retourne le cout en mp de l'attaque
+     * @return integer : MP utilisé
      */
-    public function getPmUsed()
+    function getMpUsed()
     {
-        return $this->_pm_used;
+        return $this->_mp_used;
     }
 
-    /**
-     * @return mixed
+    /** Retourne les degats sous la forme degats/100
+     * @return integer : coefficient de degats
      */
-    public function getDegats()
+    function getDegats()
     {
         return ($this->_degats / 100);
     }
 
+    /** Retourne le nom de l'attaque
+     * @return string : nom de l'attaque
+     */
+    public function getNom()
+    {
+        return $this->_nom;
+    }
+
+    /**  Affichage de l'attaque en string
+     * Sous la forme :
+     *  "NOM: ID=5; Degats : 10% ; cout : 3MP"
+     *
+     * @return string
+     */
     function __toString()
     {
-        return $this->_nom . ': ID=' . $this->_id_attaque . '; Degats : ' . $this->_degats . '% ; cout : ' . $this->_pm_used . 'PM';
+        return $this->_nom . ': ID=' . $this->_id_attaque . '; Degats : ' . $this->_degats . '% ; cout : ' . $this->_mp_used . 'MP';
+    }
+
+    function afficherAttaque()
+    {
+        echo '<div class="attaque">';
+        echo $this->_nom . ' | ';
+        echo 'Degats : ' . $this->_degats . '% | ';
+        echo $this->_mp_used . 'PM';
+        echo '</div>';
     }
 
 
