@@ -9,8 +9,8 @@ if ( !Joueur::connectee () ) {
     header ( 'Location: index.php?module=connexion' );
 }
 $controleur = new ModBoutiqueControleurBoutique();
-echo '<a href="index.php?module=boutique">Accueil Module</a><br/>';
-echo "<h2>" . $action . "</h2>";
+echo '<a href="index.php?module=boutique">Accueil Module</a></br></br>';
+//echo "<h2>" . $action . "</h2>";
 if ( $action == "afficher" ) {
     $controleur->afficher ();
 } else if ( $action == "acheter" ) {

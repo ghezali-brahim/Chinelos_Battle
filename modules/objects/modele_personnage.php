@@ -155,7 +155,7 @@ class Personnage extends DBMapper
         $personnageElement   = $personnageAvantBD->getPersonnage ();
         $elementPersonnageBD = array (
                 'id_personnage' => $id_personnage,
-                'nom'           => "chausson " . $id_personnage,
+                'nom'           => "Chausson " . $id_personnage,
                 'element'       => $personnageElement[ 'element' ],
                 'niveau'        => $personnageElement[ 'niveau' ],
                 'experience'    => $personnageElement[ 'experience' ],
@@ -183,7 +183,7 @@ class Personnage extends DBMapper
      *
      * @return Personnage
      */
-    static function createPersonnage ( $niveau )
+    static function createPersonnage ( $niveau, $nom="Monster" )
     {
         //ICI on récupère l'experience du niveau
         $resultat   = Personnage::requeteFromBD (
@@ -216,7 +216,7 @@ class Personnage extends DBMapper
         // On prépare les éléments pour la création du Personnage
         $personnageElement = array (
                 'id_personnage' => self::$id_personnage_serial,
-                'nom'           => "monster",
+                'nom'           => $nom,
                 'element'       => rand ( 1, 4 ),// ICI on peut modifier l'élement du personnage par défault; ici aleatoire
                 'niveau'        => $niveau,
                 'experience'    => $caracNiveau[ 'experience' ],
@@ -822,9 +822,9 @@ class Personnage extends DBMapper
         $rep  = "img/avatar/";
         $text = '<div class="personnage">' .
                 '<img src="' . Element::getIcone ( $this->_element ) . '" alt="' . Element::getNom ( $this->_element ) . '"/> <br/>'
-                . '<img src="' . $rep . $this->_element . ".jpg" . '" alt="' . $this->_nom . '"/> <br/>'
-                . $this->_nom . ' (level ' . $this->_niveau . ') <br/>'
-                . 'experience : ' . $this->_experience . '/' . Niveau::getXpNiveau ( $this->_niveau + 1 ) . ' <br/>'
+                . '<img class="avatarPerso" src="' . $rep . $this->_element . ".jpg" . '" alt="' . $this->_nom . '"/> <br/>'
+                . $this->_nom . ' (Level ' . $this->_niveau . ') <br/>'
+                . 'Experience : ' . $this->_experience . '/' . Niveau::getXpNiveau ( $this->_niveau + 1 ) . ' <br/>'
                 . 'HP : ' . $this->_hp . ' / ' . $this->_hp_max . '<br/>'
                 . '<progress value="' . $this->_hp . '" min ="0" max="' . $this->_hp_max . '"></progress> <br/>'
                 . 'MP : ' . $this->_mp . ' / ' . $this->_mp_max . '<br/>'
@@ -832,7 +832,6 @@ class Personnage extends DBMapper
                 . 'Puissance : ' . $this->_puissance . '<br/>'
                 . 'Defense : ' . $this->_defense . '<br/>'
                 . '</div>';
-
         return $text;
     }
 

@@ -10,10 +10,11 @@ class ModCombatVueCombat
      **/
     static function affAccueilModule ()
     {
-        echo "ACCUEIL:";
-        echo '<a href="index.php?module=combat&action=afficher">Afficher</a> <br>';
-        echo '<a href="index.php?module=combat&action=listeCombat">listeCombat</a> <br>';
-        echo '<a href="index.php?module=combat&action=Combat">Combat</a> <br>';
+		echo "</br><div class='combat'><p class='textCombat'>
+			<a href='index.php?module=combat&action=listeCombat'><button class='buttonModule' style='width:130px;height=20px;'>Scénario</button></a></br>
+			<a href='index.php?module=combat&action=Combat'><button class='buttonModule' style='width:130px;height=20px;'>Combat Aléatoire</button></a></br>
+			</p></div>";
+
     }
 
     static function afficherCombat ( $combat )
@@ -69,8 +70,11 @@ class ModCombatVueCombat
     {
         foreach ( $listeEnemies as $joueur_IA ) {
             //self::afficherEquipe($joueur_IA->getEquipeOne());
-            echo $joueur_IA->getEquipeOne ()->__toString ();
-            echo '<br>_____________________________________________________<br>';
+            //echo $joueur_IA->getEquipeOne ()->__toString ();
+			echo "</br>";
+			echo $joueur_IA->retourneAffichageJoueurIA();
+			echo "</br><button class='affronterEquipe'>Affronter cette équipe !</button>";
+            echo "</br></br><img src='include/images/sep.gif'></img><br>";
         }
     }
 

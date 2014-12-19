@@ -62,8 +62,16 @@ class ModCombatControleurCombat
         }
         $this->_joueur->virerMortEquipeOne ();
         $robot1->virerMortEquipeOne ();
-        $this->_combat = new Combat( $this->_joueur, $robot1 );
-        $this->_combat->combattre ();
+		try{
+			$this->_combat = new Combat( $this->_joueur, $robot1 );
+			$this->_combat->combattre ();
+			$_SESSION[ 'joueur' ] = serialize ( $this->_joueur );
+		}catch(Exception $e){
+			if($e->getMessage()=="Votre Equipe Une n'a plus de personnage apte à combattre !"){
+				echo " </br>Votre Equipe Une n'a plus de personnage apte à combattre !</br>
+					</br> Merci de vous dirigez vers la <a href='index.php?module=boutique'>Boutique</a> pour les soigner !";
+			}
+		}
         /*
         $personnage1=$joueur->getEquipeOne()->getPersonnages()[0];
         $monstre1= $robot1->getEquipeOne()->getPersonnages()[0];

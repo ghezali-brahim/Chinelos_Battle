@@ -10,24 +10,29 @@ class ModBoutiqueVueBoutique
      **/
     static function affAccueilModule ()
     {
-        echo "ACCUEIL:";
-        echo '<a href="index.php?module=boutique&action=afficher">Afficher</a> <br>';
-        echo '<a href="index.php?module=boutique&action=acheter">Acheter</a> <br>';
+		echo "<div class='boutique'><p class='textBoutique'>
+			<a href='index.php?module=boutique&action=afficher'><button class='buttonModule' style='width:130px;height=20px;'>Inventaire</button></a> </br>
+			<a href='index.php?module=boutique&action=acheter'><button class='buttonModule' style='width:130px;height=20px;'>Acheter</button></a> </br></br>
+		</p></div>";
     }
 
     static function acheterPersonnage ()
-    {
-        echo '<a href="index.php?module=boutique&action=acheter&value=personnage">Acheter un personnage</a><br/>';
+    {		
+		echo "<div class='aventurierFloat'><a href='index.php?module=boutique&action=acheter&value=personnage'><img class='aventurier' src='include/images/aventurier.jpg'></img></br>
+		<span>Acheter un personnage</span></a></div>";
     }
 
     static function afficherBoutique ()
     {
         //TODO
     }
+	
+	
 
     static function acheterSoin ()
     {
-        echo '<a href="index.php?module=boutique&action=acheter&value=soin">Soigner tous vos personnage</a><br/>';
+		echo "<div class='divInfirmiere'><a href='index.php?module=boutique&action=acheter&value=soin'><img class='infirmiere' src='include/images/infirmiere.png'></img></br>
+		<span>Soigner son Equipe</span></a></div>";
     }
 
     /**
@@ -37,7 +42,10 @@ class ModBoutiqueVueBoutique
      */
     static function afficherJoueur ( $joueur )
     {
-        echo "Bienvenue dans la boutique, " . $joueur[ 'username' ] . " , il vous reste " . $joueur[ 'argent' ] . " gils. <br>";
+		
+        echo "Bienvenue dans votre inventaire, " . $joueur[ 'username' ] . ".</br></br>";
+		echo "<div class='bourse'><p class='textBourse'>" . $joueur[ 'argent' ] . " Gils</p></div></br></br>";
+		
     }
 }
 

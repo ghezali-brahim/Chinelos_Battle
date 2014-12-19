@@ -28,14 +28,16 @@ class  Equipe extends DBMapper
         do {
             $personnages = array ();
             //Attribution des personnages pour le robot
+			$i=0;
             $sommeNiveau = 0;
             while ( $niveauTotal > $sommeNiveau ) {
                 //Le niveau aleatoire est généré entre 1/8 du niveau du groupe et 1/4
+				$i++;
                 $niveauAleatoire = rand ( $niveauTotal / 8, $niveauTotal / 2 );
                 if ( $niveauAleatoire == 0 ) {
                     $niveauAleatoire = 1;
                 }
-                $pers = Personnage::createPersonnage ( $niveauAleatoire );
+                $pers = Personnage::createPersonnage ( $niveauAleatoire,"Monster " . $i );
                 $sommeNiveau += $niveauAleatoire;
                 array_push ( $personnages, $pers );
             }

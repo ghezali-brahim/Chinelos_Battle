@@ -21,17 +21,28 @@ class Combat extends DBMapper
         $this->_equipe1       = $participant_1->getEquipeOne ();
         $this->_equipe2       = $participant_2->getEquipeOne ();
         $this->passerTour     = FALSE;
+		if($this->_equipe1->getNombrePersonnages()==0 OR $this->_equipe2->getNombrePersonnages()==0){
+			throw new Exception( "Votre Equipe Une n'a plus de personnage apte à combattre !" );
+		}
+		if ( $this->unParticipantMort () ) {
+            throw new Exception( 'Un joueur a tous ses personnages mort avant même le debut du combat' );
+        }
+
     }
 
     function combattre ()
     {
-        if ( $this->unParticipantMort () ) {
-            throw new Exception( 'Un joueur a tous ses personnages mort avant même le debut du combat' );
-        }
+		$i=0;
+        
         //echo $this->_equipe1->getPersonnages()[0]->;
+		echo "<h1 class='ennemiApp'>Des ennemis apparaissent !</h1>";
         echo "<script>$('#combat').html('" . $this->retourneAffichage () . "')</script>";
         do {
+			$i++;
             //TODO il faut mettre un bouton pour passer un Tour (et les tours de chaque personnage)
+			echo"</br></br>";
+			echo "<img src='include/images/sep.gif'></img>";
+			echo "<h1 class='tourx'>Tour " . $i . " :</h1>";
             echo '<div id="combat"></div>';
             /*
             echo "<br>\n Tour " . $this->tour . " :";
@@ -64,7 +75,7 @@ class Combat extends DBMapper
 
     function retourneAffichage ()
     {
-        $text = $this->_equipe1->retourneAffichageEquipe () . "<br/>_________________________________________VS_________________________________________<br/><br/>" . $this->_equipe2->retourneAffichageEquipe ();
+        echo $text = $this->_equipe1->retourneAffichageEquipe () . "<br/><img class='bourse' src='include/images/vs.jpg'></img><br/><br/>" . $this->_equipe2->retourneAffichageEquipe ();
         $text = $text . '<a href="index.php?module=combat&action=passerTour">PasserTour</a>';
 
         return $text;

@@ -10,7 +10,7 @@ if ( !Joueur::connectee () ) {
 }
 $controleur = new ModCombatControleurCombat();
 echo '<a href="index.php?module=combat">Accueil Module</a><br/>';
-echo "<h2>" . $action . "</h2>";
+//echo "<h2>" . $action . "</h2>";
 if ( $action == "afficher" ) {
     $controleur->afficher ();
 } else if ( $action == "listeCombat" ) {

@@ -1,6 +1,5 @@
 <?php
-echo '		</section>
-		<footer>
-		</footer>
-	</body>
-</html>';
+echo '
+<footer>
+	<p>© Copyright ChinelosBattle.com. All Rights Reserved</p>
+</footer>';

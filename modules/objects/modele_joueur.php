@@ -210,7 +210,7 @@ class Joueur extends Participant
             // ON mulitplie par le ratio de l'élement
             $degats = $degats * Element::getRatioDegatElement ( $personnage->getElement (), $personnageTarget->getElement () );
             //DEBUG
-            echo '<br/>========= ' . $personnage . ' a fait ' . $degats . ' à lenemi : ' . $personnageTarget . ' ======<br/>';
+            //echo '<br/>========= ' . $personnage . ' a fait ' . $degats . ' à lenemi : ' . $personnageTarget . ' ======<br/>';
             $personnageTarget->subirDegats ( $degats );
         } catch ( Exception $e ) {
             print_r ( $e );
