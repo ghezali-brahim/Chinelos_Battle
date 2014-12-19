@@ -1,0 +1,61 @@
+
+body { 
+	font-family:"Arial";
+}
+h1 {
+font-size:40px;
+}
+header { 
+     height: 150px;
+	 position: relative center;
+     background: #121212 ;
+     border: 2px rgb(100,100,100) outset;
+}
+header, nav, footer {
+	 margin: 0 auto 0 auto;
+	 width: 750px;
+}
+
+
+nav {
+	background: grey;
+     height: 25px;
+     text-shadow: 2px 2px 4px black;
+     border: 2px rgb(100,100,100) outset;
+}
+nav a {
+	color: white;
+	 letter-spacing: 0.1em;
+     display: block; 
+     float: left; 
+     height: 25px;
+     padding: 0px 5px 0px 5px;
+     text-align: center;
+     text-transform: uppercase;
+     text-decoration: none;
+     border: 1px rgb(100,100,100) inset;
+}
+
+/* Corps de la page */
+ section {
+	text-align:center;
+	margin: 0 auto 0 auto;
+	width: 750px;
+	background: #ededed ;
+	border: 2px rgb(100,100,100) outset;
+	text-align: left;
+	height:auto;
+	height-min:500px;
+}
+section form {
+	text-align:center;
+}
+/*bas de page */
+ footer {
+	 color: white;
+     height: 150px;
+     text-align: center; 
+     border: 2px rgb(100,100,100) outset;
+	 background: url("img/header.jpg");
+
+}
