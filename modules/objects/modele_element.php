@@ -19,7 +19,7 @@ class Element extends DBMapper
      *
      * @return string lien vers l'image de l'élement
      */
-    static public function getIcone($id_element)
+    static public function getIcone ( $id_element )
     {
         return self::$dossierIcone . $id_element . ".png";
     }
@@ -31,9 +31,9 @@ class Element extends DBMapper
      * @return contenu ligne element de la BD
      * @throws Exception
      */
-    static public function getElement($id_element)
+    static public function getElement ( $id_element )
     {
-        return Element::selectFromBD($id_element, "SELECT * FROM element WHERE id_element = :id_element")[0];
+        return Element::selectFromBD ( $id_element, "SELECT * FROM element WHERE id_element = :id_element" )[ 0 ];
     }
 
     /** Envoie une requete vers la base de donnée et retourne le résultat
@@ -44,21 +44,21 @@ class Element extends DBMapper
      * @return mixed
      * @throws Exception
      */
-    private static function selectFromBD($id_element, $requete = "SELECT DISTINCT * FROM element WHERE id_element = :id_element")
+    private static function selectFromBD ( $id_element, $requete = "SELECT DISTINCT * FROM element WHERE id_element = :id_element" )
     {
         //ICI on récupère les informations de l'attaque
         try {
-            $reponse = self::$database->prepare($requete);
-            $reponse->execute(
-                array(
-                    'id_element' => $id_element
-                ));
-        } catch (PDOException $e) {
-            echo 'Échec lors de la connexion : ' . $e->getMessage();
+            $reponse = self::$database->prepare ( $requete );
+            $reponse->execute (
+                    array (
+                            'id_element' => $id_element
+                    ) );
+        } catch ( PDOException $e ) {
+            echo 'Échec lors de la connexion : ' . $e->getMessage ();
         }
-        $contenuElement = $reponse->fetchAll();
-        if ($contenuElement == NULL) {
-            throw new Exception("L'identifiant element :" . $id_element . " est un element inconnu.");
+        $contenuElement = $reponse->fetchAll ();
+        if ( $contenuElement == NULL ) {
+            throw new Exception( "L'identifiant element :" . $id_element . " est un element inconnu." );
         }
 
         return $contenuElement;
@@ -71,9 +71,9 @@ class Element extends DBMapper
      * @return String Nom de l'element
      * @throws Exception
      */
-    static public function getNom($id_element)
+    static public function getNom ( $id_element )
     {
-        return Element::selectFromBD($id_element, "SELECT nom FROM element WHERE id_element = :id_element")[0]['nom'];
+        return Element::selectFromBD ( $id_element, "SELECT nom FROM element WHERE id_element = :id_element" )[ 0 ][ 'nom' ];
     }
 
     /** Retourne un ratio de degat d'un élément sur un autre en fonction de l'id_element
@@ -86,16 +86,13 @@ class Element extends DBMapper
      *
      * @return float|int
      */
-    static function getRatioDegatElement($id_element, $id_element_target)
+    static function getRatioDegatElement ( $id_element, $id_element_target )
     {
-
-        if (in_array($id_element_target, Element::getIdElementFortContre($id_element))) {
+        if ( in_array ( $id_element_target, Element::getIdElementFortContre ( $id_element ) ) ) {
             $ratio = 1.5;
-        }
-        else if (in_array($id_element_target, Element::getIdElementFaibleContre($id_element))) {
+        } else if ( in_array ( $id_element_target, Element::getIdElementFaibleContre ( $id_element ) ) ) {
             $ratio = 0.5;
-        }
-        else {
+        } else {
             $ratio = 1;
         }
 
@@ -109,11 +106,11 @@ class Element extends DBMapper
      * @return array(Integer) ; liste des id elements
      * @throws Exception
      */
-    static function getIdElementFortContre($id_element)
+    static function getIdElementFortContre ( $id_element )
     {
-        $id_fort_contre_String = Element::selectFromBD($id_element, "SELECT id_fort_contre FROM element WHERE id_element = :id_element")[0]['id_fort_contre'];
+        $id_fort_contre_String = Element::selectFromBD ( $id_element, "SELECT id_fort_contre FROM element WHERE id_element = :id_element" )[ 0 ][ 'id_fort_contre' ];
 
-        return explode(";", $id_fort_contre_String);
+        return explode ( ";", $id_fort_contre_String );
     }
 
     /** Retourne sous forme de liste d'entier la liste des id_element contre lequels l'id_element spécifié est faible
@@ -123,10 +120,10 @@ class Element extends DBMapper
      * @return array(Integer) ; liste des id elements
      * @throws Exception
      */
-    static function getIdElementFaibleContre($id_element)
+    static function getIdElementFaibleContre ( $id_element )
     {
-        $id_faible_contre_String = Element::selectFromBD($id_element, "SELECT id_faible_contre FROM element WHERE id_element = :id_element")[0]['id_faible_contre'];
+        $id_faible_contre_String = Element::selectFromBD ( $id_element, "SELECT id_faible_contre FROM element WHERE id_element = :id_element" )[ 0 ][ 'id_faible_contre' ];
 
-        return explode(";", $id_faible_contre_String);
+        return explode ( ";", $id_faible_contre_String );
     }
 }

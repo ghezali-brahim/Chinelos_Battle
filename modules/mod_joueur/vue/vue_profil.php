@@ -1,6 +1,6 @@
 <?php
-if (!defined('TEST_INCLUDE'))
-    die ("Vous n'avez pas accès directement à ce fichier");
+if ( !defined ( 'TEST_INCLUDE' ) )
+    die ( "Vous n'avez pas accès directement à ce fichier" );
 
 
 class ModJoueurVueJoueur
@@ -8,7 +8,7 @@ class ModJoueurVueJoueur
     /**
      * Affiche la page d'accueil du module
      **/
-    static function affAccueilModule()
+    static function affAccueilModule ()
     {
         echo "ACCUEIL:";
         echo '<a href="index.php?module=joueur&action=afficher">Afficher</a> <br>';
@@ -22,15 +22,12 @@ class ModJoueurVueJoueur
      *
      * @param $joueur
      */
-    static function afficherJoueur($joueur)
+    static function afficherJoueur ( $joueur )
     {
-        echo "Bienvenue " . $joueur['username'] . " , il vous reste " . $joueur['argent'] . " gils. <br>";
-
-
+        echo "Bienvenue " . $joueur[ 'username' ] . " , il vous reste " . $joueur[ 'argent' ] . " gils. <br>";
         //Affichage des différents personnages
         echo '<h2 id="listePerso"> Listes de vos personnages : </h2>';
-
-        ModJoueurVueJoueur::afficherEquipes($joueur['equipes']);
+        ModJoueurVueJoueur::afficherEquipes ( $joueur[ 'equipes' ] );
         /*
         $joueur2=new Joueur();
         $joueur2->getPersonnageWithID(1)->afficherPersonnage();
@@ -38,32 +35,30 @@ class ModJoueurVueJoueur
         */
     }
 
-    static function afficherEquipes($equipes)
+    static function afficherEquipes ( $equipes )
     {
-
         $i = 0;
-        foreach ($equipes as $equipe) {
-            if ($i == 0) {
+        foreach ( $equipes as $equipe ) {
+            if ( $i == 0 ) {
                 echo "<h3>Equipes :</h3>";
-            }
-            else {
+            } else {
                 echo "<h3>Disponible :</h3>";
             }
-            self::afficherEquipe($equipe);
+            self::afficherEquipe ( $equipe );
             $i++;
         }
     }
 
-    static function afficherEquipe($equipe)
+    static function afficherEquipe ( $equipe )
     {
-        self::afficherPersonnages($equipe->getPersonnages());
+        self::afficherPersonnages ( $equipe->getPersonnages () );
     }
 
     /** Affiche une liste de personnages
      *
      * @param $personnages
      */
-    static function afficherPersonnages($personnages)
+    static function afficherPersonnages ( $personnages )
     {
         echo ' <table border="1" id="tableau">
 	<tr>
@@ -79,52 +74,47 @@ class ModJoueurVueJoueur
         <th> Defense </th>
         <th> ID Equipe </th>
 	</tr>';
-
-        foreach ($personnages as $value) {
-
-            $persoX = $value->getPersonnage();
+        foreach ( $personnages as $value ) {
+            $persoX = $value->getPersonnage ();
             echo "<tr>\n";
-            echo "<td>" . $persoX['id_personnage'] . "</td>";
-            echo "<td>" . $persoX['nom'] . "</td>\n";
-            echo "<td>" . $persoX['element'] . "</td>\n";
-            echo "<td>" . $persoX['niveau'] . "</td>\n";
-            echo "<td>" . $persoX['experience'] . "</td>\n";
-            echo "<td>" . $value->getIdAttaques() . "</td>\n";
-            echo "<td>" . $persoX['hp'] . "</td>\n";
-            echo "<td>" . $persoX['mp'] . "</td>\n";
-            echo "<td>" . $persoX['puissance'] . "</td>\n";
-            echo "<td>" . $persoX['defense'] . "</td>\n";
-            echo "<td>" . $persoX['id_equipe'] . "</td>\n";
+            echo "<td>" . $persoX[ 'id_personnage' ] . "</td>";
+            echo "<td>" . $persoX[ 'nom' ] . "</td>\n";
+            echo "<td>" . $persoX[ 'element' ] . "</td>\n";
+            echo "<td>" . $persoX[ 'niveau' ] . "</td>\n";
+            echo "<td>" . $persoX[ 'experience' ] . "</td>\n";
+            echo "<td>" . $value->getIdAttaques () . "</td>\n";
+            echo "<td>" . $persoX[ 'hp' ] . "</td>\n";
+            echo "<td>" . $persoX[ 'mp' ] . "</td>\n";
+            echo "<td>" . $persoX[ 'puissance' ] . "</td>\n";
+            echo "<td>" . $persoX[ 'defense' ] . "</td>\n";
+            echo "<td>" . $persoX[ 'id_equipe' ] . "</td>\n";
             echo "</tr>";
         }
-
         echo "</table>";
     }
 
-    static function afficherEquipeOne($equipe)
+    static function afficherEquipeOne ( $equipe )
     {
-        $equipe->afficherEquipe();
+        $equipe->afficherEquipe ();
     }
 
-    static function afficherTransfert($joueur)
+    static function afficherTransfert ( $joueur )
     {
         //Affichage des différents personnages
         echo '<h2 id="listePerso"> Listes de vos personnages : </h2>';
         $i = 0;
-        foreach ($joueur['equipes'] as $equipe) {
-            if ($i == 0) {
+        foreach ( $joueur[ 'equipes' ] as $equipe ) {
+            if ( $i == 0 ) {
                 echo "<h3>Equipes :</h3>";
-            }
-            else {
+            } else {
                 echo "<h3>Disponible :</h3>";
             }
-            self::afficherPersonnagesTransfert($equipe->getPersonnages());
+            self::afficherPersonnagesTransfert ( $equipe->getPersonnages () );
             $i++;
         }
-
     }
 
-    static function afficherPersonnagesTransfert($personnages)
+    static function afficherPersonnagesTransfert ( $personnages )
     {
         {
             echo ' <table border="1" id="tableau">
@@ -141,29 +131,24 @@ class ModJoueurVueJoueur
         <th> Defense </th>
         <th> ID Equipe </th>
 	</tr>';
-
-            foreach ($personnages as $value) {
-
-                $persoX = $value->getPersonnage();
+            foreach ( $personnages as $value ) {
+                $persoX = $value->getPersonnage ();
                 echo "<tr>\n";
-                echo '<td><input type="button" onclick="document.location.href=\'index.php?module=joueur&action=transferer&id_personnage=' . $persoX['id_personnage'] . '\'" value="' . $persoX['id_personnage'] . '"/></td>';
-                echo "<td>" . $persoX['nom'] . "</td>\n";
-                echo "<td>" . $persoX['element'] . "</td>\n";
-                echo "<td>" . $persoX['niveau'] . "</td>\n";
-                echo "<td>" . $persoX['experience'] . "</td>\n";
-                echo "<td>" . $value->getIdAttaques() . "</td>\n";
-                echo "<td>" . $persoX['hp'] . "</td>\n";
-                echo "<td>" . $persoX['mp'] . "</td>\n";
-                echo "<td>" . $persoX['puissance'] . "</td>\n";
-                echo "<td>" . $persoX['defense'] . "</td>\n";
-                echo "<td>" . $persoX['id_equipe'] . "</td>\n";
+                echo '<td><input type="button" onclick="document.location.href=\'index.php?module=joueur&action=transferer&id_personnage=' . $persoX[ 'id_personnage' ] . '\'" value="' . $persoX[ 'id_personnage' ] . '"/></td>';
+                echo "<td>" . $persoX[ 'nom' ] . "</td>\n";
+                echo "<td>" . $persoX[ 'element' ] . "</td>\n";
+                echo "<td>" . $persoX[ 'niveau' ] . "</td>\n";
+                echo "<td>" . $persoX[ 'experience' ] . "</td>\n";
+                echo "<td>" . $value->getIdAttaques () . "</td>\n";
+                echo "<td>" . $persoX[ 'hp' ] . "</td>\n";
+                echo "<td>" . $persoX[ 'mp' ] . "</td>\n";
+                echo "<td>" . $persoX[ 'puissance' ] . "</td>\n";
+                echo "<td>" . $persoX[ 'defense' ] . "</td>\n";
+                echo "<td>" . $persoX[ 'id_equipe' ] . "</td>\n";
                 echo "</tr>";
             }
-
             echo "</table>";
         }
     }
-
-
 }
 

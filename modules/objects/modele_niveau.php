@@ -1,6 +1,7 @@
 <?php
-if (!defined('TEST_INCLUDE'))
-    die ("Vous n'avez pas accès directement à ce fichier");
+if ( !defined ( 'TEST_INCLUDE' ) )
+    die ( "Vous n'avez pas accès directement à ce fichier" );
+
 
 class Niveau extends DBMapper
 {
@@ -11,14 +12,14 @@ class Niveau extends DBMapper
      *
      * @return float
      */
-    static public function getPourcentXp($experience)
+    static public function getPourcentXp ( $experience )
     {
-        $niveau               = Niveau::getNiveau($experience);
+        $niveau               = Niveau::getNiveau ( $experience );
         $niveauSuivant        = $niveau + 1;
-        $experienceNecessaire = Niveau::getXpNiveau($niveauSuivant) - Niveau::getXpNiveau($niveau);
-        $pourcentageEffectue  = (1 - (Niveau::getXpManquantPourUp($experience) / $experienceNecessaire)) * 100;
+        $experienceNecessaire = Niveau::getXpNiveau ( $niveauSuivant ) - Niveau::getXpNiveau ( $niveau );
+        $pourcentageEffectue  = ( 1 - ( Niveau::getXpManquantPourUp ( $experience ) / $experienceNecessaire ) ) * 100;
 
-        return round($pourcentageEffectue, 2);
+        return round ( $pourcentageEffectue, 2 );
     }
 
     /** Retourne le niveau correspondant à l'experience actuelle
@@ -27,21 +28,21 @@ class Niveau extends DBMapper
      *
      * @return mixed
      */
-    static public function getNiveau($experience)
+    static public function getNiveau ( $experience )
     {
         $requete = "SELECT DISTINCT niveau FROM niveau WHERE experience <= :experience ORDER BY niveau DESC limit 1";
         try {
-            $reponse = self::$database->prepare($requete);
-            $reponse->execute(
-                array(
-                    'experience' => ($experience)
-                ));
-        } catch (PDOException $e) {
-            echo 'Échec lors de la connexion : ' . $e->getMessage();
+            $reponse = self::$database->prepare ( $requete );
+            $reponse->execute (
+                    array (
+                            'experience' => ( $experience )
+                    ) );
+        } catch ( PDOException $e ) {
+            echo 'Échec lors de la connexion : ' . $e->getMessage ();
         }
-        $niveauActuel = $reponse->fetch();
+        $niveauActuel = $reponse->fetch ();
 
-        return $niveauActuel['niveau'];
+        return $niveauActuel[ 'niveau' ];
     }
 
     /** Retourne l'experience necessaire pour le niveau spécifié
@@ -50,35 +51,35 @@ class Niveau extends DBMapper
      *
      * @return mixed
      */
-    static public function getXpNiveau($niveau)
+    static public function getXpNiveau ( $niveau )
     {
         $requete = "SELECT DISTINCT experience FROM niveau WHERE niveau = :niveau";
         try {
-            $reponse = self::$database->prepare($requete);
-            $reponse->execute(
-                array(
-                    'niveau' => ($niveau)
-                ));
-        } catch (PDOException $e) {
-            echo 'Échec lors de la connexion : ' . $e->getMessage();
+            $reponse = self::$database->prepare ( $requete );
+            $reponse->execute (
+                    array (
+                            'niveau' => ( $niveau )
+                    ) );
+        } catch ( PDOException $e ) {
+            echo 'Échec lors de la connexion : ' . $e->getMessage ();
         }
-        $niveauActuel = $reponse->fetch();
+        $niveauActuel = $reponse->fetch ();
 
-        return $niveauActuel['experience'];
+        return $niveauActuel[ 'experience' ];
     }
 
     /** retourne l'experience manquant pour monter le niveau suivant
      *
      * @param $experience
      *
-     * @return mixed
+     * @return int
      */
-    static public function getXpManquantPourUp($experience)
+    static public function getXpManquantPourUp ( $experience )
     {
-        $niveau               = Niveau::getNiveau($experience);
-        $experienceNecessaire = Niveau::getXpNiveau($niveau + 1);
+        $niveau               = Niveau::getNiveau ( $experience );
+        $experienceNecessaire = Niveau::getXpNiveau ( $niveau + 1 );
 
-        return ($experienceNecessaire - $experience);
+        return ( $experienceNecessaire - $experience );
     }
 }
 

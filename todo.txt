@@ -1,0 +1,15 @@
+Mettre à jour correctement le changelog(mettre à jour l'ensemble des classes et méthodes mis à jours)
+
+Corentin:
+	-Item: Architecture Item et quelque exemple de type : Potions, Renforcement( ex :+puissance)
+Jeremy:
+	-Interface graphique
+Sarah:
+	-Interface graphique & elements graphiques
+	-Combat (ajax)
+
+Brahim:
+
+
+NOTES POUR BRAHIM:
+SESSION pour la gestion des combats

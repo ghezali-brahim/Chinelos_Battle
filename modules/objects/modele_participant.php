@@ -1,74 +1,72 @@
 <?php
-if (!defined('TEST_INCLUDE'))
-    die ("Vous n'avez pas accès directement à ce fichier");
-
+if ( !defined ( 'TEST_INCLUDE' ) )
+    die ( "Vous n'avez pas accès directement à ce fichier" );
 require_once MOD_BPATH . DIR_SEP . "../objects/modele_equipe.php";
+
 
 abstract class  Participant extends DBMapper
 {
     protected $_equipes;
 
-    abstract function addPersonnage($personnage);
+    abstract function addPersonnage ( $personnage );
 
-    abstract function getParticipant();
+    abstract function getParticipant ();
 
-    abstract function refresh();
+    abstract function refresh ();
 
-    abstract function attaquerEnnemi($participant, $i);
+    abstract function attaquerEnnemi ( $participant, $i );
 
     /**
      * @param $id_personnage
      *
      * @return Personnage
      */
-    function getPersonnageWithID($id_personnage)
+    function getPersonnageWithID ( $id_personnage )
     {
         $personnage = NULL;
-        foreach ($this->_equipes as $equipe) {
-            if ($equipe->getPersonnage($id_personnage) != NULL) {
-                $personnage = $equipe->getPersonnage($id_personnage);
+        foreach ( $this->_equipes as $equipe ) {
+            if ( $equipe->getPersonnage ( $id_personnage ) != NULL ) {
+                $personnage = $equipe->getPersonnage ( $id_personnage );
             }
         }
 
         return $personnage;
-
     }
 
     /**
      * @return array(Equipes)
      */
-    function getEquipes()
+    function getEquipes ()
     {
         return $this->_equipes;
     }
 
-    function getNiveauTotalParticipant()
+    function getNiveauTotalParticipant ()
     {
-        return $this->getEquipeOne()->getNiveauTotalPersos();
+        return $this->getEquipeOne ()->getNiveauTotalPersos ();
     }
 
     /**
      * @return Equipe 0
      */
-    function getEquipeOne()
+    function getEquipeOne ()
     {
-        return $this->_equipes[0];
+        return $this->_equipes[ 0 ];
     }
 
     /** Ici on retire les morts de l'equipe, ensuite on trie l'equipe principal
      *
      */
-    function virerMortEquipeOne()
+    function virerMortEquipeOne ()
     {
-
-        $listePersonnageATransferer = array();
-        foreach ($this->_equipes[0]->getPersonnages() as $personnage) {
-            if ($personnage->isDead()) {
-                array_push($listePersonnageATransferer, $personnage);
+        $listePersonnageATransferer = array ();
+        foreach ( $this->_equipes[ 0 ]->getPersonnages () as $personnage ) {
+            if ( $personnage->isDead () ) {
+                array_push ( $listePersonnageATransferer, $personnage );
             }
         }
-        foreach ($listePersonnageATransferer as $personnage) {
-            $this->transferer($personnage);
+        foreach ( $listePersonnageATransferer as $personnage ) {
+            $this->transferer ( $personnage );
         }
     }
 
@@ -78,43 +76,43 @@ abstract class  Participant extends DBMapper
      *
      * @throws Exception
      */
-    function transferer($personnage)
+    function transferer ( $personnage )
     {
-        if ($personnage == NULL) {
-            throw new Exception('personnage inconnu');
+        if ( $personnage == NULL ) {
+            throw new Exception( 'personnage inconnu' );
         }
-        if ($personnage->getIdEquipe() == $this->_equipes[0]->getIdEquipe()) {
-            $this->_equipes[0]->removePersonnage($personnage);
-            $this->_equipes[1]->addPersonnage($personnage);
-        }
-        else if ($personnage->getIdEquipe() == $this->_equipes[1]->getIdEquipe()) {
-            if ($this->getEquipeOne()->getNombrePersonnages() < 6) {
-                $this->_equipes[1]->removePersonnage($personnage);
-                $this->_equipes[0]->addPersonnage($personnage);
+        if ( $personnage->getIdEquipe () == $this->_equipes[ 0 ]->getIdEquipe () ) {
+            $this->_equipes[ 0 ]->removePersonnage ( $personnage );
+            $this->_equipes[ 1 ]->addPersonnage ( $personnage );
+        } else if ( $personnage->getIdEquipe () == $this->_equipes[ 1 ]->getIdEquipe () ) {
+            if ( $this->getEquipeOne ()->getNombrePersonnages () < 6 ) {
+                $this->_equipes[ 1 ]->removePersonnage ( $personnage );
+                $this->_equipes[ 0 ]->addPersonnage ( $personnage );
+            } else {
+                throw new Exception( "Impossible de transferer le personnage car l'equipe principal est déja remplit (6personnage)." );
             }
-            else {
-                throw new Exception("Impossible de transferer le personnage car l'equipe principal est déja remplit (6personnage).");
-            }
-
+        } else {
+            throw new Exception( 'transfert impossible' );
         }
-        else {
-            throw new Exception('transfert impossible');
-        }
-
     }
 
-    function trierEquipeOne()
+    function trierEquipeOne ()
     {
-        $this->_equipes[0]->trierPersonnageParNiveau();
+        $this->_equipes[ 0 ]->trierPersonnageParNiveau ();
     }
 
     /**
      * @return string
      */
-    function __toString()
+    function __toString ()
     {
-        return "; " . $this->_equipes[0]->__toString();
+        return "; " . $this->_equipes[ 0 ]->__toString ();
     }
 
+    // 29/11/2014
+    function soignerEquipeOne ()
+    {
+        $this->getEquipeOne ()->soignerEquipe ();
+    }
 }
 

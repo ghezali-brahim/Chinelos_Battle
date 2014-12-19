@@ -1,6 +1,6 @@
 <?php
-if (!defined('TEST_INCLUDE'))
-    die ("Vous n'avez pas accès directement à ce fichier");
+if ( !defined ( 'TEST_INCLUDE' ) )
+    die ( "Vous n'avez pas accès directement à ce fichier" );
 /*
 //importation modele
 require_once MOD_BPATH . "modele" . DIR_SEP . "modele_attaque.php";
@@ -16,46 +16,48 @@ require_once "modules/include_objects.php";
 //importation vue
 require_once MOD_BPATH . DIR_SEP . "vue/vue_profil.php";
 
+
 class ModJoueurControleurJoueur
 {
+    protected $_joueur;
 
-    public function accueilModule()
+    function __construct ()
     {
-        ModJoueurVueJoueur::affAccueilModule();
-    }
-
-    public function afficher()
-    {
-        if (!isset($joueur)) {
-            $joueur = new Joueur();
+        if ( Joueur::connectee () ) {
+            if ( !isset( $_SESSION[ 'joueur' ] ) ) {
+                $_SESSION[ 'joueur' ] = serialize ( new Joueur() );
+            }
         }
-        ModJoueurVueJoueur::afficherJoueur($joueur->getParticipant());
+        $this->_joueur = unserialize ( $_SESSION[ 'joueur' ] );
     }
 
-    public function afficherEquipeOne()
+    public function accueilModule ()
     {
-        if (!isset($joueur)) {
-            $joueur = new Joueur();
-        }
-        ModJoueurVueJoueur::afficherEquipeOne($joueur->getEquipeOne());
+        ModJoueurVueJoueur::affAccueilModule ();
     }
 
-    public function transferer()
+    public function afficher ()
     {
-        $joueur = new Joueur();
-        if (isset($_GET['id_personnage'])) {
-            $id_personnage = $_GET['id_personnage'];
-            $personnage    = $joueur->getPersonnageWithID($id_personnage);
-            $joueur->transferer($personnage);
-            header("Refresh: 0;URL=index.php?module=joueur&action=transferer");
+        ModJoueurVueJoueur::afficherJoueur ( $this->_joueur->getParticipant () );
+    }
+
+    public function afficherEquipeOne ()
+    {
+        ModJoueurVueJoueur::afficherEquipeOne ( $this->_joueur->getEquipeOne () );
+    }
+
+    public function transferer ()
+    {
+        if ( isset( $_GET[ 'id_personnage' ] ) ) {
+            $id_personnage = $_GET[ 'id_personnage' ];
+            $personnage    = $this->_joueur->getPersonnageWithID ( $id_personnage );
+            $this->_joueur->transferer ( $personnage );
+            $_SESSION[ 'joueur' ] = serialize ( $this->_joueur );
+            header ( "Refresh: 0;URL=index.php?module=joueur&action=transferer" );
             //echo '<a href="index.php?module=joueur&action=afficher">Rafraichir</a>';
+        } else {
+            ModJoueurVueJoueur::afficherTransfert ( $this->_joueur->getParticipant () );
         }
-        else {
-            ModJoueurVueJoueur::afficherTransfert($joueur->getParticipant());
-        }
-
     }
-
-
 }
 

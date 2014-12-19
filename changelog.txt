@@ -1,3 +1,20 @@
 17/11/2014 :
 	-Release 1.2
 	Modification complete de la structure
+18/11/2014 :
+Creation d'équipe automatique si non existant
+
+22/11/2014:
+		Brahim :
+			-Modification et mise à jour complète de la classe Personnage
+			-Modification partielle de de la classe Equipe
+			-Debut du changement complet de la classe Combat
+			Il faut utiliser cette nouvelle version pour être à jour, j'ai fait pleins de modif un peu partout
+			
+30/11/2014:
+		Brahim :
+			-Mise en place d'un système de log sur la classe Personnage.
+			-Mise à jour dans les modules combat, boutique et profil.
+			-Mise en place d'un nouveau script sql pour la BD
+			-Mise en place du système de SESSION, il n'y a plus de requete inutile lors des changements de page.
+			-Release 1.3

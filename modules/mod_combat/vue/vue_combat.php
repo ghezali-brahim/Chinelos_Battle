@@ -1,6 +1,6 @@
 <?php
-if (!defined('TEST_INCLUDE'))
-    die ("Vous n'avez pas accès directement à ce fichier");
+if ( !defined ( 'TEST_INCLUDE' ) )
+    die ( "Vous n'avez pas accès directement à ce fichier" );
 
 
 class ModCombatVueCombat
@@ -8,7 +8,7 @@ class ModCombatVueCombat
     /**
      * Affiche la page d'accueil du module
      **/
-    static function affAccueilModule()
+    static function affAccueilModule ()
     {
         echo "ACCUEIL:";
         echo '<a href="index.php?module=combat&action=afficher">Afficher</a> <br>';
@@ -16,21 +16,21 @@ class ModCombatVueCombat
         echo '<a href="index.php?module=combat&action=Combat">Combat</a> <br>';
     }
 
-    static function afficherCombat($combat)
+    static function afficherCombat ( $combat )
     {
-        $combat->afficher();
+        $combat->afficher ();
     }
 
-    static function afficherEquipe($equipe)
+    static function afficherEquipe ( $equipe )
     {
-        self::afficherPersonnages($equipe->getPersonnages());
+        self::afficherPersonnages ( $equipe->getPersonnages () );
     }
 
     /** Affiche une liste de personnages
      *
      * @param $personnages
      */
-    static function afficherPersonnages($personnages)
+    static function afficherPersonnages ( $personnages )
     {
         echo ' <table border="1" id="tableau">
 	<tr>
@@ -46,44 +46,40 @@ class ModCombatVueCombat
         <th> Defense </th>
         <th> ID Equipe </th>
 	</tr>';
-
-        foreach ($personnages as $value) {
-
-            $persoX = $value->getPersonnage();
+        foreach ( $personnages as $value ) {
+            $persoX = $value->getPersonnage ();
             echo "<tr>\n";
-            echo "<td>" . $persoX['id_personnage'] . "</td>";
-            echo "<td>" . $persoX['nom'] . "</td>\n";
-            echo "<td>" . $persoX['element'] . "</td>\n";
-            echo "<td>" . $persoX['niveau'] . "</td>\n";
-            echo "<td>" . $persoX['experience'] . "</td>\n";
-            echo "<td>" . $value->getIdAttaques() . "</td>\n";
-            echo "<td>" . $persoX['hp'] . "</td>\n";
-            echo "<td>" . $persoX['mp'] . "</td>\n";
-            echo "<td>" . $persoX['puissance'] . "</td>\n";
-            echo "<td>" . $persoX['defense'] . "</td>\n";
-            echo "<td>" . $persoX['id_equipe'] . "</td>\n";
+            echo "<td>" . $persoX[ 'id_personnage' ] . "</td>";
+            echo "<td>" . $persoX[ 'nom' ] . "</td>\n";
+            echo "<td>" . $persoX[ 'element' ] . "</td>\n";
+            echo "<td>" . $persoX[ 'niveau' ] . "</td>\n";
+            echo "<td>" . $persoX[ 'experience' ] . "</td>\n";
+            echo "<td>" . $value->getIdAttaques () . "</td>\n";
+            echo "<td>" . $persoX[ 'hp' ] . "</td>\n";
+            echo "<td>" . $persoX[ 'mp' ] . "</td>\n";
+            echo "<td>" . $persoX[ 'puissance' ] . "</td>\n";
+            echo "<td>" . $persoX[ 'defense' ] . "</td>\n";
+            echo "<td>" . $persoX[ 'id_equipe' ] . "</td>\n";
             echo "</tr>";
         }
-
         echo "</table>";
     }
 
-    static function afficherListeCombat($listeEnemies)
+    static function afficherListeCombat ( $listeEnemies )
     {
-        foreach ($listeEnemies as $joueur_IA) {
+        foreach ( $listeEnemies as $joueur_IA ) {
             //self::afficherEquipe($joueur_IA->getEquipeOne());
-            echo $joueur_IA->getEquipeOne()->__toString();
+            echo $joueur_IA->getEquipeOne ()->__toString ();
             echo '<br>_____________________________________________________<br>';
         }
     }
 
-    static function afficherTourCombat($combat)
+    static function afficherTourCombat ( $combat )
     {
-
         echo "<br>\n Tour " . $combat->tour . " :";
-        $combat->afficher();
-        $combat->unTour();
-        $combat->afficher();
+        $combat->afficher ();
+        $combat->unTour ();
+        $combat->afficher ();
     }
 }
 

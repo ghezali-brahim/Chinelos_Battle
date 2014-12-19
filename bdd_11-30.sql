@@ -1,6 +1,27 @@
-<?php
+-- phpMyAdmin SQL Dump
+-- version 4.2.7.1
+-- http://www.phpmyadmin.net
+--
+-- Client :  127.0.0.1
+-- Généré le :  Dim 30 Novembre 2014 à 20:26
+-- Version du serveur :  5.6.20
+-- Version de PHP :  5.5.15
 
-$reqTableUsers = "
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Base de données :  `test`
+--
+
+-- --------------------------------------------------------
+
 --
 -- Structure de la table `attaque`
 --
@@ -55,6 +76,14 @@ CREATE TABLE IF NOT EXISTS `equipe` (
   `id_user` int(11) NOT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
+--
+-- Contenu de la table `equipe`
+--
+
+INSERT INTO `equipe` (`id_equipe`, `id_user`) VALUES
+(1, 1),
+(2, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -70,6 +99,13 @@ CREATE TABLE IF NOT EXISTS `item` (
   `actions` varchar(64) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Contenu de la table `item`
+--
+
+INSERT INTO `item` (`id_item`, `nom`, `description`, `prix_achat`, `item_type`, `actions`) VALUES
+(1, 'Potion HP', 'permet de monter ses pvs', 1, 1, ''),
+(2, 'Potion MP', 'permet de modifier ses points de mp', 1, 1, '');
 
 -- --------------------------------------------------------
 
@@ -121,6 +157,13 @@ CREATE TABLE IF NOT EXISTS `personnage` (
   `id_equipe` int(11) DEFAULT NULL
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=26 ;
 
+--
+-- Contenu de la table `personnage`
+--
+
+INSERT INTO `personnage` (`id_personnage`, `nom`, `element`, `niveau`, `experience`, `attaques`, `hp`, `hp_max`, `mp`, `mp_max`, `puissance`, `defense`, `id_equipe`) VALUES
+(1, 'Caporal', 3, 9, 2060, '1;2;3', 140, 160, 55, 55, 30, 9, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -135,6 +178,17 @@ CREATE TABLE IF NOT EXISTS `users` (
   `argent` int(11) DEFAULT NULL,
   `id_equipe` int(11) DEFAULT NULL
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+
+--
+-- Contenu de la table `users`
+--
+
+INSERT INTO `users` (`id_user`, `username`, `password`, `email`, `argent`, `id_equipe`) VALUES
+(1, 'admin', '9cf95dacd226dcf43da376cdb6cbba7035218921', 'admin@admin.com', 326, 0),
+(2, 'brahim', '9cf95dacd226dcf43da376cdb6cbba7035218921', 'azerty@hotmail.fr', 100, 0),
+(3, 'lolilol', 'c0cd4f939a5d41f3c89aa5b74e92d2b64ab6a2b0', 'azertylol@hotmail.fr', 10, 0),
+(4, 'blabla', 'bb21158c733229347bd4e681891e213d94c685be', 'blabla@free.fr', 10, 0),
+(5, 'freezing', '9cf95dacd226dcf43da376cdb6cbba7035218921', 'freezing@free.fr', 10, 0);
 
 --
 -- Index pour les tables exportées
@@ -204,6 +258,3 @@ MODIFY `id_user` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-";
-$connexion->query ( $reqTableUsers );
-
