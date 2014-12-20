@@ -39,13 +39,13 @@ class Boutique extends DBMapper
     public function acheterSoin ()
     {
         try {
-            $this->_joueur->depenser ( 2 );
+            $this->_joueur->depenser ( 1 );
             try {
                 $this->_joueur->soignerEquipeOne ();
             } catch ( Exception $e ) {
                 echo $e;
                 //on recredite l'argent car il y a eu une erreur
-                $this->_joueur->ajouterArgent ( 2 );
+                $this->_joueur->ajouterArgent ( 1 );
             }
         } catch ( Exception $e ) {
             echo $e;

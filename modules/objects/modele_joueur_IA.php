@@ -27,7 +27,8 @@ class Joueur_IA extends Participant
         // TODO: Implement refresh() method.
     }
 
-    /** Appel la fonction mère pour l'affichage de la liste des personnages
+    /**
+     * Appel la fonction mère pour l'affichage de la liste des personnages
      * @return mixed|string
      */
     function __toString ()
@@ -43,7 +44,8 @@ class Joueur_IA extends Participant
         );
     }
 
-    /** Ajoute le personnage chez le participant
+    /**
+     * Ajoute le personnage chez le participant
      *
      * @param $personnage
      *
@@ -57,7 +59,7 @@ class Joueur_IA extends Participant
             throw new Exception( 'Exception, ajout du personnage impossible car personnage null' );
         }
     }
-
+    //TODO A mettre à jour
     function attaquerEnnemi ( $participant, $i )
     {
         try {

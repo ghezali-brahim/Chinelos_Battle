@@ -12,7 +12,8 @@ class Element extends DBMapper
 
     private static $dossierIcone = "img/element/";
 
-    /** Retourne le lien vers l'image correspondant à l'élement
+    /**
+     * Retourne le lien vers l'image correspondant à l'élement
      * en chaine de caractère
      *
      * @param $id_element
@@ -24,7 +25,8 @@ class Element extends DBMapper
         return self::$dossierIcone . $id_element . ".png";
     }
 
-    /** Retourne l'ensemble du contenu de l'élement dont l'id_element a été renseigné
+    /**
+     * Retourne l'ensemble du contenu de l'élement dont l'id_element a été renseigné
      *
      * @param $id_element
      *
@@ -36,7 +38,8 @@ class Element extends DBMapper
         return Element::selectFromBD ( $id_element, "SELECT * FROM element WHERE id_element = :id_element" )[ 0 ];
     }
 
-    /** Envoie une requete vers la base de donnée et retourne le résultat
+    /**
+     * Envoie une requete vers la base de donnée et retourne le résultat
      *
      * @param        $id_element
      * @param string $requete
@@ -60,11 +63,25 @@ class Element extends DBMapper
         if ( $contenuElement == NULL ) {
             throw new Exception( "L'identifiant element :" . $id_element . " est un element inconnu." );
         }
-
+        //TODO je suis persuadé qu'il y a un probleme => go voir les logs
+        if ( static::$db_debug ) {
+            $i     = 0;
+            $infos = "";
+            foreach ( $contenuElement[0] as $info ) {
+                if ( $i == 0 ) {
+                    $infos = $info;
+                } else {
+                    $infos .= "|" . $info;
+                }
+                $i++;
+            }
+            static::log ( $requete . " : \t $infos", "requete_".get_called_class() );
+        }
         return $contenuElement;
     }
 
-    /** Retourne le nom de l'élement dont l'id_element a été renseigné
+    /**
+     * Retourne le nom de l'élement dont l'id_element a été renseigné
      *
      * @param $id_element
      *
@@ -76,7 +93,8 @@ class Element extends DBMapper
         return Element::selectFromBD ( $id_element, "SELECT nom FROM element WHERE id_element = :id_element" )[ 0 ][ 'nom' ];
     }
 
-    /** Retourne un ratio de degat d'un élément sur un autre en fonction de l'id_element
+    /**
+     * Retourne un ratio de degat d'un élément sur un autre en fonction de l'id_element
      * SI Fort contre alors :   1.5
      * SI Faible contre alors : 0.5
      * Sinon                  : 1.0
@@ -99,7 +117,8 @@ class Element extends DBMapper
         return $ratio;
     }
 
-    /** Retourne sous forme de liste d'entier la liste des id_element contre lequels l'id_element spécifié est fort
+    /**
+     * Retourne sous forme de liste d'entier la liste des id_element contre lequels l'id_element spécifié est fort
      *
      * @param $id_element
      *
@@ -113,7 +132,8 @@ class Element extends DBMapper
         return explode ( ";", $id_fort_contre_String );
     }
 
-    /** Retourne sous forme de liste d'entier la liste des id_element contre lequels l'id_element spécifié est faible
+    /**
+     * Retourne sous forme de liste d'entier la liste des id_element contre lequels l'id_element spécifié est faible
      *
      * @param $id_element
      *

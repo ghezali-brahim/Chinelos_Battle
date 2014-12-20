@@ -1,3 +1,7 @@
 30/11/2014 : 
 			Il y a une erreur lors de la modification de la base de données, les données sur le site ne sont plus à jour, du coup il faut deco/reco.
 				Idée: mettre un temps de rafraichissement dessorte que le site se syncronise avec la BD. (ex: 10s, on récupère données BD et on rafraichit le joueur(= on le recréer)
+				
+				
+20/12/2014 :
+			Warning: Cannot modify header information - headers already sent by (output started at /home/users/00/31/1e/home/www/include/body.php:35) in /home/users/00/31/1e/home/www/modules/mod_boutique/controleur/controleur_boutique.php on line 60

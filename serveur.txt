@@ -1,0 +1,40 @@
+Votre site
++--------------------------------------------------------------------------------
+
+Pour accéder à votre site, il se trouve à l'adresse suivante:
+http://chinelos-battle.lescigales.org 
+
++--------------------------------------------------------------------------------
+| Votre premier compte FTP vers votre site
++--------------------------------------------------------------------------------
+
+Pour changer les pages de votre site, vous devez utiliser un client FTP et 
+'uploader' vos fichiers en vous connectant à l'adresse suivante:
+
+Serveur FTP: ftp.lescigales.org
+Port: 21
+Adresse: ftp://lm4_ftp@ftp.lescigales.org
+
+Vos identifiants pour le compte FTP sont les suivants:
+
+Utilisateur: lm4_ftp 
+Mot de passe: een9toox 
+
+Vous pouvez créer d'autres comptes FTP à partir du control panel et il est à
+noter qu'effacer un compte FTP ne détruit pas vos fichiers, aucune crainte
+à avoir donc :)
+
++--------------------------------------------------------------------------------
+| Votre compte MySQL ainsi que votre première base de données !
++--------------------------------------------------------------------------------
+
+Nous vous avons également créé un compte MySQL et une base de données que vous
+pouvez utiliser dès à présent !
+
+Utilisateur: lm4_mysql 
+Mot de passe: uox7ak4f 
+Hôte de connexion: localhost
+Nom de la base: lm4_mysql 
+
+Vous pouvez gérer vos données en ligne grâce à l'excellent phpMyAdmin:
+http://sql.lescigales.org/

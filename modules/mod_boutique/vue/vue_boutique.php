@@ -18,7 +18,7 @@ class ModBoutiqueVueBoutique
 
     static function acheterPersonnage ()
     {		
-		echo "<div class='aventurierFloat'><a href='index.php?module=boutique&action=acheter&value=personnage'><img class='aventurier' src='include/images/aventurier.jpg'></img></br>
+		echo "<div class='aventurierFloat'><a href='index.php?module=boutique&action=acheter&value=personnage'><img class='aventurier' src='include/images/aventurier.jpg'/></br>
 		<span>Acheter un personnage</span></a></div>";
     }
 
@@ -31,7 +31,7 @@ class ModBoutiqueVueBoutique
 
     static function acheterSoin ()
     {
-		echo "<div class='divInfirmiere'><a href='index.php?module=boutique&action=acheter&value=soin'><img class='infirmiere' src='include/images/infirmiere.png'></img></br>
+		echo "<div class='divInfirmiere'><a href='index.php?module=boutique&action=acheter&value=soin'><img class='infirmiere' src='include/images/infirmiere.png'/></br>
 		<span>Soigner son Equipe</span></a></div>";
     }
 

@@ -56,7 +56,7 @@ class ModBoutiqueControleurBoutique
             }
             if ( $_GET[ 'value' ] == "soin" ) {
                 $this->_boutique->acheterSoin ();
-                echo 'vous avez soigner tous vos personnage pour 2 gils';
+                echo 'vous avez soigner tous vos personnage pour 1 gils';
                 header ( "Refresh: 1;URL=index.php?module=boutique&action=acheter" );
             }
         } else {

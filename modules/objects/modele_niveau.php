@@ -6,7 +6,8 @@ if ( !defined ( 'TEST_INCLUDE' ) )
 class Niveau extends DBMapper
 {
 
-    /** Retourne le pourcentage d'experience réalisé pour monter au niveau suivant
+    /**
+     * etourne le pourcentage d'experience réalisé pour monter au niveau suivant
      *
      * @param $experience
      *
@@ -22,7 +23,8 @@ class Niveau extends DBMapper
         return round ( $pourcentageEffectue, 2 );
     }
 
-    /** Retourne le niveau correspondant à l'experience actuelle
+    /**
+     * Retourne le niveau correspondant à l'experience actuelle
      *
      * @param $experience
      *
@@ -30,22 +32,15 @@ class Niveau extends DBMapper
      */
     static public function getNiveau ( $experience )
     {
-        $requete = "SELECT DISTINCT niveau FROM niveau WHERE experience <= :experience ORDER BY niveau DESC limit 1";
-        try {
-            $reponse = self::$database->prepare ( $requete );
-            $reponse->execute (
-                    array (
-                            'experience' => ( $experience )
-                    ) );
-        } catch ( PDOException $e ) {
-            echo 'Échec lors de la connexion : ' . $e->getMessage ();
-        }
-        $niveauActuel = $reponse->fetch ();
+        $niveauActuel = static::requeteFromDB ( "SELECT DISTINCT niveau FROM niveau WHERE experience <= :experience ORDER BY niveau DESC limit 1", array (
+                'experience' => ( $experience )
+        ) )[ 0 ];
 
         return $niveauActuel[ 'niveau' ];
     }
 
-    /** Retourne l'experience necessaire pour le niveau spécifié
+    /**
+     * Retourne l'experience necessaire pour le niveau spécifié
      *
      * @param $niveau
      *
@@ -53,22 +48,15 @@ class Niveau extends DBMapper
      */
     static public function getXpNiveau ( $niveau )
     {
-        $requete = "SELECT DISTINCT experience FROM niveau WHERE niveau = :niveau";
-        try {
-            $reponse = self::$database->prepare ( $requete );
-            $reponse->execute (
-                    array (
-                            'niveau' => ( $niveau )
-                    ) );
-        } catch ( PDOException $e ) {
-            echo 'Échec lors de la connexion : ' . $e->getMessage ();
-        }
-        $niveauActuel = $reponse->fetch ();
+        $niveauActuel = static::requeteFromDB ( "SELECT DISTINCT experience FROM niveau WHERE niveau = :niveau", array (
+                'niveau' => ( $niveau )
+        ) )[ 0 ];
 
         return $niveauActuel[ 'experience' ];
     }
 
-    /** retourne l'experience manquant pour monter le niveau suivant
+    /**
+     * Retourne l'experience manquant pour monter le niveau suivant
      *
      * @param $experience
      *

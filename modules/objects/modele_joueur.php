@@ -10,6 +10,7 @@ class Joueur extends Participant
     protected $_id_user;
     protected $_username;
     protected $_argent;
+    public $_date_derniere_refresh;
 
     /**
      * On créer un Joueur à partir de la base de données; On verifie d'abbord si le joueur est connecté.
@@ -17,50 +18,27 @@ class Joueur extends Participant
     function __construct ()
     {
         if ( self::connectee () ) {
-            $requete = "SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user";
-            try {
-                $reponse = self::$database->prepare ( $requete );
-                $reponse->execute (
-                        array (
-                                'username' => $_SESSION [ 'username' ],
-                                'id_user'  => $_SESSION [ 'id_user' ]
-                        ) );
-            } catch ( PDOException $e ) {
-                echo 'Échec lors de la connexion : ' . $e->getMessage ();
-            }
+            $resultat=static::requeteFromDB("SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user",array (
+                    'username' => $_SESSION [ 'username' ],
+                    'id_user'  => $_SESSION [ 'id_user' ]
+            ))[0];
             //Recuperation infos du joueur
-            $resultat        = $reponse->fetch ();
             $this->_id_user  = $resultat[ 'id_user' ];
             $this->_username = $resultat[ 'username' ];
             $this->_argent   = $resultat[ 'argent' ];
+
             // Recuperation de la liste des équipes
-            $requete = "SELECT id_equipe FROM equipe WHERE id_user = :id_user";
-            try {
-                $reponse = self::$database->prepare ( $requete );
-                $reponse->execute (
-                        array (
-                                'id_user' => $_SESSION [ 'id_user' ]
-                        ) );
-            } catch ( PDOException $e ) {
-                echo 'Echec lors de la connexion : ' . $e->getMessage ();
-            }
-            $listeEquipes   = $reponse->fetchall ();
+            $listeEquipes=static::requeteFromDB("SELECT id_equipe FROM equipe WHERE id_user = :id_user",array (
+                    'id_user' => $_SESSION [ 'id_user' ]
+            ));
             $this->_equipes = array ();
+            // SI le compte n'a pas deux equipes, alors on lui créer les deux equipes
             if ( count ( $listeEquipes ) == 0 ) {
                 Equipe::createTwoEquipeForBD ( $this->_id_user );
                 // Recuperation de la liste des équipes
-                $requete = "SELECT id_equipe FROM equipe WHERE id_user = :id_user";
-                try {
-                    $reponse = self::$database->prepare ( $requete );
-                    $reponse->execute (
-                            array (
-                                    'id_user' => $_SESSION [ 'id_user' ]
-                            ) );
-                } catch ( PDOException $e ) {
-                    echo 'Echec lors de la connexion : ' . $e->getMessage ();
-                }
-                $listeEquipes   = $reponse->fetchall ();
-                $this->_equipes = array ();
+                $listeEquipes=static::requeteFromDB("SELECT id_equipe FROM equipe WHERE id_user = :id_user",array (
+                        'id_user' => $_SESSION [ 'id_user' ]
+                ));
             }
             foreach ( $listeEquipes as $id_equipe ) {
                 $equipe = Equipe::createEquipeFromBD ( $id_equipe[ 'id_equipe' ] );
@@ -69,6 +47,7 @@ class Joueur extends Participant
         } else {
             die( 'vous n\'etes pas connecté' );
         }
+        $_date_derniere_refresh=time();
     }
 
 
@@ -78,21 +57,14 @@ class Joueur extends Participant
         //Verification de la connexion
         if ( isset( $_SESSION[ 'username' ] ) && isset( $_SESSION[ 'id_user' ] ) ) {
             if ( $_SESSION[ 'username' ] != NULL && $_SESSION[ 'id_user' ] != NULL ) {
-                $requete = "SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user";
-                try {
-                    $reponse = self::$database->prepare ( $requete );
-                    $reponse->execute (
-                            array (
-                                    'username' => $_SESSION [ 'username' ],
-                                    'id_user'  => $_SESSION [ 'id_user' ]
-                            ) );
-                } catch ( PDOException $e ) {
-                    echo 'Échec lors de la connexion : ' . $e->getMessage ();
-                }
+
+                $resultat=static::requeteFromDB("SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user",array (
+                                'username' => $_SESSION [ 'username' ],
+                                'id_user'  => $_SESSION [ 'id_user' ]));
                 // Verifie la validité des valeurs de sessions
                 // Si les valeurs de sessions n'existe pas dans la bdd; alors erreur
-                if ( $reponse->rowCount () > 0 ) {
-                    $connectee = TRUE;
+                if(count($resultat) > 0){
+                    $connectee= TRUE;
                 }
                 // FIN verification connexion
             }
@@ -101,7 +73,8 @@ class Joueur extends Participant
         return $connectee;
     }
 
-    /** Ajoute un personnage au joueur courant
+    /**
+     * Ajoute un personnage au joueur courant
      * Verifie si le personnage n'appartient pas déja au joueur
      * Modifie l'id equipe du personnage pour mettre celui du joueur courant
      *
@@ -122,15 +95,44 @@ class Joueur extends Participant
         }
     }
 
-    /** Rafraichit le joueur depuis la bdd
-     *
+    /**
+     * Rafraichit le joueur depuis la bdd
+     * Toutes les 2 minutes
      */
     function refresh ()
     {
-        // TODO: Implement refresh() method.
+        $now=time();
+        $date_diff=$this->dateDiff($now, $this->_date_derniere_refresh);
+        if($date_diff['minute'] > 2){
+            $donneesJoueur=static::requeteFromDB("select argent from users where id_user=:id_user",array('id_user' => $this->_id_user))[0];
+            $this->_argent=$donneesJoueur['argent'];
+            foreach($this->_equipes as $equipe){
+                $equipe->refresh();
+            }
+            $this->_date_derniere_refresh=time();
+        }else{
+        }
     }
+    function dateDiff($date1, $date2){
+        $diff = abs($date1 - $date2); // abs pour avoir la valeur absolute, ainsi éviter d'avoir une différence négative
+        $retour = array();
 
-    /** Appel la fonction mère pour l'affichage de la liste des personnages
+        $tmp = $diff;
+        $retour['second'] = $tmp % 60;
+
+        $tmp = floor( ($tmp - $retour['second']) /60 );
+        $retour['minute'] = $tmp % 60;
+
+        $tmp = floor( ($tmp - $retour['minute'])/60 );
+        $retour['hour'] = $tmp % 24;
+
+        $tmp = floor( ($tmp - $retour['hour'])  /24 );
+        $retour['day'] = $tmp;
+
+        return $retour;
+    }
+    /**
+     * Appel la fonction mère pour l'affichage de la liste des personnages
      * @return mixed|string
      */
     function __toString ()
@@ -196,6 +198,7 @@ class Joueur extends Participant
         $this->getEquipeOne ()->ajouterPourcentExperience ( $pourcentXP );
     }
 
+    //TODO a mettre à jour
     function attaquerEnnemi ( $participant, $i )
     {
         try {
@@ -215,6 +218,7 @@ class Joueur extends Participant
         } catch ( Exception $e ) {
             print_r ( $e );
         }
+        $this->refresh();
     }
 
     function getArgent ()

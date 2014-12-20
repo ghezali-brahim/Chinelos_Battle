@@ -41,6 +41,10 @@ abstract class  Participant extends DBMapper
         return $this->_equipes;
     }
 
+    /**
+     * Retourne le niveau total de l'equipe one du participant
+     * @return int
+     */
     function getNiveauTotalParticipant ()
     {
         return $this->getEquipeOne ()->getNiveauTotalPersos ();
@@ -54,8 +58,8 @@ abstract class  Participant extends DBMapper
         return $this->_equipes[ 0 ];
     }
 
-    /** Ici on retire les morts de l'equipe, ensuite on trie l'equipe principal
-     *
+    /**
+     * Ici on retire les morts de l'equipe, ensuite on trie l'equipe principal
      */
     function virerMortEquipeOne ()
     {
@@ -70,7 +74,8 @@ abstract class  Participant extends DBMapper
         }
     }
 
-    /** Modifie l'equipe du personnage spécifié du participant
+    /**
+     * Modifie l'equipe du personnage spécifié du participant
      *
      * @param $personnage
      *
@@ -109,7 +114,9 @@ abstract class  Participant extends DBMapper
         return "; " . $this->_equipes[ 0 ]->__toString ();
     }
 
-    // 29/11/2014
+    /**
+     * Soigne l'equipe One du participant
+     */
     function soignerEquipeOne ()
     {
         $this->getEquipeOne ()->soignerEquipe ();
