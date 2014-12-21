@@ -59,12 +59,12 @@ class Combat extends DBMapper
         if ( count ( $this->getEquipe1Vivant () ) == 0 ) {
             $gagnant = $this->_participant1;
         } else if ( count ( $this->getEquipe2Vivant () ) == 0 ) {
-            $gangnant = $this->_participant2;
+            $gagnant = $this->_participant2;
         } else {
             throw new Exception( "Impossible de récompenser alors qu'il n'y a pas de gagnant" );
         }
         // si lvl total inférieur à celui de l'enemi alors + de bonus
-        if ( $gagnant->getNiveauTotalParticipant () > $this->_participant_1->getNiveauTotalParticipant () || $gagnant->getNiveauTotalParticipant () > $this->_participant_2->getNiveauTotalParticipant () ) {
+        if ( $gagnant->getNiveauTotalParticipant () > $this->_participant1->getNiveauTotalParticipant () || $gagnant->getNiveauTotalParticipant () > $this->_participant2->getNiveauTotalParticipant () ) {
             //ICI recompense sous la forme (argent, %xp)
             $recompense_gagnant = array (
                     'argent'     => 10,

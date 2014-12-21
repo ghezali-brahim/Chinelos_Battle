@@ -2,6 +2,7 @@
 if ( !defined ( 'TEST_INCLUDE' ) )
     die ( "Vous n'avez pas accès directement à ce fichier" );
 
+
 //TODO Transformer la structure d'attaque et la mettre comme element == evite les requetes inutiles car attaque communs à tout le monde
 class Attaque extends DBMapper
 {
@@ -13,6 +14,7 @@ class Attaque extends DBMapper
     //protected $_element; // A voir
     /**
      * Constructeur
+     *
      * @param $id_attaque
      *
      * @throws Exception
@@ -20,10 +22,10 @@ class Attaque extends DBMapper
     function __construct ( $id_attaque )
     {
         //ICI on récupère les informations de l'attaque
-        $resultat=static::requeteFromDB("SELECT * FROM attaque WHERE id_attaque = :id_attaque", array (
+        $resultat        = static::requeteFromDB ( "SELECT * FROM attaque WHERE id_attaque = :id_attaque", array (
                 'id_attaque' => $id_attaque
         ) );
-        $attaqueElements = $resultat[0];
+        $attaqueElements = $resultat[ 0 ];
         if ( $attaqueElements == NULL ) {
             throw new Exception( "L'identifiant element :" . $id_attaque . " est une attaque inconnu." );
         }
@@ -34,6 +36,18 @@ class Attaque extends DBMapper
         if ( self::$db_debug ) {
             static::log ( "Construction " . __CLASS__ . " : " . $this->__toString () );
         }
+    }
+
+    /**
+     * Affichage de l'attaque en string
+     * Sous la forme :
+     *  "NOM: ID=5; Degats : 10% ; cout : 3MP"
+     *
+     * @return string
+     */
+    function __toString ()
+    {
+        return $this->_nom . ': ID=' . $this->_id_attaque . '; Degats : ' . $this->_degats . '% ; cout : ' . $this->_mp_used . 'MP';
     }
 
     /**
@@ -54,12 +68,13 @@ class Attaque extends DBMapper
                     'mp_used' => 3 ) )// Si aucun parametre
     {
         if ( self::$db_debug ) {
-            static::log ( "Creation d'une attaque de nom : ".$attaqueElements['nom']);
+            static::log ( "Creation d'une attaque de nom : " . $attaqueElements[ 'nom' ] );
         }
         //ICI on créer l'attaque dans la base de donnée
-        static::requeteFromDB("INSERT INTO attaque VALUES(\"\", :nom, :degats, :mp_used)",$attaqueElements);
+        static::requeteFromDB ( "INSERT INTO attaque VALUES(\"\", :nom, :degats, :mp_used)", $attaqueElements );
         //TODO trouver une meilleur maniere de trouver l'id attaque
-        $id_attaque=static::requeteFromDB("SELECT id_attaque FROM attaque ORDER BY DESC")[0];
+        $id_attaque = static::requeteFromDB ( "SELECT id_attaque FROM attaque ORDER BY DESC" )[ 0 ];
+
         // On créer l'objet attaque
         return new Attaque( $id_attaque );
     }
@@ -100,18 +115,6 @@ class Attaque extends DBMapper
         return $this->_nom;
     }
 
-    /**
-     * Affichage de l'attaque en string
-     * Sous la forme :
-     *  "NOM: ID=5; Degats : 10% ; cout : 3MP"
-     *
-     * @return string
-     */
-    function __toString ()
-    {
-        return $this->_nom . ': ID=' . $this->_id_attaque . '; Degats : ' . $this->_degats . '% ; cout : ' . $this->_mp_used . 'MP';
-    }
-
     function afficherAttaque ()
     {
         echo '<div class="attaque">';
@@ -125,13 +128,15 @@ class Attaque extends DBMapper
      * Retourne l'affichage des attaques
      * @return string
      */
-    function retourneAffichageAttaque(){
-        $text="";
-        $text.= '<div class="attaque">';
-        $text.=  $this->_nom . ' | ';
-        $text.=  'Degats : ' . $this->_degats . '% | ';
-        $text.=  $this->_mp_used . 'PM';
-        $text.=  '</div>';
+    function retourneAffichageAttaque ()
+    {
+        $text = "";
+        $text .= '<div class="attaque">';
+        $text .= $this->_nom . ' | ';
+        $text .= 'Degats : ' . $this->_degats . '% | ';
+        $text .= $this->_mp_used . 'PM';
+        $text .= '</div>';
+
         return $text;
     }
 }

@@ -8,8 +8,9 @@ class ModConnexionModeleConnexion extends DBMapper
 
     public static function connexion ()
     {
-        $id_user = NULL;
-        $requete = "SELECT id_user, password FROM users WHERE username = :username";
+        $id_user         = NULL;
+        $username_trouve = 0;
+        $requete         = "SELECT id_user, password FROM users WHERE username = :username";
         if ( isset ( $_POST [ 'username' ] ) && isset ( $_POST [ 'password' ] ) ) {
             try {
                 $reponse = self::$database->prepare ( $requete );

@@ -59,6 +59,7 @@ class Joueur_IA extends Participant
             throw new Exception( 'Exception, ajout du personnage impossible car personnage null' );
         }
     }
+
     //TODO A mettre à jour
     function attaquerEnnemi ( $participant, $i )
     {
@@ -80,13 +81,13 @@ class Joueur_IA extends Participant
             print_r ( $e );
         }
     }
-	
-	function retourneAffichageJoueurIA(){
-	
-		$text = "<h2><strong>Niveau de l'equipe adverse : " . $this->getEquipeOne()->getNiveauTotalPersos() . "</strong></h2></br>" . 
-		$this->getEquipeOne()->retourneAffichageEquipe();
-		
+
+    function retourneAffichageJoueurIA ()
+    {
+        $text = "<h2><strong>Niveau de l'equipe adverse : " . $this->getEquipeOne ()->getNiveauTotalPersos () . "</strong></h2><br>" .
+                $this->getEquipeOne ()->retourneAffichageEquipe ();
+
         return $text;
-	}
+    }
 }
 

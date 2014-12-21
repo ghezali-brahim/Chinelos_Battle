@@ -21,28 +21,32 @@ class Combat extends DBMapper
         $this->_equipe1       = $participant_1->getEquipeOne ();
         $this->_equipe2       = $participant_2->getEquipeOne ();
         $this->passerTour     = FALSE;
-		if($this->_equipe1->getNombrePersonnages()==0 OR $this->_equipe2->getNombrePersonnages()==0){
-			throw new Exception( "Votre Equipe Une n'a plus de personnage apte à combattre !" );
-		}
-		if ( $this->unParticipantMort () ) {
+        if ( $this->_equipe1->getNombrePersonnages () == 0 OR $this->_equipe2->getNombrePersonnages () == 0 ) {
+            throw new Exception( "Votre Equipe Une n'a plus de personnage apte à combattre !" );
+        }
+        if ( $this->unParticipantMort () ) {
             throw new Exception( 'Un joueur a tous ses personnages mort avant même le debut du combat' );
         }
-
     }
 
+    function unParticipantMort ()
+    {
+        return ( $this->_equipe1->allPersonnagesDead () || $this->_equipe2->allPersonnagesDead () );
+    }
+
+    //TODO
     function combattre ()
     {
-		$i=0;
-        
+        $i = 0;
         //echo $this->_equipe1->getPersonnages()[0]->;
-		echo "<h1 class='ennemiApp'>Des ennemis apparaissent !</h1>";
+        echo "<h1 class='ennemiApp'>Des ennemis apparaissent !</h1>";
         echo "<script>$('#combat').html('" . $this->retourneAffichage () . "')</script>";
         do {
-			$i++;
+            $i++;
             //TODO il faut mettre un bouton pour passer un Tour (et les tours de chaque personnage)
-			echo"</br></br>";
-			echo "<img src='include/images/sep.gif'></img>";
-			echo "<h1 class='tourx'>Tour " . $i . " :</h1>";
+            echo "<br><br>";
+            echo "<img src='include/images/sep.gif'/>";
+            echo "<h1 class='tourx'>Tour " . $i . " :</h1>";
             echo '<div id="combat"></div>';
             /*
             echo "<br>\n Tour " . $this->tour . " :";
@@ -65,12 +69,6 @@ class Combat extends DBMapper
             $this->recompenserFinCombat ( $gagnant );
         }
         echo "le joueur gagnant :" . $gagnant->__toString ();
-    }
-
-    //TODO
-    function unParticipantMort ()
-    {
-        return ( $this->_equipe1->allPersonnagesDead () || $this->_equipe2->allPersonnagesDead () );
     }
 
     function retourneAffichage ()

@@ -18,4 +18,3 @@ echo '<!DOCTYPE html>
 			<span><a href="index.php?module=joueur">Profil</a></span>
 		</nav>
 		<section>';
-?>

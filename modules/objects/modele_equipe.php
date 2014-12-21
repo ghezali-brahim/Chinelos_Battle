@@ -20,7 +20,7 @@ class  Equipe extends DBMapper
     {
         $this->_id_equipe           = $id_equipe;
         $this->_personnages         = $personnages;
-        $this->_indice_perso_actuel = 0;
+        $this->_indice_perso_actuel = -1;
         if ( self::$db_debug ) {
             static::log ( "Construction " . __CLASS__ . " : " . $this->__toString () );
         }
@@ -157,7 +157,7 @@ class  Equipe extends DBMapper
      */
     function addPersonnage ( $personnage )
     {
-        static::log ( "Ajout du personnage ". $personnage->getIdPersonnage()." a l'equipe " . $this->_id_equipe );
+        static::log ( "Ajout du personnage " . $personnage->getIdPersonnage () . " a l'equipe " . $this->_id_equipe );
         if ( !in_array ( $personnage, $this->_personnages ) ) {
             array_push ( $this->_personnages, $personnage );
             $personnage->setIDEquipe ( $this->_id_equipe );
@@ -175,7 +175,7 @@ class  Equipe extends DBMapper
      */
     function removePersonnage ( $personnage )
     {
-        static::log ( "Retrait du personnage ".$personnage->getIdPersonnage() ." de l'equipe " . $this->_id_equipe );
+        static::log ( "Retrait du personnage " . $personnage->getIdPersonnage () . " de l'equipe " . $this->_id_equipe );
         if ( !in_array ( $personnage, $this->_personnages ) ) {
             throw new Exception( 'le personnage que vous souhaité retirer de l\'equipe n\'est pas dans cette equipe' );
         } else {
@@ -183,14 +183,6 @@ class  Equipe extends DBMapper
             array_splice ( $this->_personnages, $key, 1 );
             $personnage->setIDEquipe ();
         }
-    }
-
-    /**
-     * @return int
-     */
-    function getIdEquipe ()
-    {
-        return $this->_id_equipe;
     }
 
     /**
@@ -367,7 +359,6 @@ class  Equipe extends DBMapper
         }
     }
 
-
     /**
      * Retourne les personnages vivants de l'équipe
      * @return array <Personnage>
@@ -400,16 +391,46 @@ class  Equipe extends DBMapper
      * Rafraichit l'equipe depuis la base de données
      * retire de l'equipe les personnages ne fesant plus partie de l'equipe
      */
-    function refresh(){
+    function refresh ()
+    {
         if ( self::$db_debug ) {
-            static::log ( "ID :" . $this->getIdEquipe() . "\t | Mise à jour de l'equipe ... " );
+            static::log ( "ID :" . $this->getIdEquipe () . "\t | Mise à jour de l'equipe ... " );
         }
-       foreach($this->_personnages as $personnage){
-           $personnage->refresh();
-           if($personnage->getIdEquipe() != $this->_id_equipe){
-               $key = array_search ( $personnage, $this->_personnages );
-               array_splice ( $this->_personnages, $key, 1 );
-           }
-       }
+        foreach ( $this->_personnages as $personnage ) {
+            $personnage->refresh ();
+            if ( $personnage->getIdEquipe () != $this->_id_equipe ) {
+                $key = array_search ( $personnage, $this->_personnages );
+                array_splice ( $this->_personnages, $key, 1 );
+            }
+        }
+    }
+
+    /**
+     * @return int
+     */
+    function getIdEquipe ()
+    {
+        return $this->_id_equipe;
+    }
+
+    public function getPersoIndiceActuel ()
+    {
+        return $this->getPersonnageIndice ( $this->getIndicePersoActuel () );
+    }
+
+    /**
+     * @return int
+     */
+    public function getIndicePersoActuel ()
+    {
+        return $this->_indice_perso_actuel;
+    }
+
+    /**
+     * @param int $indice_perso_actuel
+     */
+    public function setIndicePersoActuel ( $indice_perso_actuel )
+    {
+        $this->_indice_perso_actuel = $indice_perso_actuel;
     }
 }

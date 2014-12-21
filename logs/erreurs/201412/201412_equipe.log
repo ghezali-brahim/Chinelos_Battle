@@ -1,0 +1,78 @@
+21/12/2014 14:49:55 Recuperation des personnages de l'equipe d'id : 1
+21/12/2014 14:49:55 Construction Equipe : ID Equipe: 1 | Niveau total :11 | Personnages :ID:5; nom : Chausson 5; lvl : 1 | ID:6; nom : Chausson 6; lvl : 1 | ID:1; nom : Caporal; lvl : 9
+21/12/2014 14:49:55 Recuperation des personnages de l'equipe d'id : 2
+21/12/2014 14:49:55 Construction Equipe : ID Equipe: 2 | Niveau total :0 | Personnages :
+21/12/2014 14:52:34 Recuperation des personnages de l'equipe d'id : 1
+21/12/2014 14:52:34 Construction Equipe : ID Equipe: 1 | Niveau total :11 | Personnages :ID:5; nom : Chausson 5; lvl : 1 | ID:6; nom : Chausson 6; lvl : 1 | ID:1; nom : Caporal; lvl : 9
+21/12/2014 14:52:34 Recuperation des personnages de l'equipe d'id : 2
+21/12/2014 14:52:34 Construction Equipe : ID Equipe: 2 | Niveau total :0 | Personnages :
+21/12/2014 14:52:36 Recuperation des personnages de l'equipe d'id : 1
+21/12/2014 14:52:36 Construction Equipe : ID Equipe: 1 | Niveau total :11 | Personnages :ID:5; nom : Chausson 5; lvl : 1 | ID:6; nom : Chausson 6; lvl : 1 | ID:1; nom : Caporal; lvl : 9
+21/12/2014 14:52:36 Recuperation des personnages de l'equipe d'id : 2
+21/12/2014 14:52:36 Construction Equipe : ID Equipe: 2 | Niveau total :0 | Personnages :
+21/12/2014 14:52:40 Soigne les hp et mp de tous les personnages de l'equipe d'id : 1
+21/12/2014 14:57:57 Creation d'une l'equipe : ...
+21/12/2014 14:57:57 Construction Equipe : ID Equipe:  | Niveau total :5 | Personnages :ID:9001; nom : Monster 1; lvl : 1 | ID:9002; nom : Monster 2; lvl : 1 | ID:9003; nom : Monster 3; lvl : 2 | ID:9004; nom : Monster 4; lvl : 1
+21/12/2014 14:58:23 Creation d'une l'equipe : ...
+21/12/2014 14:58:23 Construction Equipe : ID Equipe:  | Niveau total :6 | Personnages :ID:9001; nom : Monster 1; lvl : 1 | ID:9002; nom : Monster 2; lvl : 1 | ID:9003; nom : Monster 3; lvl : 2 | ID:9004; nom : Monster 4; lvl : 2
+21/12/2014 14:58:24 Creation d'une l'equipe : ...
+21/12/2014 14:58:24 Construction Equipe : ID Equipe:  | Niveau total :5 | Personnages :ID:9001; nom : Monster 1; lvl : 2 | ID:9002; nom : Monster 2; lvl : 1 | ID:9003; nom : Monster 3; lvl : 2
+21/12/2014 14:58:31 Creation d'une l'equipe : ...
+21/12/2014 14:58:31 Construction Equipe : ID Equipe:  | Niveau total :5 | Personnages :ID:9001; nom : Monster 1; lvl : 2 | ID:9002; nom : Monster 2; lvl : 1 | ID:9003; nom : Monster 3; lvl : 1 | ID:9004; nom : Monster 4; lvl : 1
+21/12/2014 14:58:42 Creation d'une l'equipe : ...
+21/12/2014 14:58:42 Construction Equipe : ID Equipe:  | Niveau total :5 | Personnages :ID:9001; nom : Monster 1; lvl : 1 | ID:9002; nom : Monster 2; lvl : 1 | ID:9003; nom : Monster 3; lvl : 1 | ID:9004; nom : Monster 4; lvl : 1 | ID:9005; nom : Monster 5; lvl : 1
+21/12/2014 14:58:48 Creation d'une l'equipe : ...
+21/12/2014 14:58:48 Construction Equipe : ID Equipe:  | Niveau total :5 | Personnages :ID:9001; nom : Monster 1; lvl : 2 | ID:9002; nom : Monster 2; lvl : 1 | ID:9003; nom : Monster 3; lvl : 2
+21/12/2014 15:07:43 Creation d'une l'equipe : ...
+21/12/2014 15:07:43 Construction Equipe : ID Equipe:  | Niveau total :5 | Personnages :ID:9001; nom : Monster 1; lvl : 1 | ID:9002; nom : Monster 2; lvl : 2 | ID:9003; nom : Monster 3; lvl : 1 | ID:9004; nom : Monster 4; lvl : 1
+21/12/2014 15:08:10 Creation d'une l'equipe : ...
+21/12/2014 15:08:10 Construction Equipe : ID Equipe:  | Niveau total :5 | Personnages :ID:9001; nom : Monster 1; lvl : 1 | ID:9002; nom : Monster 2; lvl : 1 | ID:9003; nom : Monster 3; lvl : 1 | ID:9004; nom : Monster 4; lvl : 1 | ID:9005; nom : Monster 5; lvl : 1
+21/12/2014 15:08:35 Creation d'une l'equipe : ...
+21/12/2014 15:08:36 Construction Equipe : ID Equipe:  | Niveau total :5 | Personnages :ID:9001; nom : Monster 1; lvl : 2 | ID:9002; nom : Monster 2; lvl : 2 | ID:9003; nom : Monster 3; lvl : 1
+21/12/2014 15:08:42 Creation d'une l'equipe : ...
+21/12/2014 15:08:42 Construction Equipe : ID Equipe:  | Niveau total :5 | Personnages :ID:9001; nom : Monster 1; lvl : 2 | ID:9002; nom : Monster 2; lvl : 1 | ID:9003; nom : Monster 3; lvl : 1 | ID:9004; nom : Monster 4; lvl : 1
+21/12/2014 15:09:12 Creation d'une l'equipe : ...
+21/12/2014 15:09:12 Construction Equipe : ID Equipe:  | Niveau total :6 | Personnages :ID:9001; nom : Monster 1; lvl : 2 | ID:9002; nom : Monster 2; lvl : 2 | ID:9003; nom : Monster 3; lvl : 2
+21/12/2014 15:09:26 Creation d'une l'equipe : ...
+21/12/2014 15:09:26 Construction Equipe : ID Equipe:  | Niveau total :5 | Personnages :ID:9001; nom : Monster 1; lvl : 1 | ID:9002; nom : Monster 2; lvl : 1 | ID:9003; nom : Monster 3; lvl : 1 | ID:9004; nom : Monster 4; lvl : 1 | ID:9005; nom : Monster 5; lvl : 1
+21/12/2014 15:23:00 Creation d'une l'equipe : ...
+21/12/2014 15:23:00 Construction Equipe : ID Equipe:  | Niveau total :5 | Personnages :ID:9001; nom : Monster 1; lvl : 1 | ID:9002; nom : Monster 2; lvl : 1 | ID:9003; nom : Monster 3; lvl : 1 | ID:9004; nom : Monster 4; lvl : 2
+21/12/2014 15:27:37 Creation d'une l'equipe : ...
+21/12/2014 15:27:37 Construction Equipe : ID Equipe:  | Niveau total :5 | Personnages :ID:9001; nom : Monster 1; lvl : 1 | ID:9002; nom : Monster 2; lvl : 1 | ID:9003; nom : Monster 3; lvl : 1 | ID:9004; nom : Monster 4; lvl : 1 | ID:9005; nom : Monster 5; lvl : 1
+21/12/2014 15:59:59 Creation d'une l'equipe : ...
+21/12/2014 15:59:59 Construction Equipe : ID Equipe:  | Niveau total :6 | Personnages :ID:9001; nom : Monster 1; lvl : 1 | ID:9002; nom : Monster 2; lvl : 1 | ID:9003; nom : Monster 3; lvl : 1 | ID:9004; nom : Monster 4; lvl : 1 | ID:9005; nom : Monster 5; lvl : 2
+21/12/2014 16:37:23 Creation d'une l'equipe : ...
+21/12/2014 16:37:23 Construction Equipe : ID Equipe:  | Niveau total :5 | Personnages :ID:9001; nom : Monster 1; lvl : 1 | ID:9002; nom : Monster 2; lvl : 1 | ID:9003; nom : Monster 3; lvl : 2 | ID:9004; nom : Monster 4; lvl : 1
+21/12/2014 16:42:50 Creation d'une l'equipe : ...
+21/12/2014 16:42:50 Construction Equipe : ID Equipe:  | Niveau total :5 | Personnages :ID:9001; nom : Monster 1; lvl : 1 | ID:9002; nom : Monster 2; lvl : 1 | ID:9003; nom : Monster 3; lvl : 1 | ID:9004; nom : Monster 4; lvl : 1 | ID:9005; nom : Monster 5; lvl : 1
+21/12/2014 16:42:51 Creation d'une l'equipe : ...
+21/12/2014 16:42:51 Construction Equipe : ID Equipe:  | Niveau total :5 | Personnages :ID:9001; nom : Monster 1; lvl : 2 | ID:9002; nom : Monster 2; lvl : 2 | ID:9003; nom : Monster 3; lvl : 1
+21/12/2014 16:42:54 Creation d'une l'equipe : ...
+21/12/2014 16:42:54 Construction Equipe : ID Equipe:  | Niveau total :5 | Personnages :ID:9001; nom : Monster 1; lvl : 2 | ID:9002; nom : Monster 2; lvl : 1 | ID:9003; nom : Monster 3; lvl : 1 | ID:9004; nom : Monster 4; lvl : 1
+21/12/2014 16:49:06 Recuperation des personnages de l'equipe d'id : 1
+21/12/2014 16:49:06 Construction Equipe : ID Equipe: 1 | Niveau total :11 | Personnages :ID:5; nom : Chausson 5; lvl : 1 | ID:6; nom : Chausson 6; lvl : 1 | ID:1; nom : Caporal; lvl : 9
+21/12/2014 16:49:06 Recuperation des personnages de l'equipe d'id : 2
+21/12/2014 16:49:06 Construction Equipe : ID Equipe: 2 | Niveau total :0 | Personnages :
+21/12/2014 16:49:07 Recuperation des personnages de l'equipe d'id : 1
+21/12/2014 16:49:07 Construction Equipe : ID Equipe: 1 | Niveau total :11 | Personnages :ID:5; nom : Chausson 5; lvl : 1 | ID:6; nom : Chausson 6; lvl : 1 | ID:1; nom : Caporal; lvl : 9
+21/12/2014 16:49:07 Recuperation des personnages de l'equipe d'id : 2
+21/12/2014 16:49:07 Construction Equipe : ID Equipe: 2 | Niveau total :0 | Personnages :
+21/12/2014 16:49:08 Recuperation des personnages de l'equipe d'id : 1
+21/12/2014 16:49:09 Construction Equipe : ID Equipe: 1 | Niveau total :11 | Personnages :ID:5; nom : Chausson 5; lvl : 1 | ID:6; nom : Chausson 6; lvl : 1 | ID:1; nom : Caporal; lvl : 9
+21/12/2014 16:49:09 Recuperation des personnages de l'equipe d'id : 2
+21/12/2014 16:49:09 Construction Equipe : ID Equipe: 2 | Niveau total :0 | Personnages :
+21/12/2014 16:49:09 Recuperation des personnages de l'equipe d'id : 1
+21/12/2014 16:49:09 Construction Equipe : ID Equipe: 1 | Niveau total :11 | Personnages :ID:5; nom : Chausson 5; lvl : 1 | ID:6; nom : Chausson 6; lvl : 1 | ID:1; nom : Caporal; lvl : 9
+21/12/2014 16:49:09 Recuperation des personnages de l'equipe d'id : 2
+21/12/2014 16:49:09 Construction Equipe : ID Equipe: 2 | Niveau total :0 | Personnages :
+21/12/2014 16:49:10 Recuperation des personnages de l'equipe d'id : 1
+21/12/2014 16:49:10 Construction Equipe : ID Equipe: 1 | Niveau total :11 | Personnages :ID:5; nom : Chausson 5; lvl : 1 | ID:6; nom : Chausson 6; lvl : 1 | ID:1; nom : Caporal; lvl : 9
+21/12/2014 16:49:10 Recuperation des personnages de l'equipe d'id : 2
+21/12/2014 16:49:10 Construction Equipe : ID Equipe: 2 | Niveau total :0 | Personnages :
+21/12/2014 16:49:11 Recuperation des personnages de l'equipe d'id : 1
+21/12/2014 16:49:11 Construction Equipe : ID Equipe: 1 | Niveau total :11 | Personnages :ID:5; nom : Chausson 5; lvl : 1 | ID:6; nom : Chausson 6; lvl : 1 | ID:1; nom : Caporal; lvl : 9
+21/12/2014 16:49:11 Recuperation des personnages de l'equipe d'id : 2
+21/12/2014 16:49:11 Construction Equipe : ID Equipe: 2 | Niveau total :0 | Personnages :
+21/12/2014 16:49:17 Creation d'une l'equipe : ...
+21/12/2014 16:49:17 Construction Equipe : ID Equipe: 1 | Niveau total :12 | Personnages :ID:9001; nom : Monster 1; lvl : 4 | ID:9002; nom : Monster 2; lvl : 4 | ID:9003; nom : Monster 3; lvl : 4
+21/12/2014 16:49:17 Ajout d'un pourcentage d'experience à tous les personnages de l'equipe d'id : 1

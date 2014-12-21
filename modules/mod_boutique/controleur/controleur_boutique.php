@@ -60,11 +60,11 @@ class ModBoutiqueControleurBoutique
                 header ( "Refresh: 1;URL=index.php?module=boutique&action=acheter" );
             }
         } else {
-			// Dimension faites pour 2 articles max -> CSS à refaire si changement
-			echo "<div class='listeAchat'>";
+            // Dimension faites pour 2 articles max -> CSS à refaire si changement
+            echo "<div class='listeAchat'>";
             ModBoutiqueVueBoutique::acheterPersonnage ();
             ModBoutiqueVueBoutique::acheterSoin ();
-			echo "</div>";
+            echo "</div>";
         }
     }
 }

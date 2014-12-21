@@ -11,7 +11,7 @@ class ModConnexionVueConnexion
     static function affAccueilModule ()
     {
         if ( !isset( $_SESSION[ 'id_user' ] ) ) {
-            echo '</br><a href="index.php?module=connexion&action=connexion"><button>Se connecter</button></a></br></br>';
+            echo '<br><a href="index.php?module=connexion&action=connexion"><button>Se connecter</button></a><br><br>';
         } else {
             if ( $_SESSION[ 'id_user' ] != NULL ) {
                 self::deconnexion ();
@@ -20,45 +20,50 @@ class ModConnexionVueConnexion
             }
         }
     }
-    static function afficherBouton(){
-        if(isset( $_SESSION[ 'id_user' ])){
-            if($_SESSION['id_user']==NULL){
-                echo '<a href="index.php?module=connexion&action=connexion"><button>Se Connecter</button></a>';
-            }else{
-                echo '<a href="index.php?module=connexion&action=deconnexion"><button>Se Deconnecter</button></a>';
-            }
-        }else{
-            echo '<a href="index.php?module=connexion&action=connexion"><button>Se Connecter</button></a>';
-        }
-    }
+
     static function deconnexion ()
     {
-        echo '</br><form action="index.php?module=connexion&action=deconnexion" method="post">
+        echo '<br><form action="index.php?module=connexion&action=deconnexion" method="post">
 			<input name="deconnexion" type="submit" onclick="if(!confirm(\'Voulez-vous vraiment vous déconnecter ?\')) return false;" value="deconnexion" />
-		</form></br>';
+		</form><br>';
+    }
+
+    static function afficherBouton ()
+    {
+        if ( isset( $_SESSION[ 'id_user' ] ) ) {
+            if ( $_SESSION[ 'id_user' ] == NULL ) {
+                echo '<a href="index.php?module=connexion&action=connexion"><button>Se Connecter</button></a>';
+            } else {
+                echo '<a href="index.php?module=connexion&action=deconnexion"><button>Se Deconnecter</button></a>';
+            }
+        } else {
+            echo '<a href="index.php?module=connexion&action=connexion"><button>Se Connecter</button></a>';
+        }
     }
 
     static function connexion ( $iduser )
     {
         if ( $iduser == NULL ) {
             ?>
-			</br>
+            <br >
             <form method="POST" action="" >
-                <label for="username" >Login &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label >
-                <input type="text" id="username" name="username" maxlength="40" size="40" required > </br></br>
+                <label for="username" >Login
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label >
+                <input type="text" id="username" name="username" maxlength="40" size="40" required > <br ><br >
                 <label for="password" >Mot de passe :</label >
-                <input type="password" id="password" name="password" maxlength="40" size="40" required ></br></br></br>
+                <input type="password" id="password" name="password" maxlength="40" size="40" required ><br ><br ><br >
                 <input type="submit" name="submit" value="Se connecter" >
             </form >
-			</br>
+            <br >
             <a href="index.php?module=inscription" >S'inscrire</a ><br />
-			</br>
+            <br >
         <?php
         } else {
             self::deconnexion ();
-            header('Location: index.php');
+            header ( 'Location: index.php' );
         }
     }
 }
+
 
 ?>

@@ -10,10 +10,10 @@ class ModJoueurVueJoueur
      **/
     static function affAccueilModule ()
     {
-		echo "</br><div class='profil'><p class='textProfil'>
-			<a href='index.php?module=joueur&action=afficher'><button class='buttonModule' style='width:130px;height=20px;'>Afficher Equipes</button></a></br>
-			<a href='index.php?module=joueur&action=transferer'><button class='buttonModule' style='width:130px;height=20px;'>Transferer</button></a></br>
-			<a href='index.php?module=joueur&action=afficherEquipeOne'><button class='buttonModule' style='width:130px;height=20px;'>Equipe Une</button></a></br>
+        echo "<br><div class='profil'><p class='textProfil'>
+			<a href='index.php?module=joueur&action=afficher'><button class='buttonModule' style='width:130px;height=20px;'>Afficher Equipes</button></a><br>
+			<a href='index.php?module=joueur&action=transferer'><button class='buttonModule' style='width:130px;height=20px;'>Transferer</button></a><br>
+			<a href='index.php?module=joueur&action=afficherEquipeOne'><button class='buttonModule' style='width:130px;height=20px;'>Equipe Une</button></a><br>
 			</p></div>";
     }
 

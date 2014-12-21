@@ -67,7 +67,7 @@ class Element extends DBMapper
         if ( static::$db_debug ) {
             $i     = 0;
             $infos = "";
-            foreach ( $contenuElement[0] as $info ) {
+            foreach ( $contenuElement[ 0 ] as $info ) {
                 if ( $i == 0 ) {
                     $infos = $info;
                 } else {
@@ -75,8 +75,9 @@ class Element extends DBMapper
                 }
                 $i++;
             }
-            static::log ( $requete . " : \t $infos", "requete_".get_called_class() );
+            static::log ( $requete . " : \t $infos", "requete_" . get_called_class () );
         }
+
         return $contenuElement;
     }
 

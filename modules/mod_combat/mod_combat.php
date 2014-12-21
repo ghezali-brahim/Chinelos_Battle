@@ -21,6 +21,8 @@ if ( $action == "afficher" ) {
     $controleur->afficherTour ();
 } else if ( $action == "passerTour" ) {
     $controleur->passerTour ();
+} else if ( $action == "unTour" ) {
+    $controleur->affichageUnTour ();
 } else {
     $controleur->accueilModule ();
 }

@@ -26,8 +26,8 @@ class ModJoueurControleurJoueur
         if ( Joueur::connectee () ) {
             if ( !isset( $_SESSION[ 'joueur' ] ) ) {
                 $_SESSION[ 'joueur' ] = serialize ( new Joueur() );
-            }else{
-            $_SESSION[ 'joueur' ] = serialize ( new Joueur() );
+            } else {
+                $_SESSION[ 'joueur' ] = serialize ( new Joueur() );
             }
         }
         $this->_joueur = unserialize ( $_SESSION[ 'joueur' ] );

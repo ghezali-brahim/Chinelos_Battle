@@ -5,9 +5,10 @@ if ( !defined ( 'TEST_INCLUDE' ) )
 
 class ModContactVueContact
 {
-	public static function afficherAccueilContact (){
-		echo "Contact</br></br>";
-		echo "<div align=center>
+    public static function afficherAccueilContact ()
+    {
+        echo "Contact<br><br>";
+        echo "<div align=center>
 			<form method=POST action=index.php?module=contact&action=envoyerMail>
 			<input type=hidden name=subject value=formmail>
 			<table>
@@ -21,11 +22,10 @@ class ModContactVueContact
 			<input type=reset value=Annuler>
 			</form>
 			</div> ";
-	}
-	
-	public static function formValider(){
-		
-	}
+    }
+
+    public static function formValider ()
+    {
+    }
 }
 
-?>

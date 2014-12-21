@@ -47,7 +47,9 @@ class Logger
      * @param string $name        Nom du fichier de log
      * @param string $row         Texte à ajouter au fichier de log
      * @param string $granularity Granularité : GRAN_VOID, GRAN_MONTH ou GRAN_YEAR
-     **/
+     *
+     * @return bool
+     */
     public function log ( $type, $name, $row, $granularity = self::GRAN_YEAR )
     {
         # Contrôle des arguments
@@ -70,6 +72,8 @@ class Logger
             $row .= "\n";
         }
         $this->write ( $logfile, $row );
+
+        return TRUE;
     }
 
     /**
@@ -137,7 +141,9 @@ class Logger
      *
      * @param string $logfile Chemin vers le fichier de log
      * @param string $row     Chaîne de caractères à ajouter au fichier
-     **/
+     *
+     * @return bool
+     */
     private function write ( $logfile, $row )
     {
         if ( !$this->ready ) {
@@ -151,8 +157,9 @@ class Logger
         $fichier = fopen ( $logfile, 'a+' );
         fputs ( $fichier, $row );
         fclose ( $fichier );
+
+        return TRUE;
     }
 }
 
 
-?>

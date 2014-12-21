@@ -189,9 +189,11 @@ class Personnage extends DBMapper
     /**
      * Creer un personnage
      *
-     * @param $niveau
+     * @param int    $niveau
+     * @param string $nom
      *
      * @return Personnage
+     * @throws Exception
      */
     static function createPersonnage ( $niveau, $nom = "Monster" )
     {
@@ -780,9 +782,9 @@ class Personnage extends DBMapper
                 . $this->_nom . ' (Level ' . $this->_niveau . ') <br/>'
                 . 'Experience : ' . $this->_experience . '/' . Niveau::getXpNiveau ( $this->_niveau + 1 ) . ' <br/>'
                 . 'HP : ' . $this->_hp . ' / ' . $this->_hp_max . '<br/>'
-                . '<progress value="' . $this->_hp . '" min ="0" max="' . $this->_hp_max . '"></progress> <br/>'
+                . '<progress value="' . $this->_hp . '" max="' . $this->_hp_max . '"></progress> <br/>'
                 . 'MP : ' . $this->_mp . ' / ' . $this->_mp_max . '<br/>'
-                . '<progress value="' . $this->_mp . '" min ="0" max="' . $this->_mp_max . '"></progress> <br/>'
+                . '<progress value="' . $this->_mp . '"  max="' . $this->_mp_max . '"></progress> <br/>'
                 . 'Puissance : ' . $this->_puissance . '<br/>'
                 . 'Defense : ' . $this->_defense . '<br/>'
                 . '</div>';
@@ -804,9 +806,9 @@ class Personnage extends DBMapper
                 . $this->_nom . ' (level ' . $this->_niveau . ') <br/>'
                 . 'experience : ' . $this->_experience . '/' . Niveau::getXpNiveau ( $this->_niveau + 1 ) . ' <br/>'
                 . 'HP : ' . $this->_hp . ' / ' . $this->_hp_max . '<br/>'
-                . '<progress value="' . $this->_hp . '" min ="0" max="' . $this->_hp_max . '"></progress> <br/>'
+                . '<progress value="' . $this->_hp . '" max="' . $this->_hp_max . '"></progress> <br/>'
                 . 'MP : ' . $this->_mp . ' / ' . $this->_mp_max . '<br/>'
-                . '<progress value="' . $this->_mp . '" min ="0" max="' . $this->_mp_max . '"></progress> <br/>'
+                . '<progress value="' . $this->_mp . '" max="' . $this->_mp_max . '"></progress> <br/>'
                 . 'Puissance : ' . $this->_puissance . '<br/>'
                 . 'Defense : ' . $this->_defense . '<br/>';
         $i    = 1;
@@ -950,5 +952,10 @@ class Personnage extends DBMapper
     public function getElement ()
     {
         return $this->_element;
+    }
+
+    function getNombreAttaque ()
+    {
+        return count ( $this->_attaques );
     }
 }

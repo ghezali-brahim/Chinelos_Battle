@@ -1,14 +1,15 @@
 <?php
 if ( !defined ( 'TEST_INCLUDE' ) )
     die ( "Vous n'avez pas accès directement à ce fichier" );
+require_once ( "Logger.class.php" );
 
-require_once("Logger.class.php");
 
 class DBMapper
 {
     protected static $database;
     protected static $db_debug;
     protected static $db_log;
+
     static function init ( $db )
     {
         self::$database = $db;
@@ -55,28 +56,28 @@ class DBMapper
                 }
                 $i++;
             }
-            static::log ( $requete . " : \t $infos", "requete_".get_called_class() );
+            static::log ( $requete . " : \t $infos", "requete_" . get_called_class () );
         }
 
         return $resultat;
     }
-    protected static function log ( $message, $nomfichier = NULL)
+
+    protected static function log ( $message, $nomfichier = NULL )
     {
-        if($nomfichier == NULL ){
-            $nomfichier=get_called_class();
+        if ( $nomfichier == NULL ) {
+            $nomfichier = get_called_class ();
         }
-        $nomfichier=strtolower($nomfichier);
+        $nomfichier = strtolower ( $nomfichier );
         if ( !isset( self::$db_log ) ) {
             self::$db_log = new Logger( "./logs" );
-            self::$db_log->log ( 'erreurs', "".$nomfichier, "___________________________________________", Logger::GRAN_MONTH );
+            self::$db_log->log ( 'erreurs', "" . $nomfichier, "___________________________________________", Logger::GRAN_MONTH );
         }
-        self::$db_log->log ( 'erreurs', "".$nomfichier, $message, Logger::GRAN_MONTH );
-
-        $requete= strpbrk($nomfichier, '_');
-        if($requete){
-            $nomfichier=substr($requete, 1);
+        self::$db_log->log ( 'erreurs', "" . $nomfichier, $message, Logger::GRAN_MONTH );
+        $requete = strpbrk ( $nomfichier, '_' );
+        if ( $requete ) {
+            $nomfichier = substr ( $requete, 1 );
         }
-        self::$db_log->log ( 'erreurs', 'statistique_'.$nomfichier, $message, Logger::GRAN_MONTH );
+        self::$db_log->log ( 'erreurs', 'statistique_' . $nomfichier, $message, Logger::GRAN_MONTH );
     }
-//parent::requeteFromDB
+    //parent::requeteFromDB
 }

@@ -2,6 +2,7 @@
 if ( !defined ( 'TEST_INCLUDE' ) )
     die ( "Vous n'avez pas accès directement à ce fichier" );
 
+
 //TODO
 class Combat extends DBMapper
 {
