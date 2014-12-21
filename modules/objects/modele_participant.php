@@ -121,5 +121,11 @@ abstract class  Participant extends DBMapper
     {
         $this->getEquipeOne ()->soignerEquipe ();
     }
+    function incrementerIndicePersoActuelParticipant(){
+        $this->_equipes[0]->incrementerIndicePersoActuel();
+    }
+    function getPersoIndiceActuel(){
+        $this->_equipes[0]->getPersoIndiceActuel();
+    }
 }
 

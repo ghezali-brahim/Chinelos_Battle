@@ -13,6 +13,7 @@ class ModCombatControleurCombat
 {
     protected $_combat;
     protected $_joueur;
+    protected $_ennemi;
 
     function __construct ()
     {
@@ -56,9 +57,16 @@ class ModCombatControleurCombat
 
     public function affichageUnTour ()
     {
+        $this->_joueur->incrementerIndicePersoActuelParticipant();
         ModCombatVueCombat::affichageUnTour ( $this->_joueur );
     }
-
+    //TODO continuer le combat
+    public function attaquePersonnage(){
+        $indicePersoEnnemi=$_POST['indice_ennemi'];
+        $indiceAttaqueChoisit=$_POST['indice_attaque_choisit'];
+        $this->_joueur->getPersoIndiceActuel()->setIndiceAttaqueChoisit($indiceAttaqueChoisit);
+        $this->_joueur->getPersoIndiceActuel()->attaquerPersonnage($this->_ennemi->getEquipeOne()->getPersonnageIndice($indicePersoEnnemi));
+    }
     public function combat ()
     {
         $this->_joueur = unserialize ( $_SESSION[ 'joueur' ] );

@@ -92,7 +92,7 @@ class ModCombatVueCombat
         $ennemi           = Equipe::createEquipe ( 5, NULL );
         $personnageActuel = $joueur->getEquipeOne ()->getPersoIndiceActuel ();
 
-
+        //TODO à voir
         ?>
         <form method="POST" action="" >
             <label for="indice_ennemi" >Indice ennemi &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label >

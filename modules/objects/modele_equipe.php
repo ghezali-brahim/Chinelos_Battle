@@ -433,4 +433,11 @@ class  Equipe extends DBMapper
     {
         $this->_indice_perso_actuel = $indice_perso_actuel;
     }
+    public function incrementerIndicePersoActuel(){
+        if($this->_indice_perso_actuel<count($this->_personnages)){
+            $this->_indice_perso_actuel++;
+        }else{
+            $this->_indice_perso_actuel=-1;
+        }
+    }
 }
