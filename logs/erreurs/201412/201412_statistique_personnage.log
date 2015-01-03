@@ -506,3 +506,355 @@
 21/12/2014 18:15:07 Creation personnage : ...
 21/12/2014 18:15:07 SELECT DISTINCT experience FROM niveau WHERE niveau = :niveau : 	 2
 21/12/2014 18:15:07 Construction Personnage : ID:9004; nom : Monster 4; lvl : 2
+22/12/2014 19:55:41 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 5
+22/12/2014 19:55:41 Construction Personnage : ID:5; nom : Chausson 5; lvl : 1
+22/12/2014 19:55:41 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 6
+22/12/2014 19:55:41 Construction Personnage : ID:6; nom : Chausson 6; lvl : 1
+22/12/2014 19:55:41 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1
+22/12/2014 19:55:41 Construction Personnage : ID:1; nom : Caporal; lvl : 9
+22/12/2014 19:55:43 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 5
+22/12/2014 19:55:43 Construction Personnage : ID:5; nom : Chausson 5; lvl : 1
+22/12/2014 19:55:43 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 6
+22/12/2014 19:55:43 Construction Personnage : ID:6; nom : Chausson 6; lvl : 1
+22/12/2014 19:55:43 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1
+22/12/2014 19:55:43 Construction Personnage : ID:1; nom : Caporal; lvl : 9
+22/12/2014 19:55:44 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 5
+22/12/2014 19:55:44 Construction Personnage : ID:5; nom : Chausson 5; lvl : 1
+22/12/2014 19:55:44 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 6
+22/12/2014 19:55:44 Construction Personnage : ID:6; nom : Chausson 6; lvl : 1
+22/12/2014 19:55:44 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1
+22/12/2014 19:55:44 Construction Personnage : ID:1; nom : Caporal; lvl : 9
+22/12/2014 19:55:46 Creation personnage : ...
+22/12/2014 19:55:46 SELECT DISTINCT experience FROM niveau WHERE niveau = :niveau : 	 4
+22/12/2014 19:55:46 Construction Personnage : ID:9001; nom : Monster 1; lvl : 4
+22/12/2014 19:55:46 Creation personnage : ...
+22/12/2014 19:55:46 SELECT DISTINCT experience FROM niveau WHERE niveau = :niveau : 	 1
+22/12/2014 19:55:46 Construction Personnage : ID:9002; nom : Monster 2; lvl : 1
+22/12/2014 19:55:46 Creation personnage : ...
+22/12/2014 19:55:46 SELECT DISTINCT experience FROM niveau WHERE niveau = :niveau : 	 1
+22/12/2014 19:55:46 Construction Personnage : ID:9003; nom : Monster 3; lvl : 1
+22/12/2014 19:55:46 Creation personnage : ...
+22/12/2014 19:55:46 SELECT DISTINCT experience FROM niveau WHERE niveau = :niveau : 	 5
+22/12/2014 19:55:46 Construction Personnage : ID:9004; nom : Monster 4; lvl : 5
+22/12/2014 19:55:46 UPDATE personnage SET id_equipe = :id_equipe WHERE id_personnage= :id_personnage : 	 |5
+22/12/2014 19:55:46 UPDATE personnage SET id_equipe = :id_equipe WHERE id_personnage= :id_personnage : 	 2|5
+22/12/2014 19:55:46 UPDATE personnage SET id_equipe = :id_equipe WHERE id_personnage= :id_personnage : 	 |6
+22/12/2014 19:55:46 UPDATE personnage SET id_equipe = :id_equipe WHERE id_personnage= :id_personnage : 	 2|6
+22/12/2014 19:55:46 UPDATE personnage SET mp = :mp WHERE id_personnage =:id_personnage : 	 1|46
+22/12/2014 19:55:46 ID :1	 | Retrait de mp : 47 - 1 = 46mp
+22/12/2014 19:55:46 ID :1	 | Attaque 1 infligeant 14hp
+22/12/2014 19:55:46 ID :9002	 | Degats à infligés avant reduction : 7hp
+22/12/2014 19:55:46 ID :9002	 | Retrait d'hp : 10 - 7 = 3hp
+22/12/2014 19:55:46 ID :9001	 | Retrait de mp : 20 - 1 = 19mp
+22/12/2014 19:55:46 ID :9001	 | Attaque 1 infligeant 4hp
+22/12/2014 19:55:46 ID :1	 | Degats à infligés avant reduction : 4hp
+22/12/2014 19:55:46 UPDATE personnage SET hp = :hp WHERE id_personnage =:id_personnage : 	 1|134
+22/12/2014 19:55:46 ID :1	 | Retrait d'hp : 135 - 1 = 134hp
+22/12/2014 19:55:46 ID :9002	 | Retrait de mp : 5 - 1 = 4mp
+22/12/2014 19:55:46 ID :9002	 | Attaque 1 infligeant 1hp
+22/12/2014 19:55:46 ID :1	 | Degats à infligés avant reduction : 1.5hp
+22/12/2014 19:55:46 UPDATE personnage SET hp = :hp WHERE id_personnage =:id_personnage : 	 1|132
+22/12/2014 19:55:46 ID :1	 | Retrait d'hp : 134 - 2 = 132hp
+22/12/2014 19:55:46 ID :9003	 | Retrait de mp : 5 - 1 = 4mp
+22/12/2014 19:55:46 ID :9003	 | Attaque 1 infligeant 1hp
+22/12/2014 19:55:46 ID :1	 | Degats à infligés avant reduction : 1hp
+22/12/2014 19:55:46 UPDATE personnage SET hp = :hp WHERE id_personnage =:id_personnage : 	 1|131
+22/12/2014 19:55:46 ID :1	 | Retrait d'hp : 132 - 1 = 131hp
+22/12/2014 19:55:46 ID :9004	 | Retrait de mp : 25 - 1 = 24mp
+22/12/2014 19:55:46 ID :9004	 | Attaque 1 infligeant 7hp
+22/12/2014 19:55:46 ID :1	 | Degats à infligés avant reduction : 7hp
+22/12/2014 19:55:46 UPDATE personnage SET hp = :hp WHERE id_personnage =:id_personnage : 	 1|124
+22/12/2014 19:55:46 ID :1	 | Retrait d'hp : 131 - 7 = 124hp
+22/12/2014 19:55:46 UPDATE personnage SET mp = :mp WHERE id_personnage =:id_personnage : 	 1|45
+22/12/2014 19:55:46 ID :1	 | Retrait de mp : 46 - 1 = 45mp
+22/12/2014 19:55:46 ID :1	 | Attaque 1 infligeant 19hp
+22/12/2014 19:55:46 ID :9002	 | Degats à infligés avant reduction : 9.5hp
+22/12/2014 19:55:46 ID :9002	 | Retrait d'hp : 9 - 9 = 0hp
+22/12/2014 19:55:46 ID :9002	 | Mort ...
+22/12/2014 19:55:46 ID :9001	 | Retrait de mp : 19 - 1 = 18mp
+22/12/2014 19:55:46 ID :9001	 | Attaque 1 infligeant 4hp
+22/12/2014 19:55:46 ID :1	 | Degats à infligés avant reduction : 4hp
+22/12/2014 19:55:46 UPDATE personnage SET hp = :hp WHERE id_personnage =:id_personnage : 	 1|120
+22/12/2014 19:55:46 ID :1	 | Retrait d'hp : 124 - 4 = 120hp
+22/12/2014 19:55:46 ID :9003	 | Retrait de mp : 4 - 1 = 3mp
+22/12/2014 19:55:46 ID :9003	 | Attaque 1 infligeant 1hp
+22/12/2014 19:55:46 ID :1	 | Degats à infligés avant reduction : 1hp
+22/12/2014 19:55:46 UPDATE personnage SET hp = :hp WHERE id_personnage =:id_personnage : 	 1|119
+22/12/2014 19:55:46 ID :1	 | Retrait d'hp : 120 - 1 = 119hp
+22/12/2014 19:55:46 ID :9004	 | Retrait de mp : 24 - 1 = 23mp
+22/12/2014 19:55:46 ID :9004	 | Attaque 1 infligeant 5hp
+22/12/2014 19:55:46 ID :1	 | Degats à infligés avant reduction : 5hp
+22/12/2014 19:55:46 UPDATE personnage SET hp = :hp WHERE id_personnage =:id_personnage : 	 1|114
+22/12/2014 19:55:46 ID :1	 | Retrait d'hp : 119 - 5 = 114hp
+22/12/2014 19:55:46 UPDATE personnage SET mp = :mp WHERE id_personnage =:id_personnage : 	 1|44
+22/12/2014 19:55:46 ID :1	 | Retrait de mp : 45 - 1 = 44mp
+22/12/2014 19:55:46 ID :1	 | Attaque 1 infligeant 21hp
+22/12/2014 19:55:46 ID :9003	 | Degats à infligés avant reduction : 21hp
+22/12/2014 19:55:46 ID :9003	 | Retrait d'hp : 21 - 21 = 0hp
+22/12/2014 19:55:46 ID :9003	 | Mort ...
+22/12/2014 19:55:46 ID :9001	 | Retrait de mp : 18 - 1 = 17mp
+22/12/2014 19:55:46 ID :9001	 | Attaque 1 infligeant 5hp
+22/12/2014 19:55:46 ID :1	 | Degats à infligés avant reduction : 5hp
+22/12/2014 19:55:46 UPDATE personnage SET hp = :hp WHERE id_personnage =:id_personnage : 	 1|113
+22/12/2014 19:55:46 ID :1	 | Retrait d'hp : 114 - 1 = 113hp
+22/12/2014 19:55:46 ID :9004	 | Retrait de mp : 23 - 1 = 22mp
+22/12/2014 19:55:46 ID :9004	 | Attaque 1 infligeant 5hp
+22/12/2014 19:55:46 ID :1	 | Degats à infligés avant reduction : 5hp
+22/12/2014 19:55:46 UPDATE personnage SET hp = :hp WHERE id_personnage =:id_personnage : 	 1|108
+22/12/2014 19:55:46 ID :1	 | Retrait d'hp : 113 - 5 = 108hp
+22/12/2014 19:55:46 UPDATE personnage SET mp = :mp WHERE id_personnage =:id_personnage : 	 1|43
+22/12/2014 19:55:46 ID :1	 | Retrait de mp : 44 - 1 = 43mp
+22/12/2014 19:55:46 ID :1	 | Attaque 1 infligeant 17hp
+22/12/2014 19:55:46 ID :9001	 | Degats à infligés avant reduction : 17hp
+22/12/2014 19:55:46 ID :9001	 | Retrait d'hp : 40 - 13 = 27hp
+22/12/2014 19:55:46 ID :9001	 | Retrait de mp : 17 - 1 = 16mp
+22/12/2014 19:55:46 ID :9001	 | Attaque 1 infligeant 4hp
+22/12/2014 19:55:46 ID :1	 | Degats à infligés avant reduction : 4hp
+22/12/2014 19:55:46 UPDATE personnage SET hp = :hp WHERE id_personnage =:id_personnage : 	 1|107
+22/12/2014 19:55:46 ID :1	 | Retrait d'hp : 108 - 1 = 107hp
+22/12/2014 19:55:46 ID :9004	 | Retrait de mp : 22 - 1 = 21mp
+22/12/2014 19:55:46 ID :9004	 | Attaque 1 infligeant 5hp
+22/12/2014 19:55:46 ID :1	 | Degats à infligés avant reduction : 5hp
+22/12/2014 19:55:46 UPDATE personnage SET hp = :hp WHERE id_personnage =:id_personnage : 	 1|106
+22/12/2014 19:55:46 ID :1	 | Retrait d'hp : 107 - 1 = 106hp
+22/12/2014 19:55:46 UPDATE personnage SET mp = :mp WHERE id_personnage =:id_personnage : 	 1|42
+22/12/2014 19:55:46 ID :1	 | Retrait de mp : 43 - 1 = 42mp
+22/12/2014 19:55:46 ID :1	 | Attaque 1 infligeant 21hp
+22/12/2014 19:55:46 ID :9001	 | Degats à infligés avant reduction : 21hp
+22/12/2014 19:55:46 ID :9001	 | Retrait d'hp : 27 - 17 = 10hp
+22/12/2014 19:55:46 ID :9001	 | Retrait de mp : 16 - 1 = 15mp
+22/12/2014 19:55:46 ID :9001	 | Attaque 1 infligeant 4hp
+22/12/2014 19:55:46 ID :1	 | Degats à infligés avant reduction : 4hp
+22/12/2014 19:55:46 UPDATE personnage SET hp = :hp WHERE id_personnage =:id_personnage : 	 1|102
+22/12/2014 19:55:46 ID :1	 | Retrait d'hp : 106 - 4 = 102hp
+22/12/2014 19:55:46 ID :9004	 | Retrait de mp : 21 - 1 = 20mp
+22/12/2014 19:55:46 ID :9004	 | Attaque 1 infligeant 6hp
+22/12/2014 19:55:46 ID :1	 | Degats à infligés avant reduction : 6hp
+22/12/2014 19:55:46 UPDATE personnage SET hp = :hp WHERE id_personnage =:id_personnage : 	 1|101
+22/12/2014 19:55:46 ID :1	 | Retrait d'hp : 102 - 1 = 101hp
+22/12/2014 19:55:46 UPDATE personnage SET mp = :mp WHERE id_personnage =:id_personnage : 	 1|41
+22/12/2014 19:55:46 ID :1	 | Retrait de mp : 42 - 1 = 41mp
+22/12/2014 19:55:46 ID :1	 | Attaque 1 infligeant 14hp
+22/12/2014 19:55:46 ID :9001	 | Degats à infligés avant reduction : 14hp
+22/12/2014 19:55:46 ID :9001	 | Retrait d'hp : 10 - 10 = 0hp
+22/12/2014 19:55:46 ID :9001	 | Mort ...
+22/12/2014 19:55:46 ID :9004	 | Retrait de mp : 20 - 1 = 19mp
+22/12/2014 19:55:46 ID :9004	 | Attaque 1 infligeant 8hp
+22/12/2014 19:55:46 ID :1	 | Degats à infligés avant reduction : 8hp
+22/12/2014 19:55:46 UPDATE personnage SET hp = :hp WHERE id_personnage =:id_personnage : 	 1|93
+22/12/2014 19:55:46 ID :1	 | Retrait d'hp : 101 - 8 = 93hp
+22/12/2014 19:55:46 UPDATE personnage SET mp = :mp WHERE id_personnage =:id_personnage : 	 1|40
+22/12/2014 19:55:46 ID :1	 | Retrait de mp : 41 - 1 = 40mp
+22/12/2014 19:55:46 ID :1	 | Attaque 1 infligeant 21hp
+22/12/2014 19:55:46 ID :9004	 | Degats à infligés avant reduction : 21hp
+22/12/2014 19:55:46 ID :9004	 | Retrait d'hp : 50 - 16 = 34hp
+22/12/2014 19:55:46 ID :9004	 | Retrait de mp : 19 - 1 = 18mp
+22/12/2014 19:55:46 ID :9004	 | Attaque 1 infligeant 6hp
+22/12/2014 19:55:46 ID :1	 | Degats à infligés avant reduction : 6hp
+22/12/2014 19:55:46 UPDATE personnage SET hp = :hp WHERE id_personnage =:id_personnage : 	 1|87
+22/12/2014 19:55:46 ID :1	 | Retrait d'hp : 93 - 6 = 87hp
+22/12/2014 19:55:46 UPDATE personnage SET mp = :mp WHERE id_personnage =:id_personnage : 	 1|39
+22/12/2014 19:55:46 ID :1	 | Retrait de mp : 40 - 1 = 39mp
+22/12/2014 19:55:46 ID :1	 | Attaque 1 infligeant 19hp
+22/12/2014 19:55:46 ID :9004	 | Degats à infligés avant reduction : 19hp
+22/12/2014 19:55:46 ID :9004	 | Retrait d'hp : 34 - 19 = 15hp
+22/12/2014 19:55:46 ID :9004	 | Retrait de mp : 18 - 1 = 17mp
+22/12/2014 19:55:46 ID :9004	 | Attaque 1 infligeant 7hp
+22/12/2014 19:55:46 ID :1	 | Degats à infligés avant reduction : 7hp
+22/12/2014 19:55:46 UPDATE personnage SET hp = :hp WHERE id_personnage =:id_personnage : 	 1|80
+22/12/2014 19:55:46 ID :1	 | Retrait d'hp : 87 - 7 = 80hp
+22/12/2014 19:55:46 UPDATE personnage SET mp = :mp WHERE id_personnage =:id_personnage : 	 1|38
+22/12/2014 19:55:46 ID :1	 | Retrait de mp : 39 - 1 = 38mp
+22/12/2014 19:55:46 ID :1	 | Attaque 1 infligeant 17hp
+22/12/2014 19:55:46 ID :9004	 | Degats à infligés avant reduction : 17hp
+22/12/2014 19:55:46 ID :9004	 | Retrait d'hp : 17 - 17 = 0hp
+22/12/2014 19:55:46 ID :9004	 | Mort ...
+22/12/2014 19:55:46 UPDATE personnage SET experience = :experience WHERE id_personnage =:id_personnage : 	 1|2760
+22/12/2014 19:55:46 ID :1	 | Ajout d'experience : 2720 + 40 = 2760xp
+27/12/2014 16:24:32 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1
+27/12/2014 16:24:32 Construction Personnage : ID:1; nom : Caporal; lvl : 9
+27/12/2014 16:24:32 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 5
+27/12/2014 16:24:32 Construction Personnage : ID:5; nom : Chausson 5; lvl : 1
+27/12/2014 16:24:32 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 6
+27/12/2014 16:24:32 Construction Personnage : ID:6; nom : Chausson 6; lvl : 1
+27/12/2014 16:24:33 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1
+27/12/2014 16:24:33 Construction Personnage : ID:1; nom : Caporal; lvl : 9
+27/12/2014 16:24:33 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 5
+27/12/2014 16:24:33 Construction Personnage : ID:5; nom : Chausson 5; lvl : 1
+27/12/2014 16:24:33 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 6
+27/12/2014 16:24:33 Construction Personnage : ID:6; nom : Chausson 6; lvl : 1
+27/12/2014 16:24:34 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1
+27/12/2014 16:24:34 Construction Personnage : ID:1; nom : Caporal; lvl : 9
+27/12/2014 16:24:34 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 5
+27/12/2014 16:24:34 Construction Personnage : ID:5; nom : Chausson 5; lvl : 1
+27/12/2014 16:24:34 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 6
+27/12/2014 16:24:34 Construction Personnage : ID:6; nom : Chausson 6; lvl : 1
+27/12/2014 16:24:38 Creation personnage : ...
+27/12/2014 16:24:38 SELECT DISTINCT experience FROM niveau WHERE niveau = :niveau : 	 2
+27/12/2014 16:24:38 Construction Personnage : ID:9001; nom : Monster 1; lvl : 2
+27/12/2014 16:24:38 Creation personnage : ...
+27/12/2014 16:24:38 SELECT DISTINCT experience FROM niveau WHERE niveau = :niveau : 	 4
+27/12/2014 16:24:38 Construction Personnage : ID:9002; nom : Monster 2; lvl : 4
+27/12/2014 16:24:38 Creation personnage : ...
+27/12/2014 16:24:38 SELECT DISTINCT experience FROM niveau WHERE niveau = :niveau : 	 4
+27/12/2014 16:24:38 Construction Personnage : ID:9003; nom : Monster 3; lvl : 4
+27/12/2014 16:24:38 UPDATE personnage SET mp = :mp WHERE id_personnage =:id_personnage : 	 1|37
+27/12/2014 16:24:38 ID :1	 | Retrait de mp : 38 - 1 = 37mp
+27/12/2014 16:24:38 ID :1	 | Attaque 1 infligeant 14hp
+27/12/2014 16:24:38 ID :9001	 | Degats à infligés avant reduction : 7hp
+27/12/2014 16:24:38 ID :9001	 | Retrait d'hp : 20 - 5 = 15hp
+27/12/2014 16:24:38 ID :9001	 | Retrait de mp : 10 - 1 = 9mp
+27/12/2014 16:24:38 ID :9001	 | Attaque 1 infligeant 1hp
+27/12/2014 16:24:38 ID :1	 | Degats à infligés avant reduction : 1.5hp
+27/12/2014 16:24:38 UPDATE personnage SET hp = :hp WHERE id_personnage =:id_personnage : 	 1|79
+27/12/2014 16:24:38 ID :1	 | Retrait d'hp : 80 - 1 = 79hp
+27/12/2014 16:24:38 ID :9002	 | Retrait de mp : 20 - 1 = 19mp
+27/12/2014 16:24:38 ID :9002	 | Attaque 1 infligeant 4hp
+27/12/2014 16:24:38 ID :1	 | Degats à infligés avant reduction : 4hp
+27/12/2014 16:24:38 UPDATE personnage SET hp = :hp WHERE id_personnage =:id_personnage : 	 1|75
+27/12/2014 16:24:38 ID :1	 | Retrait d'hp : 79 - 4 = 75hp
+27/12/2014 16:24:38 ID :9003	 | Retrait de mp : 20 - 1 = 19mp
+27/12/2014 16:24:38 ID :9003	 | Attaque 1 infligeant 5hp
+27/12/2014 16:24:38 ID :1	 | Degats à infligés avant reduction : 7.5hp
+27/12/2014 16:24:38 UPDATE personnage SET hp = :hp WHERE id_personnage =:id_personnage : 	 1|67
+27/12/2014 16:24:38 ID :1	 | Retrait d'hp : 75 - 8 = 67hp
+27/12/2014 16:24:38 UPDATE personnage SET mp = :mp WHERE id_personnage =:id_personnage : 	 1|36
+27/12/2014 16:24:38 ID :1	 | Retrait de mp : 37 - 1 = 36mp
+27/12/2014 16:24:38 ID :1	 | Attaque 1 infligeant 19hp
+27/12/2014 16:24:38 ID :9001	 | Degats à infligés avant reduction : 9.5hp
+27/12/2014 16:24:38 ID :9001	 | Retrait d'hp : 15 - 8 = 7hp
+27/12/2014 16:24:38 ID :9001	 | Retrait de mp : 9 - 1 = 8mp
+27/12/2014 16:24:38 ID :9001	 | Attaque 1 infligeant 2hp
+27/12/2014 16:24:38 ID :1	 | Degats à infligés avant reduction : 3hp
+27/12/2014 16:24:38 UPDATE personnage SET hp = :hp WHERE id_personnage =:id_personnage : 	 1|66
+27/12/2014 16:24:38 ID :1	 | Retrait d'hp : 67 - 1 = 66hp
+27/12/2014 16:24:38 ID :9002	 | Retrait de mp : 19 - 1 = 18mp
+27/12/2014 16:24:38 ID :9002	 | Attaque 1 infligeant 4hp
+27/12/2014 16:24:38 ID :1	 | Degats à infligés avant reduction : 4hp
+27/12/2014 16:24:38 UPDATE personnage SET hp = :hp WHERE id_personnage =:id_personnage : 	 1|62
+27/12/2014 16:24:38 ID :1	 | Retrait d'hp : 66 - 4 = 62hp
+27/12/2014 16:24:38 ID :9003	 | Retrait de mp : 19 - 1 = 18mp
+27/12/2014 16:24:38 ID :9003	 | Attaque 1 infligeant 5hp
+27/12/2014 16:24:38 ID :1	 | Degats à infligés avant reduction : 7.5hp
+27/12/2014 16:24:38 UPDATE personnage SET hp = :hp WHERE id_personnage =:id_personnage : 	 1|61
+27/12/2014 16:24:38 ID :1	 | Retrait d'hp : 62 - 1 = 61hp
+27/12/2014 16:24:38 UPDATE personnage SET mp = :mp WHERE id_personnage =:id_personnage : 	 1|35
+27/12/2014 16:24:38 ID :1	 | Retrait de mp : 36 - 1 = 35mp
+27/12/2014 16:24:38 ID :1	 | Attaque 1 infligeant 15hp
+27/12/2014 16:24:38 ID :9001	 | Degats à infligés avant reduction : 7.5hp
+27/12/2014 16:24:38 ID :9001	 | Retrait d'hp : 8 - 8 = 0hp
+27/12/2014 16:24:38 ID :9001	 | Mort ...
+27/12/2014 16:24:38 ID :9002	 | Retrait de mp : 18 - 1 = 17mp
+27/12/2014 16:24:38 ID :9002	 | Attaque 1 infligeant 5hp
+27/12/2014 16:24:38 ID :1	 | Degats à infligés avant reduction : 5hp
+27/12/2014 16:24:38 UPDATE personnage SET hp = :hp WHERE id_personnage =:id_personnage : 	 1|60
+27/12/2014 16:24:38 ID :1	 | Retrait d'hp : 61 - 1 = 60hp
+27/12/2014 16:24:38 ID :9003	 | Retrait de mp : 18 - 1 = 17mp
+27/12/2014 16:24:38 ID :9003	 | Attaque 1 infligeant 4hp
+27/12/2014 16:24:38 ID :1	 | Degats à infligés avant reduction : 6hp
+27/12/2014 16:24:38 UPDATE personnage SET hp = :hp WHERE id_personnage =:id_personnage : 	 1|54
+27/12/2014 16:24:38 ID :1	 | Retrait d'hp : 60 - 6 = 54hp
+27/12/2014 16:24:38 UPDATE personnage SET mp = :mp WHERE id_personnage =:id_personnage : 	 1|34
+27/12/2014 16:24:38 ID :1	 | Retrait de mp : 35 - 1 = 34mp
+27/12/2014 16:24:38 ID :1	 | Attaque 1 infligeant 21hp
+27/12/2014 16:24:38 ID :9002	 | Degats à infligés avant reduction : 21hp
+27/12/2014 16:24:38 ID :9002	 | Retrait d'hp : 40 - 21 = 19hp
+27/12/2014 16:24:38 ID :9002	 | Retrait de mp : 17 - 1 = 16mp
+27/12/2014 16:24:38 ID :9002	 | Attaque 1 infligeant 4hp
+27/12/2014 16:24:38 ID :1	 | Degats à infligés avant reduction : 4hp
+27/12/2014 16:24:38 UPDATE personnage SET hp = :hp WHERE id_personnage =:id_personnage : 	 1|53
+27/12/2014 16:24:38 ID :1	 | Retrait d'hp : 54 - 1 = 53hp
+27/12/2014 16:24:38 ID :9003	 | Retrait de mp : 17 - 1 = 16mp
+27/12/2014 16:24:38 ID :9003	 | Attaque 1 infligeant 4hp
+27/12/2014 16:24:38 ID :1	 | Degats à infligés avant reduction : 6hp
+27/12/2014 16:24:38 UPDATE personnage SET hp = :hp WHERE id_personnage =:id_personnage : 	 1|47
+27/12/2014 16:24:38 ID :1	 | Retrait d'hp : 53 - 6 = 47hp
+27/12/2014 16:24:38 UPDATE personnage SET mp = :mp WHERE id_personnage =:id_personnage : 	 1|33
+27/12/2014 16:24:38 ID :1	 | Retrait de mp : 34 - 1 = 33mp
+27/12/2014 16:24:38 ID :1	 | Attaque 1 infligeant 21hp
+27/12/2014 16:24:38 ID :9002	 | Degats à infligés avant reduction : 21hp
+27/12/2014 16:24:38 ID :9002	 | Retrait d'hp : 21 - 21 = 0hp
+27/12/2014 16:24:38 ID :9002	 | Mort ...
+27/12/2014 16:24:38 ID :9003	 | Retrait de mp : 16 - 1 = 15mp
+27/12/2014 16:24:38 ID :9003	 | Attaque 1 infligeant 5hp
+27/12/2014 16:24:38 ID :1	 | Degats à infligés avant reduction : 7.5hp
+27/12/2014 16:24:38 UPDATE personnage SET hp = :hp WHERE id_personnage =:id_personnage : 	 1|46
+27/12/2014 16:24:38 ID :1	 | Retrait d'hp : 47 - 1 = 46hp
+27/12/2014 16:24:38 UPDATE personnage SET mp = :mp WHERE id_personnage =:id_personnage : 	 1|32
+27/12/2014 16:24:38 ID :1	 | Retrait de mp : 33 - 1 = 32mp
+27/12/2014 16:24:38 ID :1	 | Attaque 1 infligeant 21hp
+27/12/2014 16:24:38 ID :9003	 | Degats à infligés avant reduction : 10.5hp
+27/12/2014 16:24:38 ID :9003	 | Retrait d'hp : 40 - 11 = 29hp
+27/12/2014 16:24:38 ID :9003	 | Retrait de mp : 15 - 1 = 14mp
+27/12/2014 16:24:38 ID :9003	 | Attaque 1 infligeant 5hp
+27/12/2014 16:24:38 ID :1	 | Degats à infligés avant reduction : 7.5hp
+27/12/2014 16:24:38 UPDATE personnage SET hp = :hp WHERE id_personnage =:id_personnage : 	 1|38
+27/12/2014 16:24:38 ID :1	 | Retrait d'hp : 46 - 8 = 38hp
+27/12/2014 16:24:38 UPDATE personnage SET mp = :mp WHERE id_personnage =:id_personnage : 	 1|31
+27/12/2014 16:24:38 ID :1	 | Retrait de mp : 32 - 1 = 31mp
+27/12/2014 16:24:38 ID :1	 | Attaque 1 infligeant 15hp
+27/12/2014 16:24:38 ID :9003	 | Degats à infligés avant reduction : 7.5hp
+27/12/2014 16:24:38 ID :9003	 | Retrait d'hp : 29 - 4 = 25hp
+27/12/2014 16:24:38 ID :9003	 | Retrait de mp : 14 - 1 = 13mp
+27/12/2014 16:24:38 ID :9003	 | Attaque 1 infligeant 5hp
+27/12/2014 16:24:38 ID :1	 | Degats à infligés avant reduction : 7.5hp
+27/12/2014 16:24:38 UPDATE personnage SET hp = :hp WHERE id_personnage =:id_personnage : 	 1|37
+27/12/2014 16:24:38 ID :1	 | Retrait d'hp : 38 - 1 = 37hp
+27/12/2014 16:24:38 UPDATE personnage SET mp = :mp WHERE id_personnage =:id_personnage : 	 1|30
+27/12/2014 16:24:38 ID :1	 | Retrait de mp : 31 - 1 = 30mp
+27/12/2014 16:24:38 ID :1	 | Attaque 1 infligeant 14hp
+27/12/2014 16:24:38 ID :9003	 | Degats à infligés avant reduction : 7hp
+27/12/2014 16:24:38 ID :9003	 | Retrait d'hp : 25 - 3 = 22hp
+27/12/2014 16:24:38 ID :9003	 | Retrait de mp : 13 - 1 = 12mp
+27/12/2014 16:24:38 ID :9003	 | Attaque 1 infligeant 5hp
+27/12/2014 16:24:38 ID :1	 | Degats à infligés avant reduction : 7.5hp
+27/12/2014 16:24:38 UPDATE personnage SET hp = :hp WHERE id_personnage =:id_personnage : 	 1|29
+27/12/2014 16:24:38 ID :1	 | Retrait d'hp : 37 - 8 = 29hp
+27/12/2014 16:24:38 UPDATE personnage SET mp = :mp WHERE id_personnage =:id_personnage : 	 1|29
+27/12/2014 16:24:38 ID :1	 | Retrait de mp : 30 - 1 = 29mp
+27/12/2014 16:24:38 ID :1	 | Attaque 1 infligeant 15hp
+27/12/2014 16:24:38 ID :9003	 | Degats à infligés avant reduction : 7.5hp
+27/12/2014 16:24:38 ID :9003	 | Retrait d'hp : 22 - 8 = 14hp
+27/12/2014 16:24:38 ID :9003	 | Retrait de mp : 12 - 1 = 11mp
+27/12/2014 16:24:38 ID :9003	 | Attaque 1 infligeant 4hp
+27/12/2014 16:24:38 ID :1	 | Degats à infligés avant reduction : 6hp
+27/12/2014 16:24:38 UPDATE personnage SET hp = :hp WHERE id_personnage =:id_personnage : 	 1|23
+27/12/2014 16:24:38 ID :1	 | Retrait d'hp : 29 - 6 = 23hp
+27/12/2014 16:24:38 UPDATE personnage SET mp = :mp WHERE id_personnage =:id_personnage : 	 1|28
+27/12/2014 16:24:38 ID :1	 | Retrait de mp : 29 - 1 = 28mp
+27/12/2014 16:24:38 ID :1	 | Attaque 1 infligeant 17hp
+27/12/2014 16:24:38 ID :9003	 | Degats à infligés avant reduction : 8.5hp
+27/12/2014 16:24:38 ID :9003	 | Retrait d'hp : 14 - 5 = 9hp
+27/12/2014 16:24:38 ID :9003	 | Retrait de mp : 11 - 1 = 10mp
+27/12/2014 16:24:38 ID :9003	 | Attaque 1 infligeant 4hp
+27/12/2014 16:24:38 ID :1	 | Degats à infligés avant reduction : 6hp
+27/12/2014 16:24:38 UPDATE personnage SET hp = :hp WHERE id_personnage =:id_personnage : 	 1|17
+27/12/2014 16:24:38 ID :1	 | Retrait d'hp : 23 - 6 = 17hp
+27/12/2014 16:24:38 UPDATE personnage SET mp = :mp WHERE id_personnage =:id_personnage : 	 1|27
+27/12/2014 16:24:38 ID :1	 | Retrait de mp : 28 - 1 = 27mp
+27/12/2014 16:24:38 ID :1	 | Attaque 1 infligeant 19hp
+27/12/2014 16:24:38 ID :9003	 | Degats à infligés avant reduction : 9.5hp
+27/12/2014 16:24:38 ID :9003	 | Retrait d'hp : 9 - 6 = 3hp
+27/12/2014 16:24:38 ID :9003	 | Retrait de mp : 10 - 1 = 9mp
+27/12/2014 16:24:38 ID :9003	 | Attaque 1 infligeant 5hp
+27/12/2014 16:24:38 ID :1	 | Degats à infligés avant reduction : 7.5hp
+27/12/2014 16:24:38 UPDATE personnage SET hp = :hp WHERE id_personnage =:id_personnage : 	 1|9
+27/12/2014 16:24:38 ID :1	 | Retrait d'hp : 17 - 8 = 9hp
+27/12/2014 16:24:38 UPDATE personnage SET mp = :mp WHERE id_personnage =:id_personnage : 	 1|26
+27/12/2014 16:24:38 ID :1	 | Retrait de mp : 27 - 1 = 26mp
+27/12/2014 16:24:38 ID :1	 | Attaque 1 infligeant 14hp
+27/12/2014 16:24:38 ID :9003	 | Degats à infligés avant reduction : 7hp
+27/12/2014 16:24:38 ID :9003	 | Retrait d'hp : 3 - 3 = 0hp
+27/12/2014 16:24:38 ID :9003	 | Mort ...
+27/12/2014 16:24:38 UPDATE personnage SET experience = :experience WHERE id_personnage =:id_personnage : 	 1|2800
+27/12/2014 16:24:38 ID :1	 | Ajout d'experience : 2760 + 40 = 2800xp
+27/12/2014 16:24:38 UPDATE personnage SET niveau = :niveau WHERE id_personnage =:id_personnage : 	 1|10
+27/12/2014 16:24:38 ID :1	 | Monter au niveau : 10
+27/12/2014 16:24:38 UPDATE personnage SET puissance = :puissance WHERE id_personnage =:id_personnage : 	 1|33
+27/12/2014 16:24:38 ID :1	 | Ajout de puissance : 30 + 3 = 33 puissance
+27/12/2014 16:24:38 UPDATE personnage SET defense = :defense WHERE id_personnage =:id_personnage : 	 1|10
+27/12/2014 16:24:38 ID :1	 | Ajout de defense : 9 + 1 = 10 defense
+27/12/2014 16:24:38 UPDATE personnage SET hp_max = :hp_max, hp = :hp_max WHERE id_personnage = :id_personnage : 	 1|170
+27/12/2014 16:24:38 ID :1	 | Ajout d'hp_max : 160 + 10 = 170hp
+27/12/2014 16:24:38 UPDATE personnage SET mp_max = :mp_max, mp = :mp_max WHERE id_personnage = :id_personnage : 	 1|60
+27/12/2014 16:24:38 ID :1	 | Ajout de mp_max : 55 + 5 = 60mp

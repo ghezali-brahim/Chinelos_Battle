@@ -86,25 +86,44 @@ class ModCombatVueCombat
         $combat->afficher ();
     }
 
-    static function affichageUnTour ( $joueur )
+    static function affichageUnTour ( $joueur, $ennemi )
     {
         echo $joueur->getEquipeOne ()->retourneAffichageEquipeAvecAttaques ();
-        $ennemi           = Equipe::createEquipe ( 5, NULL );
         $personnageActuel = $joueur->getEquipeOne ()->getPersoIndiceActuel ();
 
         //TODO à voir
         ?>
-        <form method="POST" action="" >
+        <form method="POST" action="index.php?module=combat&action=unTour&attaquePersonnage=true" >
             <label for="indice_ennemi" >Indice ennemi &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label >
             <input type="number" id="indice_ennemi" name="indice_ennemi" min="0"
-                   max="<?php echo ( $ennemi->getNombrePersonnages () - 1 ); ?>" required /> <br ><br >
+                   max="<?php echo ( $ennemi->getEquipeOne ()->getNombrePersonnages () - 1 ); ?>" required /> <br ><br >
             <label for="indice_attaque" >Indice attaque :</label >
             <input type="number" id="indice_attaque" name="indice_attaque" min="0"
                    max="<?php echo ( $personnageActuel->getNombreAttaque () - 1 ); ?>" required /><br ><br ><br >
             <input type="submit" name="submit" value="Attaquer" >
         </form >
         <?php
-        echo $ennemi->retourneAffichageEquipe ();
+        echo $ennemi->getEquipeOne ()->retourneAffichageEquipeAvecAttaques ();
+    }
+
+    static function retourneAffichageTour ( $joueur, $ennemi )
+    {
+        $text = '';
+        $text .= $joueur->getEquipeOne ()->retourneAffichageEquipeAvecAttaques ();
+        $personnageActuel = $joueur->getEquipeOne ()->getPersoIndiceActuel ();
+        //TODO à voir
+        $text .= '<form method="POST" action="index.php?module=combat&action=unTour&attaquePersonnage=true" >
+            <label for="indice_ennemi" >Indice ennemi &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label >
+            <input type="number" id="indice_ennemi" name="indice_ennemi" min="0"
+                   max="<?php echo ( $ennemi->getEquipeOne()->getNombrePersonnages () - 1 ); ?>" required /> <br ><br >
+            <label for="indice_attaque" >Indice attaque :</label >
+            <input type="number" id="indice_attaque" name="indice_attaque" min="0"
+                   max="<?php echo ( $personnageActuel->getNombreAttaque () - 1 ); ?>" required /><br ><br ><br >
+            <input type="submit" name="submit" value="Attaquer" >
+        </form >';
+        $text .= $ennemi->getEquipeOne ()->retourneAffichageEquipeAvecAttaques ();
+
+        return $text;
     }
 }
 

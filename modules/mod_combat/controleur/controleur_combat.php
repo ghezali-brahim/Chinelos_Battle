@@ -17,12 +17,15 @@ class ModCombatControleurCombat
 
     function __construct ()
     {
-        if ( Joueur::connectee () ) {
-            if ( !isset( $_SESSION[ 'joueur' ] ) ) {
-                $_SESSION[ 'joueur' ] = serialize ( new Joueur() );
-            }
+        if ( !isset( $_SESSION[ 'joueur' ] ) ) {
+            $_SESSION[ 'joueur' ] = serialize ( new Joueur() );
         }
         $this->_joueur = unserialize ( $_SESSION[ 'joueur' ] );
+        if ( !isset( $_SESSION[ 'ennemi' ] ) ) {
+            echo "re ..";
+            $_SESSION[ 'ennemi' ] = serialize ( new Joueur_IA( $this->_joueur->getNiveauTotalParticipant () ) );
+        }
+        $this->_ennemi = unserialize ( $_SESSION[ 'ennemi' ] );
     }
 
     public function accueilModule ()
@@ -57,16 +60,70 @@ class ModCombatControleurCombat
 
     public function affichageUnTour ()
     {
-        $this->_joueur->incrementerIndicePersoActuelParticipant();
-        ModCombatVueCombat::affichageUnTour ( $this->_joueur );
+        if ( $this->_ennemi->getEquipeOne ()->allPersonnagesDead () == TRUE && $this->_joueur->getEquipeOne ()->allPersonnagesDead () == FALSE ) {
+            $this->recompenserFinCombat ( $this->_joueur, $this->_ennemi );
+            $_SESSION[ 'joueur' ] = serialize ( $this->_joueur );
+            $_SESSION[ 'ennemi' ] = serialize ( new Joueur_IA( $this->_joueur->getNiveauTotalParticipant () ) );
+            $this->_ennemi        = $this->_ennemi = unserialize ( $_SESSION[ 'ennemi' ] );
+            header ( "Refresh: 2;URL=index.php?module=combat" );
+        }
+        if ( $this->_ennemi->getEquipeOne ()->allPersonnagesDead () == FALSE && $this->_joueur->getEquipeOne ()->allPersonnagesDead () == TRUE ) {
+            $_SESSION[ 'joueur' ] = serialize ( $this->_joueur );
+            $_SESSION[ 'ennemi' ] = serialize ( new Joueur_IA( $this->_joueur->getNiveauTotalParticipant () ) );
+            $this->_ennemi        = $this->_ennemi = unserialize ( $_SESSION[ 'ennemi' ] );
+            echo "Vous avez perdu";
+            header ( "Refresh: 2;URL=index.php?module=boutique&action=acheter" );
+        }
+        $this->_joueur->incrementerIndicePersoActuelParticipant ();
+        $this->_ennemi->incrementerIndicePersoActuelParticipant ();
+        ModCombatVueCombat::affichageUnTour ( $this->_joueur, $this->_ennemi );
+        //echo "<script>$('#combat').html('" . ModCombatVueCombat::retourneAffichageTour ( $this->_joueur , $this->_ennemi)."')</script>";
+        if ( isset( $_GET[ 'attaquePersonnage' ] ) ) {
+            if ( $_GET[ 'attaquePersonnage' ] == TRUE ) {
+                try {
+                    $this->attaquePersonnage ();
+                } catch ( Exception $e ) {
+                    echo "Impossible d'attaquer avec ce personnage" . $this->_joueur->getPersoIndiceActuel ()->__toString ();
+                }
+            }
+        }
+        $this->_ennemi->attaquer ( $this->_joueur );
+        $_SESSION[ 'joueur' ] = serialize ( $this->_joueur );
+        $_SESSION[ 'ennemi' ] = serialize ( $this->_ennemi );
     }
+
     //TODO continuer le combat
-    public function attaquePersonnage(){
-        $indicePersoEnnemi=$_POST['indice_ennemi'];
-        $indiceAttaqueChoisit=$_POST['indice_attaque_choisit'];
-        $this->_joueur->getPersoIndiceActuel()->setIndiceAttaqueChoisit($indiceAttaqueChoisit);
-        $this->_joueur->getPersoIndiceActuel()->attaquerPersonnage($this->_ennemi->getEquipeOne()->getPersonnageIndice($indicePersoEnnemi));
+
+    private function recompenserFinCombat ( $gagnant, $perdant )
+    {
+        //si participant 1 gagné alors récompense:
+        if ( !( $gagnant->getEquipeOne ()->allPersonnagesDead () ) ) {
+            // si lvl total inférieur à celui de l'enemi alors + de bonus
+            if ( $gagnant->getNiveauTotalParticipant () < $perdant->getNiveauTotalParticipant () ) {
+                //ICI recompense sous la forme (argent, %xp)
+                $recompense_p1 = array (
+                        'argent'     => 10,
+                        'pourcentXP' => 6 );
+            } else {
+                $recompense_p1 = array (
+                        'argent'     => 5,
+                        'pourcentXP' => 4 );
+            }
+            echo "votre récompense de fin de combat est : " . $recompense_p1[ 'argent' ] . "gils ainsi que " . $recompense_p1[ 'pourcentXP' ] . "% d'experience. <br/>";
+            $gagnant->ajouterArgent ( $recompense_p1[ 'argent' ] );
+            $gagnant->ajouterPourcentExperience ( $recompense_p1[ 'pourcentXP' ] );
+            $_SESSION[ 'ennemi' ] = serialize ( new Joueur_IA( $this->_joueur->getNiveauTotalParticipant () ) );
+        }
     }
+
+    public function attaquePersonnage ()
+    {
+        $indicePersoEnnemi    = $_POST[ 'indice_ennemi' ];
+        $indiceAttaqueChoisit = $_POST[ 'indice_attaque' ];
+        $this->_joueur->getPersoIndiceActuel ()->setIndiceAttaqueChoisit ( $indiceAttaqueChoisit );
+        $this->_joueur->getPersoIndiceActuel ()->attaquerPersonnage ( $this->_ennemi->getEquipeOne ()->getPersonnageIndice ( $indicePersoEnnemi ) );
+    }
+
     public function combat ()
     {
         $this->_joueur = unserialize ( $_SESSION[ 'joueur' ] );

@@ -20,7 +20,7 @@ class  Equipe extends DBMapper
     {
         $this->_id_equipe           = $id_equipe;
         $this->_personnages         = $personnages;
-        $this->_indice_perso_actuel = -1;
+        $this->_indice_perso_actuel = 0;
         if ( self::$db_debug ) {
             static::log ( "Construction " . __CLASS__ . " : " . $this->__toString () );
         }
@@ -219,6 +219,7 @@ class  Equipe extends DBMapper
     function retourneAffichageEquipeAvecAttaques ()
     {
         $text = '<div class="equipe">';
+        $text .= '<h3>Indice personnage actuelle : ' . $this->_indice_perso_actuel . '</h3><br>';
         for ( $i = 0; $i < count ( $this->_personnages ); $i++ ) {
             if ( $i == $this->_indice_perso_actuel ) {
                 $text = $text . $this->getPersonnageIndice ( $i )->retourneAffichagePersonnageAvecAttaque ();
@@ -242,7 +243,7 @@ class  Equipe extends DBMapper
     function getPersonnageIndice ( $indice )
     {
         if ( !array_key_exists ( $indice, $this->_personnages ) ) {
-            throw new Exception( "Indice incorrecte afin de récuperer le personnage" );
+            throw new Exception( "ID Equipe: $this->_id_equipe  ; Indice $this->_indice_perso_actuel incorrecte afin de récuperer le personnage" );
         }
 
         return $this->_personnages[ $indice ];
@@ -433,11 +434,15 @@ class  Equipe extends DBMapper
     {
         $this->_indice_perso_actuel = $indice_perso_actuel;
     }
-    public function incrementerIndicePersoActuel(){
-        if($this->_indice_perso_actuel<count($this->_personnages)){
-            $this->_indice_perso_actuel++;
-        }else{
-            $this->_indice_perso_actuel=-1;
+
+    public function incrementerIndicePersoActuel ()
+    {
+        while ( $this->getPersonnageIndice ( $this->_indice_perso_actuel )->isDead () && !$this->allPersonnagesDead () ) {
+            if ( $this->_indice_perso_actuel < count ( $this->_personnages ) - 1 ) {
+                $this->_indice_perso_actuel++;
+            } else {
+                $this->_indice_perso_actuel = 0;
+            }
         }
     }
 }

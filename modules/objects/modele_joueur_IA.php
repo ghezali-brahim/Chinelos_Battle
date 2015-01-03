@@ -82,6 +82,28 @@ class Joueur_IA extends Participant
         }
     }
 
+    function attaquer ( $participant )
+    {
+        try {
+            $personnage       = $this->getEquipeOne ()->getPersoIndiceActuel ();
+            $personnageTarget = $participant->getEquipeOne ()->getPersonnagePlusFaibleVivant ();
+            //ON A RAJOUTER LA NOTION D'ELEMENT
+            try {
+                $degats = $personnage->attaquer ( 0 );
+            } catch ( Exception $e ) {
+                $degats = $personnage->attaquer ( 2 );
+            }
+            // ON mulitplie par le ratio de l'élement
+            $degats = $degats * Element::getRatioDegatElement ( $personnage->getElement (), $personnageTarget->getElement () );
+            //DEBUG
+            //echo '<br/>========= ' . $personnage . ' a fait ' . $degats . ' à lenemi : ' . $personnageTarget . ' ======<br/>';
+            $personnageTarget->subirDegats ( $degats );
+        } catch ( Exception $e ) {
+            print_r ( $e );
+        }
+    }
+
+
     function retourneAffichageJoueurIA ()
     {
         $text = "<h2><strong>Niveau de l'equipe adverse : " . $this->getEquipeOne ()->getNiveauTotalPersos () . "</strong></h2><br>" .

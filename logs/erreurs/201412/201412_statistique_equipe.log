@@ -102,3 +102,49 @@
 21/12/2014 18:05:03 Construction Equipe : ID Equipe:  | Niveau total :5 | Personnages :ID:9001; nom : Monster 1; lvl : 1 | ID:9002; nom : Monster 2; lvl : 1 | ID:9003; nom : Monster 3; lvl : 1 | ID:9004; nom : Monster 4; lvl : 1 | ID:9005; nom : Monster 5; lvl : 1
 21/12/2014 18:15:07 Creation d'une l'equipe : ...
 21/12/2014 18:15:07 Construction Equipe : ID Equipe:  | Niveau total :5 | Personnages :ID:9001; nom : Monster 1; lvl : 1 | ID:9002; nom : Monster 2; lvl : 1 | ID:9003; nom : Monster 3; lvl : 1 | ID:9004; nom : Monster 4; lvl : 2
+22/12/2014 19:55:41 Recuperation des personnages de l'equipe d'id : 1
+22/12/2014 19:55:41 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 1
+22/12/2014 19:55:41 Construction Equipe : ID Equipe: 1 | Niveau total :11 | Personnages :ID:5; nom : Chausson 5; lvl : 1 | ID:6; nom : Chausson 6; lvl : 1 | ID:1; nom : Caporal; lvl : 9
+22/12/2014 19:55:41 Recuperation des personnages de l'equipe d'id : 2
+22/12/2014 19:55:41 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 2
+22/12/2014 19:55:41 Construction Equipe : ID Equipe: 2 | Niveau total :0 | Personnages :
+22/12/2014 19:55:43 Recuperation des personnages de l'equipe d'id : 1
+22/12/2014 19:55:43 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 1
+22/12/2014 19:55:43 Construction Equipe : ID Equipe: 1 | Niveau total :11 | Personnages :ID:5; nom : Chausson 5; lvl : 1 | ID:6; nom : Chausson 6; lvl : 1 | ID:1; nom : Caporal; lvl : 9
+22/12/2014 19:55:43 Recuperation des personnages de l'equipe d'id : 2
+22/12/2014 19:55:43 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 2
+22/12/2014 19:55:43 Construction Equipe : ID Equipe: 2 | Niveau total :0 | Personnages :
+22/12/2014 19:55:44 Recuperation des personnages de l'equipe d'id : 1
+22/12/2014 19:55:44 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 1
+22/12/2014 19:55:44 Construction Equipe : ID Equipe: 1 | Niveau total :11 | Personnages :ID:5; nom : Chausson 5; lvl : 1 | ID:6; nom : Chausson 6; lvl : 1 | ID:1; nom : Caporal; lvl : 9
+22/12/2014 19:55:44 Recuperation des personnages de l'equipe d'id : 2
+22/12/2014 19:55:44 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 2
+22/12/2014 19:55:44 Construction Equipe : ID Equipe: 2 | Niveau total :0 | Personnages :
+22/12/2014 19:55:46 Creation d'une l'equipe : ...
+22/12/2014 19:55:46 Construction Equipe : ID Equipe: 1 | Niveau total :11 | Personnages :ID:9001; nom : Monster 1; lvl : 4 | ID:9002; nom : Monster 2; lvl : 1 | ID:9003; nom : Monster 3; lvl : 1 | ID:9004; nom : Monster 4; lvl : 5
+22/12/2014 19:55:46 Retrait du personnage 5 de l'equipe 1
+22/12/2014 19:55:46 Ajout du personnage 5 a l'equipe 2
+22/12/2014 19:55:46 Retrait du personnage 6 de l'equipe 1
+22/12/2014 19:55:46 Ajout du personnage 6 a l'equipe 2
+22/12/2014 19:55:46 Ajout d'un pourcentage d'experience à tous les personnages de l'equipe d'id : 1
+27/12/2014 16:24:32 Recuperation des personnages de l'equipe d'id : 1
+27/12/2014 16:24:32 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 1
+27/12/2014 16:24:32 Construction Equipe : ID Equipe: 1 | Niveau total :9 | Personnages :ID:1; nom : Caporal; lvl : 9
+27/12/2014 16:24:32 Recuperation des personnages de l'equipe d'id : 2
+27/12/2014 16:24:32 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 2
+27/12/2014 16:24:32 Construction Equipe : ID Equipe: 2 | Niveau total :2 | Personnages :ID:5; nom : Chausson 5; lvl : 1 | ID:6; nom : Chausson 6; lvl : 1
+27/12/2014 16:24:33 Recuperation des personnages de l'equipe d'id : 1
+27/12/2014 16:24:33 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 1
+27/12/2014 16:24:33 Construction Equipe : ID Equipe: 1 | Niveau total :9 | Personnages :ID:1; nom : Caporal; lvl : 9
+27/12/2014 16:24:33 Recuperation des personnages de l'equipe d'id : 2
+27/12/2014 16:24:33 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 2
+27/12/2014 16:24:33 Construction Equipe : ID Equipe: 2 | Niveau total :2 | Personnages :ID:5; nom : Chausson 5; lvl : 1 | ID:6; nom : Chausson 6; lvl : 1
+27/12/2014 16:24:34 Recuperation des personnages de l'equipe d'id : 1
+27/12/2014 16:24:34 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 1
+27/12/2014 16:24:34 Construction Equipe : ID Equipe: 1 | Niveau total :9 | Personnages :ID:1; nom : Caporal; lvl : 9
+27/12/2014 16:24:34 Recuperation des personnages de l'equipe d'id : 2
+27/12/2014 16:24:34 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 2
+27/12/2014 16:24:34 Construction Equipe : ID Equipe: 2 | Niveau total :2 | Personnages :ID:5; nom : Chausson 5; lvl : 1 | ID:6; nom : Chausson 6; lvl : 1
+27/12/2014 16:24:38 Creation d'une l'equipe : ...
+27/12/2014 16:24:38 Construction Equipe : ID Equipe: 1 | Niveau total :10 | Personnages :ID:9001; nom : Monster 1; lvl : 2 | ID:9002; nom : Monster 2; lvl : 4 | ID:9003; nom : Monster 3; lvl : 4
+27/12/2014 16:24:38 Ajout d'un pourcentage d'experience à tous les personnages de l'equipe d'id : 1

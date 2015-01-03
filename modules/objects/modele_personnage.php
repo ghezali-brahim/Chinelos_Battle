@@ -800,7 +800,7 @@ class Personnage extends DBMapper
     function retourneAffichagePersonnageAvecAttaque ()
     {
         $rep  = "img/avatar/";
-        $text = '<div class="personnage">' .
+        $text = '<div class="personnage" style="background-color:#ffcf95;">' .
                 '<img src="' . Element::getIcone ( $this->_element ) . '" alt="' . Element::getNom ( $this->_element ) . '"/> <br/>'
                 . '<img src="' . $rep . $this->_element . ".jpg" . '" alt="' . $this->_nom . '"/> <br/>'
                 . $this->_nom . ' (level ' . $this->_niveau . ') <br/>'
@@ -811,15 +811,11 @@ class Personnage extends DBMapper
                 . '<progress value="' . $this->_mp . '" max="' . $this->_mp_max . '"></progress> <br/>'
                 . 'Puissance : ' . $this->_puissance . '<br/>'
                 . 'Defense : ' . $this->_defense . '<br/>';
-        $i    = 1;
-        $text = $text . '<form>';
+        $text .= '<div class="attaque" style="background-color: #F0AD4E">';
         foreach ( $this->_attaques as $attaque ) {
-            $text = $text . '<button class="attaque" name="attaque" value"' . $attaque->getIdAttaque () . '" >';
-            $text = $text . $attaque->__toString () . '';
-            $text = $text . '</button>';
-            $i++;
+            $text = $text . $attaque->__toString () . '<br>';
         }
-        $text = $text . '</form>';
+        $text .= '</div>';
         $text = $text . '</div>';
 
         return $text;
@@ -856,6 +852,10 @@ class Personnage extends DBMapper
         if ( is_null ( $personnageTarget ) ) {
             throw new Exception( "Veuillez choisir un personnage à attaquer" );
         }
+        if ( $this->isDead () ) {
+            throw new Exception( "ID Perso : $this->_id_personnage ; de niveau : $this->_niveau || Impossible d'attaquer, vous êtes morts ..." );
+        }
+        echo "Personnage :" . $this->__toString () . "\t | Attaque le personnage  : " . $personnageTarget->__toString ();
         $indice_attaque = $this->getIndiceAttaqueChoisit ();
         $degats         = $this->attaquer ( $indice_attaque );
         if ( self::$db_debug ) {

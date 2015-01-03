@@ -49,15 +49,16 @@
             </div >
             <div class="menu" >
                 <ul >
-                    <li ><a href="index.php?module=connexion&action=connexion" class="active" >Accueil<br />
+                    <li ><a href="index.php?module=connexion&action=connexion" id="connexion"
+                            class="active" >Accueil<br />
                             <span >connexion</span ></a ></li >
-                    <li ><a href="index.php?module=combat" >Combat<br />
+                    <li ><a href="index.php?module=combat" id="combat" >Combat<br />
                             <span >combattre</span ></a ></li >
-                    <li ><a href="index.php?module=boutique" >Boutique<br />
+                    <li ><a href="index.php?module=boutique" id="boutique" >Boutique<br />
                             <span >shopping</span ></a ></li >
-                    <li ><a href="index.php?module=joueur" >Joueur<br />
+                    <li ><a href="index.php?module=joueur" id="joueur" >Joueur<br />
                             <span >équipes</span ></a ></li >
-                    <li ><a href="index.php?module=contact" >Contact<br />
+                    <li ><a href="index.php?module=contact" id="contact" >Contact<br />
                             <span >assistance</span ></a ></li >
 
                 </ul >
