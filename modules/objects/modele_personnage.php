@@ -859,7 +859,7 @@ class Personnage extends DBMapper
         $indice_attaque = $this->getIndiceAttaqueChoisit ();
         $degats         = $this->attaquer ( $indice_attaque );
         if ( self::$db_debug ) {
-            static::log ( "ID :" . $this->getIdPersonnage () . "\t | Attaque le personnage  : " . $personnageTarget->getIdPersonnage () );
+            static::log ( "ID :" . $this->getIdPersonnage () . "\t | Attaque le personnage  : " . $personnageTarget->getIdPersonnage ()." et inflige $degats hp." );
         }
         $degats = $degats * Element::getRatioDegatElement ( $this->getElement (), $personnageTarget->getElement () );
         $personnageTarget->subirDegats ( $degats );
