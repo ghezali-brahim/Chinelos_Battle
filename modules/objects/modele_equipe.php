@@ -437,12 +437,14 @@ class  Equipe extends DBMapper
 
     public function incrementerIndicePersoActuel ()
     {
-        while ( $this->getPersonnageIndice ( $this->_indice_perso_actuel )->isDead () && !$this->allPersonnagesDead () ) {
+        $i = 0;
+        while ( $this->getPersonnageIndice ( $this->_indice_perso_actuel )->isDead () && !$this->allPersonnagesDead () || $i == 0 ) {
             if ( $this->_indice_perso_actuel < count ( $this->_personnages ) - 1 ) {
                 $this->_indice_perso_actuel++;
             } else {
                 $this->_indice_perso_actuel = 0;
             }
+            $i++;
         }
     }
 }

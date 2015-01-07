@@ -944,3 +944,282 @@
 03/01/2015 23:01:11 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
 03/01/2015 23:01:16 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
 03/01/2015 23:01:42 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+03/01/2015 23:08:22 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+05/01/2015 23:59:05 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+05/01/2015 23:59:05 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+05/01/2015 23:59:05 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+05/01/2015 23:59:05 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+05/01/2015 23:59:07 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+05/01/2015 23:59:07 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+05/01/2015 23:59:07 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+05/01/2015 23:59:07 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+05/01/2015 23:59:07 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+05/01/2015 23:59:08 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+05/01/2015 23:59:08 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+05/01/2015 23:59:08 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 22:51:43 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 22:51:43 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 22:51:43 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 22:51:43 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+07/01/2015 22:51:52 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 22:51:59 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 22:52:03 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 22:52:07 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 22:52:12 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 22:52:19 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 22:52:24 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 22:52:27 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 22:52:43 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 22:52:46 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 22:52:49 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 22:53:22 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 22:55:42 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 22:55:42 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 22:55:42 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 22:55:42 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 22:55:42 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+07/01/2015 22:55:42 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 22:55:43 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 22:55:43 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 22:55:43 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 22:55:43 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 22:55:43 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+07/01/2015 22:55:43 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 22:55:45 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 22:55:45 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 22:55:45 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 22:55:45 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 22:55:45 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+07/01/2015 22:56:06 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 22:58:54 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 22:59:02 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 22:59:12 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 22:59:15 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:02:07 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:02:18 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:02:22 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:02:31 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:02:48 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:02:58 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:05:23 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:12:49 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:18:00 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:18:53 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:19:22 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:26:43 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:26:43 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:26:43 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:26:44 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:26:44 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:26:44 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:26:47 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:26:47 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:26:47 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:26:47 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:26:47 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+07/01/2015 23:26:48 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:27:33 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:27:35 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:27:38 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:27:41 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:27:42 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:27:42 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:27:42 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:27:42 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:27:42 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:27:42 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:27:42 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:27:42 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+07/01/2015 23:27:43 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:27:43 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:27:43 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:27:44 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:27:56 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:27:58 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:27:58 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:27:58 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:27:58 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:00 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:01 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:01 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:01 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:01 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:01 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:01 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:01 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:01 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+07/01/2015 23:28:02 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:02 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:02 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:08 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:08 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:08 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:08 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:08 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+07/01/2015 23:28:10 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:10 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:10 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:10 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:10 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+07/01/2015 23:28:12 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:12 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:12 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:12 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:12 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+07/01/2015 23:28:12 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:12 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:12 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:12 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:12 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+07/01/2015 23:28:13 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:13 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:13 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:13 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:13 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+07/01/2015 23:28:13 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:13 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:13 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:13 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:13 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+07/01/2015 23:28:16 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:16 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:16 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:17 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:17 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:17 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:18 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:18 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:18 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:19 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:19 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:19 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:20 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:20 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:20 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:20 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:20 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+07/01/2015 23:28:21 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:21 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:21 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:21 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:28:21 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+07/01/2015 23:29:21 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:29:21 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:29:21 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:29:21 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:29:21 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:29:21 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:29:21 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:29:21 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+07/01/2015 23:29:22 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:29:22 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:29:22 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:29:22 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:29:23 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:29:29 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:29:40 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:31:50 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:31:55 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:31:55 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:31:55 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:31:55 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:31:55 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+07/01/2015 23:37:13 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:37:17 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:37:22 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:37:27 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:37:32 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:37:35 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:41:02 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:41:24 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:41:30 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:41:57 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:43:37 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:43:37 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:46:01 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:46:05 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:46:19 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:46:23 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:46:28 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:46:35 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:47:52 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:47:58 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:48:06 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:48:12 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:48:25 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:48:32 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:48:42 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:48:47 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:48:53 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:49:02 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:49:44 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:49:53 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:49:55 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:49:57 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:49:59 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:49:59 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:49:59 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:49:59 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:49:59 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+07/01/2015 23:50:01 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:50:01 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:50:01 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:50:01 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:50:01 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:50:01 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:50:03 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:50:03 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:50:03 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:50:04 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:50:04 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:50:04 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:50:04 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:50:05 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:52:34 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:52:46 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:52:46 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:52:47 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:54:28 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:54:28 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:54:28 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:54:28 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+07/01/2015 23:54:30 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:54:40 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:54:44 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:54:50 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:54:52 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:54:55 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:54:59 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:55:05 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:55:38 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:55:42 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:55:46 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:55:51 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:55:56 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:56:01 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:56:56 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:57:03 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:57:12 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:57:17 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:57:23 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:57:35 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:57:41 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:57:48 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:57:55 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:58:01 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:58:07 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:58:11 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:58:22 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:58:34 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:58:36 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:58:41 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:58:41 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:58:41 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:58:41 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:58:41 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+07/01/2015 23:58:42 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:58:42 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:58:42 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:58:42 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+07/01/2015 23:58:42 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+07/01/2015 23:58:54 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1

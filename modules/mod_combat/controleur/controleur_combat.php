@@ -22,7 +22,6 @@ class ModCombatControleurCombat
         }
         $this->_joueur = unserialize ( $_SESSION[ 'joueur' ] );
         if ( !isset( $_SESSION[ 'ennemi' ] ) ) {
-            echo "re ..";
             $_SESSION[ 'ennemi' ] = serialize ( new Joueur_IA( $this->_joueur->getNiveauTotalParticipant () ) );
         }
         $this->_ennemi = unserialize ( $_SESSION[ 'ennemi' ] );

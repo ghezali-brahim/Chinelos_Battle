@@ -855,11 +855,11 @@ class Personnage extends DBMapper
         if ( $this->isDead () ) {
             throw new Exception( "ID Perso : $this->_id_personnage ; de niveau : $this->_niveau || Impossible d'attaquer, vous êtes morts ..." );
         }
-        echo "Personnage :" . $this->__toString () . "\t | Attaque le personnage  : " . $personnageTarget->__toString ();
         $indice_attaque = $this->getIndiceAttaqueChoisit ();
         $degats         = $this->attaquer ( $indice_attaque );
+        echo "Personnage :" . $this->__toString () . "\t | Attaque le personnage  : " . $personnageTarget->__toString () . " et inflige $degats hp.";
         if ( self::$db_debug ) {
-            static::log ( "ID :" . $this->getIdPersonnage () . "\t | Attaque le personnage  : " . $personnageTarget->getIdPersonnage ()." et inflige $degats hp." );
+            static::log ( "ID :" . $this->getIdPersonnage () . "\t | Attaque le personnage  : " . $personnageTarget->getIdPersonnage () . " et inflige $degats hp." );
         }
         $degats = $degats * Element::getRatioDegatElement ( $this->getElement (), $personnageTarget->getElement () );
         $personnageTarget->subirDegats ( $degats );
