@@ -49,6 +49,7 @@ class ModCombatControleurCombat
                 array_push ( $listeEnemies, new Joueur_IA( $this->_joueur->getNiveauTotalParticipant () + ( $i - 5 ) ) );
             }
         }
+        $_SESSION[ 'listeEnnemies' ] = serialize ( $listeEnemies );
         ModCombatVueCombat::afficherListeCombat ( $listeEnemies );
     }
 
@@ -59,19 +60,24 @@ class ModCombatControleurCombat
 
     public function affichageUnTour ()
     {
+        if ( isset( $_POST[ 'ennemi_choisit' ] ) ) {
+            $liste_ennemies       = unserialize ( $_SESSION[ 'listeEnnemies' ] );
+            $this->_ennemi        = $liste_ennemies[ $_POST[ 'ennemi_choisit' ] ];
+            $_SESSION[ 'ennemi' ] = serialize ( $this->_ennemi );
+        }
         if ( $this->_ennemi->getEquipeOne ()->allPersonnagesDead () == TRUE && $this->_joueur->getEquipeOne ()->allPersonnagesDead () == FALSE ) {
             $this->recompenserFinCombat ( $this->_joueur, $this->_ennemi );
             $_SESSION[ 'joueur' ] = serialize ( $this->_joueur );
             $_SESSION[ 'ennemi' ] = serialize ( new Joueur_IA( $this->_joueur->getNiveauTotalParticipant () ) );
             $this->_ennemi        = $this->_ennemi = unserialize ( $_SESSION[ 'ennemi' ] );
-            header ( "Refresh: 2;URL=index.php?module=combat" );
+            header ( "Refresh: 4;URL=index.php?module=combat" );
         }
         if ( $this->_ennemi->getEquipeOne ()->allPersonnagesDead () == FALSE && $this->_joueur->getEquipeOne ()->allPersonnagesDead () == TRUE ) {
             $_SESSION[ 'joueur' ] = serialize ( $this->_joueur );
             $_SESSION[ 'ennemi' ] = serialize ( new Joueur_IA( $this->_joueur->getNiveauTotalParticipant () ) );
             $this->_ennemi        = $this->_ennemi = unserialize ( $_SESSION[ 'ennemi' ] );
             echo "Vous avez perdu";
-            header ( "Refresh: 2;URL=index.php?module=boutique&action=acheter" );
+            header ( "Refresh: 4;URL=index.php?module=boutique&action=acheter" );
         }
         $this->_joueur->incrementerIndicePersoActuelParticipant ();
         $this->_ennemi->incrementerIndicePersoActuelParticipant ();
@@ -92,7 +98,6 @@ class ModCombatControleurCombat
     }
 
     //TODO continuer le combat
-
     private function recompenserFinCombat ( $gagnant, $perdant )
     {
         //si participant 1 gagné alors récompense:
@@ -111,7 +116,8 @@ class ModCombatControleurCombat
             echo "votre récompense de fin de combat est : " . $recompense_p1[ 'argent' ] . "gils ainsi que " . $recompense_p1[ 'pourcentXP' ] . "% d'experience. <br/>";
             $gagnant->ajouterArgent ( $recompense_p1[ 'argent' ] );
             $gagnant->ajouterPourcentExperience ( $recompense_p1[ 'pourcentXP' ] );
-            $_SESSION[ 'ennemi' ] = serialize ( new Joueur_IA( $this->_joueur->getNiveauTotalParticipant () ) );
+            //$_SESSION[ 'ennemi' ] = serialize ( new Joueur_IA( $this->_joueur->getNiveauTotalParticipant () ) );
+            unset( $_SESSION[ 'ennemi' ] );
         }
     }
 
