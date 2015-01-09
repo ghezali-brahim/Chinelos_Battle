@@ -1,0 +1,5 @@
+Pour installer le site:
+1- il faut tout d'abbord placer le repertoire Chinelos_Battle à l'endroit ou il faut pour publier le site.
+2- importer le fichier installation.sql dans votre base de donnée+
+3- Modifier le fichier params_connexion.php qui se trouve dans le dossier "include"
+4- Il suffit de vous inscrire et vous pouvez profiter du site.

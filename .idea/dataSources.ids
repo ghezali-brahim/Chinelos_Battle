@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - test@localhost" uuid="8629a1a4-c42e-4276-9e87-514786dc7144">
+    <database-info product="MySQL" version="5.6.20" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.31 ( Revision: alexander.soklakov@oracle.com-20140520065950-groqzzbvxprqdmnz )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="test"/>
+    <table name="attaque" schema="" catalog="test" type="TABLE">
+      <column name="id_attaque" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="nom" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="degats" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="mp_used" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id_attaque"/>
+    </table>
+    <table name="element" schema="" catalog="test" type="TABLE">
+      <column name="id_element" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="nom" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12"/>
+      <column name="id_faible_contre" sqlType="VARCHAR" precision="64" scale="0" nullable="true" jdbcType="12"/>
+      <column name="id_fort_contre" sqlType="VARCHAR" precision="64" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id_element"/>
+      <index name="unique_nom" unique="true" columns="nom"/>
+    </table>
+    <table name="equipe" schema="" catalog="test" type="TABLE">
+      <column name="id_equipe" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="id_user" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <index name="id_equipe" unique="true" columns="id_equipe"/>
+    </table>
+    <table name="item" schema="" catalog="test" type="TABLE">
+      <column name="id_item" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="nom" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12"/>
+      <column name="description" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="prix_achat" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="item_type" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="actions" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id_item"/>
+      <index name="unique_nom" unique="true" columns="nom"/>
+    </table>
+    <table name="niveau" schema="" catalog="test" type="TABLE">
+      <column name="niveau" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="experience" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <primary-key name="PRIMARY" columns="niveau"/>
+      <index name="unique_experience" unique="true" columns="experience"/>
+    </table>
+    <table name="personnage" schema="" catalog="test" type="TABLE">
+      <column name="id_personnage" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="nom" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="element" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="niveau" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="experience" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="attaques" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="hp" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="hp_max" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="mp" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="mp_max" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="puissance" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="defense" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="id_equipe" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <index name="id_personnage" unique="true" columns="id_personnage"/>
+    </table>
+    <table name="users" schema="" catalog="test" type="TABLE">
+      <column name="id_user" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="username" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="password" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="argent" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="id_equipe" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <index name="email" unique="true" columns="email"/>
+      <index name="id_user" unique="true" columns="id_user"/>
+      <index name="username" unique="true" columns="username"/>
+    </table>
+  </data-source>
+</component>
