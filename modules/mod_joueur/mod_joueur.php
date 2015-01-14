@@ -17,6 +17,8 @@ if ( $action == "afficher" ) {
     $controleur->transferer ();
 } else if ( $action == "afficherEquipeOne" ) {
     $controleur->afficherEquipeOne ();
-} else {
+} else if($action == "classement") {
+    $controleur->classement();
+}else {
     $controleur->accueilModule ();
 }

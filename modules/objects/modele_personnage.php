@@ -958,4 +958,19 @@ class Personnage extends DBMapper
     {
         return count ( $this->_attaques );
     }
+
+    /**
+     * Retourne le personnage le plus haut level entre deux
+     * @param $p1
+     * @param $p2
+     *
+     * @return Personnage
+     */
+    static function getPersonnagePlusHL($p1, $p2){
+        if(Personnage::comparerNiveauPersonnage($p1,$p2)>=0){
+            return $p1;
+        }else{
+            return $p2;
+        }
+    }
 }

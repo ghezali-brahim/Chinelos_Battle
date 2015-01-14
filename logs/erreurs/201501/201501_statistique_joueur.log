@@ -1,0 +1,304 @@
+09/01/2015 22:59:40 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 22:59:42 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 22:59:44 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 22:59:45 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 22:59:47 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 22:59:48 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 22:59:51 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 22:59:51 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 22:59:51 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 22:59:51 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 22:59:51 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+09/01/2015 22:59:52 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 22:59:52 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 22:59:52 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 22:59:52 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 22:59:52 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+09/01/2015 22:59:54 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 22:59:54 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 22:59:54 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 22:59:54 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 22:59:54 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+09/01/2015 22:59:55 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 22:59:55 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 22:59:55 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 22:59:55 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 22:59:55 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+09/01/2015 22:59:56 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 22:59:56 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 22:59:56 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 22:59:56 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 22:59:56 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+09/01/2015 22:59:56 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 22:59:56 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 22:59:56 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 22:59:56 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 22:59:56 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+09/01/2015 22:59:57 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 22:59:57 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 22:59:57 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 22:59:59 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 22:59:59 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 22:59:59 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 23:00:00 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 23:00:00 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 23:00:00 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 23:00:01 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 23:00:01 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 23:00:01 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 23:00:01 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+09/01/2015 23:00:02 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 19:29:00 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 19:29:00 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 19:29:00 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 19:29:00 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+14/01/2015 19:29:01 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 19:29:01 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 19:29:01 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 19:29:05 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 19:29:05 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 19:29:05 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 19:29:06 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 19:29:07 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 19:29:07 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 19:29:07 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 19:29:08 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 19:29:08 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 19:29:08 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 19:29:08 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 19:29:08 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+14/01/2015 19:29:09 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 19:29:09 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 19:29:09 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 19:29:09 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:20:30 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:20:31 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:20:31 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:20:31 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:20:31 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:20:31 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+14/01/2015 21:20:32 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:20:32 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:20:32 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:20:32 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:20:32 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+14/01/2015 21:20:32 SELECT  users.username, personnage.nom,element.nom, personnage.niveau, personnage.experience, personnage.attaques, personnage.hp_max, personnage.mp_max, personnage.puissance, personnage.defense  FROM
+  ((users INNER JOIN equipe ON users.id_user = equipe.id_user)
+    INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe) INNER JOIN element ON personnage.element = element.id_element
+WHERE 1 = 1 order by personnage.niveau DESC; : 	 
+14/01/2015 21:20:50 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:20:50 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:20:50 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:20:50 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:20:50 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+14/01/2015 21:20:52 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:20:52 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:20:52 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:20:52 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:20:52 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+14/01/2015 21:22:21 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:22:21 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:22:21 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:22:21 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:22:21 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+14/01/2015 21:22:23 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:22:23 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:22:23 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:22:23 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:22:23 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+14/01/2015 21:22:23 SELECT  users.username, personnage.nom,element.nom, personnage.niveau, personnage.experience, personnage.attaques, personnage.hp_max, personnage.mp_max, personnage.puissance, personnage.defense  FROM
+  ((users INNER JOIN equipe ON users.id_user = equipe.id_user)
+    INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe) INNER JOIN element ON personnage.element = element.id_element
+WHERE 1 = 1 order by personnage.niveau DESC; : 	 
+14/01/2015 21:22:48 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:22:48 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:22:48 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:22:48 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:22:48 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+14/01/2015 21:22:48 SELECT  users.username, personnage.nom,element.nom, personnage.niveau, personnage.experience, personnage.attaques, personnage.hp_max, personnage.mp_max, personnage.puissance, personnage.defense  FROM
+  ((users INNER JOIN equipe ON users.id_user = equipe.id_user)
+    INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe) INNER JOIN element ON personnage.element = element.id_element
+WHERE 1 = 1 order by personnage.niveau DESC; : 	 
+14/01/2015 21:24:35 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:24:35 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:24:35 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:24:35 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:24:35 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+14/01/2015 21:24:35 SELECT  users.username, personnage.nom,element.nom, personnage.niveau, personnage.experience, personnage.attaques, personnage.hp_max, personnage.mp_max, personnage.puissance, personnage.defense  FROM
+  ((users INNER JOIN equipe ON users.id_user = equipe.id_user)
+    INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe) INNER JOIN element ON personnage.element = element.id_element
+WHERE 1 = 1 order by personnage.niveau DESC; : 	 
+14/01/2015 21:25:14 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:25:14 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:25:14 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:25:14 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:25:14 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+14/01/2015 21:25:14 SELECT  users.username, personnage.nom,element.nom as element, personnage.niveau, personnage.experience, personnage.attaques, personnage.hp_max, personnage.mp_max, personnage.puissance, personnage.defense  FROM
+  ((users INNER JOIN equipe ON users.id_user = equipe.id_user)
+    INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe) INNER JOIN element ON personnage.element = element.id_element
+WHERE 1 = 1 order by personnage.niveau DESC; : 	 
+14/01/2015 21:25:30 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:25:30 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:25:30 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:25:30 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:25:30 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+14/01/2015 21:25:30 SELECT  users.username, personnage.nom,element.nom as element, personnage.niveau, personnage.experience, personnage.attaques, personnage.hp_max, personnage.mp_max, personnage.puissance, personnage.defense  FROM
+  ((users INNER JOIN equipe ON users.id_user = equipe.id_user)
+    INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe) INNER JOIN element ON personnage.element = element.id_element
+WHERE 1 = 1 order by personnage.niveau DESC; : 	 
+14/01/2015 21:26:18 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:26:18 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:26:18 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:26:18 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:26:18 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+14/01/2015 21:26:18 SELECT  users.username, personnage.nom,element.nom as element, personnage.niveau, personnage.experience, personnage.attaques, personnage.hp_max, personnage.mp_max, personnage.puissance, personnage.defense  FROM
+  ((users INNER JOIN equipe ON users.id_user = equipe.id_user)
+    INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe) INNER JOIN element ON personnage.element = element.id_element
+WHERE 1 = 1 order by personnage.niveau DESC; : 	 
+14/01/2015 21:31:15 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:31:15 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:31:15 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:31:15 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:31:15 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+14/01/2015 21:31:15 SELECT  users.username, personnage.nom,element.nom as element, personnage.niveau, personnage.experience, personnage.attaques, personnage.hp_max, personnage.mp_max, personnage.puissance, personnage.defense  FROM
+  ((users INNER JOIN equipe ON users.id_user = equipe.id_user)
+    INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe) INNER JOIN element ON personnage.element = element.id_element
+WHERE 1 = 1 order by personnage.niveau DESC; : 	 
+14/01/2015 21:31:49 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:31:49 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:31:49 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:31:49 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:31:49 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+14/01/2015 21:31:49 SELECT  users.username, personnage.nom,element.nom as element, personnage.niveau, personnage.experience, personnage.attaques, personnage.hp_max, personnage.mp_max, personnage.puissance, personnage.defense  FROM
+  ((users INNER JOIN equipe ON users.id_user = equipe.id_user)
+    INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe) INNER JOIN element ON personnage.element = element.id_element
+WHERE 1 = 1 order by personnage.niveau DESC; : 	 
+14/01/2015 21:37:06 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:37:06 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:37:06 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:37:06 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:37:06 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+14/01/2015 21:37:06 SELECT  users.username, personnage.nom,element.nom as element, personnage.niveau, personnage.experience, personnage.attaques, personnage.hp_max, personnage.mp_max, personnage.puissance, personnage.defense  FROM
+  ((users INNER JOIN equipe ON users.id_user = equipe.id_user)
+    INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe) INNER JOIN element ON personnage.element = element.id_element
+WHERE 1 = 1 order by personnage.niveau DESC; : 	 
+14/01/2015 21:37:14 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:37:14 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:37:14 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:37:14 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:37:14 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+14/01/2015 21:37:14 SELECT  users.username, personnage.nom,element.nom as element, personnage.niveau, personnage.experience, personnage.attaques, personnage.hp_max, personnage.mp_max, personnage.puissance, personnage.defense  FROM
+  ((users INNER JOIN equipe ON users.id_user = equipe.id_user)
+    INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe) INNER JOIN element ON personnage.element = element.id_element
+WHERE 1 = 1 order by personnage.niveau DESC; : 	 
+14/01/2015 21:37:47 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:37:47 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:37:47 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:37:47 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:37:47 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+14/01/2015 21:37:47 SELECT  users.username, personnage.nom,element.nom as element, personnage.niveau, personnage.experience, personnage.attaques, personnage.hp_max, personnage.mp_max, personnage.puissance, personnage.defense  FROM
+  ((users INNER JOIN equipe ON users.id_user = equipe.id_user)
+    INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe) INNER JOIN element ON personnage.element = element.id_element
+WHERE 1 = 1 order by personnage.niveau DESC; : 	 
+14/01/2015 21:38:09 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:38:09 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:38:09 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:38:09 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:38:09 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+14/01/2015 21:38:09 SELECT  users.username, personnage.nom,element.nom as element, personnage.niveau, personnage.experience, personnage.attaques, personnage.hp_max, personnage.mp_max, personnage.puissance, personnage.defense  FROM
+  ((users INNER JOIN equipe ON users.id_user = equipe.id_user)
+    INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe) INNER JOIN element ON personnage.element = element.id_element
+WHERE 1 = 1 order by personnage.niveau DESC; : 	 
+14/01/2015 21:38:17 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:38:17 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:38:17 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:38:17 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 21:38:17 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+14/01/2015 21:38:17 SELECT  users.username, personnage.nom,element.nom as element, personnage.niveau, personnage.experience, personnage.attaques, personnage.hp_max, personnage.mp_max, personnage.puissance, personnage.defense  FROM
+  ((users INNER JOIN equipe ON users.id_user = equipe.id_user)
+    INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe) INNER JOIN element ON personnage.element = element.id_element
+WHERE 1 = 1 order by personnage.niveau DESC; : 	 
+14/01/2015 22:02:16 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:02:18 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:02:32 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:02:32 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:02:32 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:02:32 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:02:32 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+14/01/2015 22:02:35 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:02:35 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:02:35 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:02:35 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:02:35 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+14/01/2015 22:02:38 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:02:38 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:02:38 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:02:38 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:02:38 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+14/01/2015 22:02:38 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:02:38 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:02:38 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:02:38 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:02:38 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+14/01/2015 22:02:40 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:02:42 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:04:07 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:04:13 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:04:19 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:04:20 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:04:37 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:04:48 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:04:48 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:04:48 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:04:48 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:04:48 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+14/01/2015 22:04:50 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:04:50 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:04:50 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:04:50 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:04:50 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+14/01/2015 22:04:50 SELECT  users.username, personnage.nom,element.nom as element, personnage.niveau, personnage.experience, personnage.attaques, personnage.hp_max, personnage.mp_max, personnage.puissance, personnage.defense  FROM
+  ((users INNER JOIN equipe ON users.id_user = equipe.id_user)
+    INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe) INNER JOIN element ON personnage.element = element.id_element
+WHERE 1 = 1 order by personnage.niveau DESC; : 	 
+14/01/2015 22:07:24 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:07:24 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:07:24 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:07:24 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:07:24 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+14/01/2015 22:07:24 SELECT  users.username, personnage.nom,element.nom as element, personnage.niveau, personnage.experience, personnage.attaques, personnage.hp_max, personnage.mp_max, personnage.puissance, personnage.defense  FROM
+  ((users INNER JOIN equipe ON users.id_user = equipe.id_user)
+    INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe) INNER JOIN element ON personnage.element = element.id_element
+WHERE 1 = 1 order by personnage.niveau DESC; : 	 
+14/01/2015 22:10:45 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:10:45 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:10:45 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:10:45 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:10:45 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+14/01/2015 22:10:45 SELECT  users.username, personnage.nom,element.nom as element, personnage.niveau, personnage.experience, personnage.attaques, personnage.hp_max, personnage.mp_max, personnage.puissance, personnage.defense  FROM
+  ((users INNER JOIN equipe ON users.id_user = equipe.id_user)
+    INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe) INNER JOIN element ON personnage.element = element.id_element
+WHERE 1 = 1 order by personnage.niveau DESC, personnage.experience DESC; : 	 
+14/01/2015 22:15:03 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:15:03 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:15:03 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:15:03 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:15:03 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+14/01/2015 22:15:03 SELECT  users.username, personnage.nom,element.nom as element, personnage.niveau, personnage.experience, personnage.attaques, personnage.hp_max, personnage.mp_max, personnage.puissance, personnage.defense  FROM
+  ((users INNER JOIN equipe ON users.id_user = equipe.id_user)
+    INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe) INNER JOIN element ON personnage.element = element.id_element
+WHERE 1 = 1 order by personnage.niveau DESC, personnage.experience DESC; : 	 
+14/01/2015 22:20:08 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:20:08 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:20:08 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:20:08 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:20:08 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+14/01/2015 22:20:19 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:20:19 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:20:19 SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:20:19 SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+14/01/2015 22:20:19 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+14/01/2015 22:20:19 SELECT  users.username, personnage.nom,element.nom as element, personnage.niveau, personnage.experience, personnage.attaques, personnage.hp_max, personnage.mp_max, personnage.puissance, personnage.defense  FROM
+  ((users INNER JOIN equipe ON users.id_user = equipe.id_user)
+    INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe) INNER JOIN element ON personnage.element = element.id_element
+WHERE 1 = 1 order by personnage.niveau DESC, personnage.experience DESC; : 	 

@@ -14,6 +14,7 @@ class ModJoueurVueJoueur
 			<a href='index.php?module=joueur&action=afficher'><button class='buttonModule' style='width:130px;height=20px;'>Afficher Equipes</button></a><br>
 			<a href='index.php?module=joueur&action=transferer'><button class='buttonModule' style='width:130px;height=20px;'>Transferer</button></a><br>
 			<a href='index.php?module=joueur&action=afficherEquipeOne'><button class='buttonModule' style='width:130px;height=20px;'>Equipe Une</button></a><br>
+			<a href='index.php?module=joueur&action=classement'><button class='buttonModule' style='width:130px;height=20px;'>CLassement</button></a><br>
 			</p></div>";
     }
 
@@ -150,6 +151,43 @@ class ModJoueurVueJoueur
             }
             echo "</table>";
         }
+    }
+
+    static function afficherPersonnagesEtJoueur ( $donneesPersonnages )
+    {
+        echo "<h2>Classement des Chinelos</h2>";
+        echo ' <table border="1" id="tableau">
+	<tr>
+	    <th> Rang </th>
+		<th> Nom Chinelo </th>
+		<th> Element </th>
+		<th> Niveau </th>
+		<th> Exp </th>
+		<th> attaques </th>
+		<th> HP </th>
+        <th> MP </th>
+        <th> Puissance </th>
+        <th> Defense </th>
+        <th> Nom utilisateur </th>
+	</tr>';
+        $rang=1;
+        foreach ( $donneesPersonnages as $value ) {
+            echo "<tr>\n";
+            echo "<td>" . $rang . "</td>\n";
+            echo "<td>" . $value[ 'nom' ] . "</td>\n";
+            echo "<td>" . $value[ 'element' ] . "</td>\n";
+            echo "<td>" . $value[ 'niveau' ] . "</td>\n";
+            echo "<td>" . $value[ 'experience' ] . "</td>\n";
+            echo "<td>" . $value['attaques'] . "</td>\n";
+            echo "<td>" . $value[ 'hp_max' ] . "</td>\n";
+            echo "<td>" . $value[ 'mp_max' ] . "</td>\n";
+            echo "<td>" . $value[ 'puissance' ] . "</td>\n";
+            echo "<td>" . $value[ 'defense' ] . "</td>\n";
+            echo "<td>" . $value[ 'username' ] . "</td>";
+            echo "</tr>";
+            $rang++;
+        }
+        echo "</table>";
     }
 }
 

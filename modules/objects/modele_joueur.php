@@ -71,6 +71,19 @@ class Joueur extends Participant
         return $connectee;
     }
 
+    static function getJoueur ( $username )
+    {
+        self::requeteFromDB ( "select id_user from users where username=:username", array ( 'username' => $username ) );
+        //TODO
+    }
+
+    static function getJoueurLePlusRiche ()
+    {
+        $resultatPerso = self::requeteFromDB ( "select username,argent from users order by argent DESC LIMIT 1" )[ 0 ];
+
+        return array ( 'username' => $resultatPerso[ 'username' ], 'argent' => $resultatPerso[ 'argent' ] );
+    }
+
     /**
      * Ajoute un personnage au joueur courant
      * Verifie si le personnage n'appartient pas déja au joueur
@@ -159,6 +172,7 @@ class Joueur extends Participant
         $this->getEquipeOne ()->ajouterPourcentExperience ( $pourcentXP );
     }
 
+    //TODO a mettre à jour
     function attaquerEnnemi ( $participant, $i )
     {
         try {
@@ -200,7 +214,6 @@ class Joueur extends Participant
         }
     }
 
-    //TODO a mettre à jour
     function dateDiff ( $date1, $date2 )
     {
         $diff               = abs ( $date1 - $date2 ); // abs pour avoir la valeur absolute, ainsi éviter d'avoir une différence négative
@@ -220,6 +233,33 @@ class Joueur extends Participant
     function getArgent ()
     {
         return $this->_argent;
+    }
+
+    /**
+     * Retourne le personnage le plus fort du joueur
+     * parmis le stock et parmis l'equipe principale
+     * @return Personnage
+     */
+    function getPersonnagePlusFort ()
+    {
+        $personnage1 = $this->_equipes[ 0 ]->getPersonnagePlusFort ();
+        $personnage2 = $this->_equipes[ 1 ]->getPersonnagePlusFort ();
+
+        return Personnage::getPersonnagePlusHL ( $personnage1, $personnage2 );
+    }
+
+    /**
+     * Retourne la liste des tuples des personnages triés par level puis par experience
+     * @return array
+     * @throws Exception
+     */
+    static function getAllPersoClassement(){
+        $donnees=self::requeteFromDB("SELECT  users.username, personnage.nom,element.nom as element, personnage.niveau, personnage.experience, personnage.attaques, personnage.hp_max, personnage.mp_max, personnage.puissance, personnage.defense  FROM
+  ((users INNER JOIN equipe ON users.id_user = equipe.id_user)
+    INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe) INNER JOIN element ON personnage.element = element.id_element
+WHERE 1 = 1 order by personnage.niveau DESC, personnage.experience DESC;");
+
+        return $donnees;
     }
 }
 

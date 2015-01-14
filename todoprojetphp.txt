@@ -1,0 +1,9 @@
+liste des joueurs connecté (afficher tous les joueurs)
+défier un joueur connecté
+table pour combat (mysql)
+Messagerie
+10 Jours 14 ==> 24 
+Inventaire
+
+Choisir élément du personnage et le nom du personnage
+

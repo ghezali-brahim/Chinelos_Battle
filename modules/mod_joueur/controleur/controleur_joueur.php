@@ -61,4 +61,10 @@ class ModJoueurControleurJoueur
             ModJoueurVueJoueur::afficherTransfert ( $this->_joueur->getParticipant () );
         }
     }
+
+    //TODO classement
+    public function classement(){
+        $donnees=Joueur::getAllPersoClassement();
+        ModJoueurVueJoueur::afficherPersonnagesEtJoueur($donnees);
+    }
 }

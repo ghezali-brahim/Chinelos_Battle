@@ -1,3 +1,10 @@
+/*
+Projet Chinelos Battle - DUT Info 2eme annee Montreuil
+Brahim
+Jeremy
+Corentin
+Sarah
+*/
 Pour installer le site:
 1- il faut tout d'abbord placer le repertoire Chinelos_Battle à l'endroit ou il faut pour publier le site.
 2- importer le fichier installation.sql dans votre base de donnée+
