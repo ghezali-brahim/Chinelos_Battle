@@ -66,7 +66,12 @@ class Combat extends DBMapper
             throw new Exception( " Il y a une erreur, car le combat est finit mais il ne reste aucun gagnant" );
         }
         if ( get_class ( $gagnant ) == 'Joueur' ) {
+            //Incrementer nbr victoire
+            $this->_joueur->incrementerVictoire ();
             $this->recompenserFinCombat ( $gagnant );
+        } else {
+            //Incrementer nbr defaite
+            $this->_joueur->incrementerDefaite ();
         }
         echo "le joueur gagnant :" . $gagnant->__toString ();
     }

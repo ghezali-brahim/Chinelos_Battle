@@ -5,38 +5,31 @@ if ( !defined ( 'TEST_INCLUDE' ) )
 
 class ModInscriptionModeleInscription extends DBMapper
 {
+    static protected $CONSTANTECRYPT = "iut2015";
+    static protected $ARGENT_DEPART  = "10";
 
-    static function inscription ( $user )
+    static public function createAccount ( $username, $password, $email )
     {
-        //print_r($user);
-        if ( $user != NULL ) {
-            try {
-                //Verification username deja existant
-                $reponse = self::$database->prepare ( 'SELECT id_user FROM users WHERE username = :username' );
-                $reponse->execute ( array ( 'username' => $user[ 0 ] ) );
-            } catch ( PDOException $e ) {
-                echo 'Échec lors de la verification du username : ' . $e->getMessage ();
-            }
-            $compteur = $reponse->rowCount ();
-            if ( $compteur != 0 ) {
-                $reussit = 0;
-                echo $user[ 0 ] . " : username déja existant";
-            } else {
-                $reussit = 1;
-                try {
-                    $query = "INSERT INTO users VALUES('', ?, ?, ?, 10, 0)";
-                    $req   = self::$database->prepare ( $query );
-                    $req->execute ( $user );
-                    $req->fetchAll ();
-                } catch ( PDOException $e ) {
-                    echo 'Échec lors de la creation de l\'utilisateur : ' . $e->getMessage ();
-                }
-            }
-        } else {
-            $reussit = 0;
+        if ( !preg_match ( '#^[a-zA-Z0-9_\-]{1,}$#', $username ) ) {
+            throw new Exception( "Il y a une erreur lors de la création du compte : $username" );
         }
+        if ( !preg_match ( '/^[a-zA-Z0-9_\$\-\.\*]{4,}$/', $password ) ) {
+            throw new Exception( "Il y a une erreur lors de la création du compte, mot de passe non valide" );
+        }
+        if ( !filter_var ( $email, FILTER_VALIDATE_EMAIL ) ) {
+            throw new Exception( "Il y a une erreur l'email est invalide $email" );
+        }
+        $password_sha1 = sha1 ( $username . $password . self::$CONSTANTECRYPT );
+        $identifiant   = array ( 'username' => $username, 'password' => $password_sha1, 'email' => $email, 'argent_depart' => self::$ARGENT_DEPART );
+        try {
+            self::requeteFromDB ( "INSERT INTO users VALUES('', :username, :password, :email, '', '', :argent_depart,'','')", $identifiant );
 
-        return $reussit;
+            return TRUE;
+        } catch ( Exception $e ) {
+            echo "Echec lors de l'inscription du compte $username, le nom de compte est deja existant\n";
+
+            return FALSE;
+        }
     }
 }
 

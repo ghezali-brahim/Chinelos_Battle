@@ -58,14 +58,18 @@
       <column name="defense" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="id_equipe" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <index name="id_personnage" unique="true" columns="id_personnage"/>
+      <index name="nom" unique="true" columns="nom"/>
     </table>
     <table name="users" schema="" catalog="test" type="TABLE">
       <column name="id_user" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
       <column name="username" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="password" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="email" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_connection" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="connected" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
       <column name="argent" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
-      <column name="id_equipe" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="nombre_victoire" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="nombre_defaite" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
       <index name="email" unique="true" columns="email"/>
       <index name="id_user" unique="true" columns="id_user"/>
       <index name="username" unique="true" columns="username"/>

@@ -66,6 +66,8 @@ class ModCombatControleurCombat
             $_SESSION[ 'ennemi' ] = serialize ( $this->_ennemi );
         }
         if ( $this->_ennemi->getEquipeOne ()->allPersonnagesDead () == TRUE && $this->_joueur->getEquipeOne ()->allPersonnagesDead () == FALSE ) {
+            //Incrementer nbr victoire
+            $this->_joueur->incrementerVictoire ();
             $this->recompenserFinCombat ( $this->_joueur, $this->_ennemi );
             $_SESSION[ 'joueur' ] = serialize ( $this->_joueur );
             $_SESSION[ 'ennemi' ] = serialize ( new Joueur_IA( $this->_joueur->getNiveauTotalParticipant () ) );
@@ -73,6 +75,8 @@ class ModCombatControleurCombat
             header ( "Refresh: 4;URL=index.php?module=combat" );
         }
         if ( $this->_ennemi->getEquipeOne ()->allPersonnagesDead () == FALSE && $this->_joueur->getEquipeOne ()->allPersonnagesDead () == TRUE ) {
+            //Incrementer nbr defaite
+            $this->_joueur->incrementerDefaite ();
             $_SESSION[ 'joueur' ] = serialize ( $this->_joueur );
             $_SESSION[ 'ennemi' ] = serialize ( new Joueur_IA( $this->_joueur->getNiveauTotalParticipant () ) );
             $this->_ennemi        = $this->_ennemi = unserialize ( $_SESSION[ 'ennemi' ] );

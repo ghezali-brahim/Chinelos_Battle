@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Jeu 15 Janvier 2015 à 20:25
+-- Généré le :  Ven 09 Janvier 2015 à 22:49
 -- Version du serveur :  5.6.20
 -- Version de PHP :  5.5.15
 
@@ -74,7 +74,7 @@ INSERT INTO `element` (`id_element`, `nom`, `id_faible_contre`, `id_fort_contre`
 CREATE TABLE IF NOT EXISTS `equipe` (
 `id_equipe` bigint(20) unsigned NOT NULL,
   `id_user` int(11) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
 
 --
 -- Contenu de la table `equipe`
@@ -82,7 +82,11 @@ CREATE TABLE IF NOT EXISTS `equipe` (
 
 INSERT INTO `equipe` (`id_equipe`, `id_user`) VALUES
 (1, 1),
-(2, 1);
+(2, 1),
+(3, 6),
+(4, 6),
+(12, 2),
+(13, 2);
 
 -- --------------------------------------------------------
 
@@ -156,14 +160,20 @@ CREATE TABLE IF NOT EXISTS `personnage` (
   `puissance` int(11) DEFAULT NULL,
   `defense` int(11) DEFAULT NULL,
   `id_equipe` int(11) DEFAULT NULL
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=26 ;
 
 --
 -- Contenu de la table `personnage`
 --
 
 INSERT INTO `personnage` (`id_personnage`, `nom`, `element`, `niveau`, `experience`, `attaques`, `hp`, `hp_max`, `mp`, `mp_max`, `puissance`, `defense`, `id_equipe`) VALUES
-(1, 'Chausson 1', 4, 1, 1, '1;2;3', 0, 10, 0, 5, 3, 1, 1);
+(1, 'Caporal', 3, 11, 7304, '1;2;3', 3, 180, 35, 65, 36, 11, 1),
+(3, 'Chausson 3', 1, 1, 0, '1;2;3', 10, 10, 5, 5, 3, 1, 0),
+(2, 'Chausson 2', 1, 1, 1, '1;2;3', 1, 10, 0, 5, 3, 1, 3),
+(4, 'Chausson 4', 2, 1, 0, '1;2;3', 10, 10, 5, 5, 3, 1, 12),
+(5, 'Chausson 5', 3, 2, 46, '1;2;3', 0, 20, 7, 10, 6, 2, 2),
+(6, 'Chausson 6', 2, 1, 16, '1;2;3', 0, 10, 4, 5, 3, 1, 2),
+(7, 'Chausson 7', 4, 1, 0, '1;2;3', 10, 10, 5, 5, 3, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -176,19 +186,21 @@ CREATE TABLE IF NOT EXISTS `users` (
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `last_connection` datetime DEFAULT NULL,
-  `connected` tinyint(1) NOT NULL DEFAULT '0',
   `argent` int(11) DEFAULT NULL,
-  `nombre_victoire` int(11) NOT NULL DEFAULT '0',
-  `nombre_defaite` int(11) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+  `id_equipe` int(11) DEFAULT NULL
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
 --
 -- Contenu de la table `users`
 --
 
-INSERT INTO `users` (`id_user`, `username`, `password`, `email`, `last_connection`, `connected`, `argent`, `nombre_victoire`, `nombre_defaite`) VALUES
-(1, 'admin', 'c91134514349233cda39fba1da675f3031eb83ff', 'admin@iut.univ-paris8.fr', '2015-01-15 20:15:37', 1, 15, 1, 1);
+INSERT INTO `users` (`id_user`, `username`, `password`, `email`, `argent`, `id_equipe`) VALUES
+(1, 'admin', '9cf95dacd226dcf43da376cdb6cbba7035218921', 'admin@admin.com', 692, 0),
+(2, 'brahim', '9cf95dacd226dcf43da376cdb6cbba7035218921', 'azerty@hotmail.fr', 100, 0),
+(3, 'lolilol', 'c0cd4f939a5d41f3c89aa5b74e92d2b64ab6a2b0', 'azertylol@hotmail.fr', 10, 0),
+(4, 'blabla', 'bb21158c733229347bd4e681891e213d94c685be', 'blabla@free.fr', 10, 0),
+(5, 'freezing', '9cf95dacd226dcf43da376cdb6cbba7035218921', 'freezing@free.fr', 10, 0),
+(6, 'lol', '9cf95dacd226dcf43da376cdb6cbba7035218921', 'brahim@hotmail.fr', 10, 0);
 
 --
 -- Index pour les tables exportées
@@ -228,7 +240,7 @@ ALTER TABLE `niveau`
 -- Index pour la table `personnage`
 --
 ALTER TABLE `personnage`
- ADD UNIQUE KEY `id_personnage` (`id_personnage`), ADD UNIQUE KEY `nom` (`nom`);
+ ADD UNIQUE KEY `id_personnage` (`id_personnage`);
 
 --
 -- Index pour la table `users`
@@ -244,17 +256,17 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `equipe`
 --
 ALTER TABLE `equipe`
-MODIFY `id_equipe` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `id_equipe` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT pour la table `personnage`
 --
 ALTER TABLE `personnage`
-MODIFY `id_personnage` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `id_personnage` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=26;
 --
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-MODIFY `id_user` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `id_user` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

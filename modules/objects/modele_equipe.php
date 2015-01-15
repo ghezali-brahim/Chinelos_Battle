@@ -68,8 +68,8 @@ class  Equipe extends DBMapper
             static::log ( "Creation d'une l'equipe : " . "..." );
         }
         //On limite la taille de l'équipe à 6 personnage
-        if($niveauTotal<=0){
-            $niveauTotal=1;
+        if ( $niveauTotal <= 0 ) {
+            $niveauTotal = 1;
         }
         do {
             $personnages = array ();
@@ -303,26 +303,6 @@ class  Equipe extends DBMapper
     }
 
     /**
-     * Retourne le personnage le plus fort de l'equipe
-     * (c'est à dire avec le level le plus élevé)
-     * @return Personnage
-     */
-    function getPersonnagePlusFort ()
-    {
-         $personnageAretournee = NULL;
-        foreach ( $this->_personnages as $personnage ) {
-                if ( ( $personnageAretournee ) == NULL ) {
-                    $personnageAretournee = $personnage;
-                } else {
-                    //Ici on affecte le personnage le plus fort à la variable $personnageARetournee
-                    $personnageAretournee=Personnage::getPersonnagePlusHL($personnage,$personnageAretournee);
-                }
-        }
-
-        return $personnageAretournee;
-    }
-
-    /**
      * Retourne vrai si tous les personnages sont mort
      * @return bool
      */
@@ -343,6 +323,26 @@ class  Equipe extends DBMapper
     function getNombrePersonnages ()
     {
         return count ( $this->_personnages );
+    }
+
+    /**
+     * Retourne le personnage le plus fort de l'equipe
+     * (c'est à dire avec le level le plus élevé)
+     * @return Personnage
+     */
+    function getPersonnagePlusFort ()
+    {
+        $personnageAretournee = NULL;
+        foreach ( $this->_personnages as $personnage ) {
+            if ( ( $personnageAretournee ) == NULL ) {
+                $personnageAretournee = $personnage;
+            } else {
+                //Ici on affecte le personnage le plus fort à la variable $personnageARetournee
+                $personnageAretournee = Personnage::getPersonnagePlusHL ( $personnage, $personnageAretournee );
+            }
+        }
+
+        return $personnageAretournee;
     }
 
     /**

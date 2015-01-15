@@ -16,12 +16,12 @@ class ModInscriptionControleurInscription
     {
         require_once MOD_BPATH . DIR_SEP . "modele/modele_inscription.php";
         require_once MOD_BPATH . DIR_SEP . "vue/vue_inscription.php";
-        if ( isset ( $_SESSION [ 'id_user' ] ) && $_SESSION[ 'id_user' ] != NULL ) {
+        if ( isset ( $_SESSION [ 'user' ] ) ) {
             echo 'Vous êtes déja inscrit ';
         } else {
             $user = self::verificationContenu ();
             //print_r($user);
-            $reussit = ModInscriptionModeleInscription::inscription ( $user );
+            $reussit = ModInscriptionModeleInscription::createAccount ( $user[ 'username' ], $user[ 'password' ], $user[ 'email' ] );
             ModInscriptionVueInscription::inscription ( $reussit );
         }
     }
@@ -67,12 +67,10 @@ class ModInscriptionControleurInscription
             $reussit = 0;
         }
         if ( $reussit == 1 ) {
-            $password = sha1 ( $password );
-
-            return array (
-                    $username,
-                    $password,
-                    $email
+            return array ( 'username'                    =>
+                                   $username, 'password' =>
+                                   $password, 'email'    =>
+                                   $email
             );
         } else {
             return NULL;

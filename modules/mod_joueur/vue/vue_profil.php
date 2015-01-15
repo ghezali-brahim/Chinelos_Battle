@@ -170,7 +170,7 @@ class ModJoueurVueJoueur
         <th> Defense </th>
         <th> Nom utilisateur </th>
 	</tr>';
-        $rang=1;
+        $rang = 1;
         foreach ( $donneesPersonnages as $value ) {
             echo "<tr>\n";
             echo "<td>" . $rang . "</td>\n";
@@ -178,7 +178,7 @@ class ModJoueurVueJoueur
             echo "<td>" . $value[ 'element' ] . "</td>\n";
             echo "<td>" . $value[ 'niveau' ] . "</td>\n";
             echo "<td>" . $value[ 'experience' ] . "</td>\n";
-            echo "<td>" . $value['attaques'] . "</td>\n";
+            echo "<td>" . $value[ 'attaques' ] . "</td>\n";
             echo "<td>" . $value[ 'hp_max' ] . "</td>\n";
             echo "<td>" . $value[ 'mp_max' ] . "</td>\n";
             echo "<td>" . $value[ 'puissance' ] . "</td>\n";

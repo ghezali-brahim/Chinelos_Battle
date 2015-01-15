@@ -11,6 +11,8 @@ class Joueur extends Participant
     protected $_id_user;
     protected $_username;
     protected $_argent;
+    protected $_nombre_victoire;
+    protected $_nombre_defaite;
 
     /**
      * On créer un Joueur à partir de la base de données; On verifie d'abbord si le joueur est connecté.
@@ -18,17 +20,20 @@ class Joueur extends Participant
     function __construct ()
     {
         if ( self::connectee () ) {
-            $resultat = static::requeteFromDB ( "SELECT id_user, username, argent FROM users WHERE username = :username AND id_user = :id_user", array (
-                    'username' => $_SESSION [ 'username' ],
-                    'id_user'  => $_SESSION [ 'id_user' ]
+            $user     = unserialize ( $_SESSION[ 'user' ] );
+            $resultat = static::requeteFromDB ( "SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user", array (
+                    'username' => $user->getUsername (),
+                    'id_user'  => $user->getIdUser ()
             ) )[ 0 ];
             //Recuperation infos du joueur
-            $this->_id_user  = $resultat[ 'id_user' ];
-            $this->_username = $resultat[ 'username' ];
-            $this->_argent   = $resultat[ 'argent' ];
+            $this->_id_user         = $resultat[ 'id_user' ];
+            $this->_username        = $resultat[ 'username' ];
+            $this->_argent          = $resultat[ 'argent' ];
+            $this->_nombre_victoire = $resultat[ 'nombre_victoire' ];
+            $this->_nombre_defaite  = $resultat[ 'nombre_defaite' ];
             // Recuperation de la liste des équipes
             $listeEquipes   = static::requeteFromDB ( "SELECT id_equipe FROM equipe WHERE id_user = :id_user", array (
-                    'id_user' => $_SESSION [ 'id_user' ]
+                    'id_user' => $this->_id_user
             ) );
             $this->_equipes = array ();
             // SI le compte n'a pas deux equipes, alors on lui créer les deux equipes
@@ -36,7 +41,7 @@ class Joueur extends Participant
                 Equipe::createTwoEquipeForBD ( $this->_id_user );
                 // Recuperation de la liste des équipes
                 $listeEquipes = static::requeteFromDB ( "SELECT id_equipe FROM equipe WHERE id_user = :id_user", array (
-                        'id_user' => $_SESSION [ 'id_user' ]
+                        'id_user' => $this->_id_user
                 ) );
             }
             foreach ( $listeEquipes as $id_equipe ) {
@@ -53,18 +58,10 @@ class Joueur extends Participant
     public static function connectee ()
     {
         $connectee = FALSE;
-        //Verification de la connexion
-        if ( isset( $_SESSION[ 'username' ] ) && isset( $_SESSION[ 'id_user' ] ) ) {
-            if ( $_SESSION[ 'username' ] != NULL && $_SESSION[ 'id_user' ] != NULL ) {
-                $resultat = static::requeteFromDB ( "SELECT id_user, username FROM users WHERE username = :username AND id_user = :id_user", array (
-                        'username' => $_SESSION [ 'username' ],
-                        'id_user'  => $_SESSION [ 'id_user' ] ) );
-                // Verifie la validité des valeurs de sessions
-                // Si les valeurs de sessions n'existe pas dans la bdd; alors erreur
-                if ( count ( $resultat ) > 0 ) {
-                    $connectee = TRUE;
-                }
-                // FIN verification connexion
+        if ( isset( $_SESSION[ 'user' ] ) ) {
+            $user = unserialize ( $_SESSION[ 'user' ] );
+            if ( $user->connectedOrNot () ) {
+                $connectee = TRUE;
             }
         }
 
@@ -82,6 +79,21 @@ class Joueur extends Participant
         $resultatPerso = self::requeteFromDB ( "select username,argent from users order by argent DESC LIMIT 1" )[ 0 ];
 
         return array ( 'username' => $resultatPerso[ 'username' ], 'argent' => $resultatPerso[ 'argent' ] );
+    }
+
+    /**
+     * Retourne la liste des tuples des personnages triés par level puis par experience
+     * @return array
+     * @throws Exception
+     */
+    static function getAllPersoClassement ()
+    {
+        $donnees = self::requeteFromDB ( "SELECT  users.username, personnage.nom,element.nom as element, personnage.niveau, personnage.experience, personnage.attaques, personnage.hp_max, personnage.mp_max, personnage.puissance, personnage.defense  FROM
+  ((users INNER JOIN equipe ON users.id_user = equipe.id_user)
+    INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe) INNER JOIN element ON personnage.element = element.id_element
+WHERE 1 = 1 order by personnage.niveau DESC, personnage.experience DESC;" );
+
+        return $donnees;
     }
 
     /**
@@ -167,12 +179,12 @@ class Joueur extends Participant
         }
     }
 
+    //TODO a mettre à jour
     function ajouterPourcentExperience ( $pourcentXP )
     {
         $this->getEquipeOne ()->ajouterPourcentExperience ( $pourcentXP );
     }
 
-    //TODO a mettre à jour
     function attaquerEnnemi ( $participant, $i )
     {
         try {
@@ -248,18 +260,16 @@ class Joueur extends Participant
         return Personnage::getPersonnagePlusHL ( $personnage1, $personnage2 );
     }
 
-    /**
-     * Retourne la liste des tuples des personnages triés par level puis par experience
-     * @return array
-     * @throws Exception
-     */
-    static function getAllPersoClassement(){
-        $donnees=self::requeteFromDB("SELECT  users.username, personnage.nom,element.nom as element, personnage.niveau, personnage.experience, personnage.attaques, personnage.hp_max, personnage.mp_max, personnage.puissance, personnage.defense  FROM
-  ((users INNER JOIN equipe ON users.id_user = equipe.id_user)
-    INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe) INNER JOIN element ON personnage.element = element.id_element
-WHERE 1 = 1 order by personnage.niveau DESC, personnage.experience DESC;");
+    function incrementerVictoire ()
+    {
+        $this->_nombre_victoire++;
+        self::requeteFromDB ( "update users set nombre_victoire=:nombre_victoire where id_user = :id_user", array ( 'id_user' => $this->_id_user, 'nombre_victoire' => $this->_nombre_victoire ) );
+    }
 
-        return $donnees;
+    function incrementerDefaite ()
+    {
+        $this->_nombre_defaite++;
+        self::requeteFromDB ( "update users set nombre_defaite=:nombre_defaite where id_user = :id_user", array ( 'id_user' => $this->_id_user, 'nombre_defaite' => $this->_nombre_defaite ) );
     }
 }
 

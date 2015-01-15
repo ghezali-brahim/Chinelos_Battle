@@ -1,49 +1,69 @@
 <?php
 if ( !defined ( 'TEST_INCLUDE' ) )
     die ( "Vous n'avez pas accès directement à ce fichier" );
+require_once MOD_BPATH . DIR_SEP . "modele/modele_connexion.php";
+require_once MOD_BPATH . DIR_SEP . "vue/vue_connexion.php";
 
 
 class ModConnexionControleurConnexion
 {
 
-    public function accueilModule ()
-    {
-        require_once MOD_BPATH . DIR_SEP . "vue/vue_connexion.php";
-        ModConnexionVueConnexion::affAccueilModule ();
-    }
-
     public function connexion ()
     {
-        require_once MOD_BPATH . DIR_SEP . "modele/modele_connexion.php";
-        require_once MOD_BPATH . DIR_SEP . "vue/vue_connexion.php";
-        if ( isset ( $_SESSION [ 'id_user' ] ) && $_SESSION[ 'id_user' ] != NULL ) {
-            echo 'Vous êtes bien connecté en tant que ' . $_SESSION [ 'username' ];
-            $controleur = new ModConnexionControleurConnexion();
-            $controleur->deconnexion ();
+        if ( isset( $_SESSION[ 'user' ] ) ) {
+            header ( "Refresh: 0;URL=index.php" );
+            die();
+        }
+        if ( isset( $_POST[ 'username' ] ) && isset( $_POST[ 'password' ] ) ) {
+            $username = $_POST[ 'username' ];
+            $password = $_POST[ 'password' ];
+            unset( $_POST[ 'username' ] );
+            unset( $_POST[ 'password' ] );
+            if ( preg_match ( '/^[a-zA-Z0-9]{4,}$/', $username ) ) {
+                if ( preg_match ( '/^[a-zA-Z0-9_\$\-\.\*]{4,}$/', $password ) ) {
+                    try {
+                        $_SESSION[ 'user' ] = serialize ( new ModConnexionModeleConnexion( $username, $password ) );
+                        echo "Connexion reussit ! ";
+                        header ( "Refresh: 2;URL=index.php" );
+                    } catch ( Exception $e ) {
+                        self::accueilModule ();
+                        echo $e->getMessage ();
+                    }
+                } else {
+                    self::accueilModule ();
+                    echo "not valid password, alphanumeric & longer than or equals 4 chars\n";
+                    echo "caractere autorisé : alpha-numeric et _ - $ * .";
+                }
+            } else {
+                self::accueilModule ();
+                echo "not valid username, alphanumeric & longer than or equals 4 chars";
+            }
         } else {
-            $donnees = ModConnexionModeleConnexion::connexion ();
-            ModConnexionVueConnexion::connexion ( $donnees );
+            self::accueilModule ();
+        }
+    }
+
+    public function accueilModule ()
+    {
+        if ( isset( $_SESSION[ 'user' ] ) ) {
+            $user = unserialize ( $_SESSION[ 'user' ] );
+            if ( $user->connectedOrNot () ) {
+                ModConnexionVueConnexion::formDeconnexion ();
+            } else {
+                ModConnexionVueConnexion::formConnexion ();
+            }
+        } else {
+            ModConnexionVueConnexion::formConnexion ();
         }
     }
 
     public function deconnexion ()
     {
-        require_once MOD_BPATH . DIR_SEP . "modele/modele_connexion.php";
-        require_once MOD_BPATH . DIR_SEP . "vue/vue_connexion.php";
-        if ( isset( $_SESSION[ 'id_user' ] ) ) {
-            if ( $_SESSION[ 'id_user' ] != NULL ) {
-                ModConnexionVueConnexion::deconnexion ();
-                if ( isset( $_POST[ 'deconnexion' ] ) ) {
-                    if ( $_POST[ 'deconnexion' ] == 'deconnexion' ) {
-                        ModConnexionModeleConnexion::deconnexion ();
-                        header ( 'Location: index.php' );
-                    }
-                }
-            } else {
-                echo 'vous n\'êtes pas connecté.';
-            }
-        } else {
-            echo 'vous n\'êtes pas connecté.';
-        }
+        $user = unserialize ( $_SESSION[ 'user' ] );
+        $user->deconnection ();
+        unset( $_SESSION[ 'user' ] );
+        unset( $user );
+        header ( "Refresh: 0;URL=index.php" );
+        die();
     }
 }

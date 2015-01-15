@@ -63,8 +63,9 @@ class ModJoueurControleurJoueur
     }
 
     //TODO classement
-    public function classement(){
-        $donnees=Joueur::getAllPersoClassement();
-        ModJoueurVueJoueur::afficherPersonnagesEtJoueur($donnees);
+    public function classement ()
+    {
+        $donnees = Joueur::getAllPersoClassement ();
+        ModJoueurVueJoueur::afficherPersonnagesEtJoueur ( $donnees );
     }
 }
