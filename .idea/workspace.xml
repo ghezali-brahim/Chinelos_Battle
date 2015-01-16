@@ -54,7 +54,28 @@
     <favorites_list name="mini_rpg" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="body.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/body.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.538462" vertical-offset="234" max-vertical-offset="2907">
+              <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/include/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4052901" vertical-offset="1752" max-vertical-offset="14722">
+              <caret line="131" column="17" selection-start-line="131" selection-start-column="17" selection-end-line="131" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -87,7 +108,6 @@
         <option value="$PROJECT_DIR$/modules/mod_boutique/vue/vue_boutique.php" />
         <option value="$PROJECT_DIR$/modules/mod_connexion/vue/vue_connexion.php" />
         <option value="$PROJECT_DIR$/modules/mod_contact/vue/vue_contact.php" />
-        <option value="$PROJECT_DIR$/include/style.css" />
         <option value="$PROJECT_DIR$/modules/mod_combat/modele/modele_combat_3.php" />
         <option value="$PROJECT_DIR$/include/body.php" />
         <option value="$PROJECT_DIR$/modules/objects/modele_participant.php" />
@@ -115,6 +135,7 @@
         <option value="$PROJECT_DIR$/modules/mod_combat/controleur/controleur_combat.php" />
         <option value="$PROJECT_DIR$/modules/mod_combat/modele/modele_combat.php" />
         <option value="$PROJECT_DIR$/modules/objects/modele_joueur.php" />
+        <option value="$PROJECT_DIR$/include/style.css" />
       </list>
     </option>
   </component>
@@ -189,36 +210,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Problems" />
-        <subPane subId="Tests" />
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="mini_rpg">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="www">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="mini_rpg">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -693,6 +684,36 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Problems" />
+        <subPane subId="Tests" />
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="mini_rpg">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="www">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="mini_rpg">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -880,17 +901,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="7" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293556" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293556" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13553259" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298887" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23131956" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23330684" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293556" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -902,11 +922,12 @@
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3293556" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293556" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39915523" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39910814" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Duplicates" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34743875" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39910814" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -932,13 +953,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/include/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="10285" max-vertical-offset="14722">
-          <caret line="489" column="20" selection-start-line="489" selection-start-column="20" selection-end-line="489" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.27709863" vertical-offset="0" max-vertical-offset="1227">
@@ -1072,17 +1086,17 @@
           </nodes>
           <notes />
           <edges>
-            <edge source="\Niveau" target="\DBMapper">
-              <point x="0.0" y="-58.5" />
-              <point x="1642.5" y="212.0" />
-              <point x="1378.3333333333335" y="212.0" />
-              <point x="24.333333333333258" y="81.0" />
-            </edge>
             <edge source="\Item" target="\DBMapper">
               <point x="0.0" y="-92.0" />
               <point x="186.0" y="182.0" />
               <point x="1256.666666666667" y="182.0" />
               <point x="-97.33333333333326" y="81.0" />
+            </edge>
+            <edge source="\Niveau" target="\DBMapper">
+              <point x="0.0" y="-58.5" />
+              <point x="1642.5" y="212.0" />
+              <point x="1378.3333333333335" y="212.0" />
+              <point x="24.333333333333258" y="81.0" />
             </edge>
             <edge source="\Action" target="\DBMapper">
               <point x="0.0" y="-14.5" />
@@ -1096,17 +1110,17 @@
               <point x="1090.5" y="1542.0" />
               <point x="104.49999999999989" y="191.0" />
             </edge>
-            <edge source="\Equipe" target="\DBMapper">
-              <point x="0.0" y="-367.5" />
-              <point x="2166.0" y="202.0" />
-              <point x="1402.6666666666665" y="202.0" />
-              <point x="48.666666666666515" y="81.0" />
-            </edge>
             <edge source="\Participant" target="\DBMapper">
               <point x="-1.1368683772161603E-13" y="-191.0" />
               <point x="986.0" y="212.0" />
               <point x="1329.666666666667" y="212.0" />
               <point x="-24.333333333333258" y="81.0" />
+            </edge>
+            <edge source="\Equipe" target="\DBMapper">
+              <point x="0.0" y="-367.5" />
+              <point x="2166.0" y="202.0" />
+              <point x="1402.6666666666665" y="202.0" />
+              <point x="48.666666666666515" y="81.0" />
             </edge>
             <edge source="\Element" target="\DBMapper">
               <point x="0.0" y="-103.0" />
@@ -1118,17 +1132,17 @@
               <point x="881.5000000000001" y="1542.0" />
               <point x="-104.5" y="191.0" />
             </edge>
-            <edge source="\Personnage" target="\DBMapper">
-              <point x="0.0" y="-642.5" />
-              <point x="3314.0" y="182.0" />
-              <point x="1451.3333333333335" y="182.0" />
-              <point x="97.33333333333326" y="81.0" />
-            </edge>
             <edge source="\Item_type" target="\DBMapper">
               <point x="0.0" y="-59.0" />
               <point x="669.5000000000001" y="202.0" />
               <point x="1305.3333333333335" y="202.0" />
               <point x="-48.66666666666674" y="81.0" />
+            </edge>
+            <edge source="\Personnage" target="\DBMapper">
+              <point x="0.0" y="-642.5" />
+              <point x="3314.0" y="182.0" />
+              <point x="1451.3333333333335" y="182.0" />
+              <point x="97.33333333333326" y="81.0" />
             </edge>
             <edge source="\Attaque" target="\Item">
               <point x="0.0" y="-158.5" />
@@ -1164,8 +1178,8 @@
           <nodes>
             <node x="" y="">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.item</node>
             <node x="" y="">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.personnage</node>
-            <node x="" y="">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.element</node>
             <node x="" y="">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.equipe</node>
+            <node x="" y="">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.element</node>
             <node x="" y="">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.users</node>
             <node x="" y="">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.attaque</node>
             <node x="" y="">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.niveau</node>
@@ -1319,7 +1333,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="442">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1327,7 +1340,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19391635" vertical-offset="0" max-vertical-offset="789">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1335,9 +1347,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15082383" vertical-offset="0" max-vertical-offset="789">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="50" />
-          <folding>
-            <marker date="1421349999150" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1345,7 +1355,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34474018" vertical-offset="0" max-vertical-offset="789">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1353,17 +1362,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.6714287" vertical-offset="0" max-vertical-offset="3383">
           <caret line="187" column="20" selection-start-line="187" selection-start-column="20" selection-end-line="187" selection-end-column="20" />
-          <folding>
-            <marker date="1421349999209" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421349999209" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/body.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3075644" vertical-offset="718" max-vertical-offset="2805">
-          <caret line="64" column="19" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -1375,7 +1373,6 @@
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1391,7 +1388,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="561">
           <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1407,9 +1403,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="748">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <marker date="1421349999158" expanded="true" signature="-1:-1" placeholder="SELECT email..users..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1433,7 +1426,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="815">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1449,7 +1441,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.47401774" vertical-offset="0" max-vertical-offset="789">
           <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1457,19 +1448,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-16.846153" vertical-offset="650" max-vertical-offset="4743">
           <caret line="64" column="32" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
-          <folding>
-            <marker date="1421349999174" expanded="true" signature="-1:-1" placeholder="SELECT id_us..users..." />
-            <marker date="1421349999174" expanded="true" signature="-1:-1" placeholder="SELECT id_eq..equipe..." />
-            <marker date="1421349999174" expanded="true" signature="-1:-1" placeholder="SELECT id_eq..equipe..." />
-            <marker date="1421349999174" expanded="true" signature="-1:-1" placeholder="select id_us..users..." />
-            <marker date="1421349999174" expanded="true" signature="-1:-1" placeholder="select usern..users..." />
-            <marker date="1421349999174" expanded="true" signature="-1:-1" placeholder="UPDATE users..." />
-            <marker date="1421349999174" expanded="true" signature="-1:-1" placeholder="UPDATE users..." />
-            <marker date="1421349999174" expanded="true" signature="-1:-1" placeholder="select argen..users..." />
-            <marker date="1421349999174" expanded="true" signature="-1:-1" placeholder="SELECT users..users..." />
-            <marker date="1421349999174" expanded="true" signature="-1:-1" placeholder="update users..." />
-            <marker date="1421349999174" expanded="true" signature="-1:-1" placeholder="update users..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1493,12 +1472,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.9891937" vertical-offset="0" max-vertical-offset="1462">
           <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
-          <folding>
-            <marker date="1421349999213" expanded="true" signature="-1:-1" placeholder="select id_us..users..." />
-            <marker date="1421349999213" expanded="true" signature="-1:-1" placeholder="UPDATE users..." />
-            <marker date="1421349999213" expanded="true" signature="-1:-1" placeholder="UPDATE users..." />
-            <marker date="1421349999213" expanded="true" signature="-1:-1" placeholder="select usern..users..." />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/body.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.538462" vertical-offset="234" max-vertical-offset="2907">
+          <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4052901" vertical-offset="1752" max-vertical-offset="14722">
+          <caret line="131" column="17" selection-start-line="131" selection-start-column="17" selection-end-line="131" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>

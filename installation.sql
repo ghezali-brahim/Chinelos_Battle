@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Jeu 15 Janvier 2015 à 20:25
+-- Généré le :  Ven 16 Janvier 2015 à 21:54
 -- Version du serveur :  5.6.20
 -- Version de PHP :  5.5.15
 
@@ -110,6 +110,22 @@ INSERT INTO `item` (`id_item`, `nom`, `description`, `prix_achat`, `item_type`, 
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `messages`
+--
+
+CREATE TABLE IF NOT EXISTS `messages` (
+`id_message` bigint(20) unsigned NOT NULL,
+  `objet` varchar(255) NOT NULL,
+  `contenu` text NOT NULL,
+  `id_expeditaire` int(11) NOT NULL,
+  `id_destinataire` int(11) NOT NULL,
+  `date_envoie` datetime NOT NULL,
+  `lu` tinyint(1) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `niveau`
 --
 
@@ -181,14 +197,15 @@ CREATE TABLE IF NOT EXISTS `users` (
   `argent` int(11) DEFAULT NULL,
   `nombre_victoire` int(11) NOT NULL DEFAULT '0',
   `nombre_defaite` int(11) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Contenu de la table `users`
 --
 
 INSERT INTO `users` (`id_user`, `username`, `password`, `email`, `last_connection`, `connected`, `argent`, `nombre_victoire`, `nombre_defaite`) VALUES
-(1, 'admin', 'c91134514349233cda39fba1da675f3031eb83ff', 'admin@iut.univ-paris8.fr', '2015-01-15 20:15:37', 1, 15, 1, 1);
+(1, 'admin', 'c91134514349233cda39fba1da675f3031eb83ff', 'admin@iut.univ-paris8.fr', '2015-01-16 21:40:53', 1, 15, 1, 1),
+(2, 'jeremyducon', 'd5188caa3f8a36e2e7172aa0914071918c90c426', 'jeremyducon@gmail.com', '0000-00-00 00:00:00', 0, 10, 0, 0);
 
 --
 -- Index pour les tables exportées
@@ -219,6 +236,12 @@ ALTER TABLE `item`
  ADD PRIMARY KEY (`id_item`), ADD UNIQUE KEY `unique_nom` (`nom`);
 
 --
+-- Index pour la table `messages`
+--
+ALTER TABLE `messages`
+ ADD PRIMARY KEY (`id_message`), ADD UNIQUE KEY `id_message` (`id_message`);
+
+--
 -- Index pour la table `niveau`
 --
 ALTER TABLE `niveau`
@@ -246,6 +269,11 @@ ALTER TABLE `users`
 ALTER TABLE `equipe`
 MODIFY `id_equipe` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
+-- AUTO_INCREMENT pour la table `messages`
+--
+ALTER TABLE `messages`
+MODIFY `id_message` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+--
 -- AUTO_INCREMENT pour la table `personnage`
 --
 ALTER TABLE `personnage`
@@ -254,7 +282,7 @@ MODIFY `id_personnage` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMEN
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-MODIFY `id_user` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `id_user` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
