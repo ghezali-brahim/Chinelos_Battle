@@ -1,2 +1,16 @@
 16/01/2015 20:49:31 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 2
 16/01/2015 20:49:31 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 3
+16/01/2015 20:53:48 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 2
+16/01/2015 20:53:48 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 3
+16/01/2015 20:56:23 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 2
+16/01/2015 20:56:23 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 3
+16/01/2015 20:56:34 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 2
+16/01/2015 20:56:35 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 3
+16/01/2015 21:04:30 SELECT DISTINCT experience FROM niveau WHERE niveau = :niveau : 	 1
+16/01/2015 21:04:30 SELECT DISTINCT experience FROM niveau WHERE niveau = :niveau : 	 1
+16/01/2015 21:06:53 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 2
+16/01/2015 21:06:53 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 3
+16/01/2015 21:08:39 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 2
+16/01/2015 21:08:39 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 3
+16/01/2015 21:08:45 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 2
+16/01/2015 21:08:45 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 3

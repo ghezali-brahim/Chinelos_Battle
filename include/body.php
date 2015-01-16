@@ -61,7 +61,7 @@
                             <span >shopping</span ></a ></li >
                     <li ><a href="index.php?module=joueur" id="joueur" >Joueur<br />
                             <span >équipes</span ></a ></li >
-					<li ><a href="index.php?module=joueur" id="joueur" >Messagerie<br />
+					<li ><a href="index.php?module=messagerie" id="joueur" >Messagerie<br />
                             <span >boite mail</span ></a ></li >
 					<?php } ?>
                     <li ><a href="index.php?module=contact" id="contact" >Contact<br />

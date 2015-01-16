@@ -8,3 +8,15 @@
 16/01/2015 20:49:21 ___________________________________________
 16/01/2015 20:49:21 select id_user, username, email, last_connection from users where username=:username AND password=:password : 	 Soldi|da14b2c1c294b1d1fbcdd3fba4cf47d61429d26b
 16/01/2015 20:49:21 UPDATE users SET last_connection = :last_connection, connected = :connected WHERE id_user=:id_user : 	 2015-01-16  20:49:21|3|1
+16/01/2015 21:01:43 ___________________________________________
+16/01/2015 21:01:43 UPDATE users SET connected = :connected WHERE id_user=:id_user : 	 |3
+16/01/2015 21:01:53 ___________________________________________
+16/01/2015 21:01:53 select id_user, username, email, last_connection from users where username=:username AND password=:password : 	 admin|68546460ac7faa14c29337a281c7d811e53564d9
+16/01/2015 21:02:08 ___________________________________________
+16/01/2015 21:02:08 select id_user, username, email, last_connection from users where username=:username AND password=:password : 	 Soldi|da14b2c1c294b1d1fbcdd3fba4cf47d61429d26b
+16/01/2015 21:02:08 UPDATE users SET last_connection = :last_connection, connected = :connected WHERE id_user=:id_user : 	 2015-01-16  21:02:08|3|1
+16/01/2015 21:02:43 ___________________________________________
+16/01/2015 21:02:43 UPDATE users SET connected = :connected WHERE id_user=:id_user : 	 |3
+16/01/2015 21:03:13 ___________________________________________
+16/01/2015 21:03:13 select id_user, username, email, last_connection from users where username=:username AND password=:password : 	 Soldi|da14b2c1c294b1d1fbcdd3fba4cf47d61429d26b
+16/01/2015 21:03:13 UPDATE users SET last_connection = :last_connection, connected = :connected WHERE id_user=:id_user : 	 2015-01-16  21:03:13|3|1

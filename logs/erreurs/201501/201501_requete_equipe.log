@@ -1,2 +1,14 @@
 16/01/2015 20:49:31 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 3
 16/01/2015 20:49:31 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 4
+16/01/2015 20:53:48 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 3
+16/01/2015 20:53:48 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 4
+16/01/2015 20:56:23 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 3
+16/01/2015 20:56:23 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 4
+16/01/2015 20:56:34 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 3
+16/01/2015 20:56:35 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 4
+16/01/2015 21:06:53 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 3
+16/01/2015 21:06:53 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 4
+16/01/2015 21:08:39 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 3
+16/01/2015 21:08:39 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 4
+16/01/2015 21:08:45 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 3
+16/01/2015 21:08:45 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 4
