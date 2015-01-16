@@ -1,0 +1,4 @@
+16/01/2015 20:49:31 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 2
+16/01/2015 20:49:31 Construction Personnage : ID:2; nom : Chausson 2; lvl : 1
+16/01/2015 20:49:31 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 3
+16/01/2015 20:49:31 Construction Personnage : ID:3; nom : Chausson 3; lvl : 1

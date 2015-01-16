@@ -52,12 +52,18 @@
                     <li ><a href="index.php?module=connexion&action=connexion" id="connexion"
                             class="active" >Accueil<br />
                             <span >connexion</span ></a ></li >
+					<?php
+						if(isset($_SESSION['user'])){
+					?>
                     <li ><a href="index.php?module=combat" id="combat" >Combat<br />
                             <span >combattre</span ></a ></li >
                     <li ><a href="index.php?module=boutique" id="boutique" >Boutique<br />
                             <span >shopping</span ></a ></li >
                     <li ><a href="index.php?module=joueur" id="joueur" >Joueur<br />
                             <span >équipes</span ></a ></li >
+					<li ><a href="index.php?module=joueur" id="joueur" >Messagerie<br />
+                            <span >boite mail</span ></a ></li >
+					<?php } ?>
                     <li ><a href="index.php?module=contact" id="contact" >Contact<br />
                             <span >assistance</span ></a ></li >
 

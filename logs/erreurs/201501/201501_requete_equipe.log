@@ -1,0 +1,2 @@
+16/01/2015 20:49:31 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 3
+16/01/2015 20:49:31 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 4

@@ -1,0 +1,10 @@
+16/01/2015 20:46:28 ___________________________________________
+16/01/2015 20:46:28 UPDATE users SET connected = :connected WHERE id_user=:id_user : 	 |3
+16/01/2015 20:47:39 ___________________________________________
+16/01/2015 20:47:39 select id_user, username, email, last_connection from users where username=:username AND password=:password : 	 Soldi|da14b2c1c294b1d1fbcdd3fba4cf47d61429d26b
+16/01/2015 20:47:39 UPDATE users SET last_connection = :last_connection, connected = :connected WHERE id_user=:id_user : 	 2015-01-16  20:47:39|3|1
+16/01/2015 20:47:59 ___________________________________________
+16/01/2015 20:47:59 UPDATE users SET connected = :connected WHERE id_user=:id_user : 	 |3
+16/01/2015 20:49:21 ___________________________________________
+16/01/2015 20:49:21 select id_user, username, email, last_connection from users where username=:username AND password=:password : 	 Soldi|da14b2c1c294b1d1fbcdd3fba4cf47d61429d26b
+16/01/2015 20:49:21 UPDATE users SET last_connection = :last_connection, connected = :connected WHERE id_user=:id_user : 	 2015-01-16  20:49:21|3|1
