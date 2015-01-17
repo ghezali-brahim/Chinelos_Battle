@@ -1,6 +1,6 @@
 <?php
 if ( !defined ( 'TEST_INCLUDE' ) )
-    die ( "Vous n'avez pas accès directement à ce fichier" );
+    exit ( "Vous n'avez pas accès directement à ce fichier" );
 
 
 class Combat extends DBMapper
@@ -123,11 +123,11 @@ class Combat extends DBMapper
                 //ICI recompense sous la forme (argent, %xp)
                 $recompense_p1 = array (
                         'argent'     => 10,
-                        'pourcentXP' => 6 );
+                        'pourcentXP' => 20 );
             } else {
                 $recompense_p1 = array (
                         'argent'     => 5,
-                        'pourcentXP' => 4 );
+                        'pourcentXP' => 10 );
             }
             echo "votre récompense de fin de combat est : " . $recompense_p1[ 'argent' ] . "gils ainsi que " . $recompense_p1[ 'pourcentXP' ] . "% d'experience. <br/>";
             $gagnant->ajouterArgent ( $recompense_p1[ 'argent' ] );

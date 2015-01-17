@@ -1,6 +1,6 @@
 <?php
 if ( !defined ( 'TEST_INCLUDE' ) )
-    die ( "Vous n'avez pas accès directement à ce fichier" );
+    exit ( "Vous n'avez pas accès directement à ce fichier" );
 
 
 class ModJoueurVueJoueur
@@ -153,7 +153,7 @@ class ModJoueurVueJoueur
         }
     }
 
-    static function afficherPersonnagesEtJoueur ( $donneesPersonnages )
+    static function afficherClassementPersonnagesEtJoueur ( $donneesPersonnages )
     {
         echo "<h2>Classement des Chinelos</h2>";
         echo ' <table border="1" id="tableau">
@@ -188,6 +188,50 @@ class ModJoueurVueJoueur
             $rang++;
         }
         echo "</table>";
+    }
+
+    static function afficherClassementJoueur ( $donneesjoueurs )
+    {
+        sort ( $donneesjoueurs, SORT_NUMERIC );
+        echo "<h2>Classement des Joueurs</h2>";
+        echo ' <table border="1" id="tableau">
+	<tr>
+	    <th> Rang </th>
+		<th> Nom joueur </th>
+		<th> Niveau Total </th>
+		<th> Nombre Perso </th>
+		<th> Niveau Max </th>
+		<th> Connectee </th>
+	</tr>';
+        $rang = 1;
+        foreach ( $donneesjoueurs as $value ) {
+            echo "<tr>\n";
+            echo "<td>" . $rang . "</td>\n";
+            echo "<td>" . $value[ 'username' ] . "</td>\n";
+            echo "<td>" . $value[ 'niveauTotal' ] . "</td>\n";
+            echo "<td>" . $value[ 'nombrePerso' ] . "</td>\n";
+            echo "<td>" . $value[ 'niveauMax' ] . "</td>\n";
+            if ( $value[ 'connected' ] ) {
+                echo "<td> O </td>\n";
+            } else {
+                echo "<td> X </td>\n";
+            }
+            echo "</tr>";
+            $rang++;
+        }
+        echo "</table>";
+    }
+
+    static function afficherChoixClassement ()
+    {
+        ?>
+        <a href='index.php?module=joueur&action=classement&type=chinelos' >
+            <button class='buttonModule' style='width:130px;height=20px;' >Afficher classement Personnages</button >
+        </a ><br >
+        <a href='index.php?module=joueur&action=classement&type=joueurs' >
+            <button class='buttonModule' style='width:130px;height=20px;' >Afficher classement Joueur</button >
+        </a ><br >
+    <?php
     }
 }
 

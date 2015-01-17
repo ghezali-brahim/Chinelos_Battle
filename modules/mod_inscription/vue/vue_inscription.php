@@ -1,6 +1,6 @@
 <?php
 if ( !defined ( 'TEST_INCLUDE' ) )
-    die ( "Vous n'avez pas accès directement à ce fichier" );
+    exit ( "Vous n'avez pas accès directement à ce fichier" );
 
 
 class ModInscriptionVueInscription
@@ -29,9 +29,11 @@ class ModInscriptionVueInscription
         if ( $reussit == 1 ) {
             echo 'inscription reussie';
             header ( "Refresh: 5;URL=index.php" );
+            exit();
         } else {
-            header ( "Refresh: 5;URL=index.php?module=inscription" );
             echo 'inscription échoué';
+            header ( "Refresh: 5;URL=index.php?module=inscription" );
+            exit();
         }
         //var_dump($vins);
         //print_r($vins);

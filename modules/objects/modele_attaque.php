@@ -1,6 +1,6 @@
 <?php
 if ( !defined ( 'TEST_INCLUDE' ) )
-    die ( "Vous n'avez pas accès directement à ce fichier" );
+    exit ( "Vous n'avez pas accès directement à ce fichier" );
 
 
 //TODO Transformer la structure d'attaque et la mettre comme element == evite les requetes inutiles car attaque communs à tout le monde

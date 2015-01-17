@@ -147,4 +147,9 @@ class Element extends DBMapper
 
         return explode ( ";", $id_faible_contre_String );
     }
+
+    static function getListElements ()
+    {
+        return self::requeteFromDB ( "select id_element,nom from element" );
+    }
 }

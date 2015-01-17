@@ -1,6 +1,6 @@
 <?php
 if ( !defined ( 'TEST_INCLUDE' ) )
-    die ( "Vous n'avez pas accès directement à ce fichier" );
+    exit ( "Vous n'avez pas accès directement à ce fichier" );
 require_once "modules/include_objects.php";
 //importation modele
 require_once MOD_BPATH . "modele" . DIR_SEP . "modele_combat.php";

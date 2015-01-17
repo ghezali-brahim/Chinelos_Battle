@@ -1,6 +1,6 @@
 <?php
 if ( !defined ( 'TEST_INCLUDE' ) )
-    die ( "Vous n'avez pas accès directement à ce fichier" );
+    exit ( "Vous n'avez pas accès directement à ce fichier" );
 
 
 class ModBoutiqueVueBoutique
@@ -20,6 +20,31 @@ class ModBoutiqueVueBoutique
     {
         echo "<div class='aventurierFloat'><a href='index.php?module=boutique&action=acheter&value=personnage'><img class='aventurier' src='include/images/aventurier.jpg'/><br>
 		<span>Acheter un personnage</span></a></div>";
+    }
+
+    static function formAchatPersonnage ()
+    {
+        ?>
+        <form method="GET" action="index.php?module=boutique&action=acheter&value=personnage" >
+            <input type="hidden" name="module" value="boutique" />
+            <input type="hidden" name="action" value="acheter" />
+            <input type="hidden" name="value" value="personnage" />
+            <label for="nom_personnage" >Nom du personnage</label >
+            <input type="text" name="nom_personnage" id="id_element" required /><br >
+            <label for="id_element" >Element</label >
+            <select name="id_element" id="id_element" required >
+                <?php
+                $elements = Element::getListElements ();
+                foreach ( $elements as $element ) {
+                    echo "<option value=\"" . $element[ 'id_element' ] . "\"> " . $element[ 'nom' ] . " </option>";
+                }
+                ?>
+            </select >
+            <br >
+            <input type="reset" value="annuler" />
+            <input type="submit" />
+        </form >
+    <?php
     }
 
     static function afficherBoutique ()

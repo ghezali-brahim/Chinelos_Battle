@@ -1,6 +1,6 @@
 <?php
 if ( !defined ( 'TEST_INCLUDE' ) )
-    die ( "Vous n'avez pas accès directement à ce fichier" );
+    exit ( "Vous n'avez pas accès directement à ce fichier" );
 require_once "modules/include_objects.php";
 //importation modele
 require_once MOD_BPATH . "modele" . DIR_SEP . "modele_combat.php";
@@ -42,12 +42,8 @@ class ModCombatControleurCombat
     {
         $this->_joueur = unserialize ( $_SESSION[ 'joueur' ] );
         $listeEnemies  = array ();
-        for ( $i = 0; $i < 10; $i++ ) {
-            if ( $i < 5 ) {
-                array_push ( $listeEnemies, new Joueur_IA( $this->_joueur->getNiveauTotalParticipant () - $i ) );
-            } else {
-                array_push ( $listeEnemies, new Joueur_IA( $this->_joueur->getNiveauTotalParticipant () + ( $i - 5 ) ) );
-            }
+        for ( $i = -2; $i < 8; $i++ ) {
+            array_push ( $listeEnemies, new Joueur_IA( $this->_joueur->getNiveauTotalParticipant () + $i ) );
         }
         $_SESSION[ 'listeEnnemies' ] = serialize ( $listeEnemies );
         ModCombatVueCombat::afficherListeCombat ( $listeEnemies );
@@ -73,6 +69,7 @@ class ModCombatControleurCombat
             $_SESSION[ 'ennemi' ] = serialize ( new Joueur_IA( $this->_joueur->getNiveauTotalParticipant () ) );
             $this->_ennemi        = $this->_ennemi = unserialize ( $_SESSION[ 'ennemi' ] );
             header ( "Refresh: 4;URL=index.php?module=combat" );
+            exit ();
         }
         if ( $this->_ennemi->getEquipeOne ()->allPersonnagesDead () == FALSE && $this->_joueur->getEquipeOne ()->allPersonnagesDead () == TRUE ) {
             //Incrementer nbr defaite
@@ -82,6 +79,7 @@ class ModCombatControleurCombat
             $this->_ennemi        = $this->_ennemi = unserialize ( $_SESSION[ 'ennemi' ] );
             echo "Vous avez perdu";
             header ( "Refresh: 4;URL=index.php?module=boutique&action=acheter" );
+            exit ();
         }
         $this->_joueur->incrementerIndicePersoActuelParticipant ();
         $this->_ennemi->incrementerIndicePersoActuelParticipant ();
@@ -111,11 +109,11 @@ class ModCombatControleurCombat
                 //ICI recompense sous la forme (argent, %xp)
                 $recompense_p1 = array (
                         'argent'     => 10,
-                        'pourcentXP' => 6 );
+                        'pourcentXP' => 20 );
             } else {
                 $recompense_p1 = array (
                         'argent'     => 5,
-                        'pourcentXP' => 4 );
+                        'pourcentXP' => 10 );
             }
             echo "votre récompense de fin de combat est : " . $recompense_p1[ 'argent' ] . "gils ainsi que " . $recompense_p1[ 'pourcentXP' ] . "% d'experience. <br/>";
             $gagnant->ajouterArgent ( $recompense_p1[ 'argent' ] );

@@ -1,6 +1,6 @@
 <?php
 if ( !defined ( 'TEST_INCLUDE' ) )
-    die ( "Vous n'avez pas accès directement à ce fichier" );
+    exit ( "Vous n'avez pas accès directement à ce fichier" );
 require_once MOD_BPATH . DIR_SEP . "../objects/modele_participant.php";
 
 
@@ -18,19 +18,19 @@ class Boutique extends DBMapper
         $this->_joueur = unserialize ( $_SESSION[ 'joueur' ] );
     }
 
-    public function acheterPerso ()
+    public function acheterPerso ( $nom, $id_element )
     {
         try {
             $this->_joueur->depenser ( 5 );
             try {
-                $this->_joueur->addPersonnage ( Personnage::createPersonnageForBD ( 1 ) );
+                $this->_joueur->addPersonnage ( Personnage::createPersonnageForBD ( 1, NULL, $nom, $id_element ) );
             } catch ( Exception $e ) {
-                echo $e;
+                echo $e->getMessage ();
                 //on recredite l'argent car il y a eu une erreur
                 $this->_joueur->ajouterArgent ( 5 );
             }
         } catch ( Exception $e ) {
-            echo $e;
+            echo $e->getMessage ();
         }
         $_SESSION[ 'joueur' ] = serialize ( $this->_joueur );
     }

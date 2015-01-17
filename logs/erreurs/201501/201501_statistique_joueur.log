@@ -16,3 +16,580 @@ WHERE 1 = 1 order by personnage.niveau DESC, personnage.experience DESC; :
 16/01/2015 21:08:39 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 3
 16/01/2015 21:08:45 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 Soldi|3
 16/01/2015 21:08:45 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 3
+17/01/2015 13:07:08 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+17/01/2015 13:07:08 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+17/01/2015 13:07:13 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+17/01/2015 13:07:13 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+17/01/2015 13:08:48 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+17/01/2015 13:08:48 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+17/01/2015 13:08:48 SELECT  users.username, personnage.nom,element.nom as element, personnage.niveau, personnage.experience, personnage.attaques, personnage.hp_max, personnage.mp_max, personnage.puissance, personnage.defense  FROM
+  ((users INNER JOIN equipe ON users.id_user = equipe.id_user)
+    INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe) INNER JOIN element ON personnage.element = element.id_element
+WHERE 1 = 1 order by personnage.niveau DESC, personnage.experience DESC; : 	 
+17/01/2015 13:09:44 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+17/01/2015 13:09:44 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+17/01/2015 13:09:46 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+17/01/2015 13:09:46 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+17/01/2015 13:09:46 SELECT  users.username, personnage.nom,element.nom as element, personnage.niveau, personnage.experience, personnage.attaques, personnage.hp_max, personnage.mp_max, personnage.puissance, personnage.defense  FROM
+  ((users INNER JOIN equipe ON users.id_user = equipe.id_user)
+    INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe) INNER JOIN element ON personnage.element = element.id_element
+WHERE 1 = 1 order by personnage.niveau DESC, personnage.experience DESC; : 	 
+17/01/2015 13:09:49 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+17/01/2015 13:09:49 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+17/01/2015 13:09:50 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+17/01/2015 13:09:50 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+17/01/2015 13:09:50 SELECT  users.username, personnage.nom,element.nom as element, personnage.niveau, personnage.experience, personnage.attaques, personnage.hp_max, personnage.mp_max, personnage.puissance, personnage.defense  FROM
+  ((users INNER JOIN equipe ON users.id_user = equipe.id_user)
+    INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe) INNER JOIN element ON personnage.element = element.id_element
+WHERE 1 = 1 order by personnage.niveau DESC, personnage.experience DESC; : 	 
+17/01/2015 13:20:37 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+17/01/2015 13:20:37 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+17/01/2015 13:22:23 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 13:22:23 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 13:22:23 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 13:22:25 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 13:22:25 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 13:23:16 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 13:23:16 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 13:23:17 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 13:23:17 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 13:23:18 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 13:23:18 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 13:23:19 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 13:23:19 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 13:23:20 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 13:23:20 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 13:23:22 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 13:23:22 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 13:23:22 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 13:23:22 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 13:43:48 select argent from users where id_user=:id_user : 	 2
+17/01/2015 13:43:49 update users set nombre_victoire=:nombre_victoire where id_user = :id_user : 	 2|1
+17/01/2015 13:43:56 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 13:43:56 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 13:44:04 update users set nombre_victoire=:nombre_victoire where id_user = :id_user : 	 2|2
+17/01/2015 13:44:10 update users set nombre_victoire=:nombre_victoire where id_user = :id_user : 	 2|2
+17/01/2015 13:44:10 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 13:44:10 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 13:44:17 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 13:44:17 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 13:44:18 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 13:44:18 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 13:44:21 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 13:44:21 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 13:44:22 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 13:44:22 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 13:44:33 update users set nombre_victoire=:nombre_victoire where id_user = :id_user : 	 2|3
+17/01/2015 13:44:48 update users set nombre_defaite=:nombre_defaite where id_user = :id_user : 	 2|1
+17/01/2015 13:44:54 update users set nombre_defaite=:nombre_defaite where id_user = :id_user : 	 2|1
+17/01/2015 13:45:14 update users set nombre_victoire=:nombre_victoire where id_user = :id_user : 	 2|3
+17/01/2015 13:45:24 update users set nombre_defaite=:nombre_defaite where id_user = :id_user : 	 2|1
+17/01/2015 13:45:38 update users set nombre_defaite=:nombre_defaite where id_user = :id_user : 	 2|1
+17/01/2015 13:45:48 update users set nombre_defaite=:nombre_defaite where id_user = :id_user : 	 2|1
+17/01/2015 13:45:48 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 13:45:48 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 13:45:54 update users set nombre_victoire=:nombre_victoire where id_user = :id_user : 	 2|4
+17/01/2015 13:47:41 update users set nombre_victoire=:nombre_victoire where id_user = :id_user : 	 2|4
+17/01/2015 13:48:14 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 13:48:14 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 13:48:16 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 13:48:16 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 13:49:45 update users set nombre_victoire=:nombre_victoire where id_user = :id_user : 	 2|5
+17/01/2015 13:50:30 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 13:50:30 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 13:50:52 update users set nombre_victoire=:nombre_victoire where id_user = :id_user : 	 2|6
+17/01/2015 13:50:55 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 13:50:55 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 13:51:00 update users set nombre_defaite=:nombre_defaite where id_user = :id_user : 	 2|2
+17/01/2015 13:51:04 update users set nombre_defaite=:nombre_defaite where id_user = :id_user : 	 2|2
+17/01/2015 13:51:09 update users set nombre_victoire=:nombre_victoire where id_user = :id_user : 	 2|7
+17/01/2015 13:54:12 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 13:54:12 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 13:54:18 update users set nombre_victoire=:nombre_victoire where id_user = :id_user : 	 2|8
+17/01/2015 13:54:33 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 13:54:33 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 13:54:37 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 13:54:37 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 13:54:38 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 13:54:38 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 13:55:10 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 13:55:10 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 13:55:12 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 13:55:12 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 13:55:13 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 13:55:13 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 13:55:13 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 13:55:13 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:08:33 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:08:33 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:08:34 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:08:34 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:08:36 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:08:36 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:08:38 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:08:38 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:08:39 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:08:39 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:08:40 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:08:40 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:08:41 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:08:41 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:08:41 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:08:41 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:08:42 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:08:42 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:09:12 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:09:12 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:09:14 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:09:14 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:09:14 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:09:14 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:09:15 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:09:15 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:09:16 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:09:16 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:09:18 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:09:18 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:09:19 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:09:19 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:09:20 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:09:20 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:09:20 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:09:20 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:09:22 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:09:22 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:09:22 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:09:22 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:09:23 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:09:23 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:09:51 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:09:51 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:09:51 SELECT  users.username, personnage.nom,element.nom as element, personnage.niveau, personnage.experience, personnage.attaques, personnage.hp_max, personnage.mp_max, personnage.puissance, personnage.defense  FROM
+  ((users INNER JOIN equipe ON users.id_user = equipe.id_user)
+    INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe) INNER JOIN element ON personnage.element = element.id_element
+WHERE 1 = 1 order by personnage.niveau DESC, personnage.experience DESC; : 	 
+17/01/2015 14:09:52 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:09:52 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:09:54 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:09:54 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:09:54 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:09:54 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:09:55 select id_user, username from users where  last_connection!=NULL : 	 
+17/01/2015 14:09:59 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:09:59 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:10:08 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:10:08 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:10:09 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:10:09 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:10:09 SELECT  users.username, personnage.nom,element.nom as element, personnage.niveau, personnage.experience, personnage.attaques, personnage.hp_max, personnage.mp_max, personnage.puissance, personnage.defense  FROM
+  ((users INNER JOIN equipe ON users.id_user = equipe.id_user)
+    INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe) INNER JOIN element ON personnage.element = element.id_element
+WHERE 1 = 1 order by personnage.niveau DESC, personnage.experience DESC; : 	 
+17/01/2015 14:10:21 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:10:21 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:10:23 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:10:23 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:10:24 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:10:24 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:10:24 select id_user, username from users where  last_connection!=NULL : 	 
+17/01/2015 14:10:42 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:10:42 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:10:42 select id_user, username from users where  last_connection!=NULL : 	 
+17/01/2015 14:11:05 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:11:05 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:11:05 select id_user, username from users where  last_connection!=NULL : 	 
+17/01/2015 14:11:47 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:11:47 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:11:47 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 14:11:47 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 14:11:47 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 14:12:54 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:12:54 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:12:54 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 14:12:54 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 14:12:54 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 14:13:15 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:13:15 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:13:15 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 14:13:15 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 14:13:15 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 14:14:04 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:14:04 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:14:04 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 14:14:04 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 14:14:04 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 14:14:30 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:14:30 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:14:30 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 14:14:30 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 14:14:30 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 14:14:51 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:14:51 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:14:51 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 14:14:51 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 14:14:51 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 14:15:03 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:15:03 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:15:03 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 14:15:03 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 14:15:03 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 14:15:53 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:15:53 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:15:53 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 14:15:53 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 14:15:53 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 14:20:14 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:20:14 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:20:15 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 14:20:15 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 14:20:15 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 14:20:33 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:20:33 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:20:33 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 14:20:33 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 14:20:33 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 14:21:04 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:21:04 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:21:04 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 14:21:04 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 14:21:04 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 14:21:09 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:21:09 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:21:09 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 14:21:09 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 14:21:09 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 14:21:09 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:21:09 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:21:10 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 14:21:10 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 14:21:10 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 14:21:18 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:21:18 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:21:18 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 14:21:18 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 14:21:18 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 14:21:20 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:21:20 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:21:20 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 14:21:20 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 14:21:20 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 14:21:21 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:21:21 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:21:21 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 14:21:21 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 14:21:21 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 14:21:21 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:21:21 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:21:22 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 14:21:22 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 14:21:22 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 14:21:22 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:21:22 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:21:22 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 14:21:22 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 14:21:22 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 14:21:22 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:21:22 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:21:22 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 14:21:22 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 14:21:22 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 14:21:23 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:21:23 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:21:23 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 14:21:23 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 14:21:23 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 14:21:23 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:21:23 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:21:23 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 14:21:23 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 14:21:23 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 14:21:23 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:21:23 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:21:24 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 14:21:24 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 14:21:24 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 14:21:24 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:21:24 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:21:24 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 14:21:24 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 14:21:24 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 14:21:24 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:21:24 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:21:24 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 14:21:24 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 14:21:24 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 14:21:24 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:21:24 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:21:24 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 14:21:24 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 14:21:24 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 14:21:25 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:21:25 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:21:25 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 14:21:25 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 14:21:25 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 14:21:25 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:21:25 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:21:25 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 14:21:25 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 14:21:25 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 14:21:25 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:21:25 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:21:25 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 14:21:25 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 14:21:25 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 14:21:26 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:21:26 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:21:26 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 14:21:26 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 14:21:26 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 14:21:26 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:21:26 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:21:26 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 14:21:26 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 14:21:26 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 14:21:26 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:21:26 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:21:26 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 14:21:26 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 14:21:26 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 14:21:26 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:21:26 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:21:26 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 14:21:26 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 14:21:26 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 14:21:27 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:21:27 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:21:27 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 14:21:27 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 14:21:27 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 14:21:27 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:21:27 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:21:27 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 14:21:27 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 14:21:27 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 14:21:28 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:21:28 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:21:28 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 14:21:28 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 14:21:28 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 14:21:28 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:21:28 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:21:28 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 14:21:28 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 14:21:28 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 14:21:28 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:21:28 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:21:28 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 14:21:28 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 14:21:28 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 14:21:29 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:21:29 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:21:29 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 14:21:29 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 14:21:29 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 14:31:09 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:31:09 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:31:09 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:31:09 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:31:10 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:31:10 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:35:06 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:35:06 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:35:07 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:35:07 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:35:15 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:35:15 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:35:17 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:35:17 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 14:35:17 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 14:35:17 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 15:55:00 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 15:55:00 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 16:15:19 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 16:15:19 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 16:15:20 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 16:15:20 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 16:17:39 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 16:17:39 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 16:17:40 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 16:17:40 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 16:17:40 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 16:17:40 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 16:17:42 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 16:17:42 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 16:20:11 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 16:20:11 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 16:28:46 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 16:28:46 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 16:28:50 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 16:28:50 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 16:54:59 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 16:54:59 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 16:55:00 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 16:55:00 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 16:55:01 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 16:55:01 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 16:55:03 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 16:55:03 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 16:58:41 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 16:58:41 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 16:58:43 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 16:58:43 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 16:59:56 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 16:59:56 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 16:59:59 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 16:59:59 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 16:59:59 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 16:59:59 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 16:59:59 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 17:00:00 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 17:00:00 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 17:00:22 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 17:00:22 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 17:00:25 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 17:00:25 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 17:02:47 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 17:02:47 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 17:02:48 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 17:02:48 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 17:02:49 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 17:02:49 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 17:02:50 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 17:02:50 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 17:02:50 SELECT  users.username, personnage.nom,element.nom as element, personnage.niveau, personnage.experience, personnage.attaques, personnage.hp_max, personnage.mp_max, personnage.puissance, personnage.defense  FROM
+  ((users INNER JOIN equipe ON users.id_user = equipe.id_user)
+    INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe) INNER JOIN element ON personnage.element = element.id_element
+WHERE 1 = 1 order by personnage.niveau DESC, personnage.experience DESC; : 	 
+17/01/2015 17:03:02 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 17:03:02 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 17:03:07 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 17:03:07 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 17:03:08 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 17:03:08 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 17:03:08 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 17:03:08 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 17:03:08 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 17:04:00 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 17:04:00 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 17:04:08 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 17:04:08 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 17:04:10 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 17:04:10 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 17:04:12 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 17:04:12 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 17:04:13 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 17:04:13 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 17:04:15 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 17:04:15 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 17:04:16 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 17:04:16 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 17:04:18 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 17:04:18 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 17:04:22 update users set nombre_victoire=:nombre_victoire where id_user = :id_user : 	 2|9
+17/01/2015 17:04:44 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 17:04:44 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 17:16:14 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 17:16:14 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 17:16:15 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 17:16:15 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 17:19:06 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 17:19:06 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 17:22:51 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 17:22:51 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 17:22:53 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 17:22:53 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 17:22:55 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 17:22:55 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 17:22:55 select id_user, username from users where  last_connection is not NULL : 	 
+17/01/2015 17:22:55 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 17:22:55 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+17/01/2015 17:26:40 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 jeremyducon|2
+17/01/2015 17:26:40 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 2
+17/01/2015 17:26:40 select id_user, username,connected from users where  last_connection is not NULL : 	 
+17/01/2015 17:26:40 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+17/01/2015 17:26:40 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2

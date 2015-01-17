@@ -1,6 +1,6 @@
 <?php
 if ( !defined ( 'TEST_INCLUDE' ) )
-    die ( "Vous n'avez pas accès directement à ce fichier" );
+    exit ( "Vous n'avez pas accès directement à ce fichier" );
 /*
 //importation modele
 require_once MOD_BPATH . "modele" . DIR_SEP . "modele_attaque.php";
@@ -56,6 +56,7 @@ class ModJoueurControleurJoueur
             $this->_joueur->transferer ( $personnage );
             $_SESSION[ 'joueur' ] = serialize ( $this->_joueur );
             header ( "Refresh: 0;URL=index.php?module=joueur&action=transferer" );
+            exit();
             //echo '<a href="index.php?module=joueur&action=afficher">Rafraichir</a>';
         } else {
             ModJoueurVueJoueur::afficherTransfert ( $this->_joueur->getParticipant () );
@@ -65,7 +66,23 @@ class ModJoueurControleurJoueur
     //TODO classement
     public function classement ()
     {
-        $donnees = Joueur::getAllPersoClassement ();
-        ModJoueurVueJoueur::afficherPersonnagesEtJoueur ( $donnees );
+        if ( isset( $_GET[ 'type' ] ) ) {
+            $type = $_GET[ 'type' ];
+            switch ( $type ) {
+                case 'chinelos':
+                    $donnees = Joueur::getAllPersoClassement ();
+                    ModJoueurVueJoueur::afficherClassementPersonnagesEtJoueur ( $donnees );
+                    break;
+                case 'joueurs':
+                    $donnees = Joueur::getAllJoueurClassement ();
+                    ModJoueurVueJoueur::afficherClassementJoueur ( $donnees );
+                    break;
+                default:
+                    ModJoueurVueJoueur::afficherChoixClassement ();
+                    break;
+            }
+        } else {
+            ModJoueurVueJoueur::afficherChoixClassement ();
+        }
     }
 }

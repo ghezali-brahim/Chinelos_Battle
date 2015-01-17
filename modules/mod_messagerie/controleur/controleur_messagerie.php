@@ -1,6 +1,6 @@
 <?php
 if ( !defined ( 'TEST_INCLUDE' ) )
-    die ( "Vous n'avez pas accès directement à ce fichier" );
+    exit ( "Vous n'avez pas accès directement à ce fichier" );
 /*
 //importation modele
 require_once MOD_BPATH . "modele" . DIR_SEP . "modele_attaque.php";
@@ -16,6 +16,7 @@ require_once "modules/include_objects.php";
 //importation vue
 require_once MOD_BPATH . "modele" . DIR_SEP . "modele_messagerie.php";
 require_once MOD_BPATH . DIR_SEP . "vue/vue_messagerie.php";
+
 
 class ModMessagerieControleurMessagerie
 {
@@ -40,17 +41,17 @@ class ModMessagerieControleurMessagerie
 
     public function afficherMessage ()
     {
-
         //ModMessagerieVueMessagerie::afficherMessage($message)
     }
+
     public function afficherListeMessages ()
     {
-        $messages=ModMessagerieModeleMessagerie::getMessages();
-        ModMessagerieVueMessagerie::afficherlistesMessages($messages);
-    }
-    public function envoyerMessage ()
-    {
-        ModMessagerieVueMessagerie::afficherFormEnvoieMessage();
+        $messages = ModMessagerieModeleMessagerie::getMessages ();
+        ModMessagerieVueMessagerie::afficherlistesMessages ( $messages );
     }
 
+    public function envoyerMessage ()
+    {
+        ModMessagerieVueMessagerie::afficherFormEnvoieMessage ();
+    }
 }

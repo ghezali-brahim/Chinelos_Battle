@@ -1,6 +1,6 @@
 <?php
 if ( !defined ( 'TEST_INCLUDE' ) )
-    die ( "Vous n'avez pas accès directement à ce fichier" );
+    exit ( "Vous n'avez pas accès directement à ce fichier" );
 
 
 class ModMessagerieVueMessagerie
@@ -16,33 +16,35 @@ class ModMessagerieVueMessagerie
 			</p></div>";
     }
 
-
-    static function afficherMessage ( $message )
-    {
-        $contenuMessage=$message->getMessagerieArray();
-        print_r($contenuMessage);
-    }
-
     static function afficherlistesMessages ( $messages )
     {
-        if(count($messages)==1){
-            static::afficherMessage($messages);
-        }else{
-            foreach($messages as $message){
-                static::afficherMessage($message);
+        if ( count ( $messages ) == 1 ) {
+            static::afficherMessage ( $messages );
+        } else {
+            foreach ( $messages as $message ) {
+                static::afficherMessage ( $message );
                 echo "<br><br>";
             }
         }
-
     }
-    static function afficherFormEnvoieMessage(){
+
+    static function afficherMessage ( $message )
+    {
+        $contenuMessage = $message->getMessagerieArray ();
+        print_r ( $contenuMessage );
+    }
+
+    static function afficherFormEnvoieMessage ()
+    {
         ?>
-        <form action="" method="POST">
-            <label for="objet">Objet:</label><input type="text" name="objet"/>
-            <label for="contenu">Contenu:</label><input type="text" name="contenu"/>
-        </form>
-        <?php
+        <form action="" method="POST" >
+            <label for="objet" >Objet:</label >
+            <input type="text" name="objet" id="objet" required />
+            <label for="contenu" >Contenu:</label >
+            <input type="text" name="contenu id=" contenu" required />
+            <input type="submit" />
+        </form >
+    <?php
     }
-
 }
 

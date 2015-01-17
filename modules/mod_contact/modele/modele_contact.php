@@ -1,6 +1,6 @@
 <?php
 if ( !defined ( 'TEST_INCLUDE' ) )
-    die ( "Vous n'avez pas accès directement à ce fichier" );
+    exit ( "Vous n'avez pas accès directement à ce fichier" );
 
 
 class ModContactModeleContact extends DBMapper
@@ -33,6 +33,7 @@ class ModContactModeleContact extends DBMapper
             mail ( 'jojax77@hotmail.fr', $objet, $message );
             //mail('jojax77@hotmail.fr', 'HI', 'Marche');
         }
-        Header ( "index.php" );
+        header ( "index.php" );
+        exit();
     }
 }

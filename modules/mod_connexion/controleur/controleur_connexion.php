@@ -1,6 +1,6 @@
 <?php
 if ( !defined ( 'TEST_INCLUDE' ) )
-    die ( "Vous n'avez pas accès directement à ce fichier" );
+    exit ( "Vous n'avez pas accès directement à ce fichier" );
 require_once MOD_BPATH . DIR_SEP . "modele/modele_connexion.php";
 require_once MOD_BPATH . DIR_SEP . "vue/vue_connexion.php";
 
@@ -12,7 +12,7 @@ class ModConnexionControleurConnexion
     {
         if ( isset( $_SESSION[ 'user' ] ) ) {
             header ( "Refresh: 0;URL=index.php" );
-            die();
+            exit();
         }
         if ( isset( $_POST[ 'username' ] ) && isset( $_POST[ 'password' ] ) ) {
             $username = $_POST[ 'username' ];
@@ -25,6 +25,7 @@ class ModConnexionControleurConnexion
                         $_SESSION[ 'user' ] = serialize ( new ModConnexionModeleConnexion( $username, $password ) );
                         echo "Connexion reussit ! ";
                         header ( "Refresh: 2;URL=index.php" );
+                        exit();
                     } catch ( Exception $e ) {
                         self::accueilModule ();
                         echo $e->getMessage ();
@@ -64,6 +65,6 @@ class ModConnexionControleurConnexion
         unset( $_SESSION[ 'user' ] );
         unset( $user );
         header ( "Refresh: 0;URL=index.php" );
-        die();
+        exit();
     }
 }

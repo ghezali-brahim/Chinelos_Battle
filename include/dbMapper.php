@@ -80,4 +80,6 @@ class DBMapper
         self::$db_log->log ( 'erreurs', 'statistique_' . $nomfichier, $message, Logger::GRAN_MONTH );
     }
     //parent::requeteFromDB
+
+
 }

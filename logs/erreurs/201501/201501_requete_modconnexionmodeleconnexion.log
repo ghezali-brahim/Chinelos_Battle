@@ -20,3 +20,15 @@
 16/01/2015 21:03:13 ___________________________________________
 16/01/2015 21:03:13 select id_user, username, email, last_connection from users where username=:username AND password=:password : 	 Soldi|da14b2c1c294b1d1fbcdd3fba4cf47d61429d26b
 16/01/2015 21:03:13 UPDATE users SET last_connection = :last_connection, connected = :connected WHERE id_user=:id_user : 	 2015-01-16  21:03:13|3|1
+17/01/2015 13:07:04 ___________________________________________
+17/01/2015 13:07:04 select id_user, username, email, last_connection from users where username=:username AND password=:password : 	 admin|c91134514349233cda39fba1da675f3031eb83ff
+17/01/2015 13:07:04 UPDATE users SET last_connection = :last_connection, connected = :connected WHERE id_user=:id_user : 	 2015-01-17  13:07:04|1|1
+17/01/2015 13:20:38 ___________________________________________
+17/01/2015 13:20:38 UPDATE users SET connected = :connected WHERE id_user=:id_user : 	 |1
+17/01/2015 13:20:45 ___________________________________________
+17/01/2015 13:20:45 select id_user, username, email, last_connection from users where username=:username AND password=:password : 	 jeremyduc|4335bd8b57a5e8ba509279a58674db279aff68a2
+17/01/2015 13:20:54 ___________________________________________
+17/01/2015 13:20:54 select id_user, username, email, last_connection from users where username=:username AND password=:password : 	 jeremyduc|4335bd8b57a5e8ba509279a58674db279aff68a2
+17/01/2015 13:22:06 ___________________________________________
+17/01/2015 13:22:06 select id_user, username, email, last_connection from users where username=:username AND password=:password : 	 jeremyducon|d5188caa3f8a36e2e7172aa0914071918c90c426
+17/01/2015 13:22:06 UPDATE users SET last_connection = :last_connection, connected = :connected WHERE id_user=:id_user : 	 2015-01-17  13:22:06|2|1

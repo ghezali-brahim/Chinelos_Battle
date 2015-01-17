@@ -1,6 +1,6 @@
 <?php
 if ( !defined ( 'TEST_INCLUDE' ) )
-    die ( "Vous n'avez pas accès directement à ce fichier" );
+    exit ( "Vous n'avez pas accès directement à ce fichier" );
 require_once MOD_BPATH . DIR_SEP . "../objects/modele_attaque.php";
 require_once MOD_BPATH . DIR_SEP . "../objects/modele_niveau.php";
 
@@ -152,18 +152,21 @@ class Personnage extends DBMapper
      * @return Personnage
      * @throws Exception
      */
-    static function createPersonnageForBD ( $niveau = 1, $id_equipe = NULL )
+    static function createPersonnageForBD ( $niveau = 1, $id_equipe = NULL, $nom = NULL, $id_element = NULL )
     {
-        // Creation du personnage
-        $personnageAvantBD = self::createPersonnage ( $niveau );
         // Ici on détermine l'identifiant personnage max +1 afin d'en créer un nouveau
         $resultat      = static::requeteFromDB ( "SELECT max(id_personnage) FROM personnage" );
         $id_personnage = $resultat[ 0 ][ 0 ] + 1;
-        //On creer un tableau contenant toutes les valeurs nécessaire pour l'ajout à la BD
+        if ( $nom == NULL ) {
+            $nom = "Chausson " . $id_personnage;
+        }
+        // Creation du personnage
+        $personnageAvantBD = self::createPersonnage ( $niveau, $nom, $id_element );
+        // //On creer un tableau contenant toutes les valeurs nécessaire pour l'ajout à la BD
         $personnageElement   = $personnageAvantBD->getPersonnage ();
         $elementPersonnageBD = array (
                 'id_personnage' => $id_personnage,
-                'nom'           => "Chausson " . $id_personnage,
+                'nom'           => $nom,
                 'element'       => $personnageElement[ 'element' ],
                 'niveau'        => $personnageElement[ 'niveau' ],
                 'experience'    => $personnageElement[ 'experience' ],
@@ -189,14 +192,18 @@ class Personnage extends DBMapper
     /**
      * Creer un personnage
      *
-     * @param int    $niveau
+     * @param        $niveau
      * @param string $nom
+     * @param null   $id_element
      *
      * @return Personnage
      * @throws Exception
      */
-    static function createPersonnage ( $niveau, $nom = "Monster" )
+    static function createPersonnage ( $niveau, $nom = "Monster", $id_element = NULL )
     {
+        if ( $id_element == NULL ) {
+            $id_element = rand ( 1, 4 );// ICI on peut modifier l'élement du personnage par défault; ici aleatoire
+        }
         if ( self::$db_debug ) {
             static::log ( "Creation personnage : " . "..." );
         }
@@ -232,7 +239,7 @@ class Personnage extends DBMapper
         $personnageElement = array (
                 'id_personnage' => self::$id_personnage_serial,
                 'nom'           => $nom,
-                'element'       => rand ( 1, 4 ),// ICI on peut modifier l'élement du personnage par défault; ici aleatoire
+                'element'       => $id_element,
                 'niveau'        => $niveau,
                 'experience'    => $caracNiveau[ 'experience' ],
                 'attaques'      => $listeAttaquesString,
@@ -922,7 +929,7 @@ class Personnage extends DBMapper
         // On retire les MP ; Exception si pas suffisament de MP
         $this->retirerMP ( $attaque->getMpUsed () );
         // Algorithme de calcul de degats
-        $degatsInfliges = ( $this->_niveau * 0.4 + 2 ) * $this->_puissance / rand ( 8, 12 );
+        $degatsInfliges = ( $this->_niveau * 0.4 + 4 ) * $this->_puissance / rand ( 8, 12 );
         if ( $degatsInfliges == 0 ) {
             $degatsInfliges++;
         }

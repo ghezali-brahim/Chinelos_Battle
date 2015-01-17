@@ -1,6 +1,6 @@
 <?php
 if ( !defined ( 'TEST_INCLUDE' ) )
-    die ( "Vous n'avez pas accès directement à ce fichier" );
+    exit ( "Vous n'avez pas accès directement à ce fichier" );
 require_once MOD_BPATH . DIR_SEP . "../objects/modele_participant.php";
 
 
@@ -49,7 +49,7 @@ class Joueur extends Participant
                 array_push ( $this->_equipes, $equipe );
             }
         } else {
-            die( 'vous n\'etes pas connecté' );
+            exit ( 'vous n\'etes pas connecté' );
         }
         $this->_date_derniere_refresh = time ();
     }
@@ -92,6 +92,29 @@ class Joueur extends Participant
   ((users INNER JOIN equipe ON users.id_user = equipe.id_user)
     INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe) INNER JOIN element ON personnage.element = element.id_element
 WHERE 1 = 1 order by personnage.niveau DESC, personnage.experience DESC;" );
+
+        return $donnees;
+    }
+
+    /**
+     * Retourne la liste des personnages du classement
+     * sous la forme : username, niveauTotal, nombrePerso, niveauMax
+     * seul les user qui se sont deja connectee sont pris
+     *
+     * @return array
+     * @throws Exception
+     */
+    static function getAllJoueurClassement ()
+    {
+        $listes_user = self::requeteFromDB ( "select id_user, username,connected from users where  last_connection is not NULL" );
+        $donnees     = array ();
+        foreach ( $listes_user as $user ) {
+            $joueur                = self::requeteFromDB ( "select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+", array ( 'id_user' => $user[ 'id_user' ] ) )[ 0 ];
+            $joueur[ 'username' ]  = $user[ 'username' ];
+            $joueur[ 'connected' ] = $user[ 'connected' ];
+            array_push ( $donnees, $joueur );
+        }
 
         return $donnees;
     }

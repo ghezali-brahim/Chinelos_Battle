@@ -1,6 +1,6 @@
 <?php
 if ( !defined ( 'TEST_INCLUDE' ) )
-    die ( "Vous n'avez pas accès directement à ce fichier" );
+    exit ( "Vous n'avez pas accès directement à ce fichier" );
 require_once MOD_BPATH . DIR_SEP . "../objects/modele_personnage.php";
 
 
@@ -355,6 +355,7 @@ class  Equipe extends DBMapper
         static::log ( "Ajout d'un pourcentage d'experience à tous les personnages de l'equipe d'id : " . $this->_id_equipe );
         foreach ( $this->_personnages as $personnage ) {
             $personnage->addPourcentExperience ( $pourcentXP );
+            $personnage->addExperience ( 1 );
         }
     }
 

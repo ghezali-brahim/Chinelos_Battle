@@ -1,6 +1,6 @@
 <?php
 if ( !defined ( 'TEST_INCLUDE' ) )
-    die ( "Vous n'avez pas accès directement à ce fichier" );
+    exit ( "Vous n'avez pas accès directement à ce fichier" );
 
 
 class ModConnexionVueConnexion
@@ -17,7 +17,7 @@ class ModConnexionVueConnexion
         ?>
         <form method="POST" action="index.php?module=connexion&action=connexion" >
             <label for="username" >Login :</label >
-            <input type="text" id="username" name="username" maxlength="9" size="9" required > <br ><br >
+            <input type="text" id="username" name="username" maxlength="12" size="12" required > <br ><br >
             <label for="password" >Mot de passe :</label >
             <input type="password" id="password" name="password" maxlength="15" size="15" required ><br ><br ><br >
             <input type="submit" name="submit" value="Se connecter" >
