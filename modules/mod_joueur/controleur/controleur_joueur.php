@@ -1,5 +1,5 @@
 <?php
-if ( !defined ( 'TEST_INCLUDE' ) )
+if ( ! defined ( 'TEST_INCLUDE' ) )
     exit ( "Vous n'avez pas accès directement à ce fichier" );
 /*
 //importation modele
@@ -17,14 +17,12 @@ require_once "modules/include_objects.php";
 require_once MOD_BPATH . DIR_SEP . "vue/vue_profil.php";
 
 
-class ModJoueurControleurJoueur
-{
+class ModJoueurControleurJoueur {
     protected $_joueur;
 
-    function __construct ()
-    {
+    function __construct () {
         if ( Joueur::connectee () ) {
-            if ( !isset( $_SESSION[ 'joueur' ] ) ) {
+            if ( ! isset( $_SESSION[ 'joueur' ] ) ) {
                 $_SESSION[ 'joueur' ] = serialize ( new Joueur() );
             } else {
                 $_SESSION[ 'joueur' ] = serialize ( new Joueur() );
@@ -33,23 +31,19 @@ class ModJoueurControleurJoueur
         $this->_joueur = unserialize ( $_SESSION[ 'joueur' ] );
     }
 
-    public function accueilModule ()
-    {
+    public function accueilModule () {
         ModJoueurVueJoueur::affAccueilModule ();
     }
 
-    public function afficher ()
-    {
+    public function afficher () {
         ModJoueurVueJoueur::afficherJoueur ( $this->_joueur->getParticipant () );
     }
 
-    public function afficherEquipeOne ()
-    {
+    public function afficherEquipeOne () {
         ModJoueurVueJoueur::afficherEquipeOne ( $this->_joueur->getEquipeOne () );
     }
 
-    public function transferer ()
-    {
+    public function transferer () {
         if ( isset( $_GET[ 'id_personnage' ] ) ) {
             $id_personnage = $_GET[ 'id_personnage' ];
             $personnage    = $this->_joueur->getPersonnageWithID ( $id_personnage );
@@ -64,8 +58,7 @@ class ModJoueurControleurJoueur
     }
 
     //TODO classement
-    public function classement ()
-    {
+    public function classement () {
         if ( isset( $_GET[ 'type' ] ) ) {
             $type = $_GET[ 'type' ];
             switch ( $type ) {

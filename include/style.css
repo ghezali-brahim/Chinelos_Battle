@@ -36,7 +36,7 @@ html {
 
 .block_header {
     margin  : 0 auto;
-    width   : 993px;
+    width   : 80%;
     padding : 0;
     border  : none;
 }
@@ -129,7 +129,7 @@ html {
     float   : left;
     padding : 2px 0 0 0;
     margin  : 0;
-    width   : 480px;
+    width   : auto;
 }
 
 .menu ul {
@@ -146,6 +146,7 @@ html {
     margin     : 0;
     padding    : 0;
     border     : 0;
+    background : #2B2B2B;
 }
 
 .menu ul li a {

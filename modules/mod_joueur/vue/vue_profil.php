@@ -1,15 +1,13 @@
 <?php
-if ( !defined ( 'TEST_INCLUDE' ) )
+if ( ! defined ( 'TEST_INCLUDE' ) )
     exit ( "Vous n'avez pas accès directement à ce fichier" );
 
 
-class ModJoueurVueJoueur
-{
+class ModJoueurVueJoueur {
     /**
      * Affiche la page d'accueil du module
      **/
-    static function affAccueilModule ()
-    {
+    static function affAccueilModule () {
         echo "<br><div class='profil'><p class='textProfil'>
 			<a href='index.php?module=joueur&action=afficher'><button class='buttonModule' style='width:130px;height=20px;'>Afficher Equipes</button></a><br>
 			<a href='index.php?module=joueur&action=transferer'><button class='buttonModule' style='width:130px;height=20px;'>Transferer</button></a><br>
@@ -24,8 +22,7 @@ class ModJoueurVueJoueur
      *
      * @param $joueur
      */
-    static function afficherJoueur ( $joueur )
-    {
+    static function afficherJoueur ( $joueur ) {
         echo "Bienvenue " . $joueur[ 'username' ] . " , il vous reste " . $joueur[ 'argent' ] . " gils. <br>";
         //Affichage des différents personnages
         echo '<h2 id="listePerso"> Listes de vos personnages : </h2>';
@@ -37,8 +34,7 @@ class ModJoueurVueJoueur
         */
     }
 
-    static function afficherEquipes ( $equipes )
-    {
+    static function afficherEquipes ( $equipes ) {
         $i = 0;
         foreach ( $equipes as $equipe ) {
             if ( $i == 0 ) {
@@ -51,8 +47,7 @@ class ModJoueurVueJoueur
         }
     }
 
-    static function afficherEquipe ( $equipe )
-    {
+    static function afficherEquipe ( $equipe ) {
         self::afficherPersonnages ( $equipe->getPersonnages () );
     }
 
@@ -60,8 +55,7 @@ class ModJoueurVueJoueur
      *
      * @param $personnages
      */
-    static function afficherPersonnages ( $personnages )
-    {
+    static function afficherPersonnages ( $personnages ) {
         echo ' <table border="1" id="tableau">
 	<tr>
 		<th> ID Perso </th>
@@ -95,13 +89,11 @@ class ModJoueurVueJoueur
         echo "</table>";
     }
 
-    static function afficherEquipeOne ( $equipe )
-    {
+    static function afficherEquipeOne ( $equipe ) {
         $equipe->afficherEquipe ();
     }
 
-    static function afficherTransfert ( $joueur )
-    {
+    static function afficherTransfert ( $joueur ) {
         //Affichage des différents personnages
         echo '<h2 id="listePerso"> Listes de vos personnages : </h2>';
         $i = 0;
@@ -116,8 +108,7 @@ class ModJoueurVueJoueur
         }
     }
 
-    static function afficherPersonnagesTransfert ( $personnages )
-    {
+    static function afficherPersonnagesTransfert ( $personnages ) {
         {
             echo ' <table border="1" id="tableau">
 	<tr>
@@ -153,8 +144,7 @@ class ModJoueurVueJoueur
         }
     }
 
-    static function afficherClassementPersonnagesEtJoueur ( $donneesPersonnages )
-    {
+    static function afficherClassementPersonnagesEtJoueur ( $donneesPersonnages ) {
         echo "<h2>Classement des Chinelos</h2>";
         echo ' <table border="1" id="tableau">
 	<tr>
@@ -190,8 +180,7 @@ class ModJoueurVueJoueur
         echo "</table>";
     }
 
-    static function afficherClassementJoueur ( $donneesjoueurs )
-    {
+    static function afficherClassementJoueur ( $donneesjoueurs ) {
         sort ( $donneesjoueurs, SORT_NUMERIC );
         echo "<h2>Classement des Joueurs</h2>";
         echo ' <table border="1" id="tableau">
@@ -222,8 +211,7 @@ class ModJoueurVueJoueur
         echo "</table>";
     }
 
-    static function afficherChoixClassement ()
-    {
+    static function afficherChoixClassement () {
         ?>
         <a href='index.php?module=joueur&action=classement&type=chinelos' >
             <button class='buttonModule' style='width:130px;height=20px;' >Afficher classement Personnages</button >

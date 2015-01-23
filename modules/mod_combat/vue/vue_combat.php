@@ -1,15 +1,13 @@
 <?php
-if ( !defined ( 'TEST_INCLUDE' ) )
+if ( ! defined ( 'TEST_INCLUDE' ) )
     exit ( "Vous n'avez pas accès directement à ce fichier" );
 
 
-class ModCombatVueCombat
-{
+class ModCombatVueCombat {
     /**
      * Affiche la page d'accueil du module
      **/
-    static function affAccueilModule ()
-    {
+    static function affAccueilModule () {
         echo "<br><div class='combat'><p class='textCombat'>
 			<a href='index.php?module=combat&action=listeCombat'><button class='buttonModule' style='width:130px;height=20px;'>Scénario</button></a><br>
 			<a href='index.php?module=combat&action=Combat'><button class='buttonModule' style='width:130px;height=20px;'>Combat Aléatoire</button></a><br>
@@ -17,13 +15,11 @@ class ModCombatVueCombat
 			</p></div>";
     }
 
-    static function afficherCombat ( $combat )
-    {
+    static function afficherCombat ( $combat ) {
         $combat->afficher ();
     }
 
-    static function afficherEquipe ( $equipe )
-    {
+    static function afficherEquipe ( $equipe ) {
         self::afficherPersonnages ( $equipe->getPersonnages () );
     }
 
@@ -31,8 +27,7 @@ class ModCombatVueCombat
      *
      * @param $personnages
      */
-    static function afficherPersonnages ( $personnages )
-    {
+    static function afficherPersonnages ( $personnages ) {
         echo ' <table border="1" id="tableau">
 	<tr>
 		<th> ID Perso </th>
@@ -66,8 +61,7 @@ class ModCombatVueCombat
         echo "</table>";
     }
 
-    static function afficherListeCombat ( $listeEnemies )
-    {
+    static function afficherListeCombat ( $listeEnemies ) {
         $i = 0;
         foreach ( $listeEnemies as $joueur_IA ) {
             //self::afficherEquipe($joueur_IA->getEquipeOne());
@@ -85,16 +79,14 @@ class ModCombatVueCombat
         }
     }
 
-    static function afficherTourCombat ( $combat )
-    {
+    static function afficherTourCombat ( $combat ) {
         echo "<br>\n Tour " . $combat->tour . " :";
         $combat->afficher ();
         $combat->unTour ();
         $combat->afficher ();
     }
 
-    static function affichageUnTour ( $joueur, $ennemi )
-    {
+    static function affichageUnTour ( $joueur, $ennemi ) {
         echo $joueur->getEquipeOne ()->retourneAffichageEquipeAvecAttaques ();
         $personnageActuel = $joueur->getEquipeOne ()->getPersoIndiceActuel ();
 
@@ -113,8 +105,7 @@ class ModCombatVueCombat
         echo $ennemi->getEquipeOne ()->retourneAffichageEquipeAvecAttaques ();
     }
 
-    static function retourneAffichageTour ( $joueur, $ennemi )
-    {
+    static function retourneAffichageTour ( $joueur, $ennemi ) {
         $text = '';
         $text .= $joueur->getEquipeOne ()->retourneAffichageEquipeAvecAttaques ();
         $personnageActuel = $joueur->getEquipeOne ()->getPersoIndiceActuel ();

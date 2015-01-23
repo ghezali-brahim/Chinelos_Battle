@@ -1,12 +1,10 @@
 <?php
-if ( !defined ( 'TEST_INCLUDE' ) )
+if ( ! defined ( 'TEST_INCLUDE' ) )
     exit ( "Vous n'avez pas accès directement à ce fichier" );
 
 
-class ModContactVueContact
-{
-    public static function afficherAccueilContact ()
-    {
+class ModContactVueContact {
+    public static function afficherAccueilContact () {
         echo "Contact<br><br>";
         echo "<div align=center>
 			<form method=POST action=index.php?module=contact&action=envoyerMail>
@@ -24,8 +22,7 @@ class ModContactVueContact
 			</div> ";
     }
 
-    public static function formValider ()
-    {
+    public static function formValider () {
     }
 }
 

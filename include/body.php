@@ -1,5 +1,3 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html >
 <head >
     <title >Chinelos Battle</title >
@@ -52,18 +50,18 @@
                     <li ><a href="index.php?module=connexion&action=connexion" id="connexion"
                             class="active" >Accueil<br />
                             <span >connexion</span ></a ></li >
-					<?php
-						if(isset($_SESSION['user'])){
-					?>
-                    <li ><a href="index.php?module=combat" id="combat" >Combat<br />
-                            <span >combattre</span ></a ></li >
-                    <li ><a href="index.php?module=boutique" id="boutique" >Boutique<br />
-                            <span >shopping</span ></a ></li >
-                    <li ><a href="index.php?module=joueur" id="joueur" >Joueur<br />
-                            <span >équipes</span ></a ></li >
-					<li ><a href="index.php?module=messagerie" id="joueur" >Messagerie<br />
-                            <span >boite mail</span ></a ></li >
-					<?php } ?>
+                    <?php
+                    if ( isset( $_SESSION[ 'user' ] ) ) {
+                        ?>
+                        <li ><a href="index.php?module=combat" id="combat" >Combat<br />
+                                <span >combattre</span ></a ></li >
+                        <li ><a href="index.php?module=boutique" id="boutique" >Boutique<br />
+                                <span >shopping</span ></a ></li >
+                        <li ><a href="index.php?module=joueur" id="joueur" >Joueur<br />
+                                <span >équipes</span ></a ></li >
+                        <li ><a href="index.php?module=messagerie" id="joueur" >Messagerie<br />
+                                <span >boite mail</span ></a ></li >
+                    <?php } ?>
                     <li ><a href="index.php?module=contact" id="contact" >Contact<br />
                             <span >assistance</span ></a ></li >
 
@@ -78,7 +76,7 @@
         ?>
     </div >
     <?php
-    if ( !isset( $_GET[ 'module' ] ) ) {
+    if ( ! isset( $_GET[ 'module' ] ) ) {
         $_GET[ 'module' ] = NULL;
     }
     if ($_GET[ 'module' ] == 'connexion' OR $_GET[ 'module' ] == NULL){

@@ -1,5 +1,5 @@
 <?php
-if ( !defined ( 'TEST_INCLUDE' ) )
+if ( ! defined ( 'TEST_INCLUDE' ) )
     exit ( "Vous n'avez pas accès directement à ce fichier" );
 /*
  * table message : id_message, contenu, id_scenario
@@ -8,23 +8,18 @@ if ( !defined ( 'TEST_INCLUDE' ) )
 
 
 //TODO non fonctionnel
-class Message extends DBMapper
-{
+class Message extends DBMapper {
 
     protected $_id_message;
     protected $_contenu;
 
 
-    function __construct ( $id_message )
-    {
+    function __construct ( $id_message ) {
         //ICI on récupère les informations de l'item
         $requete = "SELECT DISTINCT * FROM message WHERE id_message = :_id_message";
         try {
             $reponse = self::$database->prepare ( $requete );
-            $reponse->execute (
-                    array (
-                            'id_message' => $id_message
-                    ) );
+            $reponse->execute ( array ( 'id_message' => $id_message ) );
         } catch ( PDOException $e ) {
             echo 'Échec lors de la connexion : ' . $e->getMessage ();
         }
@@ -36,8 +31,7 @@ class Message extends DBMapper
         $this->_contenu    = $messageElements[ 'contenu' ];
     }
 
-    function afficherMessage ()
-    {
+    function afficherMessage () {
         echo '<div class="messages">';
         echo '<p>' . $this->_contenu . '</p>';
         echo '</div>';
@@ -46,8 +40,7 @@ class Message extends DBMapper
     /**
      * @param $id_message
      */
-    function getContenu ()
-    {
+    function getContenu () {
         try {
             $reponse = self::$database->query ( 'SELECT contenu FROM message WHERE idMessage = :_id_message' );
         } catch ( PDOException $e ) {
@@ -57,8 +50,7 @@ class Message extends DBMapper
         return $reponse;
     }
 
-    function setContenu ( $nouveauContenu )
-    {
+    function setContenu ( $nouveauContenu ) {
         $this->_contenu = $nouveauContenu;
     }
 }

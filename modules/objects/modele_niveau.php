@@ -1,10 +1,9 @@
 <?php
-if ( !defined ( 'TEST_INCLUDE' ) )
+if ( ! defined ( 'TEST_INCLUDE' ) )
     exit ( "Vous n'avez pas accès directement à ce fichier" );
 
 
-class Niveau extends DBMapper
-{
+class Niveau extends DBMapper {
 
     /**
      * etourne le pourcentage d'experience réalisé pour monter au niveau suivant
@@ -13,8 +12,7 @@ class Niveau extends DBMapper
      *
      * @return float
      */
-    static public function getPourcentXp ( $experience )
-    {
+    static public function getPourcentXp ( $experience ) {
         $niveau               = Niveau::getNiveau ( $experience );
         $niveauSuivant        = $niveau + 1;
         $experienceNecessaire = Niveau::getXpNiveau ( $niveauSuivant ) - Niveau::getXpNiveau ( $niveau );
@@ -30,11 +28,8 @@ class Niveau extends DBMapper
      *
      * @return mixed
      */
-    static public function getNiveau ( $experience )
-    {
-        $niveauActuel = static::requeteFromDB ( "SELECT DISTINCT niveau FROM niveau WHERE experience <= :experience ORDER BY niveau DESC limit 1", array (
-                'experience' => ( $experience )
-        ) )[ 0 ];
+    static public function getNiveau ( $experience ) {
+        $niveauActuel = static::requeteFromDB ( "SELECT DISTINCT niveau FROM niveau WHERE experience <= :experience ORDER BY niveau DESC limit 1", array ( 'experience' => ( $experience ) ) )[ 0 ];
 
         return $niveauActuel[ 'niveau' ];
     }
@@ -46,11 +41,8 @@ class Niveau extends DBMapper
      *
      * @return mixed
      */
-    static public function getXpNiveau ( $niveau )
-    {
-        $niveauActuel = static::requeteFromDB ( "SELECT DISTINCT experience FROM niveau WHERE niveau = :niveau", array (
-                'niveau' => ( $niveau )
-        ) )[ 0 ];
+    static public function getXpNiveau ( $niveau ) {
+        $niveauActuel = static::requeteFromDB ( "SELECT DISTINCT experience FROM niveau WHERE niveau = :niveau", array ( 'niveau' => ( $niveau ) ) )[ 0 ];
 
         return $niveauActuel[ 'experience' ];
     }
@@ -62,8 +54,7 @@ class Niveau extends DBMapper
      *
      * @return int
      */
-    static public function getXpManquantPourUp ( $experience )
-    {
+    static public function getXpManquantPourUp ( $experience ) {
         $niveau               = Niveau::getNiveau ( $experience );
         $experienceNecessaire = Niveau::getXpNiveau ( $niveau + 1 );
 

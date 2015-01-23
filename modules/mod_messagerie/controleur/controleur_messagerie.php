@@ -1,5 +1,5 @@
 <?php
-if ( !defined ( 'TEST_INCLUDE' ) )
+if ( ! defined ( 'TEST_INCLUDE' ) )
     exit ( "Vous n'avez pas accès directement à ce fichier" );
 /*
 //importation modele
@@ -18,14 +18,12 @@ require_once MOD_BPATH . "modele" . DIR_SEP . "modele_messagerie.php";
 require_once MOD_BPATH . DIR_SEP . "vue/vue_messagerie.php";
 
 
-class ModMessagerieControleurMessagerie
-{
+class ModMessagerieControleurMessagerie {
     protected $_joueur;
 
-    function __construct ()
-    {
+    function __construct () {
         if ( Joueur::connectee () ) {
-            if ( !isset( $_SESSION[ 'joueur' ] ) ) {
+            if ( ! isset( $_SESSION[ 'joueur' ] ) ) {
                 $_SESSION[ 'joueur' ] = serialize ( new Joueur() );
             } else {
                 $_SESSION[ 'joueur' ] = serialize ( new Joueur() );
@@ -34,24 +32,20 @@ class ModMessagerieControleurMessagerie
         $this->_joueur = unserialize ( $_SESSION[ 'joueur' ] );
     }
 
-    public function accueilModule ()
-    {
+    public function accueilModule () {
         ModMessagerieVueMessagerie::affAccueilModule ();
     }
 
-    public function afficherMessage ()
-    {
+    public function afficherMessage () {
         //ModMessagerieVueMessagerie::afficherMessage($message)
     }
 
-    public function afficherListeMessages ()
-    {
+    public function afficherListeMessages () {
         $messages = ModMessagerieModeleMessagerie::getMessages ();
         ModMessagerieVueMessagerie::afficherlistesMessages ( $messages );
     }
 
-    public function envoyerMessage ()
-    {
+    public function envoyerMessage () {
         ModMessagerieVueMessagerie::afficherFormEnvoieMessage ();
     }
 }

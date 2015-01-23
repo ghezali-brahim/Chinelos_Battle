@@ -1,19 +1,16 @@
 <?php
-if ( !defined ( 'TEST_INCLUDE' ) )
+if ( ! defined ( 'TEST_INCLUDE' ) )
     exit ( "Vous n'avez pas accès directement à ce fichier" );
 
 
-class ModInscriptionControleurInscription
-{
+class ModInscriptionControleurInscription {
 
-    public function accueilModule ()
-    {
+    public function accueilModule () {
         require_once MOD_BPATH . DIR_SEP . "vue/vue_inscription.php";
         ModInscriptionVueInscription::affAccueilModule ();
     }
 
-    public function inscription ()
-    {
+    public function inscription () {
         require_once MOD_BPATH . DIR_SEP . "modele/modele_inscription.php";
         require_once MOD_BPATH . DIR_SEP . "vue/vue_inscription.php";
         if ( isset ( $_SESSION [ 'user' ] ) ) {
@@ -26,8 +23,7 @@ class ModInscriptionControleurInscription
         }
     }
 
-    public function verificationContenu ()
-    {
+    public function verificationContenu () {
         $reussit = 1;
         //Verification existance des variables
         if ( isset( $_POST [ 'username' ] ) ) {
@@ -56,7 +52,7 @@ class ModInscriptionControleurInscription
                     $reussit = 0;
                     echo 'mot de passe différent';
                 }
-                if ( !filter_var ( $email, FILTER_VALIDATE_EMAIL ) ) {
+                if ( ! filter_var ( $email, FILTER_VALIDATE_EMAIL ) ) {
                     $reussit = 0;
                     echo "{$email} n'est pas une adresse email valide.";
                 }
@@ -67,11 +63,7 @@ class ModInscriptionControleurInscription
             $reussit = 0;
         }
         if ( $reussit == 1 ) {
-            return array ( 'username'                    =>
-                                   $username, 'password' =>
-                                   $password, 'email'    =>
-                                   $email
-            );
+            return array ( 'username' => $username, 'password' => $password, 'email' => $email );
         } else {
             return NULL;
         }

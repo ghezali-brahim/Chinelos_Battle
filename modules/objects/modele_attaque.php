@@ -1,11 +1,10 @@
 <?php
-if ( !defined ( 'TEST_INCLUDE' ) )
+if ( ! defined ( 'TEST_INCLUDE' ) )
     exit ( "Vous n'avez pas accès directement à ce fichier" );
 
 
 //TODO Transformer la structure d'attaque et la mettre comme element == evite les requetes inutiles car attaque communs à tout le monde
-class Attaque extends DBMapper
-{
+class Attaque extends DBMapper {
 
     protected $_id_attaque;
     protected $_nom;
@@ -19,12 +18,9 @@ class Attaque extends DBMapper
      *
      * @throws Exception
      */
-    function __construct ( $id_attaque )
-    {
+    function __construct ( $id_attaque ) {
         //ICI on récupère les informations de l'attaque
-        $resultat        = static::requeteFromDB ( "SELECT * FROM attaque WHERE id_attaque = :id_attaque", array (
-                'id_attaque' => $id_attaque
-        ) );
+        $resultat        = static::requeteFromDB ( "SELECT * FROM attaque WHERE id_attaque = :id_attaque", array ( 'id_attaque' => $id_attaque ) );
         $attaqueElements = $resultat[ 0 ];
         if ( $attaqueElements == NULL ) {
             throw new Exception( "L'identifiant element :" . $id_attaque . " est une attaque inconnu." );
@@ -45,8 +41,7 @@ class Attaque extends DBMapper
      *
      * @return string
      */
-    function __toString ()
-    {
+    function __toString () {
         return $this->_nom . ': ID=' . $this->_id_attaque . '; Degats : ' . $this->_degats . '% ; cout : ' . $this->_mp_used . 'MP';
     }
 
@@ -61,11 +56,7 @@ class Attaque extends DBMapper
      *
      * @return Attaque : Attaque qui a été créer
      */
-    static function createAttaque (
-            $attaqueElements = array (
-                    'nom'     => "attaqueX",
-                    'degats'  => 10,
-                    'mp_used' => 3 ) )// Si aucun parametre
+    static function createAttaque ( $attaqueElements = array ( 'nom' => "attaqueX", 'degats' => 10, 'mp_used' => 3 ) )// Si aucun parametre
     {
         if ( self::$db_debug ) {
             static::log ( "Creation d'une attaque de nom : " . $attaqueElements[ 'nom' ] );
@@ -83,8 +74,7 @@ class Attaque extends DBMapper
      * Retourne l'identifiant de l'attaque
      * @return integer : Identifiant attaque
      */
-    function getIdAttaque ()
-    {
+    function getIdAttaque () {
         return $this->_id_attaque;
     }
 
@@ -92,8 +82,7 @@ class Attaque extends DBMapper
      * Retourne le cout en mp de l'attaque
      * @return integer : MP utilisé
      */
-    function getMpUsed ()
-    {
+    function getMpUsed () {
         return $this->_mp_used;
     }
 
@@ -101,8 +90,7 @@ class Attaque extends DBMapper
      * Retourne les degats sous la forme degats/100
      * @return integer : coefficient de degats
      */
-    function getDegats ()
-    {
+    function getDegats () {
         return ( $this->_degats / 100 );
     }
 
@@ -110,13 +98,11 @@ class Attaque extends DBMapper
      * Retourne le nom de l'attaque
      * @return string : nom de l'attaque
      */
-    public function getNom ()
-    {
+    public function getNom () {
         return $this->_nom;
     }
 
-    function afficherAttaque ()
-    {
+    function afficherAttaque () {
         echo '<div class="attaque">';
         echo $this->_nom . ' | ';
         echo 'Degats : ' . $this->_degats . '% | ';
@@ -128,8 +114,7 @@ class Attaque extends DBMapper
      * Retourne l'affichage des attaques
      * @return string
      */
-    function retourneAffichageAttaque ()
-    {
+    function retourneAffichageAttaque () {
         $text = "";
         $text .= '<div class="attaque">';
         $text .= $this->_nom . ' | ';

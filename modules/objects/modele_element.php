@@ -7,8 +7,7 @@
  * Time: 22:16
  */
 //TODO Faire un mode debug avec des logs
-class Element extends DBMapper
-{
+class Element extends DBMapper {
 
     private static $dossierIcone = "img/element/";
 
@@ -20,8 +19,7 @@ class Element extends DBMapper
      *
      * @return string lien vers l'image de l'élement
      */
-    static public function getIcone ( $id_element )
-    {
+    static public function getIcone ( $id_element ) {
         return self::$dossierIcone . $id_element . ".png";
     }
 
@@ -33,8 +31,7 @@ class Element extends DBMapper
      * @return contenu ligne element de la BD
      * @throws Exception
      */
-    static public function getElement ( $id_element )
-    {
+    static public function getElement ( $id_element ) {
         return Element::selectFromBD ( $id_element, "SELECT * FROM element WHERE id_element = :id_element" )[ 0 ];
     }
 
@@ -47,15 +44,11 @@ class Element extends DBMapper
      * @return mixed
      * @throws Exception
      */
-    private static function selectFromBD ( $id_element, $requete = "SELECT DISTINCT * FROM element WHERE id_element = :id_element" )
-    {
+    private static function selectFromBD ( $id_element, $requete = "SELECT DISTINCT * FROM element WHERE id_element = :id_element" ) {
         //ICI on récupère les informations de l'attaque
         try {
             $reponse = self::$database->prepare ( $requete );
-            $reponse->execute (
-                    array (
-                            'id_element' => $id_element
-                    ) );
+            $reponse->execute ( array ( 'id_element' => $id_element ) );
         } catch ( PDOException $e ) {
             echo 'Échec lors de la connexion : ' . $e->getMessage ();
         }
@@ -89,8 +82,7 @@ class Element extends DBMapper
      * @return String Nom de l'element
      * @throws Exception
      */
-    static public function getNom ( $id_element )
-    {
+    static public function getNom ( $id_element ) {
         return Element::selectFromBD ( $id_element, "SELECT nom FROM element WHERE id_element = :id_element" )[ 0 ][ 'nom' ];
     }
 
@@ -105,8 +97,7 @@ class Element extends DBMapper
      *
      * @return float|int
      */
-    static function getRatioDegatElement ( $id_element, $id_element_target )
-    {
+    static function getRatioDegatElement ( $id_element, $id_element_target ) {
         if ( in_array ( $id_element_target, Element::getIdElementFortContre ( $id_element ) ) ) {
             $ratio = 1.5;
         } else if ( in_array ( $id_element_target, Element::getIdElementFaibleContre ( $id_element ) ) ) {
@@ -126,8 +117,7 @@ class Element extends DBMapper
      * @return array(Integer) ; liste des id elements
      * @throws Exception
      */
-    static function getIdElementFortContre ( $id_element )
-    {
+    static function getIdElementFortContre ( $id_element ) {
         $id_fort_contre_String = Element::selectFromBD ( $id_element, "SELECT id_fort_contre FROM element WHERE id_element = :id_element" )[ 0 ][ 'id_fort_contre' ];
 
         return explode ( ";", $id_fort_contre_String );
@@ -141,15 +131,13 @@ class Element extends DBMapper
      * @return array(Integer) ; liste des id elements
      * @throws Exception
      */
-    static function getIdElementFaibleContre ( $id_element )
-    {
+    static function getIdElementFaibleContre ( $id_element ) {
         $id_faible_contre_String = Element::selectFromBD ( $id_element, "SELECT id_faible_contre FROM element WHERE id_element = :id_element" )[ 0 ][ 'id_faible_contre' ];
 
         return explode ( ";", $id_faible_contre_String );
     }
 
-    static function getListElements ()
-    {
+    static function getListElements () {
         return self::requeteFromDB ( "select id_element,nom from element" );
     }
 }

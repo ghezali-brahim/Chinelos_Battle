@@ -1,15 +1,13 @@
 <?php
-if ( !defined ( 'TEST_INCLUDE' ) )
+if ( ! defined ( 'TEST_INCLUDE' ) )
     exit ( "Vous n'avez pas accès directement à ce fichier" );
 
 
-class ModInscriptionVueInscription
-{
+class ModInscriptionVueInscription {
     /**
      * Affiche la page d'accueil du module
      **/
-    static function affAccueilModule ()
-    {
+    static function affAccueilModule () {
         ?>
         <form method="post" action="index.php?module=inscription&action=inscription" >
             <label >Login: <input type="text" name="username" required /></label ><br />
@@ -24,8 +22,7 @@ class ModInscriptionVueInscription
     <?php
     }
 
-    static function inscription ( $reussit )
-    {
+    static function inscription ( $reussit ) {
         if ( $reussit == 1 ) {
             echo 'inscription reussie';
             header ( "Refresh: 5;URL=index.php" );

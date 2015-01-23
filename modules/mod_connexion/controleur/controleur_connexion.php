@@ -1,15 +1,13 @@
 <?php
-if ( !defined ( 'TEST_INCLUDE' ) )
+if ( ! defined ( 'TEST_INCLUDE' ) )
     exit ( "Vous n'avez pas accès directement à ce fichier" );
 require_once MOD_BPATH . DIR_SEP . "modele/modele_connexion.php";
 require_once MOD_BPATH . DIR_SEP . "vue/vue_connexion.php";
 
 
-class ModConnexionControleurConnexion
-{
+class ModConnexionControleurConnexion {
 
-    public function connexion ()
-    {
+    public function connexion () {
         if ( isset( $_SESSION[ 'user' ] ) ) {
             header ( "Refresh: 0;URL=index.php" );
             exit();
@@ -44,8 +42,7 @@ class ModConnexionControleurConnexion
         }
     }
 
-    public function accueilModule ()
-    {
+    public function accueilModule () {
         if ( isset( $_SESSION[ 'user' ] ) ) {
             $user = unserialize ( $_SESSION[ 'user' ] );
             if ( $user->connectedOrNot () ) {
@@ -58,8 +55,7 @@ class ModConnexionControleurConnexion
         }
     }
 
-    public function deconnexion ()
-    {
+    public function deconnexion () {
         $user = unserialize ( $_SESSION[ 'user' ] );
         $user->deconnection ();
         unset( $_SESSION[ 'user' ] );

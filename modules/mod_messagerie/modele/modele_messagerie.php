@@ -1,10 +1,9 @@
 <?php
-if ( !defined ( 'TEST_INCLUDE' ) )
+if ( ! defined ( 'TEST_INCLUDE' ) )
     exit ( "Vous n'avez pas accès directement à ce fichier" );
 
 
-class ModMessagerieModeleMessagerie extends DBMapper
-{
+class ModMessagerieModeleMessagerie extends DBMapper {
     protected $_id_message;
     protected $_objet;
     protected $_contenu;
@@ -13,8 +12,7 @@ class ModMessagerieModeleMessagerie extends DBMapper
     protected $_date_envoie;
     protected $_lu;
 
-    function __construct ( $id_message )
-    {
+    function __construct ( $id_message ) {
         $resultat               = self::requeteFromDB ( "select objet, contenu, id_expeditaire, id_destinataire, date_envoie, lu from messages where id_message=:id_message", array ( 'id_message' => $id_message ) )[ 0 ];
         $this->_objet           = $resultat[ 'objet' ];
         $this->_contenu         = $resultat[ 'contenu' ];
@@ -24,8 +22,7 @@ class ModMessagerieModeleMessagerie extends DBMapper
         $this->_lu              = $resultat[ 'lu' ];
     }
 
-    static function getMessages ()
-    {
+    static function getMessages () {
         $user               = unserialize ( $_SESSION[ 'user' ] );
         $listes_id_messages = self::requeteFromDB ( "select id_message from messages where id_expeditaire=:id_user", array ( 'id_user' => $user->getIdUser () ) );
         $messages           = array ();
@@ -36,22 +33,13 @@ class ModMessagerieModeleMessagerie extends DBMapper
         return $messages;
     }
 
-    static function createMessage ()
-    {
+    static function createMessage () {
         $user = unserialize ( $_SESSION[ 'user' ] );
         //TODO
     }
 
-    function getMessagerieArray ()
-    {
-        $contenuMessage = array ( 'id_message'     => $this->_id_message,
-                                  'objet'          => $this->_objet,
-                                  'contenu'        => $this->_contenu,
-                                  'id_expeditaire' => $this->_id_expeditaire,
-                                  'id_destinaire'  => $this->_id_destinataire,
-                                  'date_envoie'    => $this->_date_envoie,
-                                  'lu'             => $this->_lu
-        );
+    function getMessagerieArray () {
+        $contenuMessage = array ( 'id_message' => $this->_id_message, 'objet' => $this->_objet, 'contenu' => $this->_contenu, 'id_expeditaire' => $this->_id_expeditaire, 'id_destinaire' => $this->_id_destinataire, 'date_envoie' => $this->_date_envoie, 'lu' => $this->_lu );
 
         return $contenuMessage;
     }

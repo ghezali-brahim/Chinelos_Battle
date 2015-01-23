@@ -8,8 +8,7 @@
  * Auteur: www.finalclap.com
  * Date: 19/02/2012
  **/
-class Logger
-{
+class Logger {
 
     const GRAN_VOID  = 'VOID'; # Dossier où sont enregistrés les fichiers logs (ex: /Applications/MAMP/www/monsite/logs)
     const GRAN_MONTH = 'MONTH'; # Le logger est prêt quand le dossier de dépôt des logs existe
@@ -25,11 +24,10 @@ class Logger
      *
      * @param string $path Chemin vers le dossier de dépôt
      **/
-    public function __construct ( $path )
-    {
+    public function __construct ( $path ) {
         $this->ready = FALSE;
         # Si le dépôt n'éxiste pas
-        if ( !is_dir ( $path ) ) {
+        if ( ! is_dir ( $path ) ) {
             trigger_error ( "<code>$path</code> n'existe pas", E_USER_WARNING );
 
             return FALSE;
@@ -50,10 +48,9 @@ class Logger
      *
      * @return bool
      */
-    public function log ( $type, $name, $row, $granularity = self::GRAN_YEAR )
-    {
+    public function log ( $type, $name, $row, $granularity = self::GRAN_YEAR ) {
         # Contrôle des arguments
-        if ( !isset( $type ) || empty( $name ) || empty( $row ) ) {
+        if ( ! isset( $type ) || empty( $name ) || empty( $row ) ) {
             trigger_error ( "Paramètres incorrects", E_USER_WARNING );
 
             return FALSE;
@@ -68,7 +65,7 @@ class Logger
         $date = date_create ();
         $row  = $date->format ( 'd/m/Y H:i:s' ) . ' ' . $row;
         # Ajout du retour chariot de fin de ligne si il n'y en a pas
-        if ( !preg_match ( '#\n$#', $row ) ) {
+        if ( ! preg_match ( '#\n$#', $row ) ) {
             $row .= "\n";
         }
         $this->write ( $logfile, $row );
@@ -87,16 +84,15 @@ class Logger
      *
      * @return string Chemin vers le fichier de log
      **/
-    public function path ( $type, $name, $granularity = self::GRAN_YEAR )
-    {
+    public function path ( $type, $name, $granularity = self::GRAN_YEAR ) {
         # On vérifie que le logger est prêt (et donc que le dossier de dépôt existe
-        if ( !$this->ready ) {
+        if ( ! $this->ready ) {
             trigger_error ( "Logger is not ready", E_USER_WARNING );
 
             return FALSE;
         }
         # Contrôle des arguments
-        if ( !isset( $type ) || empty( $name ) ) {
+        if ( ! isset( $type ) || empty( $name ) ) {
             trigger_error ( "Paramètres incorrects", E_USER_WARNING );
 
             return FALSE;
@@ -106,7 +102,7 @@ class Logger
             $type_path = $this->depot . '/';
         } else {
             $type_path = $this->depot . '/' . $type . '/';
-            if ( !is_dir ( $type_path ) ) {
+            if ( ! is_dir ( $type_path ) ) {
                 mkdir ( $type_path );
             }
         }
@@ -116,14 +112,14 @@ class Logger
         } elseif ( $granularity == self::GRAN_MONTH ) {
             $mois_courant   = date ( 'Ym' );
             $type_path_mois = $type_path . $mois_courant;
-            if ( !is_dir ( $type_path_mois ) ) {
+            if ( ! is_dir ( $type_path_mois ) ) {
                 mkdir ( $type_path_mois );
             }
             $logfile = $type_path_mois . '/' . $mois_courant . '_' . $name . '.log';
         } elseif ( $granularity == self::GRAN_YEAR ) {
             $current_year   = date ( 'Y' );
             $type_path_year = $type_path . $current_year;
-            if ( !is_dir ( $type_path_year ) ) {
+            if ( ! is_dir ( $type_path_year ) ) {
                 mkdir ( $type_path_year );
             }
             $logfile = $type_path_year . '/' . $current_year . '_' . $name . '.log';
@@ -144,9 +140,8 @@ class Logger
      *
      * @return bool
      */
-    private function write ( $logfile, $row )
-    {
-        if ( !$this->ready ) {
+    private function write ( $logfile, $row ) {
+        if ( ! $this->ready ) {
             return FALSE;
         }
         if ( empty( $logfile ) ) {

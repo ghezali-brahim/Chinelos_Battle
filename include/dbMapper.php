@@ -1,17 +1,15 @@
 <?php
-if ( !defined ( 'TEST_INCLUDE' ) )
-    die ( "Vous n'avez pas accès directement à ce fichier" );
+if ( ! defined ( 'TEST_INCLUDE' ) )
+    exit ( "Vous n'avez pas accès directement à ce fichier" );
 require_once ( "Logger.class.php" );
 
 
-class DBMapper
-{
+class DBMapper {
     protected static $database;
     protected static $db_debug;
     protected static $db_log;
 
-    static function init ( $db )
-    {
+    static function init ( $db ) {
         self::$database = $db;
         self::$db_debug = TRUE;
         self::$db_log;
@@ -30,8 +28,7 @@ class DBMapper
      * @return array de resultat dans le cas d'un select ou String
      * @throws Exception
      */
-    protected static function requeteFromDB ( $requete, $donnees = array () )
-    {
+    protected static function requeteFromDB ( $requete, $donnees = array () ) {
         if ( $requete == NULL ) {
             throw new Exception( "Impossible de faire la requete car requete ou donnees vide" );
         }
@@ -62,13 +59,12 @@ class DBMapper
         return $resultat;
     }
 
-    protected static function log ( $message, $nomfichier = NULL )
-    {
+    protected static function log ( $message, $nomfichier = NULL ) {
         if ( $nomfichier == NULL ) {
             $nomfichier = get_called_class ();
         }
         $nomfichier = strtolower ( $nomfichier );
-        if ( !isset( self::$db_log ) ) {
+        if ( ! isset( self::$db_log ) ) {
             self::$db_log = new Logger( "./logs" );
             self::$db_log->log ( 'erreurs', "" . $nomfichier, "___________________________________________", Logger::GRAN_MONTH );
         }
@@ -80,6 +76,4 @@ class DBMapper
         self::$db_log->log ( 'erreurs', 'statistique_' . $nomfichier, $message, Logger::GRAN_MONTH );
     }
     //parent::requeteFromDB
-
-
 }

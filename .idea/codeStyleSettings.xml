@@ -20,17 +20,25 @@
           <option name="UPPER_CASE_NULL_CONST" value="true" />
           <option name="BLANK_LINE_BEFORE_RETURN_STATEMENT" value="true" />
           <option name="ALIGN_CLASS_CONSTANTS" value="true" />
+          <option name="SPACE_AFTER_UNARY_NOT" value="true" />
         </PHPCodeStyleSettings>
+        <SqlCodeStyleSettings>
+          <option name="TYPE_CASE" value="0" />
+          <option name="IDENTIFIER_CASE" value="1" />
+        </SqlCodeStyleSettings>
         <XML>
           <option name="XML_LEGACY_SETTINGS_IMPORTED" value="true" />
         </XML>
         <codeStyleSettings language="PHP">
+          <option name="KEEP_LINE_BREAKS" value="false" />
           <option name="KEEP_FIRST_COLUMN_COMMENT" value="false" />
           <option name="KEEP_CONTROL_STATEMENT_IN_ONE_LINE" value="false" />
           <option name="KEEP_BLANK_LINES_IN_CODE" value="0" />
           <option name="KEEP_BLANK_LINES_BEFORE_RBRACE" value="0" />
           <option name="BLANK_LINES_AFTER_PACKAGE" value="1" />
           <option name="BLANK_LINES_AROUND_CLASS" value="2" />
+          <option name="CLASS_BRACE_STYLE" value="1" />
+          <option name="METHOD_BRACE_STYLE" value="1" />
           <option name="ALIGN_MULTILINE_PARAMETERS_IN_CALLS" value="true" />
           <option name="ALIGN_MULTILINE_ARRAY_INITIALIZER_EXPRESSION" value="true" />
           <option name="ALIGN_GROUP_FIELD_DECLARATIONS" value="true" />
@@ -51,6 +59,12 @@
           <indentOptions>
             <option name="CONTINUATION_INDENT_SIZE" value="8" />
           </indentOptions>
+        </codeStyleSettings>
+        <codeStyleSettings language="SQL">
+          <option name="SPACE_WITHIN_PARENTHESES" value="true" />
+          <option name="SPACE_WITHIN_METHOD_CALL_PARENTHESES" value="true" />
+          <option name="SPACE_WITHIN_METHOD_PARENTHESES" value="true" />
+          <option name="SPACE_BEFORE_METHOD_CALL_PARENTHESES" value="true" />
         </codeStyleSettings>
       </value>
     </option>

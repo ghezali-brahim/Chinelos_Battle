@@ -1,22 +1,20 @@
 <?php
-if ( !defined ( 'TEST_INCLUDE' ) )
+if ( ! defined ( 'TEST_INCLUDE' ) )
     exit ( "Vous n'avez pas accès directement à ce fichier" );
 
 
-class ModInscriptionModeleInscription extends DBMapper
-{
+class ModInscriptionModeleInscription extends DBMapper {
     static protected $CONSTANTECRYPT = "iut2015";
     static protected $ARGENT_DEPART  = "10";
 
-    static public function createAccount ( $username, $password, $email )
-    {
-        if ( !preg_match ( '#^[a-zA-Z0-9_\-]{1,}$#', $username ) ) {
+    static public function createAccount ( $username, $password, $email ) {
+        if ( ! preg_match ( '#^[a-zA-Z0-9_\-]{1,}$#', $username ) ) {
             throw new Exception( "Il y a une erreur lors de la création du compte : $username" );
         }
-        if ( !preg_match ( '/^[a-zA-Z0-9_\$\-\.\*]{4,}$/', $password ) ) {
+        if ( ! preg_match ( '/^[a-zA-Z0-9_\$\-\.\*]{4,}$/', $password ) ) {
             throw new Exception( "Il y a une erreur lors de la création du compte, mot de passe non valide" );
         }
-        if ( !filter_var ( $email, FILTER_VALIDATE_EMAIL ) ) {
+        if ( ! filter_var ( $email, FILTER_VALIDATE_EMAIL ) ) {
             throw new Exception( "Il y a une erreur l'email est invalide $email" );
         }
         $password_sha1 = sha1 ( $username . $password . self::$CONSTANTECRYPT );

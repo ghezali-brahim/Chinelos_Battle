@@ -1,23 +1,20 @@
 <?php
-if ( !defined ( 'TEST_INCLUDE' ) )
+if ( ! defined ( 'TEST_INCLUDE' ) )
     exit ( "Vous n'avez pas accès directement à ce fichier" );
 
 
-class ModMessagerieVueMessagerie
-{
+class ModMessagerieVueMessagerie {
     /**
      * Affiche la page d'accueil du module
      **/
-    static function affAccueilModule ()
-    {
+    static function affAccueilModule () {
         echo "<br><div class='messagerie'><p>
 			<a href='index.php?module=messagerie&action=afficher'><button class='buttonModule' style='width:130px;height=20px;'>Afficher</button></a><br>
 			<a href='index.php?module=messagerie&action=envoyer_message'><button class='buttonModule' style='width:130px;height=20px;'>Envoyer message</button></a><br>
 			</p></div>";
     }
 
-    static function afficherlistesMessages ( $messages )
-    {
+    static function afficherlistesMessages ( $messages ) {
         if ( count ( $messages ) == 1 ) {
             static::afficherMessage ( $messages );
         } else {
@@ -28,14 +25,12 @@ class ModMessagerieVueMessagerie
         }
     }
 
-    static function afficherMessage ( $message )
-    {
+    static function afficherMessage ( $message ) {
         $contenuMessage = $message->getMessagerieArray ();
         print_r ( $contenuMessage );
     }
 
-    static function afficherFormEnvoieMessage ()
-    {
+    static function afficherFormEnvoieMessage () {
         ?>
         <form action="" method="POST" >
             <label for="objet" >Objet:</label >

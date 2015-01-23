@@ -1,5 +1,5 @@
 <?php
-if ( !defined ( 'TEST_INCLUDE' ) )
+if ( ! defined ( 'TEST_INCLUDE' ) )
     exit ( "Vous n'avez pas accès directement à ce fichier" );
 define ( 'MOD_BPATH', "modules" . DIR_SEP . "mod_inscription" . DIR_SEP );
 if ( isset( $_SESSION[ 'id_user' ] ) && $_SESSION[ 'id_user' ] != NULL )

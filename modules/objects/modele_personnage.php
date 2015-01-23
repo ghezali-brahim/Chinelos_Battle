@@ -1,19 +1,13 @@
 <?php
-if ( !defined ( 'TEST_INCLUDE' ) )
+if ( ! defined ( 'TEST_INCLUDE' ) )
     exit ( "Vous n'avez pas accès directement à ce fichier" );
 require_once MOD_BPATH . DIR_SEP . "../objects/modele_attaque.php";
 require_once MOD_BPATH . DIR_SEP . "../objects/modele_niveau.php";
 
 
-class Personnage extends DBMapper
-{
+class Personnage extends DBMapper {
 
-    static    $CARAC_ADD_FOR_UPPING = array (
-            'hp_max'    => 10,
-            'mp_max'    => 5,
-            'puissance' => 3,
-            'defense'   => 1
-    );
+    static    $CARAC_ADD_FOR_UPPING = array ( 'hp_max' => 10, 'mp_max' => 5, 'puissance' => 3, 'defense' => 1 );
     static    $id_personnage_serial = 9000;// IL ne faut pas dépasser 9000 persos
     protected $_id_personnage;
     protected $_nom;
@@ -38,8 +32,7 @@ class Personnage extends DBMapper
      *
      * @param $personnageElement : array
      */
-    protected function __construct ( $personnageElement )
-    {
+    protected function __construct ( $personnageElement ) {
         try {
             if ( $personnageElement[ 'id_personnage' ] >= 0 ) {
                 $this->_id_personnage = $personnageElement[ 'id_personnage' ];//TODO
@@ -107,12 +100,12 @@ class Personnage extends DBMapper
             } else {
                 throw new Exception( 'defense incorrecte' );
             }
-            if ( !isset( $personnageElement[ 'id_equipe' ] ) ) {
+            if ( ! isset( $personnageElement[ 'id_equipe' ] ) ) {
                 $this->_id_equipe = NULL;
             } else {
                 $this->_id_equipe = $personnageElement[ 'id_equipe' ];
             }
-            if ( !isset( $personnageElement[ 'in_BD' ] ) ) {
+            if ( ! isset( $personnageElement[ 'in_BD' ] ) ) {
                 $this->_in_BD = FALSE;
             } else {
                 $this->_in_BD = $personnageElement[ 'in_BD' ];
@@ -129,8 +122,7 @@ class Personnage extends DBMapper
         }
     }
 
-    function __toString ()
-    {
+    function __toString () {
         return 'ID:' . $this->getIdPersonnage () . '; nom : ' . $this->_nom . '; lvl : ' . $this->_niveau;
     }
 
@@ -138,8 +130,7 @@ class Personnage extends DBMapper
      * Retourne l'identifiant personnage
      * @return int id_personnage
      */
-    function getIdPersonnage ()
-    {
+    function getIdPersonnage () {
         return $this->_id_personnage;
     }
 
@@ -152,8 +143,7 @@ class Personnage extends DBMapper
      * @return Personnage
      * @throws Exception
      */
-    static function createPersonnageForBD ( $niveau = 1, $id_equipe = NULL, $nom = NULL, $id_element = NULL )
-    {
+    static function createPersonnageForBD ( $niveau = 1, $id_equipe = NULL, $nom = NULL, $id_element = NULL ) {
         // Ici on détermine l'identifiant personnage max +1 afin d'en créer un nouveau
         $resultat      = static::requeteFromDB ( "SELECT max(id_personnage) FROM personnage" );
         $id_personnage = $resultat[ 0 ][ 0 ] + 1;
@@ -164,25 +154,9 @@ class Personnage extends DBMapper
         $personnageAvantBD = self::createPersonnage ( $niveau, $nom, $id_element );
         // //On creer un tableau contenant toutes les valeurs nécessaire pour l'ajout à la BD
         $personnageElement   = $personnageAvantBD->getPersonnage ();
-        $elementPersonnageBD = array (
-                'id_personnage' => $id_personnage,
-                'nom'           => $nom,
-                'element'       => $personnageElement[ 'element' ],
-                'niveau'        => $personnageElement[ 'niveau' ],
-                'experience'    => $personnageElement[ 'experience' ],
-                'attaques'      => $personnageAvantBD->getIdAttaques (),
-                'hp'            => $personnageElement[ 'hp' ],
-                'hp_max'        => $personnageElement[ 'hp_max' ],
-                'mp'            => $personnageElement[ 'mp' ],
-                'mp_max'        => $personnageElement[ 'mp_max' ],
-                'puissance'     => $personnageElement[ 'puissance' ],
-                'defense'       => $personnageElement[ 'defense' ],
-                'id_equipe'     => $id_equipe
-        );
+        $elementPersonnageBD = array ( 'id_personnage' => $id_personnage, 'nom' => $nom, 'element' => $personnageElement[ 'element' ], 'niveau' => $personnageElement[ 'niveau' ], 'experience' => $personnageElement[ 'experience' ], 'attaques' => $personnageAvantBD->getIdAttaques (), 'hp' => $personnageElement[ 'hp' ], 'hp_max' => $personnageElement[ 'hp_max' ], 'mp' => $personnageElement[ 'mp' ], 'mp_max' => $personnageElement[ 'mp_max' ], 'puissance' => $personnageElement[ 'puissance' ], 'defense' => $personnageElement[ 'defense' ], 'id_equipe' => $id_equipe );
         //ICI on créer le personnage dans la base de donnée
-        static::requeteFromDB (
-                "INSERT INTO personnage VALUES(:id_personnage, :nom, :element, :niveau, :experience, :attaques, :hp, :hp_max, :mp, :mp_max, :puissance, :defense, :id_equipe)",
-                $elementPersonnageBD );
+        static::requeteFromDB ( "INSERT INTO personnage VALUES(:id_personnage, :nom, :element, :niveau, :experience, :attaques, :hp, :hp_max, :mp, :mp_max, :puissance, :defense, :id_equipe)", $elementPersonnageBD );
         $elementPersonnageBD[ 'in_BD' ] = TRUE;
 
         // On créer l'objet Personnage
@@ -199,8 +173,7 @@ class Personnage extends DBMapper
      * @return Personnage
      * @throws Exception
      */
-    static function createPersonnage ( $niveau, $nom = "Monster", $id_element = NULL )
-    {
+    static function createPersonnage ( $niveau, $nom = "Monster", $id_element = NULL ) {
         if ( $id_element == NULL ) {
             $id_element = rand ( 1, 4 );// ICI on peut modifier l'élement du personnage par défault; ici aleatoire
         }
@@ -208,19 +181,10 @@ class Personnage extends DBMapper
             static::log ( "Creation personnage : " . "..." );
         }
         //ICI on récupère l'experience du niveau
-        $resultat   = static::requeteFromDB (
-                "SELECT DISTINCT experience FROM niveau WHERE niveau = :niveau", array (
-                        'niveau' => $niveau
-                ) );
+        $resultat   = static::requeteFromDB ( "SELECT DISTINCT experience FROM niveau WHERE niveau = :niveau", array ( 'niveau' => $niveau ) );
         $experience = $resultat[ 0 ][ 'experience' ];
         // Definition des caracteristique correspondant au niveau du personnage
-        $caracNiveau = array (
-                'experience' => $experience,
-                'hp_max'     => self::$CARAC_ADD_FOR_UPPING[ 'hp_max' ] * $niveau,
-                'mp_max'     => self::$CARAC_ADD_FOR_UPPING[ 'mp_max' ] * $niveau,
-                'puissance'  => self::$CARAC_ADD_FOR_UPPING[ 'puissance' ] * $niveau,
-                'defense'    => self::$CARAC_ADD_FOR_UPPING[ 'defense' ] * $niveau
-        );
+        $caracNiveau = array ( 'experience' => $experience, 'hp_max' => self::$CARAC_ADD_FOR_UPPING[ 'hp_max' ] * $niveau, 'mp_max' => self::$CARAC_ADD_FOR_UPPING[ 'mp_max' ] * $niveau, 'puissance' => self::$CARAC_ADD_FOR_UPPING[ 'puissance' ] * $niveau, 'defense' => self::$CARAC_ADD_FOR_UPPING[ 'defense' ] * $niveau );
         // Creation de la liste des attaques ($listeAttaques)
         $listeAttaques = array ( new Attaque( 1 ), new Attaque( 2 ), new Attaque( 3 ) );
         // Creation d'une liste des id des attaques ($listeAttaquesString)
@@ -236,21 +200,7 @@ class Personnage extends DBMapper
         }
         self::$id_personnage_serial++;
         // On prépare les éléments pour la création du Personnage
-        $personnageElement = array (
-                'id_personnage' => self::$id_personnage_serial,
-                'nom'           => $nom,
-                'element'       => $id_element,
-                'niveau'        => $niveau,
-                'experience'    => $caracNiveau[ 'experience' ],
-                'attaques'      => $listeAttaquesString,
-                'hp'            => $caracNiveau[ 'hp_max' ],
-                'hp_max'        => $caracNiveau[ 'hp_max' ],
-                'mp'            => $caracNiveau[ 'mp_max' ],
-                'mp_max'        => $caracNiveau[ 'mp_max' ],
-                'puissance'     => $caracNiveau[ 'puissance' ],
-                'defense'       => $caracNiveau[ 'defense' ],
-                'in_BD'         => FALSE
-        );
+        $personnageElement = array ( 'id_personnage' => self::$id_personnage_serial, 'nom' => $nom, 'element' => $id_element, 'niveau' => $niveau, 'experience' => $caracNiveau[ 'experience' ], 'attaques' => $listeAttaquesString, 'hp' => $caracNiveau[ 'hp_max' ], 'hp_max' => $caracNiveau[ 'hp_max' ], 'mp' => $caracNiveau[ 'mp_max' ], 'mp_max' => $caracNiveau[ 'mp_max' ], 'puissance' => $caracNiveau[ 'puissance' ], 'defense' => $caracNiveau[ 'defense' ], 'in_BD' => FALSE );
 
         // On créer l'objet Personnage
         return new Personnage( $personnageElement );
@@ -260,24 +210,8 @@ class Personnage extends DBMapper
      * Retourne les éléments du personnage
      * @return array
      */
-    function getPersonnage ()
-    {
-        return array (
-                'id_personnage' => $this->getIdPersonnage (),
-                'nom'           => $this->_nom,
-                'element'       => $this->_element,
-                'niveau'        => $this->_niveau,
-                'experience'    => $this->_experience,
-                'attaques'      => $this->_attaques,
-                'hp'            => $this->_hp,
-                'hp_max'        => $this->_hp_max,
-                'mp'            => $this->_mp,
-                'mp_max'        => $this->_mp_max,
-                'puissance'     => $this->_puissance,
-                'defense'       => $this->_defense,
-                'id_equipe'     => $this->_id_equipe,
-                'in_BD'         => $this->_in_BD
-        );
+    function getPersonnage () {
+        return array ( 'id_personnage' => $this->getIdPersonnage (), 'nom' => $this->_nom, 'element' => $this->_element, 'niveau' => $this->_niveau, 'experience' => $this->_experience, 'attaques' => $this->_attaques, 'hp' => $this->_hp, 'hp_max' => $this->_hp_max, 'mp' => $this->_mp, 'mp_max' => $this->_mp_max, 'puissance' => $this->_puissance, 'defense' => $this->_defense, 'id_equipe' => $this->_id_equipe, 'in_BD' => $this->_in_BD );
     }
 
     /**
@@ -285,8 +219,7 @@ class Personnage extends DBMapper
      * Renvoie les id des attaques séparé par un ";"
      * @return string
      */
-    function getIdAttaques ()
-    {
+    function getIdAttaques () {
         // Creation d'une liste des id des attaques ($listeAttaquesString)
         $listeAttaquesString = "";
         $i                   = 0;
@@ -306,8 +239,7 @@ class Personnage extends DBMapper
      * Retourne la liste des attaques du personnage
      * @return array(Attaques)
      */
-    function getAttaques ()
-    {
+    function getAttaques () {
         return $this->_attaques;
     }
 
@@ -318,13 +250,9 @@ class Personnage extends DBMapper
      *
      * @return Personnage
      */
-    static function getPersonnageFromBD ( $id_personnage )
-    {
+    static function getPersonnageFromBD ( $id_personnage ) {
         //ICI on récupère les informations du personnage
-        $resultat                     = static::requeteFromDB (
-                "SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage", array (
-                        'id_personnage' => $id_personnage
-                ) );
+        $resultat                     = static::requeteFromDB ( "SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage", array ( 'id_personnage' => $id_personnage ) );
         $personnageElement            = $resultat[ 0 ];
         $personnageElement[ 'in_BD' ] = TRUE;
 
@@ -339,8 +267,7 @@ class Personnage extends DBMapper
      *
      * @return Personnage
      */
-    static function getPersonnagePlusHL ( $p1, $p2 )
-    {
+    static function getPersonnagePlusHL ( $p1, $p2 ) {
         if ( Personnage::comparerNiveauPersonnage ( $p1, $p2 ) >= 0 ) {
             return $p1;
         } else {
@@ -358,8 +285,7 @@ class Personnage extends DBMapper
      *
      * @return int
      */
-    static function comparerNiveauPersonnage ( $p1, $p2 )
-    {
+    static function comparerNiveauPersonnage ( $p1, $p2 ) {
         if ( $p1->getNiveau () == $p2->getNiveau () ) {
             return 0;
         }
@@ -374,8 +300,7 @@ class Personnage extends DBMapper
      *
      * @throws Exception
      */
-    function addPourcentExperience ( $pourcentExperience )
-    {
+    function addPourcentExperience ( $pourcentExperience ) {
         if ( $pourcentExperience < 0 ) {
             throw new Exception( "pourcentage d'experience négatif" );
         }
@@ -391,17 +316,12 @@ class Personnage extends DBMapper
      *
      * @throws Exception
      */
-    function addExperience ( $experience )
-    {
+    function addExperience ( $experience ) {
         if ( $experience >= 0 ) {
             $this->_experience += $experience;
             //ICI on met à jour l'experience du personnage dans la bdd
             if ( $this->_in_BD ) {
-                static::requeteFromDB (
-                        "UPDATE personnage SET experience = :experience WHERE id_personnage =:id_personnage", array (
-                                'id_personnage' => $this->getIdPersonnage (),
-                                'experience'    => $this->_experience
-                        ) );
+                static::requeteFromDB ( "UPDATE personnage SET experience = :experience WHERE id_personnage =:id_personnage", array ( 'id_personnage' => $this->getIdPersonnage (), 'experience' => $this->_experience ) );
             }
             if ( self::$db_debug ) {
                 static::log ( "ID :" . $this->getIdPersonnage () . "\t | Ajout d'experience : " . ( $this->_experience - $experience ) . " + " . $experience . " = " . $this->_experience . "xp" );
@@ -421,17 +341,12 @@ class Personnage extends DBMapper
      * Fait monter le niveau du personnage puis lui rajoute les caractéristiques supplémentaires
      * @throws Exception
      */
-    function upNiveau ()
-    {
+    function upNiveau () {
         if ( Niveau::getNiveau ( $this->_experience ) != $this->_niveau ) {
             $this->_niveau = Niveau::getNiveau ( $this->_experience );
             //ICI on met à jour le niveau du personnage dans la bdd
             if ( $this->_in_BD ) {
-                static::requeteFromDB (
-                        "UPDATE personnage SET niveau = :niveau WHERE id_personnage =:id_personnage", array (
-                                'id_personnage' => $this->getIdPersonnage (),
-                                'niveau'        => $this->_niveau
-                        ) );
+                static::requeteFromDB ( "UPDATE personnage SET niveau = :niveau WHERE id_personnage =:id_personnage", array ( 'id_personnage' => $this->getIdPersonnage (), 'niveau' => $this->_niveau ) );
             }
             if ( self::$db_debug ) {
                 static::log ( "ID :" . $this->getIdPersonnage () . "\t | Monter au niveau : " . $this->_niveau );
@@ -453,16 +368,11 @@ class Personnage extends DBMapper
      *
      * @throws Exception si puissance <= 0
      */
-    function addPuissance ( $puissance )
-    {
+    function addPuissance ( $puissance ) {
         if ( $puissance > 0 ) {
             $this->_puissance += $puissance;
             if ( $this->_in_BD ) {
-                static::requeteFromDB (
-                        "UPDATE personnage SET puissance = :puissance WHERE id_personnage =:id_personnage", array (
-                                'id_personnage' => $this->getIdPersonnage (),
-                                'puissance'     => $this->_puissance
-                        ) );
+                static::requeteFromDB ( "UPDATE personnage SET puissance = :puissance WHERE id_personnage =:id_personnage", array ( 'id_personnage' => $this->getIdPersonnage (), 'puissance' => $this->_puissance ) );
             }
             if ( self::$db_debug ) {
                 static::log ( "ID :" . $this->getIdPersonnage () . "\t | Ajout de puissance : " . ( $this->_puissance - $puissance ) . " + " . $puissance . " = " . $this->_puissance . " puissance" );
@@ -479,16 +389,11 @@ class Personnage extends DBMapper
      *
      * @throws Exception si defense <= 0
      */
-    function addDefense ( $defense )
-    {
+    function addDefense ( $defense ) {
         if ( $defense > 0 ) {
             $this->_defense += $defense;
             if ( $this->_in_BD ) {
-                static::requeteFromDB (
-                        "UPDATE personnage SET defense = :defense WHERE id_personnage =:id_personnage", array (
-                                'id_personnage' => $this->getIdPersonnage (),
-                                'defense'       => $this->_defense
-                        ) );
+                static::requeteFromDB ( "UPDATE personnage SET defense = :defense WHERE id_personnage =:id_personnage", array ( 'id_personnage' => $this->getIdPersonnage (), 'defense' => $this->_defense ) );
             }
             if ( self::$db_debug ) {
                 static::log ( "ID :" . $this->getIdPersonnage () . "\t | Ajout de defense : " . ( $this->_defense - $defense ) . " + " . $defense . " = " . $this->_defense . " defense" );
@@ -505,18 +410,13 @@ class Personnage extends DBMapper
      *
      * @throws Exception si hp_max <= 0
      */
-    function addHpMax ( $hp_max )
-    {
+    function addHpMax ( $hp_max ) {
         if ( $hp_max > 0 ) {
             $this->_hp_max = $hp_max + $this->_hp_max;
             //Lors du up, remise au max des hp
             $this->_hp = $this->_hp_max;
             if ( $this->_in_BD ) {
-                static::requeteFromDB (
-                        "UPDATE personnage SET hp_max = :hp_max, hp = :hp_max WHERE id_personnage = :id_personnage", array (
-                                'id_personnage' => $this->getIdPersonnage (),
-                                'hp_max'        => $this->_hp_max
-                        ) );
+                static::requeteFromDB ( "UPDATE personnage SET hp_max = :hp_max, hp = :hp_max WHERE id_personnage = :id_personnage", array ( 'id_personnage' => $this->getIdPersonnage (), 'hp_max' => $this->_hp_max ) );
             }
             if ( self::$db_debug ) {
                 static::log ( "ID :" . $this->getIdPersonnage () . "\t | Ajout d'hp_max : " . ( $this->_hp_max - $hp_max ) . " + " . $hp_max . " = " . $this->_hp_max . "hp" );
@@ -533,18 +433,13 @@ class Personnage extends DBMapper
      *
      * @throws Exception si mp_max <= 0
      */
-    function addMpMax ( $mp_max )
-    {
+    function addMpMax ( $mp_max ) {
         if ( $mp_max > 0 ) {
             $this->_mp_max += $mp_max;
             //Lors du up, remise au max des mp
             $this->_mp = $this->_mp_max;
             if ( $this->_in_BD ) {
-                static::requeteFromDB (
-                        "UPDATE personnage SET mp_max = :mp_max, mp = :mp_max WHERE id_personnage = :id_personnage", array (
-                                'id_personnage' => $this->getIdPersonnage (),
-                                'mp_max'        => $this->_mp_max
-                        ) );
+                static::requeteFromDB ( "UPDATE personnage SET mp_max = :mp_max, mp = :mp_max WHERE id_personnage = :id_personnage", array ( 'id_personnage' => $this->getIdPersonnage (), 'mp_max' => $this->_mp_max ) );
             }
             if ( self::$db_debug ) {
                 static::log ( "ID :" . $this->getIdPersonnage () . "\t | Ajout de mp_max : " . ( $this->_mp_max - $mp_max ) . " + " . $mp_max . " = " . $this->_mp_max . "mp" );
@@ -559,8 +454,7 @@ class Personnage extends DBMapper
      *
      * @param $hp
      */
-    function addHp ( $hp )
-    {
+    function addHp ( $hp ) {
         $hp_actuel = $this->_hp;
         //Mise à jour des HP
         if ( $hp + $this->_hp > $this->_hp_max ) {
@@ -570,11 +464,7 @@ class Personnage extends DBMapper
         }
         //Mise à jour dans la BD
         if ( $this->_in_BD ) {
-            static::requeteFromDB (
-                    "UPDATE personnage SET hp = :hp WHERE id_personnage = :id_personnage", array (
-                            'id_personnage' => $this->getIdPersonnage (),
-                            'hp'            => $this->_hp
-                    ) );
+            static::requeteFromDB ( "UPDATE personnage SET hp = :hp WHERE id_personnage = :id_personnage", array ( 'id_personnage' => $this->getIdPersonnage (), 'hp' => $this->_hp ) );
         }
         if ( self::$db_debug ) {
             static::log ( "ID :" . $this->getIdPersonnage () . "\t | Ajout d'hp : " . $hp_actuel . " + " . $hp . " = " . $this->_hp . "hp" );
@@ -586,8 +476,7 @@ class Personnage extends DBMapper
      *
      * @param $mp
      */
-    function addMp ( $mp )
-    {
+    function addMp ( $mp ) {
         //Mise à jour des MP
         if ( $mp + $this->_mp > $this->_mp_max ) {
             $this->_mp = $this->_mp_max;
@@ -596,11 +485,7 @@ class Personnage extends DBMapper
         }
         //Mise à jour dans la BD
         if ( $this->_in_BD ) {
-            static::requeteFromDB (
-                    "UPDATE personnage SET mp = :mp WHERE id_personnage =:id_personnage", array (
-                            'id_personnage' => $this->getIdPersonnage (),
-                            'mp'            => $this->_mp
-                    ) );
+            static::requeteFromDB ( "UPDATE personnage SET mp = :mp WHERE id_personnage =:id_personnage", array ( 'id_personnage' => $this->getIdPersonnage (), 'mp' => $this->_mp ) );
         }
         if ( self::$db_debug ) {
             static::log ( "ID :" . $this->getIdPersonnage () . "\t | Ajout de mp : " . ( $this->_mp - $mp ) . " + " . $mp . " = " . $this->_mp . "mp" );
@@ -616,8 +501,7 @@ class Personnage extends DBMapper
      *
      * @throws Exception
      */
-    function subirDegats ( $degats )
-    {
+    function subirDegats ( $degats ) {
         if ( $degats >= 0 ) {
             if ( $this->_defense == 0 ) {
                 $this->_defense = 1;
@@ -643,8 +527,7 @@ class Personnage extends DBMapper
      *
      * @param $degats
      */
-    function retirerHP ( $degats )
-    {
+    function retirerHP ( $degats ) {
         $degats = round ( $degats );
         if ( $this->_hp - $degats < 0 ) {
             $this->_hp = 0;
@@ -653,11 +536,7 @@ class Personnage extends DBMapper
         }
         //Mise à jour dans la BD
         if ( $this->_in_BD ) {
-            static::requeteFromDB (
-                    "UPDATE personnage SET hp = :hp WHERE id_personnage =:id_personnage", array (
-                            'id_personnage' => $this->getIdPersonnage (),
-                            'hp'            => $this->_hp
-                    ) );
+            static::requeteFromDB ( "UPDATE personnage SET hp = :hp WHERE id_personnage =:id_personnage", array ( 'id_personnage' => $this->getIdPersonnage (), 'hp' => $this->_hp ) );
         }
         if ( self::$db_debug ) {
             static::log ( "ID :" . $this->getIdPersonnage () . "\t | Retrait d'hp : " . ( $this->_hp + $degats ) . " - " . $degats . " = " . $this->_hp . "hp" );
@@ -671,8 +550,7 @@ class Personnage extends DBMapper
      * Retourne vrai si le personnage est mort
      * @return bool
      */
-    function isDead ()
-    {
+    function isDead () {
         return $this->_hp == 0;
     }
 
@@ -681,24 +559,21 @@ class Personnage extends DBMapper
      *
      * @return mixed
      */
-    function getXpManquantPourUp ()
-    {
+    function getXpManquantPourUp () {
         return Niveau::getXpManquantPourUp ( $this->_experience );
     }
 
     /** De 0 à 99% xp réalisé
      * @return mixed
      */
-    function getPourcentXp ()
-    {
+    function getPourcentXp () {
         return Niveau::getPourcentXp ( $this->_experience );
     }
 
     /**
      * @return Niveau (int)
      */
-    function getNiveau ()
-    {
+    function getNiveau () {
         return $this->_niveau;
     }
 
@@ -711,10 +586,7 @@ class Personnage extends DBMapper
             static::log ( "ID :" . $this->getIdPersonnage () . "\t | Mise à jour du personnage ... " );
         }
         if ( $this->_in_BD ) {
-            $resultat          = static::requeteFromDB (
-                    "SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage", array (
-                            'id_personnage' => $this->getIdPersonnage ()
-                    ) );
+            $resultat          = static::requeteFromDB ( "SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage", array ( 'id_personnage' => $this->getIdPersonnage () ) );
             $personnageElement = $resultat[ 0 ];
             $this->_nom        = $personnageElement[ 'nom' ];
             $this->_element    = $personnageElement[ 'element' ];
@@ -733,8 +605,7 @@ class Personnage extends DBMapper
     /**
      * Obsolete : Affichage du personnage sous forme de tableau
      */
-    function afficher ()
-    {
+    function afficher () {
         echo '<table border="1">
     <tr>
         <th> ID Perso</th>
@@ -769,8 +640,7 @@ class Personnage extends DBMapper
      * Retourne l'id equipe du personnage
      * @return int id_equipe
      */
-    function getIdEquipe ()
-    {
+    function getIdEquipe () {
         return $this->_id_equipe;
     }
 
@@ -779,16 +649,11 @@ class Personnage extends DBMapper
      *
      * @param mixed $id_equipe
      */
-    function setIDEquipe ( $id_equipe = NULL )
-    {
+    function setIDEquipe ( $id_equipe = NULL ) {
         //Changement id_equipe du personnage
         //Mise à jour dans la BD
         if ( $this->_in_BD ) {
-            static::requeteFromDB (
-                    "UPDATE personnage SET id_equipe = :id_equipe WHERE id_personnage= :id_personnage", array (
-                            'id_equipe'     => $id_equipe,
-                            'id_personnage' => $this->getIdPersonnage ()
-                    ) );
+            static::requeteFromDB ( "UPDATE personnage SET id_equipe = :id_equipe WHERE id_personnage= :id_personnage", array ( 'id_equipe' => $id_equipe, 'id_personnage' => $this->getIdPersonnage () ) );
         }
         $this->_id_equipe = $id_equipe;
     }
@@ -797,21 +662,9 @@ class Personnage extends DBMapper
      * Retourne l'affichage du Personnage sous forme de text html
      * @return string
      */
-    function retourneAffichagePersonnage ()
-    {
+    function retourneAffichagePersonnage () {
         $rep  = "img/avatar/";
-        $text = '<div class="personnage">' .
-                '<img src="' . Element::getIcone ( $this->_element ) . '" alt="' . Element::getNom ( $this->_element ) . '"/> <br/>'
-                . '<img class="avatarPerso" src="' . $rep . $this->_element . ".jpg" . '" alt="' . $this->_nom . '"/> <br/>'
-                . $this->_nom . ' (Level ' . $this->_niveau . ') <br/>'
-                . 'Experience : ' . $this->_experience . '/' . Niveau::getXpNiveau ( $this->_niveau + 1 ) . ' <br/>'
-                . 'HP : ' . $this->_hp . ' / ' . $this->_hp_max . '<br/>'
-                . '<progress value="' . $this->_hp . '" max="' . $this->_hp_max . '"></progress> <br/>'
-                . 'MP : ' . $this->_mp . ' / ' . $this->_mp_max . '<br/>'
-                . '<progress value="' . $this->_mp . '"  max="' . $this->_mp_max . '"></progress> <br/>'
-                . 'Puissance : ' . $this->_puissance . '<br/>'
-                . 'Defense : ' . $this->_defense . '<br/>'
-                . '</div>';
+        $text = '<div class="personnage">' . '<img src="' . Element::getIcone ( $this->_element ) . '" alt="' . Element::getNom ( $this->_element ) . '"/> <br/>' . '<img class="avatarPerso" src="' . $rep . $this->_element . ".jpg" . '" alt="' . $this->_nom . '"/> <br/>' . $this->_nom . ' (Level ' . $this->_niveau . ') <br/>' . 'Experience : ' . $this->_experience . '/' . Niveau::getXpNiveau ( $this->_niveau + 1 ) . ' <br/>' . 'HP : ' . $this->_hp . ' / ' . $this->_hp_max . '<br/>' . '<progress value="' . $this->_hp . '" max="' . $this->_hp_max . '"></progress> <br/>' . 'MP : ' . $this->_mp . ' / ' . $this->_mp_max . '<br/>' . '<progress value="' . $this->_mp . '"  max="' . $this->_mp_max . '"></progress> <br/>' . 'Puissance : ' . $this->_puissance . '<br/>' . 'Defense : ' . $this->_defense . '<br/>' . '</div>';
 
         return $text;
     }
@@ -821,26 +674,15 @@ class Personnage extends DBMapper
      * On rajoute les boutons pour les attaques
      * @return string
      */
-    function retourneAffichagePersonnageAvecAttaque ()
-    {
+    function retourneAffichagePersonnageAvecAttaque () {
         $rep  = "img/avatar/";
-        $text = '<div class="personnage" style="background-color:#ffcf95;">' .
-                '<img src="' . Element::getIcone ( $this->_element ) . '" alt="' . Element::getNom ( $this->_element ) . '"/> <br/>'
-                . '<img src="' . $rep . $this->_element . ".jpg" . '" alt="' . $this->_nom . '"/> <br/>'
-                . $this->_nom . ' (level ' . $this->_niveau . ') <br/>'
-                . 'experience : ' . $this->_experience . '/' . Niveau::getXpNiveau ( $this->_niveau + 1 ) . ' <br/>'
-                . 'HP : ' . $this->_hp . ' / ' . $this->_hp_max . '<br/>'
-                . '<progress value="' . $this->_hp . '" max="' . $this->_hp_max . '"></progress> <br/>'
-                . 'MP : ' . $this->_mp . ' / ' . $this->_mp_max . '<br/>'
-                . '<progress value="' . $this->_mp . '" max="' . $this->_mp_max . '"></progress> <br/>'
-                . 'Puissance : ' . $this->_puissance . '<br/>'
-                . 'Defense : ' . $this->_defense . '<br/>';
+        $text = '<div class="personnage" style="background-color:#ffcf95;">' . '<img src="' . Element::getIcone ( $this->_element ) . '" alt="' . Element::getNom ( $this->_element ) . '"/> <br/>' . '<img src="' . $rep . $this->_element . ".jpg" . '" alt="' . $this->_nom . '"/> <br/>' . $this->_nom . ' (level ' . $this->_niveau . ') <br/>' . 'experience : ' . $this->_experience . '/' . Niveau::getXpNiveau ( $this->_niveau + 1 ) . ' <br/>' . 'HP : ' . $this->_hp . ' / ' . $this->_hp_max . '<br/>' . '<progress value="' . $this->_hp . '" max="' . $this->_hp_max . '"></progress> <br/>' . 'MP : ' . $this->_mp . ' / ' . $this->_mp_max . '<br/>' . '<progress value="' . $this->_mp . '" max="' . $this->_mp_max . '"></progress> <br/>' . 'Puissance : ' . $this->_puissance . '<br/>' . 'Defense : ' . $this->_defense . '<br/>';
         $text .= '<div class="attaque" style="background-color: #F0AD4E">';
         foreach ( $this->_attaques as $attaque ) {
             $text = $text . $attaque->__toString () . '<br>';
         }
         $text .= '</div>';
-        $text = $text . '</div>';
+        $text .= '</div>';
 
         return $text;
     }
@@ -849,8 +691,7 @@ class Personnage extends DBMapper
      * Retourne les hp max du personnage
      * @return int
      */
-    public function getHpMax ()
-    {
+    public function getHpMax () {
         return $this->_hp_max;
     }
 
@@ -858,8 +699,7 @@ class Personnage extends DBMapper
      * Retourne les mp max du personnage
      * @return int
      */
-    public function getMpMax ()
-    {
+    public function getMpMax () {
         return $this->_mp_max;
     }
 
@@ -871,8 +711,7 @@ class Personnage extends DBMapper
      *
      * @throws Exception
      */
-    function attaquerPersonnage ( $personnageTarget )
-    {
+    function attaquerPersonnage ( $personnageTarget ) {
         if ( is_null ( $personnageTarget ) ) {
             throw new Exception( "Veuillez choisir un personnage à attaquer" );
         }
@@ -892,8 +731,7 @@ class Personnage extends DBMapper
     /**
      * @return int
      */
-    public function getIndiceAttaqueChoisit ()
-    {
+    public function getIndiceAttaqueChoisit () {
         return $this->_indice_attaque_choisit;
     }
 
@@ -902,8 +740,7 @@ class Personnage extends DBMapper
      *
      * @throws Exception
      */
-    public function setIndiceAttaqueChoisit ( $indice_attaque_choisit )
-    {
+    public function setIndiceAttaqueChoisit ( $indice_attaque_choisit ) {
         if ( array_key_exists ( $indice_attaque_choisit, $this->_attaques ) ) {
             $this->_indice_attaque_choisit = $indice_attaque_choisit;
         } else {
@@ -920,8 +757,7 @@ class Personnage extends DBMapper
      * @return mixed
      * @throws Exception
      */
-    function attaquer ( $attaqueIndice )
-    {
+    function attaquer ( $attaqueIndice ) {
         if ( $this->_attaques[ $attaqueIndice ] == NULL ) {
             throw new Exception( 'Indice attaque incorrecte' );
         }
@@ -949,8 +785,7 @@ class Personnage extends DBMapper
      *
      * @throws Exception
      */
-    function retirerMP ( $mp_used )
-    {
+    function retirerMP ( $mp_used ) {
         if ( $this->_mp - $mp_used < 0 ) {
             throw new Exception( 'Nombre de MP non sufisant: ' . $this->_mp . 'MP restant / ' . $mp_used . 'MP Necessaire' );
         } else {
@@ -958,11 +793,7 @@ class Personnage extends DBMapper
         }
         //Mise à jour dans la BD
         if ( $this->_in_BD ) {
-            static::requeteFromDB (
-                    "UPDATE personnage SET mp = :mp WHERE id_personnage =:id_personnage", array (
-                            'id_personnage' => $this->getIdPersonnage (),
-                            'mp'            => $this->_mp
-                    ) );
+            static::requeteFromDB ( "UPDATE personnage SET mp = :mp WHERE id_personnage =:id_personnage", array ( 'id_personnage' => $this->getIdPersonnage (), 'mp' => $this->_mp ) );
         }
         if ( self::$db_debug ) {
             static::log ( "ID :" . $this->getIdPersonnage () . "\t | Retrait de mp : " . ( $this->_mp + $mp_used ) . " - " . $mp_used . " = " . $this->_mp . "mp" );
@@ -973,13 +804,11 @@ class Personnage extends DBMapper
      * Retourne l'identifiant element du personnage
      * @return int
      */
-    public function getElement ()
-    {
+    public function getElement () {
         return $this->_element;
     }
 
-    function getNombreAttaque ()
-    {
+    function getNombreAttaque () {
         return count ( $this->_attaques );
     }
 }

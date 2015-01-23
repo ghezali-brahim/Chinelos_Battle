@@ -1,11 +1,10 @@
 <?php
-if ( !defined ( 'TEST_INCLUDE' ) )
+if ( ! defined ( 'TEST_INCLUDE' ) )
     exit ( "Vous n'avez pas accès directement à ce fichier" );
 require_once MOD_BPATH . DIR_SEP . "../objects/modele_personnage.php";
 
 
-class  Equipe extends DBMapper
-{
+class  Equipe extends DBMapper {
     protected $_id_equipe;// If null ==> Equipe IA
     protected $_personnages;// characters
     protected $_indice_perso_actuel;
@@ -16,8 +15,7 @@ class  Equipe extends DBMapper
      * @param $personnages
      * @param $id_equipe
      */
-    protected function __construct ( $personnages, $id_equipe )
-    {
+    protected function __construct ( $personnages, $id_equipe ) {
         $this->_id_equipe           = $id_equipe;
         $this->_personnages         = $personnages;
         $this->_indice_perso_actuel = 0;
@@ -29,8 +27,7 @@ class  Equipe extends DBMapper
     /**
      * @return mixed
      */
-    function __toString ()
-    {
+    function __toString () {
         $listePersonnages = array ();
         foreach ( $this->_personnages as $personnage ) {
             array_push ( $listePersonnages, $personnage->__toString () );
@@ -44,8 +41,7 @@ class  Equipe extends DBMapper
      * Retourne le niveau total des persos d'une équipe
      * @return int Niveau Total
      */
-    function getNiveauTotalPersos ()
-    {
+    function getNiveauTotalPersos () {
         $somme = 0;
         foreach ( $this->_personnages as $personnage ) {
             $somme = $somme + ( $personnage->getNiveau () );
@@ -62,8 +58,7 @@ class  Equipe extends DBMapper
      *
      * @return Equipe
      */
-    static function createEquipe ( $niveauTotal, $id_equipe )
-    {
+    static function createEquipe ( $niveauTotal, $id_equipe ) {
         if ( self::$db_debug ) {
             static::log ( "Creation d'une l'equipe : " . "..." );
         }
@@ -99,8 +94,7 @@ class  Equipe extends DBMapper
      *
      * @throws Exception
      */
-    static function createTwoEquipeForBD ( $id_user )
-    {
+    static function createTwoEquipeForBD ( $id_user ) {
         static::log ( "Creation de deux equipe pour le joueur avec l'id : " . $id_user . " ..." );
         // Creation de l'equipe One
         static::requeteFromDB ( "INSERT INTO equipe VALUES (\"\", :id_user)", array ( 'id_user' => $id_user ) );
@@ -118,12 +112,9 @@ class  Equipe extends DBMapper
      *
      * @return Equipe
      */
-    static function createEquipeFromBD ( $id_equipe )
-    {
+    static function createEquipeFromBD ( $id_equipe ) {
         static::log ( "Recuperation des personnages de l'equipe d'id : " . $id_equipe );
-        $resultat_requete   = static::requeteFromDB ( "SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau", array (
-                'id_equipe' => $id_equipe
-        ) );
+        $resultat_requete   = static::requeteFromDB ( "SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau", array ( 'id_equipe' => $id_equipe ) );
         $listeIDPersonnages = array ();
         // Un peu compliqué, mais on recupère ici la liste des id_personnage et on les mets en forme
         foreach ( $resultat_requete as $key => $id_perso ) {
@@ -146,8 +137,7 @@ class  Equipe extends DBMapper
      *
      * @return int si positif alors $p1 > $p2
      */
-    static function comparerNiveauDeuxPersonnage ( $p1, $p2 )
-    {
+    static function comparerNiveauDeuxPersonnage ( $p1, $p2 ) {
         return Personnage::comparerNiveauPersonnage ( $p1, $p2 );
     }
 
@@ -158,10 +148,9 @@ class  Equipe extends DBMapper
      *
      * @throws Exception
      */
-    function addPersonnage ( $personnage )
-    {
+    function addPersonnage ( $personnage ) {
         static::log ( "Ajout du personnage " . $personnage->getIdPersonnage () . " a l'equipe " . $this->_id_equipe );
-        if ( !in_array ( $personnage, $this->_personnages ) ) {
+        if ( ! in_array ( $personnage, $this->_personnages ) ) {
             array_push ( $this->_personnages, $personnage );
             $personnage->setIDEquipe ( $this->_id_equipe );
         } else {
@@ -176,10 +165,9 @@ class  Equipe extends DBMapper
      *
      * @throws Exception
      */
-    function removePersonnage ( $personnage )
-    {
+    function removePersonnage ( $personnage ) {
         static::log ( "Retrait du personnage " . $personnage->getIdPersonnage () . " de l'equipe " . $this->_id_equipe );
-        if ( !in_array ( $personnage, $this->_personnages ) ) {
+        if ( ! in_array ( $personnage, $this->_personnages ) ) {
             throw new Exception( 'le personnage que vous souhaité retirer de l\'equipe n\'est pas dans cette equipe' );
         } else {
             $key = array_search ( $personnage, $this->_personnages );
@@ -191,8 +179,7 @@ class  Equipe extends DBMapper
     /**
      * @return array(Personnages)
      */
-    function getPersonnages ()
-    {
+    function getPersonnages () {
         return $this->_personnages;
     }
 
@@ -202,8 +189,7 @@ class  Equipe extends DBMapper
      *
      * @return Personnage
      */
-    function getPersonnage ( $id_personnage )
-    {
+    function getPersonnage ( $id_personnage ) {
         $personnagetoReturn = NULL;
         foreach ( $this->_personnages as $personnage ) {
             if ( $personnage->getIdPersonnage () == $id_personnage ) {
@@ -219,8 +205,7 @@ class  Equipe extends DBMapper
      * au personnage correspondant à l'indice indice_perso_actuel
      * @return string
      */
-    function retourneAffichageEquipeAvecAttaques ()
-    {
+    function retourneAffichageEquipeAvecAttaques () {
         $text = '<div class="equipe">';
         $text .= '<h3>Indice personnage actuelle : ' . $this->_indice_perso_actuel . '</h3><br>';
         for ( $i = 0; $i < count ( $this->_personnages ); $i++ ) {
@@ -243,17 +228,15 @@ class  Equipe extends DBMapper
      * @return Personnage
      * @throws Exception
      */
-    function getPersonnageIndice ( $indice )
-    {
-        if ( !array_key_exists ( $indice, $this->_personnages ) ) {
+    function getPersonnageIndice ( $indice ) {
+        if ( ! array_key_exists ( $indice, $this->_personnages ) ) {
             throw new Exception( "ID Equipe: $this->_id_equipe  ; Indice $this->_indice_perso_actuel incorrecte afin de récuperer le personnage" );
         }
 
         return $this->_personnages[ $indice ];
     }
 
-    function afficherEquipe ()
-    {
+    function afficherEquipe () {
         /*
         echo '<div class="equipe">';
         foreach ( $this->_personnages as $personnage ) {
@@ -264,8 +247,7 @@ class  Equipe extends DBMapper
         echo $this->retourneAffichageEquipe ();
     }
 
-    function retourneAffichageEquipe ()
-    {
+    function retourneAffichageEquipe () {
         $text = '<div class="equipe">';
         foreach ( $this->_personnages as $personnage ) {
             $text = $text . $personnage->retourneAffichagePersonnage ();
@@ -281,14 +263,13 @@ class  Equipe extends DBMapper
      * @return Personnage
      * @throws Exception
      */
-    function getPersonnagePlusFaibleVivant ()
-    {
+    function getPersonnagePlusFaibleVivant () {
         if ( $this->allPersonnagesDead () ) {
             throw new Exception( 'Aucun personnage Vivant' );
         }
         $personnageAretournee = NULL;
         foreach ( $this->_personnages as $personnage ) {
-            if ( !$personnage->isDead () ) {
+            if ( ! $personnage->isDead () ) {
                 if ( ( $personnageAretournee ) == NULL ) {
                     $personnageAretournee = $personnage;
                 } else {
@@ -306,8 +287,7 @@ class  Equipe extends DBMapper
      * Retourne vrai si tous les personnages sont mort
      * @return bool
      */
-    function allPersonnagesDead ()
-    {
+    function allPersonnagesDead () {
         $i = 0;
         do {
             $allDead = $this->_personnages[ $i ]->isDead ();
@@ -320,8 +300,7 @@ class  Equipe extends DBMapper
     /**
      * @return int
      */
-    function getNombrePersonnages ()
-    {
+    function getNombrePersonnages () {
         return count ( $this->_personnages );
     }
 
@@ -330,8 +309,7 @@ class  Equipe extends DBMapper
      * (c'est à dire avec le level le plus élevé)
      * @return Personnage
      */
-    function getPersonnagePlusFort ()
-    {
+    function getPersonnagePlusFort () {
         $personnageAretournee = NULL;
         foreach ( $this->_personnages as $personnage ) {
             if ( ( $personnageAretournee ) == NULL ) {
@@ -350,8 +328,7 @@ class  Equipe extends DBMapper
      *
      * @param $pourcentXP
      */
-    function ajouterPourcentExperience ( $pourcentXP )
-    {
+    function ajouterPourcentExperience ( $pourcentXP ) {
         static::log ( "Ajout d'un pourcentage d'experience à tous les personnages de l'equipe d'id : " . $this->_id_equipe );
         foreach ( $this->_personnages as $personnage ) {
             $personnage->addPourcentExperience ( $pourcentXP );
@@ -363,8 +340,7 @@ class  Equipe extends DBMapper
      * Trie les personnages dans l'equipe (objet) par niveau
      * @throws Exception
      */
-    function trierPersonnageParNiveau ()
-    {
+    function trierPersonnageParNiveau () {
         $this->trierPersonnagePersonnalise ( "comparerNiveauPersonnage" );
     }
 
@@ -375,8 +351,7 @@ class  Equipe extends DBMapper
      *
      * @throws Exception
      */
-    function trierPersonnagePersonnalise ( $parametre )
-    {
+    function trierPersonnagePersonnalise ( $parametre ) {
         static::log ( "trie de l'equipe par $parametre sur l'equipe d'id : " . $this->_id_equipe );
         if ( usort ( $this->_personnages, array ( "Personnage", $parametre ) ) ) {
         } else {
@@ -388,11 +363,10 @@ class  Equipe extends DBMapper
      * Retourne les personnages vivants de l'équipe
      * @return array <Personnage>
      */
-    function getPersonnageVivant ()
-    {
+    function getPersonnageVivant () {
         $personnagesVivant = array ();
         foreach ( $this->_personnages as $personnage ) {
-            if ( !$personnage->isDead () ) {
+            if ( ! $personnage->isDead () ) {
                 array_push ( $personnagesVivant, $personnage );
             }
         }
@@ -403,8 +377,7 @@ class  Equipe extends DBMapper
     /**
      * Soigne l'equipe (utiliser par boutique)
      */
-    function soignerEquipe ()
-    {
+    function soignerEquipe () {
         static::log ( "Soigne les hp et mp de tous les personnages de l'equipe d'id : " . $this->_id_equipe );
         foreach ( $this->_personnages as $personnage ) {
             $personnage->addHp ( $personnage->getHpMax () );
@@ -416,8 +389,7 @@ class  Equipe extends DBMapper
      * Rafraichit l'equipe depuis la base de données
      * retire de l'equipe les personnages ne fesant plus partie de l'equipe
      */
-    function refresh ()
-    {
+    function refresh () {
         if ( self::$db_debug ) {
             static::log ( "ID :" . $this->getIdEquipe () . "\t | Mise à jour de l'equipe ... " );
         }
@@ -433,36 +405,31 @@ class  Equipe extends DBMapper
     /**
      * @return int
      */
-    function getIdEquipe ()
-    {
+    function getIdEquipe () {
         return $this->_id_equipe;
     }
 
-    public function getPersoIndiceActuel ()
-    {
+    public function getPersoIndiceActuel () {
         return $this->getPersonnageIndice ( $this->getIndicePersoActuel () );
     }
 
     /**
      * @return int
      */
-    public function getIndicePersoActuel ()
-    {
+    public function getIndicePersoActuel () {
         return $this->_indice_perso_actuel;
     }
 
     /**
      * @param int $indice_perso_actuel
      */
-    public function setIndicePersoActuel ( $indice_perso_actuel )
-    {
+    public function setIndicePersoActuel ( $indice_perso_actuel ) {
         $this->_indice_perso_actuel = $indice_perso_actuel;
     }
 
-    public function incrementerIndicePersoActuel ()
-    {
+    public function incrementerIndicePersoActuel () {
         $i = 0;
-        while ( $this->getPersonnageIndice ( $this->_indice_perso_actuel )->isDead () && !$this->allPersonnagesDead () || $i == 0 ) {
+        while ( $this->getPersonnageIndice ( $this->_indice_perso_actuel )->isDead () && ! $this->allPersonnagesDead () || $i == 0 ) {
             if ( $this->_indice_perso_actuel < count ( $this->_personnages ) - 1 ) {
                 $this->_indice_perso_actuel++;
             } else {

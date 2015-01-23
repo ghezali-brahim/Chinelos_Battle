@@ -1,11 +1,10 @@
 <?php
-if ( !defined ( 'TEST_INCLUDE' ) )
+if ( ! defined ( 'TEST_INCLUDE' ) )
     exit ( "Vous n'avez pas accès directement à ce fichier" );
 require_once MOD_BPATH . DIR_SEP . "../objects/modele_equipe.php";
 
 
-abstract class  Participant extends DBMapper
-{
+abstract class  Participant extends DBMapper {
     protected $_equipes;
 
     abstract function addPersonnage ( $personnage );
@@ -21,8 +20,7 @@ abstract class  Participant extends DBMapper
      *
      * @return Personnage
      */
-    function getPersonnageWithID ( $id_personnage )
-    {
+    function getPersonnageWithID ( $id_personnage ) {
         $personnage = NULL;
         foreach ( $this->_equipes as $equipe ) {
             if ( $equipe->getPersonnage ( $id_personnage ) != NULL ) {
@@ -36,8 +34,7 @@ abstract class  Participant extends DBMapper
     /**
      * @return array(Equipes)
      */
-    function getEquipes ()
-    {
+    function getEquipes () {
         return $this->_equipes;
     }
 
@@ -45,24 +42,21 @@ abstract class  Participant extends DBMapper
      * Retourne le niveau total de l'equipe one du participant
      * @return int
      */
-    function getNiveauTotalParticipant ()
-    {
+    function getNiveauTotalParticipant () {
         return $this->getEquipeOne ()->getNiveauTotalPersos ();
     }
 
     /**
      * @return Equipe 0
      */
-    function getEquipeOne ()
-    {
+    function getEquipeOne () {
         return $this->_equipes[ 0 ];
     }
 
     /**
      * Ici on retire les morts de l'equipe, ensuite on trie l'equipe principal
      */
-    function virerMortEquipeOne ()
-    {
+    function virerMortEquipeOne () {
         $listePersonnageATransferer = array ();
         foreach ( $this->_equipes[ 0 ]->getPersonnages () as $personnage ) {
             if ( $personnage->isDead () ) {
@@ -81,8 +75,7 @@ abstract class  Participant extends DBMapper
      *
      * @throws Exception
      */
-    function transferer ( $personnage )
-    {
+    function transferer ( $personnage ) {
         if ( $personnage == NULL ) {
             throw new Exception( 'personnage inconnu' );
         }
@@ -101,34 +94,29 @@ abstract class  Participant extends DBMapper
         }
     }
 
-    function trierEquipeOne ()
-    {
+    function trierEquipeOne () {
         $this->_equipes[ 0 ]->trierPersonnageParNiveau ();
     }
 
     /**
      * @return string
      */
-    function __toString ()
-    {
+    function __toString () {
         return "; " . $this->_equipes[ 0 ]->__toString ();
     }
 
     /**
      * Soigne l'equipe One du participant
      */
-    function soignerEquipeOne ()
-    {
+    function soignerEquipeOne () {
         $this->getEquipeOne ()->soignerEquipe ();
     }
 
-    function incrementerIndicePersoActuelParticipant ()
-    {
+    function incrementerIndicePersoActuelParticipant () {
         $this->_equipes[ 0 ]->incrementerIndicePersoActuel ();
     }
 
-    function getPersoIndiceActuel ()
-    {
+    function getPersoIndiceActuel () {
         return $this->_equipes[ 0 ]->getPersoIndiceActuel ();
     }
 }

@@ -1,18 +1,16 @@
 <?php
-if ( !defined ( 'TEST_INCLUDE' ) )
+if ( ! defined ( 'TEST_INCLUDE' ) )
     exit ( "Vous n'avez pas accès directement à ce fichier" );
 require_once MOD_BPATH . DIR_SEP . "../objects/modele_participant.php";
 
 
-class Joueur_IA extends Participant
-{
+class Joueur_IA extends Participant {
     static    $indice_robot; // commence à 1
     protected $_id_robot;
 
-    function __construct ( $niveauTotal )
-    {
+    function __construct ( $niveauTotal ) {
         global $indice_robot;
-        if ( !isset( $indice_robot ) ) {
+        if ( ! isset( $indice_robot ) ) {
             $indice_robot = 0;
         }
         $indice_robot++;
@@ -22,8 +20,7 @@ class Joueur_IA extends Participant
     }
 
 
-    function refresh ()
-    {
+    function refresh () {
         // TODO: Implement refresh() method.
     }
 
@@ -31,17 +28,12 @@ class Joueur_IA extends Participant
      * Appel la fonction mère pour l'affichage de la liste des personnages
      * @return mixed|string
      */
-    function __toString ()
-    {
+    function __toString () {
         return "Identifiant robot: " . $this->_id_robot . parent::__toString ();
     }
 
-    function getParticipant ()
-    {
-        return array (
-                'id_robot' => $this->_id_robot,
-                'equipes'  => $this->_equipes
-        );
+    function getParticipant () {
+        return array ( 'id_robot' => $this->_id_robot, 'equipes' => $this->_equipes );
     }
 
     /**
@@ -51,8 +43,7 @@ class Joueur_IA extends Participant
      *
      * @throws Exception
      */
-    function addPersonnage ( $personnage )
-    {
+    function addPersonnage ( $personnage ) {
         if ( $personnage != NULL ) {
             $this->_equipes[ 0 ]->addPersonnage ( $personnage );
         } else {
@@ -61,8 +52,12 @@ class Joueur_IA extends Participant
     }
 
     //TODO A mettre à jour
-    function attaquerEnnemi ( $participant, $i )
-    {
+
+    function attaquer ( $participant ) {
+        $this->attaquerEnnemi ( $participant, $this->getEquipeOne ()->getIndicePersoActuel () );
+    }
+
+    function attaquerEnnemi ( $participant, $i ) {
         try {
             $personnage       = $this->getEquipeOne ()->getPersonnages ()[ $i ];
             $personnageTarget = $participant->getEquipeOne ()->getPersonnagePlusFaibleVivant ();
@@ -82,32 +77,8 @@ class Joueur_IA extends Participant
         }
     }
 
-    function attaquer ( $participant )
-    {
-        try {
-            $personnage       = $this->getEquipeOne ()->getPersoIndiceActuel ();
-            $personnageTarget = $participant->getEquipeOne ()->getPersonnagePlusFaibleVivant ();
-            //ON A RAJOUTER LA NOTION D'ELEMENT
-            try {
-                $degats = $personnage->attaquer ( 0 );
-            } catch ( Exception $e ) {
-                $degats = $personnage->attaquer ( 2 );
-            }
-            // ON mulitplie par le ratio de l'élement
-            $degats = $degats * Element::getRatioDegatElement ( $personnage->getElement (), $personnageTarget->getElement () );
-            //DEBUG
-            //echo '<br/>========= ' . $personnage . ' a fait ' . $degats . ' à lenemi : ' . $personnageTarget . ' ======<br/>';
-            $personnageTarget->subirDegats ( $degats );
-        } catch ( Exception $e ) {
-            print_r ( $e );
-        }
-    }
-
-
-    function retourneAffichageJoueurIA ()
-    {
-        $text = "<h2><strong>Niveau de l'equipe adverse : " . $this->getEquipeOne ()->getNiveauTotalPersos () . "</strong></h2><br>" .
-                $this->getEquipeOne ()->retourneAffichageEquipe ();
+    function retourneAffichageJoueurIA () {
+        $text = "<h2><strong>Niveau de l'equipe adverse : " . $this->getEquipeOne ()->getNiveauTotalPersos () . "</strong></h2><br>" . $this->getEquipeOne ()->retourneAffichageEquipe ();
 
         return $text;
     }

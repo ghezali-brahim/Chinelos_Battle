@@ -1,24 +1,18 @@
 <?php
-if ( !defined ( 'TEST_INCLUDE' ) )
+if ( ! defined ( 'TEST_INCLUDE' ) )
     exit ( "Vous n'avez pas accès directement à ce fichier" );
 
 
-class ModContactModeleContact extends DBMapper
-{
+class ModContactModeleContact extends DBMapper {
 
-    public function envoyerMail ( $donnees )
-    {
-        if ( !isset( $_SESSION[ 'user' ] ) ) {
+    public function envoyerMail ( $donnees ) {
+        if ( ! isset( $_SESSION[ 'user' ] ) ) {
         } else {
             $requete = "SELECT email, username FROM users WHERE username = :username AND id_user = :id_user";
             try {
                 $user    = unserialize ( $_SESSION[ 'user' ] );
                 $reponse = self::$database->prepare ( $requete );
-                $reponse->execute (
-                        array (
-                                'username' => $user->getUsername (),
-                                'id_user'  => $user->getIdUser ()
-                        ) );
+                $reponse->execute ( array ( 'username' => $user->getUsername (), 'id_user' => $user->getIdUser () ) );
             } catch ( PDOException $e ) {
                 echo 'Échec lors de la connexion : ' . $e->getMessage ();
             }
