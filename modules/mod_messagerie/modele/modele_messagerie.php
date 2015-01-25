@@ -4,44 +4,49 @@ if ( ! defined ( 'TEST_INCLUDE' ) )
 
 
 class ModMessagerieModeleMessagerie extends DBMapper {
-    protected $_id_message;
-    protected $_objet;
-    protected $_contenu;
-    protected $_id_expeditaire;
-    protected $_id_destinataire;
-    protected $_date_envoie;
-    protected $_lu;
 
-    function __construct ( $id_message ) {
-        $resultat               = self::requeteFromDB ( "select objet, contenu, id_expeditaire, id_destinataire, date_envoie, lu from messages where id_message=:id_message", array ( 'id_message' => $id_message ) )[ 0 ];
-        $this->_objet           = $resultat[ 'objet' ];
-        $this->_contenu         = $resultat[ 'contenu' ];
-        $this->_id_destinataire = $resultat[ 'id_expeditaire' ];
-        $this->_id_expeditaire  = $resultat[ 'id_expeditaire' ];
-        $this->_date_envoie     = $resultat[ 'date_envoie' ];
-        $this->_lu              = $resultat[ 'lu' ];
-    }
+    protected $_id_user;
+    private $_liste_messages_envoyer;
+    private $_liste_messages_recus;
 
-    static function getMessages () {
-        $user               = unserialize ( $_SESSION[ 'user' ] );
-        $listes_id_messages = self::requeteFromDB ( "select id_message from messages where id_expeditaire=:id_user", array ( 'id_user' => $user->getIdUser () ) );
-        $messages           = array ();
-        foreach ( $listes_id_messages as $id_message ) {
-            $messages = new ModMessagerieModeleMessagerie( $id_message[ 'id_message' ] );
+    function __construct ( $id_user ) {
+        $this->_id_user                = $id_user;
+        $liste_id_messages_envoyer     = self::requeteFromDB ( "select id_message from messages where id_expeditaire=:id_user", array ( 'id_user' => $this->_id_user ) );
+        $liste_id_messages_recus       = self::requeteFromDB ( "select id_message from messages where id_destinataire=:id_user", array ( 'id_user' => $this->_id_user ) );
+        $this->_liste_messages_envoyer = array ();
+        $this->_liste_message_recus    = array ();
+        foreach ( $liste_id_messages_envoyer as $id_message ) {
+            array_push ( $this->_liste_messages_envoyer, new Message( $id_message ) );
         }
-
-        return $messages;
+        foreach ( $liste_id_messages_recus as $id_message ) {
+            array_push ( $this->_liste_messages_recus, new Message( $id_message ) );
+        }
     }
 
-    static function createMessage () {
-        $user = unserialize ( $_SESSION[ 'user' ] );
-        //TODO
+
+    function createMessage ( $objet, $contenu, $id_destinataire ) {
+        Message::createMessage ( $objet, $contenu, $id_destinataire, $this->_id_user );
+    }
+    function getListesMessagesEnvoyer(){
+        $listesMessagesEnvoyerArray=array();
+        if(count($this->_liste_messages_envoyer)<=0){
+            return array();
+        }
+        foreach( $this->_liste_messages_envoyer as $message_envoyer){
+            array_push($listesMessagesEnvoyerArray,$message_envoyer->getMessagerieArray());
+        }
+        return $listesMessagesEnvoyerArray;
+    }
+    function getListesMessagesRecus(){
+        $listesMessagesRecusArray=array();
+        if(count($this->_liste_messages_recus)<=0){
+            return array();
+        }
+        foreach( $this->_liste_messages_recus as $message_recus){
+            array_push($listesMessagesRecusArray,$message_recus->getMessageArray());
+        }
+        return $listesMessagesRecusArray;
     }
 
-    function getMessagerieArray () {
-        $contenuMessage = array ( 'id_message' => $this->_id_message, 'objet' => $this->_objet, 'contenu' => $this->_contenu, 'id_expeditaire' => $this->_id_expeditaire, 'id_destinaire' => $this->_id_destinataire, 'date_envoie' => $this->_date_envoie, 'lu' => $this->_lu );
-
-        return $contenuMessage;
-    }
 }
 

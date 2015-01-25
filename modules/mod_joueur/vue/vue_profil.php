@@ -190,6 +190,8 @@ class ModJoueurVueJoueur {
 		<th> Niveau Total </th>
 		<th> Nombre Perso </th>
 		<th> Niveau Max </th>
+		<th> Nombre Victoire</th>
+		<th> Nombre Defaite</th>
 		<th> Connectee </th>
 	</tr>';
         $rang = 1;
@@ -200,6 +202,8 @@ class ModJoueurVueJoueur {
             echo "<td>" . $value[ 'niveauTotal' ] . "</td>\n";
             echo "<td>" . $value[ 'nombrePerso' ] . "</td>\n";
             echo "<td>" . $value[ 'niveauMax' ] . "</td>\n";
+            echo "<td>" . $value[ 'nombre_victoire' ] . "</td>\n";
+            echo "<td>" . $value[ 'nombre_defaite' ] . "</td>\n";
             if ( $value[ 'connected' ] ) {
                 echo "<td> O </td>\n";
             } else {
@@ -213,12 +217,8 @@ class ModJoueurVueJoueur {
 
     static function afficherChoixClassement () {
         ?>
-        <a href='index.php?module=joueur&action=classement&type=chinelos' >
-            <button class='buttonModule' style='width:130px;height=20px;' >Afficher classement Personnages</button >
-        </a ><br >
-        <a href='index.php?module=joueur&action=classement&type=joueurs' >
-            <button class='buttonModule' style='width:130px;height=20px;' >Afficher classement Joueur</button >
-        </a ><br >
+        <a href='index.php?module=joueur&action=classement&type=chinelos' ><button class='buttonModule' style='width:130px;height=20px;' >Afficher classement Personnages</button ></a ><br >
+        <a href='index.php?module=joueur&action=classement&type=joueurs' ><button class='buttonModule' style='width:130px;height=20px;' >Afficher classement Joueur</button ></a ><br >
     <?php
     }
 }

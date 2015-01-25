@@ -20,6 +20,7 @@ require_once MOD_BPATH . DIR_SEP . "vue/vue_messagerie.php";
 
 class ModMessagerieControleurMessagerie {
     protected $_joueur;
+    protected $_messagerie;
 
     function __construct () {
         if ( Joueur::connectee () ) {
@@ -30,6 +31,8 @@ class ModMessagerieControleurMessagerie {
             }
         }
         $this->_joueur = unserialize ( $_SESSION[ 'joueur' ] );
+        $user=unserialize($_SESSION['user']);
+        $this->_messagerie=new ModMessagerieModeleMessagerie($user->getIdUser());
     }
 
     public function accueilModule () {
@@ -41,11 +44,20 @@ class ModMessagerieControleurMessagerie {
     }
 
     public function afficherListeMessages () {
-        $messages = ModMessagerieModeleMessagerie::getMessages ();
-        ModMessagerieVueMessagerie::afficherlistesMessages ( $messages );
+        echo "Message envoyés:<br>";
+        print_r($this->_messagerie->getListesMessagesEnvoyer());
+        echo "<br><br>Message recus:<br>";
+        print_r($this->_messagerie->getListesMessagesRecus());
+
+        //ModMessagerieVueMessagerie::afficherlistesMessages ( $messages );
     }
 
     public function envoyerMessage () {
-        ModMessagerieVueMessagerie::afficherFormEnvoieMessage ();
+        if(isset($_POST['message'])){
+            //$this->_messagerie->createMessage(...);
+        }else{
+            ModMessagerieVueMessagerie::afficherFormEnvoieMessage ();
+        }
+
     }
 }

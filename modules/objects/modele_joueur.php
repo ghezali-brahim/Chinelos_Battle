@@ -14,6 +14,13 @@ class Joueur extends Participant {
     protected $_nombre_defaite;
 
     /**
+     * @return mixed
+     */
+    public function getIdUser () {
+        return $this->_id_user;
+    }
+
+    /**
      * On créer un Joueur à partir de la base de données; On verifie d'abbord si le joueur est connecté.
      */
     function __construct () {
@@ -92,13 +99,15 @@ WHERE 1 = 1 order by personnage.niveau DESC, personnage.experience DESC;" );
      * @throws Exception
      */
     static function getAllJoueurClassement () {
-        $listes_user = self::requeteFromDB ( "select id_user, username,connected from users where  last_connection is not NULL" );
+        $listes_user = self::requeteFromDB ( "select id_user, username,connected,nombre_victoire, nombre_defaite from users where  last_connection is not NULL" );
         $donnees     = array ();
         foreach ( $listes_user as $user ) {
             $joueur                = self::requeteFromDB ( "select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
-", array ( 'id_user' => $user[ 'id_user' ] ) )[ 0 ];
+", array ( 'id_user' => $user[ 'id_user' ] ) )[ 0 ];;
             $joueur[ 'username' ]  = $user[ 'username' ];
             $joueur[ 'connected' ] = $user[ 'connected' ];
+            $joueur[ 'nombre_victoire'] = $user[ 'nombre_victoire'];
+            $joueur[ 'nombre_defaite'] = $user[ 'nombre_defaite'];
             array_push ( $donnees, $joueur );
         }
 
@@ -253,6 +262,10 @@ WHERE 1 = 1 order by personnage.niveau DESC, personnage.experience DESC;" );
     function incrementerDefaite () {
         $this->_nombre_defaite++;
         self::requeteFromDB ( "update users set nombre_defaite=:nombre_defaite where id_user = :id_user", array ( 'id_user' => $this->_id_user, 'nombre_defaite' => $this->_nombre_defaite ) );
+    }
+
+    static function getUsernameJoueur($id_user){
+        return self::requeteFromDB("select username from users where id_user=:id_user", array('id_user' => $id_user))[0];
     }
 }
 

@@ -11,8 +11,17 @@ class Combat extends DBMapper {
     private   $tourDe;// indice du participant dont c'est le tour
     private   $indicePersonnagesEquipe1;
     private   $indicePersonnagesEquipe2;
+    private   $_joueurReel;
 
     function __construct ( $participant1, $participant2 ) {
+        if(get_class($participant2)==Joueur::class){
+            $this->_joueurReel=TRUE;
+        }
+        if($this->_joueurReel){
+            $donnees=array('id_joueur_1' => $participant1->getIdUser(), 'id_joueur_2' =>$participant2->getIdUser());
+            self::requeteFromDB("INSERT INTO combats(id_joueur_1, id_joueur_2) VALUES(:id_joueur_1, :id_joueur_2)",$donnees);
+            print_r($donnees);
+        }
         $this->_participant1            = $participant1;
         $this->_participant2            = $participant2;
         $this->nbrTour                  = 1;
@@ -31,6 +40,9 @@ class Combat extends DBMapper {
             $this->indicePersonnagesEquipe2++;
             $this->tourDe = 1;
         }
+    }
+    function incrementerIndicePerso($participant){
+        $participant->incrementerIndicePersoActuelParticipant();
     }
 
     function __toString () {
@@ -59,9 +71,9 @@ class Combat extends DBMapper {
         // si lvl total inférieur à celui de l'enemi alors + de bonus
         if ( $gagnant->getNiveauTotalParticipant () > $this->_participant1->getNiveauTotalParticipant () || $gagnant->getNiveauTotalParticipant () > $this->_participant2->getNiveauTotalParticipant () ) {
             //ICI recompense sous la forme (argent, %xp)
-            $recompense_gagnant = array ( 'argent' => 10, 'pourcentXP' => 6 );
+            $recompense_gagnant = array ( 'argent' => 10, 'pourcentXP' => 20 );
         } else {
-            $recompense_gagnant = array ( 'argent' => 5, 'pourcentXP' => 4 );
+            $recompense_gagnant = array ( 'argent' => 5, 'pourcentXP' => 15 );
         }
         echo "votre récompense de fin de combat est : " . $recompense_gagnant[ 'argent' ] . "gils ainsi que " . $recompense_gagnant[ 'pourcentXP' ] . "% d'experience. <br/>";
         $gagnant->ajouterArgent ( $recompense_gagnant[ 'argent' ] );

@@ -9,7 +9,7 @@ class ModCombatVueCombat {
      **/
     static function affAccueilModule () {
         echo "<br><div class='combat'><p class='textCombat'>
-			<a href='index.php?module=combat&action=listeCombat'><button class='buttonModule' style='width:130px;height=20px;'>Scénario</button></a><br>
+			<a href='index.php?module=combat&action=listeCombat'><button class='buttonModule' style='width:130px;height=20px;'>Listes des combats</button></a><br>
 			<a href='index.php?module=combat&action=Combat'><button class='buttonModule' style='width:130px;height=20px;'>Combat Aléatoire</button></a><br>
 			<a href='index.php?module=combat&action=unTour'><button class='buttonModule' style='width:130px;height=20px;'>Un tour</button></a><br>
 			</p></div>";
@@ -111,12 +111,12 @@ class ModCombatVueCombat {
         $personnageActuel = $joueur->getEquipeOne ()->getPersoIndiceActuel ();
         //TODO à voir
         $text .= '<form method="POST" action="index.php?module=combat&action=unTour&attaquePersonnage=true" >
-            <label for="indice_ennemi" >Indice ennemi &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label >
+            <label for="indice_ennemi" >Indice ennemi :</label >
             <input type="number" id="indice_ennemi" name="indice_ennemi" min="0"
-                   max="<?php echo ( $ennemi->getEquipeOne()->getNombrePersonnages () - 1 ); ?>" required /> <br ><br >
+                   max="'. $ennemi->getEquipeOne()->getNombrePersonnages () - 1 .'" required /> <br ><br >
             <label for="indice_attaque" >Indice attaque :</label >
             <input type="number" id="indice_attaque" name="indice_attaque" min="0"
-                   max="<?php echo ( $personnageActuel->getNombreAttaque () - 1 ); ?>" required /><br ><br ><br >
+                   max="'.$personnageActuel->getNombreAttaque () - 1 .'" required /><br ><br ><br >
             <input type="submit" name="submit" value="Attaquer" >
         </form >';
         $text .= $ennemi->getEquipeOne ()->retourneAffichageEquipeAvecAttaques ();

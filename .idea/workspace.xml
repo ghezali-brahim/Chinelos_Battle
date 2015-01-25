@@ -54,7 +54,95 @@
     <favorites_list name="mini_rpg" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="controleur_combat.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/mod_combat/controleur/controleur_combat.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1326" max-vertical-offset="2890">
+              <caret line="78" column="69" selection-start-line="78" selection-start-column="69" selection-end-line="78" selection-end-column="69" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="modele_messagerie.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/mod_messagerie/modele/modele_messagerie.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="986">
+              <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+              <folding>
+                <marker date="1422208284983" expanded="true" signature="418:479" placeholder="select id_me..messages..." />
+                <marker date="1422208284983" expanded="true" signature="588:650" placeholder="select id_me..messages..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="controleur_messagerie.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/modules/mod_messagerie/controleur/controleur_messagerie.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6500416" vertical-offset="0" max-vertical-offset="1203">
+              <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="modele_connexion.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/mod_connexion/modele/modele_connexion.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1054" max-vertical-offset="1292">
+              <caret line="62" column="32" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
+              <folding>
+                <marker date="1421793933956" expanded="true" signature="671:778" placeholder="select id_us..users..." />
+                <marker date="1421793933956" expanded="true" signature="1488:1586" placeholder="UPDATE users..." />
+                <marker date="1421793933956" expanded="true" signature="1939:2001" placeholder="UPDATE users..." />
+                <marker date="1421793933956" expanded="true" signature="2472:2519" placeholder="select usern..users..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="modele_message.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/mod_messagerie/modele/modele_message.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="680" max-vertical-offset="918">
+              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+              <folding>
+                <marker date="1422207920636" expanded="true" signature="593:707" placeholder="select objet..messages..." />
+                <marker date="1422207920636" expanded="true" signature="1578:1727" placeholder="INSERT INTO ..." />
+                <marker date="1422207920636" expanded="true" signature="1578:1747" placeholder="insert into ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="modele_joueur.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/objects/modele_joueur.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="3468" max-vertical-offset="4726">
+              <caret line="266" column="37" selection-start-line="266" selection-start-column="20" selection-end-line="266" selection-end-column="37" />
+              <folding>
+                <marker date="1422207719319" expanded="true" signature="815:940" placeholder="SELECT id_us..users..." />
+                <marker date="1422207719319" expanded="true" signature="1506:1559" placeholder="SELECT id_eq..equipe..." />
+                <marker date="1422207719319" expanded="true" signature="1959:2012" placeholder="SELECT id_eq..equipe..." />
+                <marker date="1422207719319" expanded="true" signature="2804:2854" placeholder="select id_us..users..." />
+                <marker date="1422207719319" expanded="true" signature="3010:3072" placeholder="select usern..users..." />
+                <marker date="1422207719319" expanded="true" signature="3438:3915" placeholder="SELECT users..users..." />
+                <marker date="1422207719319" expanded="true" signature="4299:4411" placeholder="select id_us..users..." />
+                <marker date="1422207719319" expanded="true" signature="4553:4777" placeholder="select SUM(p..equipe..." />
+                <marker date="1422207719319" expanded="true" signature="6647:6704" placeholder="UPDATE users..." />
+                <marker date="1422207719319" expanded="true" signature="7460:7517" placeholder="UPDATE users..." />
+                <marker date="1422207719319" expanded="true" signature="9307:9354" placeholder="select argen..users..." />
+                <marker date="1422207719319" expanded="true" signature="10917:10991" placeholder="update users..." />
+                <marker date="1422207719319" expanded="true" signature="11191:11263" placeholder="update users..." />
+                <marker date="1422207719319" expanded="true" signature="11444:11493" placeholder="select usern..users..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -67,15 +155,10 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/include/header.php" />
-        <option value="$PROJECT_DIR$/include/Logger.class.php" />
-        <option value="$PROJECT_DIR$/dist/js/bootstrap.js" />
-        <option value="$PROJECT_DIR$/include/js/custom.js" />
         <option value="$PROJECT_DIR$/dist/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/modules/mod_contact/vue/vue_contact.php" />
         <option value="$PROJECT_DIR$/modules/objects/modele_participant.php" />
         <option value="$PROJECT_DIR$/modules/objects/modele_item_type.php" />
-        <option value="$PROJECT_DIR$/modules/objects/modele_message.php" />
         <option value="db-console:/5067ad16/95f615fa-9425-462a-ba92-6c39ca6737b4/" />
         <option value="$PROJECT_DIR$/include/params_connexion.php" />
         <option value="$PROJECT_DIR$/modules/mod_inscription/modele/modele_inscription.php" />
@@ -92,7 +175,6 @@
         <option value="$PROJECT_DIR$/modules/mod_boutique/modele/modele_boutique.php" />
         <option value="$PROJECT_DIR$/modules/mod_combat/controleur/controleur_combat2.php" />
         <option value="$PROJECT_DIR$/modules/mod_combat/modele/modele_combat_2.php" />
-        <option value="$PROJECT_DIR$/modules/mod_combat/modele/modele_combat_3.php" />
         <option value="$PROJECT_DIR$/modules/mod_connexion/controleur/controleur_connexion.php" />
         <option value="$PROJECT_DIR$/modules/mod_connexion/mod_connexion.php" />
         <option value="$PROJECT_DIR$/modules/mod_connexion/modele/modele_connexion.php" />
@@ -101,23 +183,29 @@
         <option value="$PROJECT_DIR$/modules/mod_boutique/mod_boutique.php" />
         <option value="$PROJECT_DIR$/modules/mod_boutique/controleur/controleur_boutique.php" />
         <option value="$PROJECT_DIR$/modules/mod_joueur/controleur/controleur_joueur.php" />
-        <option value="$PROJECT_DIR$/modules/objects/modele_joueur.php" />
-        <option value="$PROJECT_DIR$/modules/mod_joueur/vue/vue_profil.php" />
         <option value="$PROJECT_DIR$/modules/mod_boutique/vue/vue_boutique.php" />
         <option value="$PROJECT_DIR$/modules/mod_combat2/mod_combat2.php" />
-        <option value="$PROJECT_DIR$/include/style.css" />
-        <option value="$PROJECT_DIR$/modules/mod_combat/vue/vue_combat.php" />
-        <option value="$PROJECT_DIR$/modules/mod_combat/controleur/controleur_combat.php" />
         <option value="$PROJECT_DIR$/modules/objects/modele_scenario.php" />
         <option value="$PROJECT_DIR$/modules/mod_combat/mod_combat2.php" />
         <option value="$PROJECT_DIR$/modules/mod_combat/mod_combat.php" />
-        <option value="$PROJECT_DIR$/modules/mod_combat/modele/modele_combat.php" />
         <option value="$PROJECT_DIR$/modules/objects/modele_joueur_IA.php" />
         <option value="$PROJECT_DIR$/modules/objects/modele_personnage.php" />
         <option value="$PROJECT_DIR$/include/body.php" />
         <option value="$PROJECT_DIR$/include/init_errors.php" />
         <option value="$PROJECT_DIR$/include/params_site.php" />
         <option value="$PROJECT_DIR$/include/dbMapper.php" />
+        <option value="$PROJECT_DIR$/include/style.css" />
+        <option value="$PROJECT_DIR$/todoprojetphp.txt" />
+        <option value="$PROJECT_DIR$/modules/mod_combat/modele/modele_combat_3.php" />
+        <option value="$PROJECT_DIR$/modules/mod_joueur/vue/vue_profil.php" />
+        <option value="$PROJECT_DIR$/modules/mod_combat/vue/vue_combat.php" />
+        <option value="$PROJECT_DIR$/modules/mod_combat/controleur/controleur_combat.php" />
+        <option value="$PROJECT_DIR$/modules/objects/modele_message.php" />
+        <option value="$PROJECT_DIR$/modules/mod_combat/modele/modele_combat.php" />
+        <option value="$PROJECT_DIR$/modules/objects/modele_joueur.php" />
+        <option value="$PROJECT_DIR$/modules/mod_messagerie/modele/modele_message.php" />
+        <option value="$PROJECT_DIR$/modules/mod_messagerie/modele/modele_messagerie.php" />
+        <option value="$PROJECT_DIR$/modules/mod_messagerie/controleur/controleur_messagerie.php" />
       </list>
     </option>
   </component>
@@ -291,8 +379,290 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="mod_messagerie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chinelos_Battle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chinelos_Battle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mod_messagerie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modele" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modele_messagerie.php" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpFileNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chinelos_Battle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chinelos_Battle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mod_messagerie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modele" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chinelos_Battle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chinelos_Battle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mod_messagerie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controleur" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controleur_messagerie.php" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpFileNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ModMessagerieControleurMessagerie" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chinelos_Battle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chinelos_Battle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mod_joueur" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chinelos_Battle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chinelos_Battle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mod_joueur" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue_profil.php" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpFileNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ModJoueurVueJoueur" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chinelos_Battle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chinelos_Battle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mod_joueur" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controleur" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controleur_joueur.php" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpFileNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ModJoueurControleurJoueur" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chinelos_Battle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chinelos_Battle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mod_connexion" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chinelos_Battle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chinelos_Battle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mod_connexion" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modele" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modele_connexion.php" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpFileNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ModConnexionModeleConnexion" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chinelos_Battle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chinelos_Battle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mod_connexion" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controleur" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controleur_connexion.php" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpFileNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ModConnexionControleurConnexion" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chinelos_Battle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chinelos_Battle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="mod_combat" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chinelos_Battle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chinelos_Battle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mod_combat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue_combat.php" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpFileNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ModCombatVueCombat" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpElementNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -357,6 +727,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chinelos_Battle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Chinelos_Battle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="include" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -381,6 +765,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\iut\Chinelos_Battle\modules\mod_combat\controleur" />
       <recent name="C:\xampp\htdocs\iut\mini_rpg\installation" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -555,29 +940,29 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293556" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293556" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293556" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24426934" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293556" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293556" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24426934" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298887" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="SonarQube" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293556" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="SonarQube" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293556" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.186407" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1927663" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293556" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Regex Tester" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32962137" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.309467" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33015114" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293556" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.398568" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Duplicates" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34743875" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39777246" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -616,113 +1001,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="uml://PHP/\Item">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>PHP</ID>
-          <OriginalElement>\Item</OriginalElement>
-          <nodes>
-            <node x="0.0" y="2017.0">\modele_scenario</node>
-            <node x="68.0" y="782.5">\Item</node>
-            <node x="2647.0" y="232.0">\Personnage</node>
-            <node x="1792.0" y="507.0">\Equipe</node>
-            <node x="595.2500000000001" y="1633.0">\Joueur_IA</node>
-            <node x="1215.0" y="771.5">\Element</node>
-            <node x="582.0000000000001" y="815.5">\Item_type</node>
-            <node x="953.2500000000001" y="1567.0">\Joueur</node>
-            <node x="1244.5" y="0.0">\DBMapper</node>
-            <node x="2560.0" y="860.0">\Action</node>
-            <node x="1505.0" y="816.0">\Niveau</node>
-            <node x="777.0000000000001" y="683.5">\Participant</node>
-            <node x="324.0000000000001" y="793.0">\Message</node>
-            <node x="0.0" y="1611.0">\Attaque</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="\Item" target="\DBMapper">
-              <point x="0.0" y="-92.0" />
-              <point x="186.0" y="182.0" />
-              <point x="1256.666666666667" y="182.0" />
-              <point x="-97.33333333333326" y="81.0" />
-            </edge>
-            <edge source="\Niveau" target="\DBMapper">
-              <point x="0.0" y="-58.5" />
-              <point x="1642.5" y="212.0" />
-              <point x="1378.3333333333335" y="212.0" />
-              <point x="24.333333333333258" y="81.0" />
-            </edge>
-            <edge source="\Action" target="\DBMapper">
-              <point x="0.0" y="-14.5" />
-              <point x="2593.5" y="192.0" />
-              <point x="1427.0" y="192.0" />
-              <point x="73.0" y="81.0" />
-            </edge>
-            <edge source="\Joueur" target="\Participant">
-              <point x="0.0" y="-202.5" />
-              <point x="1207.75" y="1542.0" />
-              <point x="1090.5" y="1542.0" />
-              <point x="104.49999999999989" y="191.0" />
-            </edge>
-            <edge source="\Participant" target="\DBMapper">
-              <point x="-1.1368683772161603E-13" y="-191.0" />
-              <point x="986.0" y="212.0" />
-              <point x="1329.666666666667" y="212.0" />
-              <point x="-24.333333333333258" y="81.0" />
-            </edge>
-            <edge source="\Equipe" target="\DBMapper">
-              <point x="0.0" y="-367.5" />
-              <point x="2166.0" y="202.0" />
-              <point x="1402.6666666666665" y="202.0" />
-              <point x="48.666666666666515" y="81.0" />
-            </edge>
-            <edge source="\Element" target="\DBMapper">
-              <point x="0.0" y="-103.0" />
-              <point x="0.0" y="81.0" />
-            </edge>
-            <edge source="\Joueur_IA" target="\Participant">
-              <point x="0.0" y="-136.5" />
-              <point x="764.2500000000001" y="1542.0" />
-              <point x="881.5000000000001" y="1542.0" />
-              <point x="-104.5" y="191.0" />
-            </edge>
-            <edge source="\Item_type" target="\DBMapper">
-              <point x="0.0" y="-59.0" />
-              <point x="669.5000000000001" y="202.0" />
-              <point x="1305.3333333333335" y="202.0" />
-              <point x="-48.66666666666674" y="81.0" />
-            </edge>
-            <edge source="\Personnage" target="\DBMapper">
-              <point x="0.0" y="-642.5" />
-              <point x="3314.0" y="182.0" />
-              <point x="1451.3333333333335" y="182.0" />
-              <point x="97.33333333333326" y="81.0" />
-            </edge>
-            <edge source="\Attaque" target="\Item">
-              <point x="0.0" y="-158.5" />
-              <point x="0.0" y="92.0" />
-            </edge>
-            <edge source="\Message" target="\DBMapper">
-              <point x="0.0" y="-81.5" />
-              <point x="443.0000000000001" y="192.0" />
-              <point x="1281.0" y="192.0" />
-              <point x="-73.0" y="81.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.45684113865932047" x="366.0" y="435.0" />
-          <SelectedNodes>
-            <node>\Item</node>
-          </SelectedNodes>
-          <Categories>
-            <Category>Constructors</Category>
-            <Category>Fields</Category>
-            <Category>Methods</Category>
-            <Category>Constants</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://DATABASE/8629a1a4-c42e-4276-9e87-514786dc7144.schema:test">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -731,8 +1009,8 @@
           <nodes>
             <node x="" y="">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.item</node>
             <node x="" y="">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.personnage</node>
-            <node x="" y="">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.equipe</node>
             <node x="" y="">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.element</node>
+            <node x="" y="">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.equipe</node>
             <node x="" y="">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.users</node>
             <node x="" y="">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.attaque</node>
             <node x="" y="">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.niveau</node>
@@ -757,13 +1035,13 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/5067ad16/8629a1a4-c42e-4276-9e87-514786dc7144/test..equipe">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/objects/modele_item.php">
@@ -775,23 +1053,23 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/5067ad16/8629a1a4-c42e-4276-9e87-514786dc7144/test..personnage">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/5067ad16/8629a1a4-c42e-4276-9e87-514786dc7144/test..item">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/objects/modele_niveau.php">
@@ -832,13 +1110,13 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/5067ad16/8629a1a4-c42e-4276-9e87-514786dc7144/test..users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/mod_inscription/controleur/controleur_inscription.php">
@@ -872,13 +1150,13 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/5067ad16/8629a1a4-c42e-4276-9e87-514786dc7144/test..element">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/mod_messagerie/vue/vue_messagerie.php">
@@ -899,13 +1177,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.49459684" vertical-offset="0" max-vertical-offset="1203">
           <caret line="35" column="12" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mod_joueur/mod_joueur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12718205" vertical-offset="0" max-vertical-offset="1203">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -944,13 +1215,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mod_connexion/controleur/controleur_connexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.045719035" vertical-offset="89" max-vertical-offset="1292">
-          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/mod_connexion/vue/vue_connexion.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6500416" vertical-offset="0" max-vertical-offset="1203">
@@ -958,38 +1222,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mod_connexion/modele/modele_connexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.83042395" vertical-offset="259" max-vertical-offset="1462">
-          <caret line="74" column="37" selection-start-line="74" selection-start-column="20" selection-end-line="74" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mod_joueur/controleur/controleur_joueur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.73150456" vertical-offset="361" max-vertical-offset="1598">
-          <caret line="73" column="85" selection-start-line="73" selection-start-column="85" selection-end-line="73" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mod_joueur/vue/vue_profil.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7714286" vertical-offset="2754" max-vertical-offset="4097">
-          <caret line="216" column="28" selection-start-line="216" selection-start-column="28" selection-end-line="216" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/mod_boutique/vue/vue_boutique.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5369909" vertical-offset="136" max-vertical-offset="1343">
           <caret line="46" column="9" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mod_combat/vue/vue_combat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46300915" vertical-offset="769" max-vertical-offset="2414">
-          <caret line="78" column="57" selection-start-line="78" selection-start-column="43" selection-end-line="78" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -1009,14 +1245,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mod_combat/controleur/controleur_combat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="595" max-vertical-offset="2890">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/objects/modele_action.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.070656694" vertical-offset="0" max-vertical-offset="1203">
@@ -1029,78 +1257,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="2244">
           <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
-          <folding>
-            <marker date="1421793934098" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..attaque..." />
-            <marker date="1421793934098" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1421793934098" expanded="true" signature="-1:-1" placeholder="SELECT id_at..attaque..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/mod_combat/modele/modele_combat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.59351623" vertical-offset="357" max-vertical-offset="2516">
-          <caret line="63" column="51" selection-start-line="63" selection-start-column="51" selection-end-line="63" selection-end-column="51" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/objects/modele_joueur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-49.53846" vertical-offset="650" max-vertical-offset="4505">
-          <caret line="114" column="43" selection-start-line="114" selection-start-column="43" selection-end-line="114" selection-end-column="43" />
-          <folding>
-            <marker date="1421793933943" expanded="true" signature="-1:-1" placeholder="SELECT id_us..users..." />
-            <marker date="1421793933943" expanded="true" signature="-1:-1" placeholder="SELECT id_eq..equipe..." />
-            <marker date="1421793933943" expanded="true" signature="-1:-1" placeholder="SELECT id_eq..equipe..." />
-            <marker date="1421793933943" expanded="true" signature="-1:-1" placeholder="select id_us..users..." />
-            <marker date="1421793933943" expanded="true" signature="-1:-1" placeholder="select usern..users..." />
-            <marker date="1421793933943" expanded="true" signature="-1:-1" placeholder="SELECT users..users..." />
-            <marker date="1421793933943" expanded="true" signature="-1:-1" placeholder="select id_us..users..." />
-            <marker date="1421793933943" expanded="true" signature="-1:-1" placeholder="select SUM(p..equipe..." />
-            <marker date="1421793933943" expanded="true" signature="-1:-1" placeholder="UPDATE users..." />
-            <marker date="1421793933943" expanded="true" signature="-1:-1" placeholder="UPDATE users..." />
-            <marker date="1421793933943" expanded="true" signature="-1:-1" placeholder="select argen..users..." />
-            <marker date="1421793933943" expanded="true" signature="-1:-1" placeholder="update users..." />
-            <marker date="1421793933943" expanded="true" signature="-1:-1" placeholder="update users..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/objects/modele_joueur_IA.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.75976723" vertical-offset="361" max-vertical-offset="1564">
-          <caret line="75" column="91" selection-start-line="75" selection-start-column="91" selection-end-line="75" selection-end-column="91" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/objects/modele_personnage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-29.115385" vertical-offset="10854" max-vertical-offset="13940">
-          <caret line="683" column="26" selection-start-line="683" selection-start-column="26" selection-end-line="683" selection-end-column="26" />
-          <folding>
-            <marker date="1421870429885" expanded="true" signature="-1:-1" placeholder="SELECT max(i..personnage..." />
-            <marker date="1421870429885" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1421870429885" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..niveau..." />
-            <marker date="1421870429885" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..personnage..." />
-            <marker date="1421870429885" expanded="true" signature="-1:-1" placeholder="UPDATE perso..." />
-            <marker date="1421870429885" expanded="true" signature="-1:-1" placeholder="UPDATE perso..." />
-            <marker date="1421870429885" expanded="true" signature="-1:-1" placeholder="UPDATE perso..." />
-            <marker date="1421870429885" expanded="true" signature="-1:-1" placeholder="UPDATE perso..." />
-            <marker date="1421870429885" expanded="true" signature="-1:-1" placeholder="UPDATE perso..." />
-            <marker date="1421870429885" expanded="true" signature="-1:-1" placeholder="UPDATE perso..." />
-            <marker date="1421870429885" expanded="true" signature="-1:-1" placeholder="UPDATE perso..." />
-            <marker date="1421870429885" expanded="true" signature="-1:-1" placeholder="UPDATE perso..." />
-            <marker date="1421870429885" expanded="true" signature="-1:-1" placeholder="UPDATE perso..." />
-            <marker date="1421870429885" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..personnage..." />
-            <marker date="1421870429885" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421870429885" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421870429885" expanded="true" signature="-1:-1" placeholder="UPDATE perso..." />
-            <marker date="1421870429885" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1421870429885" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1421870429885" expanded="true" signature="-1:-1" placeholder="UPDATE perso..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1108,6 +1265,173 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334" vertical-offset="126" max-vertical-offset="1462">
           <caret line="31" column="65" selection-start-line="31" selection-start-column="65" selection-end-line="31" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48413345" vertical-offset="0" max-vertical-offset="14739">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/todoprojetphp.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1229">
+          <caret line="0" column="19" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/mod_joueur/controleur/controleur_joueur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-38.115383" vertical-offset="250" max-vertical-offset="1479">
+          <caret line="73" column="67" selection-start-line="73" selection-start-column="67" selection-end-line="73" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/mod_joueur/mod_joueur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12718205" vertical-offset="0" max-vertical-offset="1203">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/mod_joueur/vue/vue_profil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-25.346153" vertical-offset="2622" max-vertical-offset="3927">
+          <caret line="193" column="27" selection-start-line="193" selection-start-column="27" selection-end-line="193" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/objects/modele_participant.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22610141" vertical-offset="0" max-vertical-offset="2193">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/objects/modele_joueur_IA.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0598503" vertical-offset="0" max-vertical-offset="1564">
+          <caret line="75" column="27" selection-start-line="75" selection-start-column="27" selection-end-line="75" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Chinelos_Battle_git/Chinelos_Battle/modules/mod_combat/controleur/controleur_combat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.90440565" vertical-offset="1088" max-vertical-offset="2890">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/mod_combat/vue/vue_combat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5982256" vertical-offset="1058" max-vertical-offset="2261">
+          <caret line="90" column="35" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/mod_combat/controleur/controleur_combat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1326" max-vertical-offset="2890">
+          <caret line="78" column="69" selection-start-line="78" selection-start-column="69" selection-end-line="78" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/mod_connexion/controleur/controleur_connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.010806317" vertical-offset="21" max-vertical-offset="1224">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/objects/modele_personnage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.8689076" vertical-offset="3720" max-vertical-offset="13940">
+          <caret line="158" column="189" selection-start-line="158" selection-start-column="32" selection-end-line="158" selection-end-column="189" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/objects/modele_joueur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3468" max-vertical-offset="4726">
+          <caret line="266" column="37" selection-start-line="266" selection-start-column="20" selection-end-line="266" selection-end-column="37" />
+          <folding>
+            <marker date="1422207719319" expanded="true" signature="815:940" placeholder="SELECT id_us..users..." />
+            <marker date="1422207719319" expanded="true" signature="1506:1559" placeholder="SELECT id_eq..equipe..." />
+            <marker date="1422207719319" expanded="true" signature="1959:2012" placeholder="SELECT id_eq..equipe..." />
+            <marker date="1422207719319" expanded="true" signature="2804:2854" placeholder="select id_us..users..." />
+            <marker date="1422207719319" expanded="true" signature="3010:3072" placeholder="select usern..users..." />
+            <marker date="1422207719319" expanded="true" signature="3438:3915" placeholder="SELECT users..users..." />
+            <marker date="1422207719319" expanded="true" signature="4299:4411" placeholder="select id_us..users..." />
+            <marker date="1422207719319" expanded="true" signature="4553:4777" placeholder="select SUM(p..equipe..." />
+            <marker date="1422207719319" expanded="true" signature="6647:6704" placeholder="UPDATE users..." />
+            <marker date="1422207719319" expanded="true" signature="7460:7517" placeholder="UPDATE users..." />
+            <marker date="1422207719319" expanded="true" signature="9307:9354" placeholder="select argen..users..." />
+            <marker date="1422207719319" expanded="true" signature="10917:10991" placeholder="update users..." />
+            <marker date="1422207719319" expanded="true" signature="11191:11263" placeholder="update users..." />
+            <marker date="1422207719319" expanded="true" signature="11444:11493" placeholder="select usern..users..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/mod_messagerie/modele/modele_message.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="680" max-vertical-offset="918">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <marker date="1422207920636" expanded="true" signature="593:707" placeholder="select objet..messages..." />
+            <marker date="1422207920636" expanded="true" signature="1578:1727" placeholder="INSERT INTO ..." />
+            <marker date="1422207920636" expanded="true" signature="1578:1747" placeholder="insert into ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/mod_combat/modele/modele_combat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5511222" vertical-offset="1173" max-vertical-offset="2516">
+          <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/mod_connexion/modele/modele_connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1054" max-vertical-offset="1292">
+          <caret line="62" column="32" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
+          <folding>
+            <marker date="1421793933956" expanded="true" signature="671:778" placeholder="select id_us..users..." />
+            <marker date="1421793933956" expanded="true" signature="1488:1586" placeholder="UPDATE users..." />
+            <marker date="1421793933956" expanded="true" signature="1939:2001" placeholder="UPDATE users..." />
+            <marker date="1421793933956" expanded="true" signature="2472:2519" placeholder="select usern..users..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/mod_messagerie/modele/modele_messagerie.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="986">
+          <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+          <folding>
+            <marker date="1422208284983" expanded="true" signature="418:479" placeholder="select id_me..messages..." />
+            <marker date="1422208284983" expanded="true" signature="588:650" placeholder="select id_me..messages..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/mod_messagerie/controleur/controleur_messagerie.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6500416" vertical-offset="0" max-vertical-offset="1203">
+          <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
           <folding />
         </state>
       </provider>
