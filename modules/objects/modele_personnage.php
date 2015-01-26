@@ -369,16 +369,12 @@ class Personnage extends DBMapper {
      * @throws Exception si puissance <= 0
      */
     function addPuissance ( $puissance ) {
-        if ( $puissance > 0 ) {
-            $this->_puissance += $puissance;
-            if ( $this->_in_BD ) {
-                static::requeteFromDB ( "UPDATE personnage SET puissance = :puissance WHERE id_personnage =:id_personnage", array ( 'id_personnage' => $this->getIdPersonnage (), 'puissance' => $this->_puissance ) );
-            }
-            if ( self::$db_debug ) {
-                static::log ( "ID :" . $this->getIdPersonnage () . "\t | Ajout de puissance : " . ( $this->_puissance - $puissance ) . " + " . $puissance . " = " . $this->_puissance . " puissance" );
-            }
-        } else {
-            throw new Exception( 'puissance à rajouté négative' );
+        $this->_puissance += $puissance;
+        if ( $this->_in_BD ) {
+            static::requeteFromDB ( "UPDATE personnage SET puissance = :puissance WHERE id_personnage =:id_personnage", array ( 'id_personnage' => $this->getIdPersonnage (), 'puissance' => $this->_puissance ) );
+        }
+        if ( self::$db_debug ) {
+            static::log ( "ID :" . $this->getIdPersonnage () . "\t | Ajout de puissance : " . ( $this->_puissance - $puissance ) . " + " . $puissance . " = " . $this->_puissance . " puissance" );
         }
     }
 
@@ -390,16 +386,12 @@ class Personnage extends DBMapper {
      * @throws Exception si defense <= 0
      */
     function addDefense ( $defense ) {
-        if ( $defense > 0 ) {
-            $this->_defense += $defense;
-            if ( $this->_in_BD ) {
-                static::requeteFromDB ( "UPDATE personnage SET defense = :defense WHERE id_personnage =:id_personnage", array ( 'id_personnage' => $this->getIdPersonnage (), 'defense' => $this->_defense ) );
-            }
-            if ( self::$db_debug ) {
-                static::log ( "ID :" . $this->getIdPersonnage () . "\t | Ajout de defense : " . ( $this->_defense - $defense ) . " + " . $defense . " = " . $this->_defense . " defense" );
-            }
-        } else {
-            throw new Exception( 'defense à rajouté négative' );
+        $this->_defense += $defense;
+        if ( $this->_in_BD ) {
+            static::requeteFromDB ( "UPDATE personnage SET defense = :defense WHERE id_personnage =:id_personnage", array ( 'id_personnage' => $this->getIdPersonnage (), 'defense' => $this->_defense ) );
+        }
+        if ( self::$db_debug ) {
+            static::log ( "ID :" . $this->getIdPersonnage () . "\t | Ajout de defense : " . ( $this->_defense - $defense ) . " + " . $defense . " = " . $this->_defense . " defense" );
         }
     }
 
