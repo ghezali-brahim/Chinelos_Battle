@@ -282,6 +282,7 @@ WHERE 1 = 1 order by personnage.niveau DESC, personnage.experience DESC;" );
 
     static function getUsernameJoueur($id_user){
         return self::requeteFromDB("select username from users where id_user=:id_user", array('id_user' => $id_user))[0][0];
+<<<<<<< HEAD
     }
 
     static function getListesUsers(){
@@ -304,7 +305,13 @@ WHERE 1 = 1 order by personnage.niveau DESC, personnage.experience DESC;" );
 
     function getItems(){
         return $this->_items;
+=======
+>>>>>>> origin/Tests
     }
+	
+	static function getListesUsers(){
+		return self::requeteFromDB("select id_user,username from users where last_connection IS NOT NULL");
+	}
 }
 
 
