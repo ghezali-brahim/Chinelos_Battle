@@ -3721,3 +3721,5 @@
 17/01/2015 17:15:57 SELECT nom FROM element WHERE id_element = :id_element : 	 Feu|Feu
 17/01/2015 17:15:57 SELECT nom FROM element WHERE id_element = :id_element : 	 Feu|Feu
 17/01/2015 17:15:57 SELECT nom FROM element WHERE id_element = :id_element : 	 Plante|Plante
+26/01/2015 21:55:14 ___________________________________________
+26/01/2015 21:55:14 select id_element,nom from element : 	 

@@ -151,3 +151,17 @@
 26/01/2015 21:32:56 select id_message from messages where id_destinataire=:id_user : 	 1
 26/01/2015 21:33:01 select id_message from messages where id_expeditaire=:id_user : 	 1
 26/01/2015 21:33:01 select id_message from messages where id_destinataire=:id_user : 	 1
+26/01/2015 21:53:20 select id_message from messages where id_expeditaire=:id_user : 	 1
+26/01/2015 21:53:20 select id_message from messages where id_destinataire=:id_user : 	 1
+26/01/2015 21:53:24 select id_message from messages where id_expeditaire=:id_user : 	 1
+26/01/2015 21:53:24 select id_message from messages where id_destinataire=:id_user : 	 1
+26/01/2015 22:13:37 select id_message from messages where id_expeditaire=:id_user : 	 1
+26/01/2015 22:13:37 select id_message from messages where id_destinataire=:id_user : 	 1
+26/01/2015 22:13:48 select id_message from messages where id_expeditaire=:id_user : 	 1
+26/01/2015 22:13:48 select id_message from messages where id_destinataire=:id_user : 	 1
+26/01/2015 22:13:56 select id_message from messages where id_expeditaire=:id_user : 	 1
+26/01/2015 22:13:56 select id_message from messages where id_destinataire=:id_user : 	 1
+26/01/2015 22:14:28 select id_message from messages where id_expeditaire=:id_user : 	 1
+26/01/2015 22:14:28 select id_message from messages where id_destinataire=:id_user : 	 1
+26/01/2015 22:14:32 select id_message from messages where id_expeditaire=:id_user : 	 1
+26/01/2015 22:14:32 select id_message from messages where id_destinataire=:id_user : 	 1

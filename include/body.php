@@ -107,7 +107,36 @@
     <div class="body" >
         <div class="body_resize" >
             <div class="right" >
-                <h2 >News & Events<br />
+			<?php
+				require_once "modules/include_objects.php";
+				$donneesjoueurs=Joueur::getAllJoueurClassement();
+				sort ( $donneesjoueurs, SORT_NUMERIC );
+					echo "<h2>Classement des Joueurs</h2>";
+					echo ' <table border="1" id="tableau">
+				<tr>
+					<th style="background-color:black; color:white"> Rang </th>
+					<th style="background-color:black; color:white"> Nom joueur </th>
+					<th style="background-color:black; color:white"> Niveau Total </th>
+					<th style="background-color:black; color:white"> Connecté </th>
+				</tr>';
+					$rang = 1;
+					foreach ( $donneesjoueurs as $value ) {
+						echo "<tr style='background-color:grey'>\n";
+						echo "<td>" . $rang . "</td>\n";
+						echo "<td>" . $value[ 'username' ] . "</td>\n";
+						echo "<td>" . $value[ 'niveauTotal' ] . "</td>\n";
+						if ( $value[ 'connected' ] ) {
+							echo "<td> O </td>\n";
+						} else {
+							echo "<td> X </td>\n";
+						}
+						echo "</tr>";
+						$rang++;
+					}
+				echo "</table>";
+				
+			?>
+              <!--  <h2 >News & Events<br />
                     <span > News et Events du jeu en direct</span ></h2 >
                 <img id="imgNews" src="include/images/majbeta13.jpg" alt="img" class="floated" />
 
@@ -132,7 +161,7 @@
                     Nous venons de créer un système automatique pour la création des équipes. </p >
 
                 <div class="bg" ></div >
-                <p ><a href="#" ><strong >Plus d'informations »</strong ></a ></p >
+                <p ><a href="#" ><strong >Plus d'informations »</strong ></a ></p >-->
             </div >
             <div class="left" >
                 <h2 >Bienvenue sur notre site !<br />

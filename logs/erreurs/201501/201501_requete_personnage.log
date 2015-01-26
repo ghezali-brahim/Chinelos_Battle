@@ -2053,3 +2053,15 @@
 26/01/2015 21:32:52 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1
 26/01/2015 21:32:56 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1
 26/01/2015 21:33:01 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1
+26/01/2015 21:53:01 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1
+26/01/2015 21:53:20 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1
+26/01/2015 21:53:24 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1
+26/01/2015 21:55:01 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1
+26/01/2015 21:55:44 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1
+26/01/2015 21:55:48 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1
+26/01/2015 21:55:55 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1
+26/01/2015 22:13:37 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1
+26/01/2015 22:13:48 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1
+26/01/2015 22:13:56 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1
+26/01/2015 22:14:28 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1
+26/01/2015 22:14:32 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1

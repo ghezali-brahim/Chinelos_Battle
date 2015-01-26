@@ -1051,3 +1051,113 @@ WHERE 1 = 1 order by personnage.niveau DESC, personnage.experience DESC; :
 26/01/2015 21:33:01 select username from users where id_user=:id_user : 	 1
 26/01/2015 21:33:01 select username from users where id_user=:id_user : 	 2
 26/01/2015 21:33:01 select username from users where id_user=:id_user : 	 1
+26/01/2015 21:53:01 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+26/01/2015 21:53:01 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+26/01/2015 21:53:19 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+26/01/2015 21:53:19 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+26/01/2015 21:53:20 select username from users where id_user=:id_user : 	 1
+26/01/2015 21:53:20 select username from users where id_user=:id_user : 	 2
+26/01/2015 21:53:20 select username from users where id_user=:id_user : 	 2
+26/01/2015 21:53:20 select username from users where id_user=:id_user : 	 1
+26/01/2015 21:53:20 select username from users where id_user=:id_user : 	 2
+26/01/2015 21:53:20 select username from users where id_user=:id_user : 	 1
+26/01/2015 21:53:24 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+26/01/2015 21:53:24 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+26/01/2015 21:53:24 select username from users where id_user=:id_user : 	 1
+26/01/2015 21:53:24 select username from users where id_user=:id_user : 	 2
+26/01/2015 21:53:24 select username from users where id_user=:id_user : 	 2
+26/01/2015 21:53:24 select username from users where id_user=:id_user : 	 1
+26/01/2015 21:53:24 select username from users where id_user=:id_user : 	 2
+26/01/2015 21:53:24 select username from users where id_user=:id_user : 	 1
+26/01/2015 21:55:01 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+26/01/2015 21:55:01 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+26/01/2015 21:55:44 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+26/01/2015 21:55:44 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+26/01/2015 21:55:48 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+26/01/2015 21:55:48 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+26/01/2015 21:55:55 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+26/01/2015 21:55:55 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+26/01/2015 21:55:55 select id_user, username,connected,nombre_victoire, nombre_defaite from users where  last_connection is not NULL : 	 
+26/01/2015 21:55:55 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+26/01/2015 21:55:55 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+26/01/2015 22:08:08 select id_user, username,connected,nombre_victoire, nombre_defaite from users where  last_connection is not NULL : 	 
+26/01/2015 22:08:08 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+26/01/2015 22:08:08 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 2
+26/01/2015 22:12:36 select id_user, username,connected,nombre_victoire, nombre_defaite from users where  last_connection is not NULL : 	 
+26/01/2015 22:12:36 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+26/01/2015 22:13:37 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+26/01/2015 22:13:37 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+26/01/2015 22:13:37 select username from users where id_user=:id_user : 	 1
+26/01/2015 22:13:37 select username from users where id_user=:id_user : 	 2
+26/01/2015 22:13:37 select username from users where id_user=:id_user : 	 2
+26/01/2015 22:13:37 select username from users where id_user=:id_user : 	 1
+26/01/2015 22:13:37 select username from users where id_user=:id_user : 	 2
+26/01/2015 22:13:37 select username from users where id_user=:id_user : 	 1
+26/01/2015 22:13:46 select id_user, username,connected,nombre_victoire, nombre_defaite from users where  last_connection is not NULL : 	 
+26/01/2015 22:13:46 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+26/01/2015 22:13:48 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+26/01/2015 22:13:48 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+26/01/2015 22:13:48 select username from users where id_user=:id_user : 	 1
+26/01/2015 22:13:48 select username from users where id_user=:id_user : 	 2
+26/01/2015 22:13:48 select username from users where id_user=:id_user : 	 2
+26/01/2015 22:13:48 select username from users where id_user=:id_user : 	 1
+26/01/2015 22:13:48 select username from users where id_user=:id_user : 	 2
+26/01/2015 22:13:48 select username from users where id_user=:id_user : 	 1
+26/01/2015 22:13:55 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+26/01/2015 22:13:56 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+26/01/2015 22:13:56 select username from users where id_user=:id_user : 	 1
+26/01/2015 22:13:56 select username from users where id_user=:id_user : 	 2
+26/01/2015 22:13:56 select username from users where id_user=:id_user : 	 2
+26/01/2015 22:13:56 select username from users where id_user=:id_user : 	 1
+26/01/2015 22:13:56 select username from users where id_user=:id_user : 	 2
+26/01/2015 22:13:56 select username from users where id_user=:id_user : 	 1
+26/01/2015 22:14:28 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+26/01/2015 22:14:28 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+26/01/2015 22:14:28 select username from users where id_user=:id_user : 	 1
+26/01/2015 22:14:28 select username from users where id_user=:id_user : 	 2
+26/01/2015 22:14:28 select username from users where id_user=:id_user : 	 2
+26/01/2015 22:14:28 select username from users where id_user=:id_user : 	 1
+26/01/2015 22:14:28 select username from users where id_user=:id_user : 	 2
+26/01/2015 22:14:28 select username from users where id_user=:id_user : 	 1
+26/01/2015 22:14:32 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+26/01/2015 22:14:32 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+26/01/2015 22:14:32 select username from users where id_user=:id_user : 	 1
+26/01/2015 22:14:32 select username from users where id_user=:id_user : 	 2
+26/01/2015 22:14:32 select username from users where id_user=:id_user : 	 2
+26/01/2015 22:14:32 select username from users where id_user=:id_user : 	 1
+26/01/2015 22:14:32 select username from users where id_user=:id_user : 	 2
+26/01/2015 22:14:32 select username from users where id_user=:id_user : 	 1
+26/01/2015 22:14:32 select id_user,username from users where last_connection IS NOT NULL : 	 
+26/01/2015 22:14:41 select id_user, username,connected,nombre_victoire, nombre_defaite from users where  last_connection is not NULL : 	 
+26/01/2015 22:14:41 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+26/01/2015 22:15:11 select id_user, username,connected,nombre_victoire, nombre_defaite from users where  last_connection is not NULL : 	 
+26/01/2015 22:15:11 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+26/01/2015 22:15:48 select id_user, username,connected,nombre_victoire, nombre_defaite from users where  last_connection is not NULL : 	 
+26/01/2015 22:15:48 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+26/01/2015 22:16:11 select id_user, username,connected,nombre_victoire, nombre_defaite from users where  last_connection is not NULL : 	 
+26/01/2015 22:16:11 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+26/01/2015 22:16:45 select id_user, username,connected,nombre_victoire, nombre_defaite from users where  last_connection is not NULL : 	 
+26/01/2015 22:16:45 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+26/01/2015 22:17:04 select id_user, username,connected,nombre_victoire, nombre_defaite from users where  last_connection is not NULL : 	 
+26/01/2015 22:17:04 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+26/01/2015 22:17:23 select id_user, username,connected,nombre_victoire, nombre_defaite from users where  last_connection is not NULL : 	 
+26/01/2015 22:17:23 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+26/01/2015 22:17:32 select id_user, username,connected,nombre_victoire, nombre_defaite from users where  last_connection is not NULL : 	 
+26/01/2015 22:17:32 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
+26/01/2015 22:17:58 select id_user, username,connected,nombre_victoire, nombre_defaite from users where  last_connection is not NULL : 	 
+26/01/2015 22:17:58 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+ : 	 1
