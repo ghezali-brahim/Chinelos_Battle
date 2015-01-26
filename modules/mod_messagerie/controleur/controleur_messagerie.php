@@ -41,21 +41,19 @@ class ModMessagerieControleurMessagerie {
     }
 
     public function afficherMessage () {
-        //ModMessagerieVueMessagerie::afficherMessage($message)
+        ModMessagerieVueMessagerie::afficherMessage($message);
     }
 
     public function afficherListeMessages () {
-        echo "Message envoyés:<br>";
-        print_r($this->_messagerie->getListesMessagesEnvoyer());
-        echo "<br><br>Message recus:<br>";
-        print_r($this->_messagerie->getListesMessagesRecus());
+        $messageEnvoyer=$this->_messagerie->getListesMessagesEnvoyer();
+        $messageRecus=$this->_messagerie->getListesMessagesRecus();
 
-        //ModMessagerieVueMessagerie::afficherlistesMessages ( $messages );
+        ModMessagerieVueMessagerie::afficherlistesMessages ( $messageEnvoyer, $messageRecus );
     }
 
     public function envoyerMessage () {
-        if(isset($_POST['message'])){
-            //$this->_messagerie->createMessage(...);
+        if(isset($_POST['objet']) && isset($_POST['contenu']) && isset($_POST['destinataire'])){
+            $this->_messagerie->createMessage ( $_POST['objet'], $_POST['contenu'], $_POST['destinataire'] );
         }else{
             ModMessagerieVueMessagerie::afficherFormEnvoieMessage ();
         }
