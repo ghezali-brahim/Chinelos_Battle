@@ -62,5 +62,33 @@ class ModBoutiqueVueBoutique {
         echo "Bienvenue dans votre inventaire, " . $joueur[ 'username' ] . ".<br><br>";
         echo "<div class='bourse'><p class='textBourse'>" . $joueur[ 'argent' ] . " Gils</p></div><br><br>";
     }
+
+    static function afficherInventaire($items){
+        echo "<h2>Votre liste d'items:</h2>";
+
+        echo ' <table border="1" id="tableau">
+	<tr>
+		<th> ID Item </th>
+		<th> Nom </th>
+		<th> Quantite </th>
+	</tr>';
+        if(count($items)>0){
+            foreach ( $items as $item ) {
+                echo "<tr>\n";
+                $element=$item[ 'item' ]->getArray();
+                echo "<td>" . $element['id_item'] . "</td>";
+                echo "<td>" . $element[ 'nom' ] . "</td>\n";
+                echo "<td>" . $item[ 'quantite' ] . "</td>\n";
+                echo "</tr>";
+            }
+        }else{
+            echo "<tr>\n";
+            echo "<td>____</td>";
+            echo "<td>____</td>";
+            echo "<td>____</td>";
+            echo "</tr>";
+        }
+        echo "</table>";
+    }
 }
 

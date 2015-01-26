@@ -78,4 +78,8 @@ class ModJoueurControleurJoueur {
             ModJoueurVueJoueur::afficherChoixClassement ();
         }
     }
+    function afficherJoueurConnectee(){
+        $users=Joueur::getListesUsersConnected();
+        ModJoueurVueJoueur::afficherListeUsersConnected($users);
+    }
 }

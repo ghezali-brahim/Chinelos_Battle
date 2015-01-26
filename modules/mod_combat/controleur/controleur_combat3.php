@@ -23,6 +23,7 @@ class ModCombatControleurCombat {
             $_SESSION[ 'ennemi' ] = serialize ( new Joueur_IA( $this->_joueur->getNiveauTotalParticipant () ) );
         }
         $this->_ennemi = unserialize ( $_SESSION[ 'ennemi' ] );
+        $this->_combat= new Combat($this->_joueur, $this->_ennemi);
     }
 
     public function accueilModule () {
@@ -46,6 +47,20 @@ class ModCombatControleurCombat {
         $this->_ennemi->incrementerIndicePersoActuelParticipant ();
         ModCombatVueCombat::affichageUnTour($this->_joueur, $this->_ennemi);
         ModCombatVueCombat::retourneAffichageTour($this->_joueur, $this->_ennemi);
+    }
+
+    public function combattre(){
+        print_r($this->_joueur);
+        echo "<br><br>";
+        print_r($this->_ennemi);
+        try {
+            if ( $this->_combat->getNbrTour () == 0 ) {
+                $this->_combat->demarrerCombat ();
+            }
+            ModCombatVueCombat::afficherTourCombat ( $this->_combat );
+        }catch( Exception $e){
+            echo "Veuillez d'abbord choisir un opposant";
+        }
     }
 
     public function afficherTour () {

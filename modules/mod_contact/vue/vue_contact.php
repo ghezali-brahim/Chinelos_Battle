@@ -7,7 +7,7 @@ class ModContactVueContact {
     public static function afficherAccueilContact () {
         echo "Contact<br><br>";
         echo "<div align=center>
-			<form method=POST action=index.php?module=contact&action=envoyerMail>
+			<form method=POST action=#>
 			<input type=hidden name=subject value=formmail>
 			<table>
 			<tr><td>Objet :</td>

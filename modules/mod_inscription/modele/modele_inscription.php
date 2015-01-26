@@ -20,7 +20,7 @@ class ModInscriptionModeleInscription extends DBMapper {
         $password_sha1 = sha1 ( $username . $password . self::$CONSTANTECRYPT );
         $identifiant   = array ( 'username' => $username, 'password' => $password_sha1, 'email' => $email, 'argent_depart' => self::$ARGENT_DEPART );
         try {
-            self::requeteFromDB ( "INSERT INTO users VALUES('', :username, :password, :email, '', '', :argent_depart,'','')", $identifiant );
+            self::requeteFromDB ( "INSERT INTO users (username, password, email, argent)VALUES(:username, :password, :email,:argent_depart)", $identifiant );
 
             return TRUE;
         } catch ( Exception $e ) {

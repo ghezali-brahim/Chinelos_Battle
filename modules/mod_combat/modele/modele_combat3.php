@@ -5,17 +5,22 @@ if ( ! defined ( 'TEST_INCLUDE' ) )
 
 //TODO
 class Combat extends DBMapper {
+
+    protected $id_combat;
     protected $nbrTour;
     private   $_participant1;
     private   $_participant2;
-    private   $tourDe;// indice du participant dont c'est le tour
+    private   $indice_tour_de_joueur;// indice du participant dont c'est le tour
     private   $indicePersonnagesEquipe1;
     private   $indicePersonnagesEquipe2;
     private   $_joueurReel;
+    private   $vainqueur;
 
     function __construct ( $participant1, $participant2 ) {
-        if(get_class($participant2)==Joueur::class){
+        if(is_a($participant2,new Joueur)){
             $this->_joueurReel=TRUE;
+        }else{
+            $this->_joueurReel=FALSE;
         }
         if($this->_joueurReel){
             $donnees=array('id_joueur_1' => $participant1->getIdUser(), 'id_joueur_2' =>$participant2->getIdUser());
@@ -24,10 +29,28 @@ class Combat extends DBMapper {
         }
         $this->_participant1            = $participant1;
         $this->_participant2            = $participant2;
-        $this->nbrTour                  = 1;
+        $this->nbrTour                  = 0;
         $this->tourDe                   = 1;
         $this->indicePersonnagesEquipe1 = 0;
         $this->indicePersonnagesEquipe2 = 0;
+        $this->indice_tour_de_joueur = 0;
+    }
+
+    /**
+     * @return int
+     */
+    public function getNbrTour () {
+        return $this->nbrTour;
+    }
+
+    function demarrerCombat() {
+        $donnees         = array ( 'id_joueur_1' => $this->_participant1->getIdUser (), 'id_joueur_2' => $this->_participant2->getIdUser () );
+        $this->id_combat = self::requeteFromDB ( "select id_combat from combats where id_joueur_1=:id_joueur_1 AND id_joueur_2=:id_joueur_2 ORDER BY id_combat DESC LIMIT 1", $donnees )[ 0 ];
+        $this->nbrTour=1;
+        $this->indicePersonnagesEquipe1=0;
+        $this->indicePersonnagesEquipe2=0;
+        $donnees=array('indice_perso_j1' => $this->indicePersonnagesEquipe1, 'indice_perso_j2' => $this->indicePersonnagesEquipe2, 'nombre_tour' => $this->nbrTour, 'id_combat' => $this->id_combat);
+        self::requeteFromDB("UPDATE combats SET indice_perso_j1 = :indice_perso_j1, indice_perso_j2 = :indice_perso_j2, nombre_tour = :nombre_tour WHERE id_combat =:id_combat",$donnees);
     }
 
     function deroulementTour () {
@@ -41,6 +64,7 @@ class Combat extends DBMapper {
             $this->tourDe = 1;
         }
     }
+
     function incrementerIndicePerso($participant){
         $participant->incrementerIndicePersoActuelParticipant();
     }

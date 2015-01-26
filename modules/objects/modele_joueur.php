@@ -12,6 +12,7 @@ class Joueur extends Participant {
     protected $_argent;
     protected $_nombre_victoire;
     protected $_nombre_defaite;
+    protected $_items;
 
     /**
      * @return mixed
@@ -19,14 +20,22 @@ class Joueur extends Participant {
     public function getIdUser () {
         return $this->_id_user;
     }
-
+	
     /**
      * On créer un Joueur à partir de la base de données; On verifie d'abbord si le joueur est connecté.
      */
-    function __construct () {
-        if ( self::connectee () ) {
+    function __construct ($id_joueur = NULL) {
+        if(is_null($id_joueur)){
+            if(self::connectee()){
+                $user     = unserialize ( $_SESSION[ 'user' ] );
+                $id_joueur = $user->getIdUser ();
+
+            }else {
+                exit ( 'vous n\'etes pas connecté' );
+            }
+        }
             $user     = unserialize ( $_SESSION[ 'user' ] );
-            $resultat = static::requeteFromDB ( "SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user", array ( 'username' => $user->getUsername (), 'id_user' => $user->getIdUser () ) )[ 0 ];
+            $resultat = static::requeteFromDB ( "SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user", array ( 'username' => $user->getUsername (), 'id_user' => $id_joueur ) )[ 0 ];
             //Recuperation infos du joueur
             $this->_id_user         = $resultat[ 'id_user' ];
             $this->_username        = $resultat[ 'username' ];
@@ -46,8 +55,15 @@ class Joueur extends Participant {
                 $equipe = Equipe::createEquipeFromBD ( $id_equipe[ 'id_equipe' ] );
                 array_push ( $this->_equipes, $equipe );
             }
-        } else {
-            exit ( 'vous n\'etes pas connecté' );
+        $resultat=self::requeteFromDB("select id_item, quantite from inventaire where id_user=:id_user", array('id_user' => $this->_id_user));
+        $this->_items=array();
+        if(count($resultat)>0){
+            foreach($resultat as $itemTab){
+                $item=new Item($itemTab['id_item']);
+                $element=array('item' => $item,
+                               'quantite' => $itemTab['quantite']);
+                array_push($this->_items, $element);
+            }
         }
         $this->_date_derniere_refresh = time ();
     }
@@ -265,7 +281,29 @@ WHERE 1 = 1 order by personnage.niveau DESC, personnage.experience DESC;" );
     }
 
     static function getUsernameJoueur($id_user){
-        return self::requeteFromDB("select username from users where id_user=:id_user", array('id_user' => $id_user))[0];
+        return self::requeteFromDB("select username from users where id_user=:id_user", array('id_user' => $id_user))[0][0];
+    }
+
+    static function getListesUsers(){
+        return self::requeteFromDB("select id_user,username from users where last_connection IS NOT NULL");
+    }
+
+    static function getListesUsersConnected(){
+        return self::requeteFromDB("select id_user,username from users where connected=TRUE");
+    }
+
+    // SARAH prend $id de l'item en param, parcrous la liste items du joueur jusqu'à trouver le bon item et fait l'action
+    function utiliserItem($id_item){
+
+        foreach($this->_items as $val){
+            if($val['id']==$id_item){
+                $this->_items->faireAction($this->_id_user);
+            }
+        }
+    }
+
+    function getItems(){
+        return $this->_items;
     }
 }
 

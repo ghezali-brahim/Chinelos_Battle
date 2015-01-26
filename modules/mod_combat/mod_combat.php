@@ -18,6 +18,8 @@ if ( $action == "afficher" ) {
     $controleur->listeCombat ();
 } else if ( $action == "Combat" ) {
     $controleur->combat ();
+} else if ( $action == "combattre" ) {
+    $controleur->combattre();
 } else if ( $action == "afficherTour" ) {
     $controleur->afficherTour ();
 } else if ( $action == "passerTour" ) {

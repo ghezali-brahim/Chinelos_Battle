@@ -43,6 +43,7 @@ class ModBoutiqueControleurBoutique
     public function afficher ()
     {
         ModBoutiqueVueBoutique::afficherJoueur ( $this->_joueur->getParticipant () );
+        ModBoutiqueVueBoutique::afficherInventaire($this->_joueur->getItems());
     }
 
     // 29/11/2014

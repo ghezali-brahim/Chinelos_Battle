@@ -221,5 +221,15 @@ class ModJoueurVueJoueur {
         <a href='index.php?module=joueur&action=classement&type=joueurs' ><button class='buttonModule' style='width:130px;height=20px;' >Afficher classement Joueur</button ></a ><br >
     <?php
     }
+     static function afficherListeUsersConnected($users){
+         echo "<h2>Listes des joueurs connectes : </h2>";
+         echo "<div style=\"margin:auto;width:150px;background-color: #C0A16B\">";
+         echo '<ul>';
+        foreach($users as $user){
+            echo '<li>- '.$user['username'].'</li>';
+        }
+         echo '</ul>';
+         echo "</div>";
+     }
 }
 

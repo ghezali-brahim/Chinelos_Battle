@@ -12,6 +12,7 @@ if ( ! Joueur::connectee () ) {
 $controleur = new ModJoueurControleurJoueur();
 echo '<a href="index.php?module=joueur">Accueil Module</a><br/>';
 //echo "<h2>" . $action . "</h2>";
+$controleur->afficherJoueurConnectee();
 if ( $action == "afficher" ) {
     $controleur->afficher ();
 } else if ( $action == "transferer" ) {
