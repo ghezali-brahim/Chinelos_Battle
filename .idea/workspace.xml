@@ -55,88 +55,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="controleur_combat.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/mod_combat/controleur/controleur_combat.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1326" max-vertical-offset="2890">
-              <caret line="78" column="69" selection-start-line="78" selection-start-column="69" selection-end-line="78" selection-end-column="69" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="modele_messagerie.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/mod_messagerie/modele/modele_messagerie.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="986">
-              <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
-              <folding>
-                <marker date="1422208284983" expanded="true" signature="418:479" placeholder="select id_me..messages..." />
-                <marker date="1422208284983" expanded="true" signature="588:650" placeholder="select id_me..messages..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="controleur_messagerie.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/modules/mod_messagerie/controleur/controleur_messagerie.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6500416" vertical-offset="0" max-vertical-offset="1203">
-              <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="modele_connexion.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/mod_connexion/modele/modele_connexion.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1054" max-vertical-offset="1292">
-              <caret line="62" column="32" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
-              <folding>
-                <marker date="1421793933956" expanded="true" signature="671:778" placeholder="select id_us..users..." />
-                <marker date="1421793933956" expanded="true" signature="1488:1586" placeholder="UPDATE users..." />
-                <marker date="1421793933956" expanded="true" signature="1939:2001" placeholder="UPDATE users..." />
-                <marker date="1421793933956" expanded="true" signature="2472:2519" placeholder="select usern..users..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="modele_message.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/mod_messagerie/modele/modele_message.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="680" max-vertical-offset="918">
-              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-              <folding>
-                <marker date="1422207920636" expanded="true" signature="593:707" placeholder="select objet..messages..." />
-                <marker date="1422207920636" expanded="true" signature="1578:1727" placeholder="INSERT INTO ..." />
-                <marker date="1422207920636" expanded="true" signature="1578:1747" placeholder="insert into ..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="modele_joueur.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="modele_joueur.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modules/objects/modele_joueur.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3468" max-vertical-offset="4726">
-              <caret line="266" column="37" selection-start-line="266" selection-start-column="20" selection-end-line="266" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.6142857" vertical-offset="4148" max-vertical-offset="5491">
+              <caret line="287" column="14" selection-start-line="287" selection-start-column="14" selection-end-line="287" selection-end-column="14" />
               <folding>
-                <marker date="1422207719319" expanded="true" signature="815:940" placeholder="SELECT id_us..users..." />
-                <marker date="1422207719319" expanded="true" signature="1506:1559" placeholder="SELECT id_eq..equipe..." />
-                <marker date="1422207719319" expanded="true" signature="1959:2012" placeholder="SELECT id_eq..equipe..." />
-                <marker date="1422207719319" expanded="true" signature="2804:2854" placeholder="select id_us..users..." />
-                <marker date="1422207719319" expanded="true" signature="3010:3072" placeholder="select usern..users..." />
-                <marker date="1422207719319" expanded="true" signature="3438:3915" placeholder="SELECT users..users..." />
-                <marker date="1422207719319" expanded="true" signature="4299:4411" placeholder="select id_us..users..." />
-                <marker date="1422207719319" expanded="true" signature="4553:4777" placeholder="select SUM(p..equipe..." />
-                <marker date="1422207719319" expanded="true" signature="6647:6704" placeholder="UPDATE users..." />
-                <marker date="1422207719319" expanded="true" signature="7460:7517" placeholder="UPDATE users..." />
-                <marker date="1422207719319" expanded="true" signature="9307:9354" placeholder="select argen..users..." />
-                <marker date="1422207719319" expanded="true" signature="10917:10991" placeholder="update users..." />
-                <marker date="1422207719319" expanded="true" signature="11191:11263" placeholder="update users..." />
-                <marker date="1422207719319" expanded="true" signature="11444:11493" placeholder="select usern..users..." />
+                <marker date="1422313963109" expanded="true" signature="1102:1227" placeholder="SELECT id_us..users..." />
+                <marker date="1422313963109" expanded="true" signature="1784:1837" placeholder="SELECT id_eq..equipe..." />
+                <marker date="1422313963109" expanded="true" signature="2237:2290" placeholder="SELECT id_eq..equipe..." />
+                <marker date="1422313963109" expanded="true" signature="2597:2660" placeholder="select id_it..inventaire..." />
+                <marker date="1422313963109" expanded="true" signature="3501:3551" placeholder="select id_us..users..." />
+                <marker date="1422313963109" expanded="true" signature="3707:3769" placeholder="select usern..users..." />
+                <marker date="1422313963109" expanded="true" signature="4135:4612" placeholder="SELECT users..users..." />
+                <marker date="1422313963109" expanded="true" signature="4996:5108" placeholder="select id_us..users..." />
+                <marker date="1422313963109" expanded="true" signature="5250:5474" placeholder="select SUM(p..equipe..." />
+                <marker date="1422313963109" expanded="true" signature="7344:7401" placeholder="UPDATE users..." />
+                <marker date="1422313963109" expanded="true" signature="8157:8214" placeholder="UPDATE users..." />
+                <marker date="1422313963109" expanded="true" signature="10004:10051" placeholder="select argen..users..." />
+                <marker date="1422313963109" expanded="true" signature="11614:11688" placeholder="update users..." />
+                <marker date="1422313963109" expanded="true" signature="11888:11960" placeholder="update users..." />
+                <marker date="1422313963109" expanded="true" signature="12144:12193" placeholder="select usern..users..." />
+                <marker date="1422313963109" expanded="true" signature="12459:12527" placeholder="select id_us..users..." />
+                <marker date="1422313963109" expanded="true" signature="12621:12676" placeholder="select id_us..users..." />
               </folding>
             </state>
           </provider>
@@ -202,10 +143,10 @@
         <option value="$PROJECT_DIR$/modules/mod_combat/controleur/controleur_combat.php" />
         <option value="$PROJECT_DIR$/modules/objects/modele_message.php" />
         <option value="$PROJECT_DIR$/modules/mod_combat/modele/modele_combat.php" />
-        <option value="$PROJECT_DIR$/modules/objects/modele_joueur.php" />
         <option value="$PROJECT_DIR$/modules/mod_messagerie/modele/modele_message.php" />
         <option value="$PROJECT_DIR$/modules/mod_messagerie/modele/modele_messagerie.php" />
         <option value="$PROJECT_DIR$/modules/mod_messagerie/controleur/controleur_messagerie.php" />
+        <option value="$PROJECT_DIR$/modules/objects/modele_joueur.php" />
       </list>
     </option>
   </component>
@@ -936,7 +877,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293556" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293556" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -946,7 +887,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SonarQube" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293556" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1927663" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19236884" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293556" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -961,10 +902,38 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293556" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.398568" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Duplicates" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34743875" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Duplicates" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34743875" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39777246" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293556" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24426934" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293556" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Regex Tester" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32962137" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293556" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19267139" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.309467" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33015114" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293556" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293556" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.398568" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298887" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="SonarQube" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293556" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39777246" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Duplicates" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34743875" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1001,6 +970,32 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/modules/objects/modele_joueur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4522" max-vertical-offset="5491">
+          <caret line="266" column="37" selection-start-line="266" selection-start-column="20" selection-end-line="266" selection-end-column="37" />
+          <folding>
+            <marker date="1422313963109" expanded="true" signature="1102:1227" placeholder="SELECT id_us..users..." />
+            <marker date="1422313963109" expanded="true" signature="1784:1837" placeholder="SELECT id_eq..equipe..." />
+            <marker date="1422313963109" expanded="true" signature="2237:2290" placeholder="SELECT id_eq..equipe..." />
+            <marker date="1422313963109" expanded="true" signature="2597:2660" placeholder="select id_it..inventaire..." />
+            <marker date="1422313963109" expanded="true" signature="3501:3551" placeholder="select id_us..users..." />
+            <marker date="1422313963109" expanded="true" signature="3707:3769" placeholder="select usern..users..." />
+            <marker date="1422313963109" expanded="true" signature="4135:4612" placeholder="SELECT users..users..." />
+            <marker date="1422313963109" expanded="true" signature="4996:5108" placeholder="select id_us..users..." />
+            <marker date="1422313963109" expanded="true" signature="5250:5474" placeholder="select SUM(p..equipe..." />
+            <marker date="1422313963109" expanded="true" signature="7344:7401" placeholder="UPDATE users..." />
+            <marker date="1422313963109" expanded="true" signature="8157:8214" placeholder="UPDATE users..." />
+            <marker date="1422313963109" expanded="true" signature="10004:10051" placeholder="select argen..users..." />
+            <marker date="1422313963109" expanded="true" signature="11614:11688" placeholder="update users..." />
+            <marker date="1422313963109" expanded="true" signature="11888:11960" placeholder="update users..." />
+            <marker date="1422313963109" expanded="true" signature="12144:12193" placeholder="select usern..users..." />
+            <marker date="1422313963109" expanded="true" signature="12459:12527" placeholder="select id_us..users..." />
+            <marker date="1422313963109" expanded="true" signature="12621:12676" placeholder="select id_us..users..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="uml://DATABASE/8629a1a4-c42e-4276-9e87-514786dc7144.schema:test">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -1009,8 +1004,8 @@
           <nodes>
             <node x="" y="">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.item</node>
             <node x="" y="">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.personnage</node>
-            <node x="" y="">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.element</node>
             <node x="" y="">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.equipe</node>
+            <node x="" y="">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.element</node>
             <node x="" y="">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.users</node>
             <node x="" y="">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.attaque</node>
             <node x="" y="">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.niveau</node>
@@ -1035,13 +1030,13 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/5067ad16/8629a1a4-c42e-4276-9e87-514786dc7144/test..equipe">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/objects/modele_item.php">
@@ -1053,23 +1048,23 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/5067ad16/8629a1a4-c42e-4276-9e87-514786dc7144/test..personnage">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state />
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/5067ad16/8629a1a4-c42e-4276-9e87-514786dc7144/test..item">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/objects/modele_niveau.php">
@@ -1110,13 +1105,13 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/5067ad16/8629a1a4-c42e-4276-9e87-514786dc7144/test..users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/mod_inscription/controleur/controleur_inscription.php">
@@ -1150,13 +1145,13 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/5067ad16/8629a1a4-c42e-4276-9e87-514786dc7144/test..element">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/mod_messagerie/vue/vue_messagerie.php">
@@ -1361,38 +1356,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/objects/modele_joueur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3468" max-vertical-offset="4726">
-          <caret line="266" column="37" selection-start-line="266" selection-start-column="20" selection-end-line="266" selection-end-column="37" />
-          <folding>
-            <marker date="1422207719319" expanded="true" signature="815:940" placeholder="SELECT id_us..users..." />
-            <marker date="1422207719319" expanded="true" signature="1506:1559" placeholder="SELECT id_eq..equipe..." />
-            <marker date="1422207719319" expanded="true" signature="1959:2012" placeholder="SELECT id_eq..equipe..." />
-            <marker date="1422207719319" expanded="true" signature="2804:2854" placeholder="select id_us..users..." />
-            <marker date="1422207719319" expanded="true" signature="3010:3072" placeholder="select usern..users..." />
-            <marker date="1422207719319" expanded="true" signature="3438:3915" placeholder="SELECT users..users..." />
-            <marker date="1422207719319" expanded="true" signature="4299:4411" placeholder="select id_us..users..." />
-            <marker date="1422207719319" expanded="true" signature="4553:4777" placeholder="select SUM(p..equipe..." />
-            <marker date="1422207719319" expanded="true" signature="6647:6704" placeholder="UPDATE users..." />
-            <marker date="1422207719319" expanded="true" signature="7460:7517" placeholder="UPDATE users..." />
-            <marker date="1422207719319" expanded="true" signature="9307:9354" placeholder="select argen..users..." />
-            <marker date="1422207719319" expanded="true" signature="10917:10991" placeholder="update users..." />
-            <marker date="1422207719319" expanded="true" signature="11191:11263" placeholder="update users..." />
-            <marker date="1422207719319" expanded="true" signature="11444:11493" placeholder="select usern..users..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/mod_messagerie/modele/modele_message.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="680" max-vertical-offset="918">
+        <state vertical-scroll-proportion="0.5714286" vertical-offset="0" max-vertical-offset="1190">
           <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding>
-            <marker date="1422207920636" expanded="true" signature="593:707" placeholder="select objet..messages..." />
-            <marker date="1422207920636" expanded="true" signature="1578:1727" placeholder="INSERT INTO ..." />
-            <marker date="1422207920636" expanded="true" signature="1578:1747" placeholder="insert into ..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1406,25 +1374,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/mod_connexion/modele/modele_connexion.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1054" max-vertical-offset="1292">
+        <state vertical-scroll-proportion="0.8021613" vertical-offset="89" max-vertical-offset="1292">
           <caret line="62" column="32" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
           <folding>
-            <marker date="1421793933956" expanded="true" signature="671:778" placeholder="select id_us..users..." />
-            <marker date="1421793933956" expanded="true" signature="1488:1586" placeholder="UPDATE users..." />
-            <marker date="1421793933956" expanded="true" signature="1939:2001" placeholder="UPDATE users..." />
-            <marker date="1421793933956" expanded="true" signature="2472:2519" placeholder="select usern..users..." />
+            <marker date="1421793933956" expanded="true" signature="-1:-1" placeholder="select id_us..users..." />
+            <marker date="1421793933956" expanded="true" signature="-1:-1" placeholder="UPDATE users..." />
+            <marker date="1421793933956" expanded="true" signature="-1:-1" placeholder="UPDATE users..." />
+            <marker date="1421793933956" expanded="true" signature="-1:-1" placeholder="select usern..users..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/mod_messagerie/modele/modele_messagerie.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="986">
-          <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
-          <folding>
-            <marker date="1422208284983" expanded="true" signature="418:479" placeholder="select id_me..messages..." />
-            <marker date="1422208284983" expanded="true" signature="588:650" placeholder="select id_me..messages..." />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="1054">
+          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1433,6 +1398,32 @@
         <state vertical-scroll-proportion="0.6500416" vertical-offset="0" max-vertical-offset="1203">
           <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/objects/modele_joueur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6142857" vertical-offset="4148" max-vertical-offset="5491">
+          <caret line="287" column="14" selection-start-line="287" selection-start-column="14" selection-end-line="287" selection-end-column="14" />
+          <folding>
+            <marker date="1422313963109" expanded="true" signature="1102:1227" placeholder="SELECT id_us..users..." />
+            <marker date="1422313963109" expanded="true" signature="1784:1837" placeholder="SELECT id_eq..equipe..." />
+            <marker date="1422313963109" expanded="true" signature="2237:2290" placeholder="SELECT id_eq..equipe..." />
+            <marker date="1422313963109" expanded="true" signature="2597:2660" placeholder="select id_it..inventaire..." />
+            <marker date="1422313963109" expanded="true" signature="3501:3551" placeholder="select id_us..users..." />
+            <marker date="1422313963109" expanded="true" signature="3707:3769" placeholder="select usern..users..." />
+            <marker date="1422313963109" expanded="true" signature="4135:4612" placeholder="SELECT users..users..." />
+            <marker date="1422313963109" expanded="true" signature="4996:5108" placeholder="select id_us..users..." />
+            <marker date="1422313963109" expanded="true" signature="5250:5474" placeholder="select SUM(p..equipe..." />
+            <marker date="1422313963109" expanded="true" signature="7344:7401" placeholder="UPDATE users..." />
+            <marker date="1422313963109" expanded="true" signature="8157:8214" placeholder="UPDATE users..." />
+            <marker date="1422313963109" expanded="true" signature="10004:10051" placeholder="select argen..users..." />
+            <marker date="1422313963109" expanded="true" signature="11614:11688" placeholder="update users..." />
+            <marker date="1422313963109" expanded="true" signature="11888:11960" placeholder="update users..." />
+            <marker date="1422313963109" expanded="true" signature="12144:12193" placeholder="select usern..users..." />
+            <marker date="1422313963109" expanded="true" signature="12459:12527" placeholder="select id_us..users..." />
+            <marker date="1422313963109" expanded="true" signature="12621:12676" placeholder="select id_us..users..." />
+          </folding>
         </state>
       </provider>
     </entry>

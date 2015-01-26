@@ -7251,3 +7251,75 @@
 26/01/2015 22:14:28 Construction Personnage : ID:1; nom : Chausson 1; lvl : 1
 26/01/2015 22:14:32 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1
 26/01/2015 22:14:32 Construction Personnage : ID:1; nom : Chausson 1; lvl : 1
+27/01/2015 00:09:58 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 5
+27/01/2015 00:09:58 Construction Personnage : ID:5; nom : Terminator93; lvl : 1
+27/01/2015 00:09:58 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1
+27/01/2015 00:09:58 Construction Personnage : ID:1; nom : Chausson 1; lvl : 1
+27/01/2015 00:10:00 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 5
+27/01/2015 00:10:00 Construction Personnage : ID:5; nom : Terminator93; lvl : 1
+27/01/2015 00:10:00 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1
+27/01/2015 00:10:00 Construction Personnage : ID:1; nom : Chausson 1; lvl : 1
+27/01/2015 00:10:00 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 5
+27/01/2015 00:10:00 Construction Personnage : ID:5; nom : Terminator93; lvl : 1
+27/01/2015 00:10:00 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1
+27/01/2015 00:10:00 Construction Personnage : ID:1; nom : Chausson 1; lvl : 1
+27/01/2015 00:10:01 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 5
+27/01/2015 00:10:01 Construction Personnage : ID:5; nom : Terminator93; lvl : 1
+27/01/2015 00:10:01 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1
+27/01/2015 00:10:01 Construction Personnage : ID:1; nom : Chausson 1; lvl : 1
+27/01/2015 00:10:01 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 5
+27/01/2015 00:10:01 Construction Personnage : ID:5; nom : Terminator93; lvl : 1
+27/01/2015 00:10:01 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1
+27/01/2015 00:10:01 Construction Personnage : ID:1; nom : Chausson 1; lvl : 1
+27/01/2015 00:10:03 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 5
+27/01/2015 00:10:03 Construction Personnage : ID:5; nom : Terminator93; lvl : 1
+27/01/2015 00:10:03 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1
+27/01/2015 00:10:03 Construction Personnage : ID:1; nom : Chausson 1; lvl : 1
+27/01/2015 00:10:03 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 5
+27/01/2015 00:10:03 Construction Personnage : ID:5; nom : Terminator93; lvl : 1
+27/01/2015 00:10:03 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1
+27/01/2015 00:10:03 Construction Personnage : ID:1; nom : Chausson 1; lvl : 1
+27/01/2015 00:12:14 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 5
+27/01/2015 00:12:14 Construction Personnage : ID:5; nom : Terminator93; lvl : 1
+27/01/2015 00:12:14 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1
+27/01/2015 00:12:14 Construction Personnage : ID:1; nom : Chausson 1; lvl : 1
+27/01/2015 00:12:16 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 5
+27/01/2015 00:12:16 Construction Personnage : ID:5; nom : Terminator93; lvl : 1
+27/01/2015 00:12:16 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1
+27/01/2015 00:12:16 Construction Personnage : ID:1; nom : Chausson 1; lvl : 1
+27/01/2015 00:12:17 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 5
+27/01/2015 00:12:17 Construction Personnage : ID:5; nom : Terminator93; lvl : 1
+27/01/2015 00:12:17 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1
+27/01/2015 00:12:17 Construction Personnage : ID:1; nom : Chausson 1; lvl : 1
+27/01/2015 00:12:18 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 5
+27/01/2015 00:12:18 Construction Personnage : ID:5; nom : Terminator93; lvl : 1
+27/01/2015 00:12:18 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1
+27/01/2015 00:12:18 Construction Personnage : ID:1; nom : Chausson 1; lvl : 1
+27/01/2015 00:12:20 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 5
+27/01/2015 00:12:20 Construction Personnage : ID:5; nom : Terminator93; lvl : 1
+27/01/2015 00:12:20 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1
+27/01/2015 00:12:20 Construction Personnage : ID:1; nom : Chausson 1; lvl : 1
+27/01/2015 00:12:21 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 5
+27/01/2015 00:12:21 Construction Personnage : ID:5; nom : Terminator93; lvl : 1
+27/01/2015 00:12:21 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1
+27/01/2015 00:12:21 Construction Personnage : ID:1; nom : Chausson 1; lvl : 1
+27/01/2015 00:12:45 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 5
+27/01/2015 00:12:45 Construction Personnage : ID:5; nom : Terminator93; lvl : 1
+27/01/2015 00:12:45 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1
+27/01/2015 00:12:45 Construction Personnage : ID:1; nom : Chausson 1; lvl : 1
+27/01/2015 00:12:46 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 5
+27/01/2015 00:12:46 Construction Personnage : ID:5; nom : Terminator93; lvl : 1
+27/01/2015 00:12:46 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1
+27/01/2015 00:12:46 Construction Personnage : ID:1; nom : Chausson 1; lvl : 1
+27/01/2015 00:12:47 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 5
+27/01/2015 00:12:47 Construction Personnage : ID:5; nom : Terminator93; lvl : 1
+27/01/2015 00:12:47 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1
+27/01/2015 00:12:47 Construction Personnage : ID:1; nom : Chausson 1; lvl : 1
+27/01/2015 00:12:47 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 5
+27/01/2015 00:12:47 Construction Personnage : ID:5; nom : Terminator93; lvl : 1
+27/01/2015 00:12:47 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1
+27/01/2015 00:12:47 Construction Personnage : ID:1; nom : Chausson 1; lvl : 1
+27/01/2015 00:12:49 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 5
+27/01/2015 00:12:49 Construction Personnage : ID:5; nom : Terminator93; lvl : 1
+27/01/2015 00:12:49 SELECT DISTINCT * FROM personnage WHERE id_personnage = :id_personnage : 	 1
+27/01/2015 00:12:49 Construction Personnage : ID:1; nom : Chausson 1; lvl : 1

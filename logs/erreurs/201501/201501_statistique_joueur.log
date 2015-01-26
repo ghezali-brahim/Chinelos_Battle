@@ -1161,3 +1161,141 @@ WHERE 1 = 1 order by personnage.niveau DESC, personnage.experience DESC; :
 26/01/2015 22:17:58 select id_user, username,connected,nombre_victoire, nombre_defaite from users where  last_connection is not NULL : 	 
 26/01/2015 22:17:58 select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
  : 	 1
+27/01/2015 00:09:58 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+27/01/2015 00:09:58 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+27/01/2015 00:09:58 select id_item, quantite from inventaire where id_user=:id_user : 	 1
+27/01/2015 00:09:58 select id_user,username from users where connected=TRUE : 	 
+27/01/2015 00:10:00 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+27/01/2015 00:10:00 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+27/01/2015 00:10:00 select id_item, quantite from inventaire where id_user=:id_user : 	 1
+27/01/2015 00:10:00 select username from users where id_user=:id_user : 	 1
+27/01/2015 00:10:00 select username from users where id_user=:id_user : 	 2
+27/01/2015 00:10:00 select username from users where id_user=:id_user : 	 1
+27/01/2015 00:10:00 select username from users where id_user=:id_user : 	 2
+27/01/2015 00:10:00 select username from users where id_user=:id_user : 	 2
+27/01/2015 00:10:00 select username from users where id_user=:id_user : 	 1
+27/01/2015 00:10:00 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+27/01/2015 00:10:00 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+27/01/2015 00:10:00 select id_item, quantite from inventaire where id_user=:id_user : 	 1
+27/01/2015 00:10:00 select id_user,username from users where connected=TRUE : 	 
+27/01/2015 00:10:01 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+27/01/2015 00:10:01 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+27/01/2015 00:10:01 select id_item, quantite from inventaire where id_user=:id_user : 	 1
+27/01/2015 00:10:01 select username from users where id_user=:id_user : 	 1
+27/01/2015 00:10:01 select username from users where id_user=:id_user : 	 2
+27/01/2015 00:10:01 select username from users where id_user=:id_user : 	 1
+27/01/2015 00:10:01 select username from users where id_user=:id_user : 	 2
+27/01/2015 00:10:01 select username from users where id_user=:id_user : 	 2
+27/01/2015 00:10:01 select username from users where id_user=:id_user : 	 1
+27/01/2015 00:10:01 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+27/01/2015 00:10:01 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+27/01/2015 00:10:01 select id_item, quantite from inventaire where id_user=:id_user : 	 1
+27/01/2015 00:10:01 select id_user,username from users where connected=TRUE : 	 
+27/01/2015 00:10:03 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+27/01/2015 00:10:03 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+27/01/2015 00:10:03 select id_item, quantite from inventaire where id_user=:id_user : 	 1
+27/01/2015 00:10:03 select id_user,username from users where connected=TRUE : 	 
+27/01/2015 00:10:03 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+27/01/2015 00:10:03 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+27/01/2015 00:10:03 select id_item, quantite from inventaire where id_user=:id_user : 	 1
+27/01/2015 00:10:03 select username from users where id_user=:id_user : 	 1
+27/01/2015 00:10:03 select username from users where id_user=:id_user : 	 2
+27/01/2015 00:10:03 select username from users where id_user=:id_user : 	 1
+27/01/2015 00:10:03 select username from users where id_user=:id_user : 	 2
+27/01/2015 00:10:03 select username from users where id_user=:id_user : 	 2
+27/01/2015 00:10:03 select username from users where id_user=:id_user : 	 1
+27/01/2015 00:12:14 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+27/01/2015 00:12:14 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+27/01/2015 00:12:14 select id_item, quantite from inventaire where id_user=:id_user : 	 1
+27/01/2015 00:12:14 select username from users where id_user=:id_user : 	 1
+27/01/2015 00:12:14 select username from users where id_user=:id_user : 	 2
+27/01/2015 00:12:14 select username from users where id_user=:id_user : 	 1
+27/01/2015 00:12:14 select username from users where id_user=:id_user : 	 2
+27/01/2015 00:12:14 select username from users where id_user=:id_user : 	 2
+27/01/2015 00:12:14 select username from users where id_user=:id_user : 	 1
+27/01/2015 00:12:16 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+27/01/2015 00:12:16 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+27/01/2015 00:12:16 select id_item, quantite from inventaire where id_user=:id_user : 	 1
+27/01/2015 00:12:16 select username from users where id_user=:id_user : 	 1
+27/01/2015 00:12:16 select username from users where id_user=:id_user : 	 2
+27/01/2015 00:12:16 select username from users where id_user=:id_user : 	 1
+27/01/2015 00:12:16 select username from users where id_user=:id_user : 	 2
+27/01/2015 00:12:16 select username from users where id_user=:id_user : 	 2
+27/01/2015 00:12:16 select username from users where id_user=:id_user : 	 1
+27/01/2015 00:12:17 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+27/01/2015 00:12:17 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+27/01/2015 00:12:17 select id_item, quantite from inventaire where id_user=:id_user : 	 1
+27/01/2015 00:12:17 select username from users where id_user=:id_user : 	 1
+27/01/2015 00:12:17 select username from users where id_user=:id_user : 	 2
+27/01/2015 00:12:17 select username from users where id_user=:id_user : 	 1
+27/01/2015 00:12:17 select username from users where id_user=:id_user : 	 2
+27/01/2015 00:12:17 select username from users where id_user=:id_user : 	 2
+27/01/2015 00:12:17 select username from users where id_user=:id_user : 	 1
+27/01/2015 00:12:18 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+27/01/2015 00:12:18 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+27/01/2015 00:12:18 select id_item, quantite from inventaire where id_user=:id_user : 	 1
+27/01/2015 00:12:18 select username from users where id_user=:id_user : 	 1
+27/01/2015 00:12:18 select username from users where id_user=:id_user : 	 2
+27/01/2015 00:12:18 select username from users where id_user=:id_user : 	 1
+27/01/2015 00:12:18 select username from users where id_user=:id_user : 	 2
+27/01/2015 00:12:18 select username from users where id_user=:id_user : 	 2
+27/01/2015 00:12:18 select username from users where id_user=:id_user : 	 1
+27/01/2015 00:12:18 select id_user,username from users where last_connection IS NOT NULL : 	 
+27/01/2015 00:12:20 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+27/01/2015 00:12:20 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+27/01/2015 00:12:20 select id_item, quantite from inventaire where id_user=:id_user : 	 1
+27/01/2015 00:12:20 select username from users where id_user=:id_user : 	 1
+27/01/2015 00:12:20 select username from users where id_user=:id_user : 	 2
+27/01/2015 00:12:20 select username from users where id_user=:id_user : 	 1
+27/01/2015 00:12:20 select username from users where id_user=:id_user : 	 2
+27/01/2015 00:12:20 select username from users where id_user=:id_user : 	 2
+27/01/2015 00:12:20 select username from users where id_user=:id_user : 	 1
+27/01/2015 00:12:21 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+27/01/2015 00:12:21 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+27/01/2015 00:12:21 select id_item, quantite from inventaire where id_user=:id_user : 	 1
+27/01/2015 00:12:21 select username from users where id_user=:id_user : 	 1
+27/01/2015 00:12:21 select username from users where id_user=:id_user : 	 2
+27/01/2015 00:12:21 select username from users where id_user=:id_user : 	 1
+27/01/2015 00:12:21 select username from users where id_user=:id_user : 	 2
+27/01/2015 00:12:21 select username from users where id_user=:id_user : 	 2
+27/01/2015 00:12:21 select username from users where id_user=:id_user : 	 1
+27/01/2015 00:12:45 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+27/01/2015 00:12:45 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+27/01/2015 00:12:45 select id_item, quantite from inventaire where id_user=:id_user : 	 1
+27/01/2015 00:12:45 select username from users where id_user=:id_user : 	 1
+27/01/2015 00:12:45 select username from users where id_user=:id_user : 	 2
+27/01/2015 00:12:45 select username from users where id_user=:id_user : 	 1
+27/01/2015 00:12:45 select username from users where id_user=:id_user : 	 2
+27/01/2015 00:12:45 select username from users where id_user=:id_user : 	 2
+27/01/2015 00:12:45 select username from users where id_user=:id_user : 	 1
+27/01/2015 00:12:46 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+27/01/2015 00:12:46 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+27/01/2015 00:12:46 select id_item, quantite from inventaire where id_user=:id_user : 	 1
+27/01/2015 00:12:46 select username from users where id_user=:id_user : 	 1
+27/01/2015 00:12:46 select username from users where id_user=:id_user : 	 2
+27/01/2015 00:12:46 select username from users where id_user=:id_user : 	 1
+27/01/2015 00:12:46 select username from users where id_user=:id_user : 	 2
+27/01/2015 00:12:46 select username from users where id_user=:id_user : 	 2
+27/01/2015 00:12:46 select username from users where id_user=:id_user : 	 1
+27/01/2015 00:12:46 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+27/01/2015 00:12:46 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+27/01/2015 00:12:47 select id_item, quantite from inventaire where id_user=:id_user : 	 1
+27/01/2015 00:12:47 select id_user,username from users where connected=TRUE : 	 
+27/01/2015 00:12:47 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+27/01/2015 00:12:47 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+27/01/2015 00:12:47 select id_item, quantite from inventaire where id_user=:id_user : 	 1
+27/01/2015 00:12:47 select username from users where id_user=:id_user : 	 1
+27/01/2015 00:12:47 select username from users where id_user=:id_user : 	 2
+27/01/2015 00:12:47 select username from users where id_user=:id_user : 	 1
+27/01/2015 00:12:47 select username from users where id_user=:id_user : 	 2
+27/01/2015 00:12:47 select username from users where id_user=:id_user : 	 2
+27/01/2015 00:12:47 select username from users where id_user=:id_user : 	 1
+27/01/2015 00:12:49 SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user : 	 admin|1
+27/01/2015 00:12:49 SELECT id_equipe FROM equipe WHERE id_user = :id_user : 	 1
+27/01/2015 00:12:49 select id_item, quantite from inventaire where id_user=:id_user : 	 1
+27/01/2015 00:12:49 select username from users where id_user=:id_user : 	 1
+27/01/2015 00:12:49 select username from users where id_user=:id_user : 	 2
+27/01/2015 00:12:49 select username from users where id_user=:id_user : 	 1
+27/01/2015 00:12:49 select username from users where id_user=:id_user : 	 2
+27/01/2015 00:12:49 select username from users where id_user=:id_user : 	 2
+27/01/2015 00:12:49 select username from users where id_user=:id_user : 	 1
