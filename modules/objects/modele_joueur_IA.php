@@ -52,7 +52,6 @@ class Joueur_IA extends Participant {
     }
 
     //TODO A mettre à jour
-
     function attaquer ( $participant ) {
         $this->attaquerEnnemi ( $participant, $this->getEquipeOne ()->getIndicePersoActuel () );
     }

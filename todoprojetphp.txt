@@ -1,10 +1,10 @@
 10 Jours 14 ==> 24
 défier un joueur connecté
-table pour combat (mysql)
-Messagerie
 
-Inventaire
 
  FAIT :
 Choisir élément du personnage et le nom du personnage
 liste des joueurs connecté (afficher tous les joueurs)
+Messagerie
+table pour combat (mysql)
+Inventaire

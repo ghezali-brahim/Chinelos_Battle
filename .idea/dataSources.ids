@@ -7,12 +7,34 @@
     </database-info>
     <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
     <schema name="" catalog="test"/>
+    <table name="action" schema="" catalog="test" type="TABLE">
+      <column name="idAction" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="hp" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="mp" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="attaque" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="defense" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="idAction"/>
+      <index name="id" unique="true" columns="idAction"/>
+    </table>
     <table name="attaque" schema="" catalog="test" type="TABLE">
       <column name="id_attaque" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="nom" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="degats" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="mp_used" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="id_attaque"/>
+    </table>
+    <table name="combats" schema="" catalog="test" type="TABLE">
+      <column name="id_combat" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="id_joueur_1" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="id_joueur_2" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="indice_perso_j1" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="LTE="/>
+      <column name="indice_perso_j2" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="LTE="/>
+      <column name="valider_j1" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="valider_j2" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="finit" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="nombre_tour" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="indice_tour_de_joueur" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="id_combat"/>
     </table>
     <table name="element" schema="" catalog="test" type="TABLE">
       <column name="id_element" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
@@ -27,15 +49,35 @@
       <column name="id_user" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <index name="id_equipe" unique="true" columns="id_equipe"/>
     </table>
-    <table name="item" schema="" catalog="test" type="TABLE">
+    <table name="inventaire" schema="" catalog="test" type="TABLE">
+      <column name="id_user" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5"/>
       <column name="id_item" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="quantite" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id_user"/>
+      <index name="id_inventaire" unique="true" columns="id_user"/>
+    </table>
+    <table name="item" schema="" catalog="test" type="TABLE">
+      <column name="id_item" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
       <column name="nom" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12"/>
-      <column name="description" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="description" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
       <column name="prix_achat" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
-      <column name="item_type" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
-      <column name="actions" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12"/>
+      <column name="type" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="id_action" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="id_item"/>
-      <index name="unique_nom" unique="true" columns="nom"/>
+      <index name="id" unique="true" columns="id_item"/>
+      <index name="idaction" unique="false" columns="id_action"/>
+      <index name="index" unique="false" columns="id_item,id_action"/>
+    </table>
+    <table name="messages" schema="" catalog="test" type="TABLE">
+      <column name="id_message" sqlType="BIGINT UNSIGNED" precision="20" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="objet" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="contenu" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="id_expeditaire" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="id_destinataire" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="date_envoie" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="lu" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <primary-key name="PRIMARY" columns="id_message"/>
+      <index name="id_message" unique="true" columns="id_message"/>
     </table>
     <table name="niveau" schema="" catalog="test" type="TABLE">
       <column name="niveau" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>

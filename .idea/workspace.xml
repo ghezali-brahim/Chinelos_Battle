@@ -55,30 +55,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="modele_joueur.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/modules/objects/modele_joueur.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6142857" vertical-offset="4148" max-vertical-offset="5491">
-              <caret line="287" column="14" selection-start-line="287" selection-start-column="14" selection-end-line="287" selection-end-column="14" />
-              <folding>
-                <marker date="1422313963109" expanded="true" signature="1102:1227" placeholder="SELECT id_us..users..." />
-                <marker date="1422313963109" expanded="true" signature="1784:1837" placeholder="SELECT id_eq..equipe..." />
-                <marker date="1422313963109" expanded="true" signature="2237:2290" placeholder="SELECT id_eq..equipe..." />
-                <marker date="1422313963109" expanded="true" signature="2597:2660" placeholder="select id_it..inventaire..." />
-                <marker date="1422313963109" expanded="true" signature="3501:3551" placeholder="select id_us..users..." />
-                <marker date="1422313963109" expanded="true" signature="3707:3769" placeholder="select usern..users..." />
-                <marker date="1422313963109" expanded="true" signature="4135:4612" placeholder="SELECT users..users..." />
-                <marker date="1422313963109" expanded="true" signature="4996:5108" placeholder="select id_us..users..." />
-                <marker date="1422313963109" expanded="true" signature="5250:5474" placeholder="select SUM(p..equipe..." />
-                <marker date="1422313963109" expanded="true" signature="7344:7401" placeholder="UPDATE users..." />
-                <marker date="1422313963109" expanded="true" signature="8157:8214" placeholder="UPDATE users..." />
-                <marker date="1422313963109" expanded="true" signature="10004:10051" placeholder="select argen..users..." />
-                <marker date="1422313963109" expanded="true" signature="11614:11688" placeholder="update users..." />
-                <marker date="1422313963109" expanded="true" signature="11888:11960" placeholder="update users..." />
-                <marker date="1422313963109" expanded="true" signature="12144:12193" placeholder="select usern..users..." />
-                <marker date="1422313963109" expanded="true" signature="12459:12527" placeholder="select id_us..users..." />
-                <marker date="1422313963109" expanded="true" signature="12621:12676" placeholder="select id_us..users..." />
-              </folding>
+      <file leaf-file-name="DATABASE/8629a1a4-c42e-4276-9e87-514786dc7144.schema:test" pinned="false" current-in-tab="true">
+        <entry file="uml://DATABASE/8629a1a4-c42e-4276-9e87-514786dc7144.schema:test">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>DATABASE</ID>
+              <OriginalElement>8629a1a4-c42e-4276-9e87-514786dc7144.schema:test</OriginalElement>
+              <nodes>
+                <node x="383.0" y="360.0">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.messages</node>
+                <node x="0.0" y="632.0">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.item</node>
+                <node x="0.0" y="0.0">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.personnage</node>
+                <node x="668.0" y="839.0">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.equipe</node>
+                <node x="635.0" y="632.0">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.element</node>
+                <node x="325.0" y="632.0">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.action</node>
+                <node x="504.0" y="0.0">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.combats</node>
+                <node x="0.0" y="360.0">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.users</node>
+                <node x="0.0" y="839.0">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.attaque</node>
+                <node x="233.0" y="839.0">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.inventaire</node>
+                <node x="496.0" y="839.0">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.niveau</node>
+              </nodes>
+              <notes />
+              <edges />
+              <settings layout="Hierarchic Group" zoom="1.0" x="440.0" y="478.5" />
+              <SelectedNodes>
+                <node>8629a1a4-c42e-4276-9e87-514786dc7144.table:test.item</node>
+              </SelectedNodes>
+              <Categories>
+                <Category>Key columns</Category>
+                <Category>Columns</Category>
+              </Categories>
             </state>
           </provider>
         </entry>
@@ -285,24 +290,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Chinelos_Battle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Chinelos_Battle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="objects" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -692,7 +679,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/diagram_bdd.png" />
     <property name="recentsLimit" value="5" />
     <property name="js.buildTools.gulp.node_interpreter" value="" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="" />
@@ -881,16 +868,17 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293556" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293556" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293556" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24403815" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293556" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293556" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24426934" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298887" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298887" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="SonarQube" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293556" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19236884" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293556" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19236884" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Regex Tester" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32962137" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
@@ -899,7 +887,6 @@
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33015114" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293556" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.398568" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -916,7 +903,7 @@
       <window_info id="Regex Tester" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32962137" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293556" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19267139" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19236884" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.309467" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33015114" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -926,8 +913,8 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293556" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.398568" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298887" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SonarQube" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293556" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39777246" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -970,58 +957,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/modules/objects/modele_joueur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4522" max-vertical-offset="5491">
-          <caret line="266" column="37" selection-start-line="266" selection-start-column="20" selection-end-line="266" selection-end-column="37" />
-          <folding>
-            <marker date="1422313963109" expanded="true" signature="1102:1227" placeholder="SELECT id_us..users..." />
-            <marker date="1422313963109" expanded="true" signature="1784:1837" placeholder="SELECT id_eq..equipe..." />
-            <marker date="1422313963109" expanded="true" signature="2237:2290" placeholder="SELECT id_eq..equipe..." />
-            <marker date="1422313963109" expanded="true" signature="2597:2660" placeholder="select id_it..inventaire..." />
-            <marker date="1422313963109" expanded="true" signature="3501:3551" placeholder="select id_us..users..." />
-            <marker date="1422313963109" expanded="true" signature="3707:3769" placeholder="select usern..users..." />
-            <marker date="1422313963109" expanded="true" signature="4135:4612" placeholder="SELECT users..users..." />
-            <marker date="1422313963109" expanded="true" signature="4996:5108" placeholder="select id_us..users..." />
-            <marker date="1422313963109" expanded="true" signature="5250:5474" placeholder="select SUM(p..equipe..." />
-            <marker date="1422313963109" expanded="true" signature="7344:7401" placeholder="UPDATE users..." />
-            <marker date="1422313963109" expanded="true" signature="8157:8214" placeholder="UPDATE users..." />
-            <marker date="1422313963109" expanded="true" signature="10004:10051" placeholder="select argen..users..." />
-            <marker date="1422313963109" expanded="true" signature="11614:11688" placeholder="update users..." />
-            <marker date="1422313963109" expanded="true" signature="11888:11960" placeholder="update users..." />
-            <marker date="1422313963109" expanded="true" signature="12144:12193" placeholder="select usern..users..." />
-            <marker date="1422313963109" expanded="true" signature="12459:12527" placeholder="select id_us..users..." />
-            <marker date="1422313963109" expanded="true" signature="12621:12676" placeholder="select id_us..users..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://DATABASE/8629a1a4-c42e-4276-9e87-514786dc7144.schema:test">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>8629a1a4-c42e-4276-9e87-514786dc7144.schema:test</OriginalElement>
-          <nodes>
-            <node x="" y="">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.item</node>
-            <node x="" y="">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.personnage</node>
-            <node x="" y="">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.equipe</node>
-            <node x="" y="">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.element</node>
-            <node x="" y="">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.users</node>
-            <node x="" y="">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.attaque</node>
-            <node x="" y="">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.niveau</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="358.0" y="549.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Columns</Category>
-            <Category>Key columns</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Downloads/test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1360">
@@ -1403,27 +1338,92 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/objects/modele_joueur.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6142857" vertical-offset="4148" max-vertical-offset="5491">
-          <caret line="287" column="14" selection-start-line="287" selection-start-column="14" selection-end-line="287" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.54285717" vertical-offset="1496" max-vertical-offset="5491">
+          <caret line="126" column="45" selection-start-line="126" selection-start-column="45" selection-end-line="126" selection-end-column="45" />
           <folding>
-            <marker date="1422313963109" expanded="true" signature="1102:1227" placeholder="SELECT id_us..users..." />
-            <marker date="1422313963109" expanded="true" signature="1784:1837" placeholder="SELECT id_eq..equipe..." />
-            <marker date="1422313963109" expanded="true" signature="2237:2290" placeholder="SELECT id_eq..equipe..." />
-            <marker date="1422313963109" expanded="true" signature="2597:2660" placeholder="select id_it..inventaire..." />
-            <marker date="1422313963109" expanded="true" signature="3501:3551" placeholder="select id_us..users..." />
-            <marker date="1422313963109" expanded="true" signature="3707:3769" placeholder="select usern..users..." />
-            <marker date="1422313963109" expanded="true" signature="4135:4612" placeholder="SELECT users..users..." />
-            <marker date="1422313963109" expanded="true" signature="4996:5108" placeholder="select id_us..users..." />
-            <marker date="1422313963109" expanded="true" signature="5250:5474" placeholder="select SUM(p..equipe..." />
-            <marker date="1422313963109" expanded="true" signature="7344:7401" placeholder="UPDATE users..." />
-            <marker date="1422313963109" expanded="true" signature="8157:8214" placeholder="UPDATE users..." />
-            <marker date="1422313963109" expanded="true" signature="10004:10051" placeholder="select argen..users..." />
-            <marker date="1422313963109" expanded="true" signature="11614:11688" placeholder="update users..." />
-            <marker date="1422313963109" expanded="true" signature="11888:11960" placeholder="update users..." />
-            <marker date="1422313963109" expanded="true" signature="12144:12193" placeholder="select usern..users..." />
-            <marker date="1422313963109" expanded="true" signature="12459:12527" placeholder="select id_us..users..." />
-            <marker date="1422313963109" expanded="true" signature="12621:12676" placeholder="select id_us..users..." />
+            <marker date="1422315083380" expanded="true" signature="-1:-1" placeholder="SELECT id_us..users..." />
+            <marker date="1422315083380" expanded="true" signature="-1:-1" placeholder="SELECT id_eq..equipe..." />
+            <marker date="1422315083380" expanded="true" signature="-1:-1" placeholder="SELECT id_eq..equipe..." />
+            <marker date="1422315083380" expanded="true" signature="-1:-1" placeholder="select id_it..inventaire..." />
+            <marker date="1422315083380" expanded="true" signature="-1:-1" placeholder="select id_us..users..." />
+            <marker date="1422315083380" expanded="true" signature="-1:-1" placeholder="select usern..users..." />
+            <marker date="1422315083380" expanded="true" signature="-1:-1" placeholder="SELECT users..users..." />
+            <marker date="1422315083380" expanded="true" signature="-1:-1" placeholder="select id_us..users..." />
+            <marker date="1422315083380" expanded="true" signature="-1:-1" placeholder="select SUM(p..equipe..." />
+            <marker date="1422315083380" expanded="true" signature="-1:-1" placeholder="UPDATE users..." />
+            <marker date="1422315083380" expanded="true" signature="-1:-1" placeholder="UPDATE users..." />
+            <marker date="1422315083380" expanded="true" signature="-1:-1" placeholder="select argen..users..." />
+            <marker date="1422315083380" expanded="true" signature="-1:-1" placeholder="update users..." />
+            <marker date="1422315083380" expanded="true" signature="-1:-1" placeholder="update users..." />
+            <marker date="1422315083380" expanded="true" signature="-1:-1" placeholder="select usern..users..." />
+            <marker date="1422315083380" expanded="true" signature="-1:-1" placeholder="select id_us..users..." />
+            <marker date="1422315083380" expanded="true" signature="-1:-1" placeholder="select id_us..users..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://PHP/\Item">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>PHP</ID>
+          <OriginalElement>\Item</OriginalElement>
+          <nodes>
+            <node x="" y="">\modele_scenario</node>
+            <node x="" y="">\Item</node>
+            <node x="" y="">\Personnage</node>
+            <node x="" y="">\Equipe</node>
+            <node x="" y="">\Joueur_IA</node>
+            <node x="" y="">\Element</node>
+            <node x="" y="">\Item_type</node>
+            <node x="" y="">\Joueur</node>
+            <node x="" y="">\DBMapper</node>
+            <node x="" y="">\Action</node>
+            <node x="" y="">\Niveau</node>
+            <node x="" y="">\Participant</node>
+            <node x="" y="">\Attaque</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.41699158629181204" x="2426.5" y="1266.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constants</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/8629a1a4-c42e-4276-9e87-514786dc7144.schema:test">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>8629a1a4-c42e-4276-9e87-514786dc7144.schema:test</OriginalElement>
+          <nodes>
+            <node x="383.0" y="360.0">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.messages</node>
+            <node x="0.0" y="632.0">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.item</node>
+            <node x="0.0" y="0.0">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.personnage</node>
+            <node x="668.0" y="839.0">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.equipe</node>
+            <node x="635.0" y="632.0">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.element</node>
+            <node x="325.0" y="632.0">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.action</node>
+            <node x="504.0" y="0.0">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.combats</node>
+            <node x="0.0" y="360.0">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.users</node>
+            <node x="0.0" y="839.0">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.attaque</node>
+            <node x="233.0" y="839.0">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.inventaire</node>
+            <node x="496.0" y="839.0">8629a1a4-c42e-4276-9e87-514786dc7144.table:test.niveau</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="440.0" y="478.5" />
+          <SelectedNodes>
+            <node>8629a1a4-c42e-4276-9e87-514786dc7144.table:test.item</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
         </state>
       </provider>
     </entry>

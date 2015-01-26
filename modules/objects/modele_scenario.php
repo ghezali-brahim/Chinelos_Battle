@@ -6,22 +6,17 @@
 
 
 //TODO non fonctionnel
-class modele_scenario
-{
+class modele_scenario {
 
     protected $id_scenario;
     protected $listeMessages;
 
 
-    function __construct ( $id_scenario )
-    {
+    function __construct ( $id_scenario ) {
         $requete = "SELECT DISTINCT * FROM message WHERE id_scenario = :id_scenario";
         try {
             $reponse = self::$database->prepare ( $requete );
-            $reponse->execute (
-                    array (
-                            'id_scenario' => $id_scenario
-                    ) );
+            $reponse->execute ( array ( 'id_scenario' => $id_scenario ) );
         } catch ( PDOException $e ) {
             echo 'Échec lors de la connexion : ' . $e->getMessage ();
         }
@@ -33,8 +28,7 @@ class modele_scenario
         $this->_contenu      = $messageElements[ 'contenu' ];
     }
 
-    function afficherMessagesScenario ()
-    {
+    function afficherMessagesScenario () {
         $reponse = self::$database->query ( 'SELECT id_message,contenu FROM message WHERE message.id_scenario=:_id_scenario ORDER BY id_message' );
         while ( $donnees = $reponse->fetch () ) {
             ?>

@@ -1888,3 +1888,402 @@
 27/01/2015 00:12:49 Recuperation des personnages de l'equipe d'id : 2
 27/01/2015 00:12:49 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 2
 27/01/2015 00:12:49 Construction Equipe : ID Equipe: 2 | Niveau total :1 | Personnages :ID:1; nom : Chausson 1; lvl : 1
+27/01/2015 00:18:03 Creation de deux equipe pour le joueur avec l'id :  ...
+27/01/2015 00:18:16 Creation de deux equipe pour le joueur avec l'id :  ...
+27/01/2015 00:20:15 Creation de deux equipe pour le joueur avec l'id :  ...
+27/01/2015 00:20:17 Creation de deux equipe pour le joueur avec l'id :  ...
+27/01/2015 00:20:32 Creation de deux equipe pour le joueur avec l'id :  ...
+27/01/2015 00:20:33 Creation de deux equipe pour le joueur avec l'id :  ...
+27/01/2015 00:20:34 Creation de deux equipe pour le joueur avec l'id :  ...
+27/01/2015 00:21:02 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:21:02 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:21:02 Construction Equipe : ID Equipe: 7 | Niveau total :2 | Personnages :ID:4; nom : Chausson 4; lvl : 1 | ID:5; nom : Naboo; lvl : 1
+27/01/2015 00:21:02 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:21:02 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:21:02 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:6; nom : Gizmo; lvl : 1
+27/01/2015 00:21:04 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:21:04 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:21:04 Construction Equipe : ID Equipe: 7 | Niveau total :2 | Personnages :ID:4; nom : Chausson 4; lvl : 1 | ID:5; nom : Naboo; lvl : 1
+27/01/2015 00:21:04 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:21:04 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:21:04 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:6; nom : Gizmo; lvl : 1
+27/01/2015 00:21:42 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:21:42 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:21:42 Construction Equipe : ID Equipe: 7 | Niveau total :2 | Personnages :ID:4; nom : Chausson 4; lvl : 1 | ID:5; nom : Naboo; lvl : 1
+27/01/2015 00:21:42 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:21:42 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:21:42 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:6; nom : Gizmo; lvl : 1
+27/01/2015 00:21:45 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:21:45 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:21:45 Construction Equipe : ID Equipe: 7 | Niveau total :2 | Personnages :ID:4; nom : Chausson 4; lvl : 1 | ID:5; nom : Naboo; lvl : 1
+27/01/2015 00:21:45 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:21:45 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:21:45 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:6; nom : Gizmo; lvl : 1
+27/01/2015 00:22:00 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:22:00 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:22:00 Construction Equipe : ID Equipe: 7 | Niveau total :2 | Personnages :ID:4; nom : Chausson 4; lvl : 1 | ID:5; nom : Naboo; lvl : 1
+27/01/2015 00:22:00 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:22:00 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:22:00 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:6; nom : Gizmo; lvl : 1
+27/01/2015 00:22:00 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:22:00 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:22:00 Construction Equipe : ID Equipe: 7 | Niveau total :2 | Personnages :ID:4; nom : Chausson 4; lvl : 1 | ID:5; nom : Naboo; lvl : 1
+27/01/2015 00:22:00 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:22:00 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:22:00 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:6; nom : Gizmo; lvl : 1
+27/01/2015 00:22:02 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:22:02 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:22:02 Construction Equipe : ID Equipe: 7 | Niveau total :2 | Personnages :ID:4; nom : Chausson 4; lvl : 1 | ID:5; nom : Naboo; lvl : 1
+27/01/2015 00:22:02 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:22:02 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:22:02 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:6; nom : Gizmo; lvl : 1
+27/01/2015 00:22:02 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:22:02 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:22:02 Construction Equipe : ID Equipe: 7 | Niveau total :2 | Personnages :ID:4; nom : Chausson 4; lvl : 1 | ID:5; nom : Naboo; lvl : 1
+27/01/2015 00:22:02 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:22:02 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:22:02 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:6; nom : Gizmo; lvl : 1
+27/01/2015 00:22:04 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:22:04 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:22:04 Construction Equipe : ID Equipe: 7 | Niveau total :2 | Personnages :ID:4; nom : Chausson 4; lvl : 1 | ID:5; nom : Naboo; lvl : 1
+27/01/2015 00:22:04 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:22:04 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:22:04 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:6; nom : Gizmo; lvl : 1
+27/01/2015 00:22:16 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:22:16 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:22:16 Construction Equipe : ID Equipe: 7 | Niveau total :2 | Personnages :ID:4; nom : Chausson 4; lvl : 1 | ID:5; nom : Naboo; lvl : 1
+27/01/2015 00:22:16 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:22:16 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:22:16 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:6; nom : Gizmo; lvl : 1
+27/01/2015 00:22:21 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:22:21 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:22:21 Construction Equipe : ID Equipe: 7 | Niveau total :2 | Personnages :ID:4; nom : Chausson 4; lvl : 1 | ID:5; nom : Naboo; lvl : 1
+27/01/2015 00:22:21 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:22:21 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:22:21 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:6; nom : Gizmo; lvl : 1
+27/01/2015 00:22:24 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:22:24 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:22:24 Construction Equipe : ID Equipe: 7 | Niveau total :2 | Personnages :ID:4; nom : Chausson 4; lvl : 1 | ID:5; nom : Naboo; lvl : 1
+27/01/2015 00:22:24 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:22:24 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:22:24 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:6; nom : Gizmo; lvl : 1
+27/01/2015 00:22:24 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:22:24 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:22:24 Construction Equipe : ID Equipe: 7 | Niveau total :2 | Personnages :ID:4; nom : Chausson 4; lvl : 1 | ID:5; nom : Naboo; lvl : 1
+27/01/2015 00:22:24 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:22:24 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:22:24 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:6; nom : Gizmo; lvl : 1
+27/01/2015 00:23:06 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:23:06 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:23:06 Construction Equipe : ID Equipe: 7 | Niveau total :2 | Personnages :ID:4; nom : Chausson 4; lvl : 1 | ID:5; nom : Naboo; lvl : 1
+27/01/2015 00:23:06 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:23:06 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:23:06 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:6; nom : Gizmo; lvl : 1
+27/01/2015 00:23:15 Creation d'une l'equipe : ...
+27/01/2015 00:23:15 Construction Equipe : ID Equipe: 1 | Niveau total :2 | Personnages :ID:9001; nom : Monster 1; lvl : 1 | ID:9002; nom : Monster 2; lvl : 1
+27/01/2015 00:23:17 Ajout d'un pourcentage d'experience à tous les personnages de l'equipe d'id : 7
+27/01/2015 00:23:21 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:23:21 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:23:21 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:4; nom : Chausson 4; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:23:21 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:23:21 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:23:21 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:6; nom : Gizmo; lvl : 1
+27/01/2015 00:23:21 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:23:21 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:23:21 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:4; nom : Chausson 4; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:23:21 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:23:21 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:23:21 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:6; nom : Gizmo; lvl : 1
+27/01/2015 00:23:23 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:23:23 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:23:23 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:4; nom : Chausson 4; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:23:23 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:23:23 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:23:23 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:6; nom : Gizmo; lvl : 1
+27/01/2015 00:23:24 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:23:24 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:23:24 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:4; nom : Chausson 4; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:23:24 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:23:24 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:23:24 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:6; nom : Gizmo; lvl : 1
+27/01/2015 00:23:25 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:23:25 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:23:25 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:4; nom : Chausson 4; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:23:25 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:23:25 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:23:25 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:6; nom : Gizmo; lvl : 1
+27/01/2015 00:23:26 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:23:26 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:23:26 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:4; nom : Chausson 4; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:23:26 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:23:26 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:23:26 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:6; nom : Gizmo; lvl : 1
+27/01/2015 00:23:34 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:23:34 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:23:34 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:4; nom : Chausson 4; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:23:34 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:23:34 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:23:34 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:6; nom : Gizmo; lvl : 1
+27/01/2015 00:23:35 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:23:35 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:23:35 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:4; nom : Chausson 4; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:23:35 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:23:35 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:23:35 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:6; nom : Gizmo; lvl : 1
+27/01/2015 00:23:37 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:23:37 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:23:37 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:4; nom : Chausson 4; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:23:37 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:23:37 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:23:37 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:6; nom : Gizmo; lvl : 1
+27/01/2015 00:23:37 Retrait du personnage 6 de l'equipe 8
+27/01/2015 00:23:37 Ajout du personnage 6 a l'equipe 7
+27/01/2015 00:23:39 Creation d'une l'equipe : ...
+27/01/2015 00:23:39 Construction Equipe : ID Equipe: 1 | Niveau total :20 | Personnages :ID:9001; nom : Monster 1; lvl : 7 | ID:9002; nom : Monster 2; lvl : 6 | ID:9003; nom : Monster 3; lvl : 7
+27/01/2015 00:23:39 Retrait du personnage 4 de l'equipe 7
+27/01/2015 00:23:39 Ajout du personnage 4 a l'equipe 8
+27/01/2015 00:23:40 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:23:40 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:23:40 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:6; nom : Gizmo; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:23:40 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:23:40 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:23:40 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:4; nom : Chausson 4; lvl : 1
+27/01/2015 00:23:42 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:23:42 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:23:42 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:6; nom : Gizmo; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:23:42 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:23:42 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:23:42 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:4; nom : Chausson 4; lvl : 1
+27/01/2015 00:23:51 Soigne les hp et mp de tous les personnages de l'equipe d'id : 7
+27/01/2015 00:24:02 Creation d'une l'equipe : ...
+27/01/2015 00:24:02 Construction Equipe : ID Equipe: 1 | Niveau total :17 | Personnages :ID:9001; nom : Monster 1; lvl : 6 | ID:9002; nom : Monster 2; lvl : 6 | ID:9003; nom : Monster 3; lvl : 5
+27/01/2015 00:24:22 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:24:22 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:24:22 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:6; nom : Gizmo; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:24:22 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:24:22 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:24:22 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:4; nom : Chausson 4; lvl : 1
+27/01/2015 00:24:23 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:24:23 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:24:23 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:6; nom : Gizmo; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:24:23 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:24:23 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:24:23 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:4; nom : Chausson 4; lvl : 1
+27/01/2015 00:24:24 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:24:24 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:24:24 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:6; nom : Gizmo; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:24:24 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:24:24 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:24:24 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:4; nom : Chausson 4; lvl : 1
+27/01/2015 00:25:39 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:25:39 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:25:39 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:6; nom : Gizmo; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:25:39 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:25:39 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:25:39 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:4; nom : Chausson 4; lvl : 1
+27/01/2015 00:25:40 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:25:40 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:25:40 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:6; nom : Gizmo; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:25:40 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:25:40 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:25:40 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:4; nom : Chausson 4; lvl : 1
+27/01/2015 00:25:41 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:25:41 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:25:42 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:6; nom : Gizmo; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:25:42 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:25:42 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:25:42 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:4; nom : Chausson 4; lvl : 1
+27/01/2015 00:25:43 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:25:43 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:25:43 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:6; nom : Gizmo; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:25:43 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:25:43 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:25:43 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:4; nom : Chausson 4; lvl : 1
+27/01/2015 00:26:02 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:26:02 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:26:02 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:6; nom : Gizmo; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:26:02 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:26:02 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:26:02 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:4; nom : Chausson 4; lvl : 1
+27/01/2015 00:26:04 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:26:04 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:26:04 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:6; nom : Gizmo; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:26:04 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:26:04 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:26:04 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:4; nom : Chausson 4; lvl : 1
+27/01/2015 00:26:05 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:26:05 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:26:05 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:6; nom : Gizmo; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:26:05 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:26:05 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:26:05 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:4; nom : Chausson 4; lvl : 1
+27/01/2015 00:27:26 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:27:26 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:27:26 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:6; nom : Gizmo; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:27:26 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:27:26 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:27:26 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:4; nom : Chausson 4; lvl : 1
+27/01/2015 00:27:26 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:27:26 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:27:26 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:6; nom : Gizmo; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:27:26 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:27:26 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:27:26 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:4; nom : Chausson 4; lvl : 1
+27/01/2015 00:28:36 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:28:36 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:28:36 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:6; nom : Gizmo; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:28:36 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:28:36 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:28:36 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:4; nom : Chausson 4; lvl : 1
+27/01/2015 00:28:36 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:28:36 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:28:36 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:6; nom : Gizmo; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:28:36 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:28:36 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:28:36 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:4; nom : Chausson 4; lvl : 1
+27/01/2015 00:28:36 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:28:36 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:28:36 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:6; nom : Gizmo; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:28:36 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:28:36 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:28:36 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:4; nom : Chausson 4; lvl : 1
+27/01/2015 00:28:37 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:28:37 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:28:37 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:6; nom : Gizmo; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:28:37 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:28:37 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:28:37 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:4; nom : Chausson 4; lvl : 1
+27/01/2015 00:28:39 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:28:39 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:28:39 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:6; nom : Gizmo; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:28:39 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:28:39 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:28:39 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:4; nom : Chausson 4; lvl : 1
+27/01/2015 00:28:40 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:28:40 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:28:40 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:6; nom : Gizmo; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:28:40 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:28:40 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:28:40 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:4; nom : Chausson 4; lvl : 1
+27/01/2015 00:29:31 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:29:31 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:29:31 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:6; nom : Gizmo; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:29:31 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:29:31 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:29:31 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:4; nom : Chausson 4; lvl : 1
+27/01/2015 00:29:31 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:29:31 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:29:31 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:6; nom : Gizmo; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:29:31 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:29:31 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:29:31 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:4; nom : Chausson 4; lvl : 1
+27/01/2015 00:29:35 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:29:35 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:29:35 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:6; nom : Gizmo; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:29:35 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:29:35 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:29:35 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:4; nom : Chausson 4; lvl : 1
+27/01/2015 00:29:36 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:29:36 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:29:36 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:6; nom : Gizmo; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:29:36 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:29:36 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:29:36 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:4; nom : Chausson 4; lvl : 1
+27/01/2015 00:29:36 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:29:36 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:29:37 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:6; nom : Gizmo; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:29:37 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:29:37 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:29:37 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:4; nom : Chausson 4; lvl : 1
+27/01/2015 00:29:37 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:29:37 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:29:37 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:6; nom : Gizmo; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:29:37 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:29:37 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:29:37 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:4; nom : Chausson 4; lvl : 1
+27/01/2015 00:29:50 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:29:50 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:29:50 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:6; nom : Gizmo; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:29:50 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:29:50 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:29:50 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:4; nom : Chausson 4; lvl : 1
+27/01/2015 00:30:24 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:30:24 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:30:24 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:6; nom : Gizmo; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:30:24 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:30:24 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:30:24 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:4; nom : Chausson 4; lvl : 1
+27/01/2015 00:30:36 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:30:36 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:30:36 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:6; nom : Gizmo; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:30:36 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:30:36 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:30:36 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:4; nom : Chausson 4; lvl : 1
+27/01/2015 00:31:03 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:31:03 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:31:03 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:6; nom : Gizmo; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:31:03 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:31:03 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:31:03 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:4; nom : Chausson 4; lvl : 1
+27/01/2015 00:31:04 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:31:04 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:31:04 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:6; nom : Gizmo; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:31:04 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:31:04 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:31:04 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:4; nom : Chausson 4; lvl : 1
+27/01/2015 00:31:25 Creation d'une l'equipe : ...
+27/01/2015 00:31:25 Construction Equipe : ID Equipe: 1 | Niveau total :11 | Personnages :ID:9001; nom : Monster 1; lvl : 1 | ID:9002; nom : Monster 2; lvl : 2 | ID:9003; nom : Monster 3; lvl : 3 | ID:9004; nom : Monster 4; lvl : 2 | ID:9005; nom : Monster 5; lvl : 3
+27/01/2015 00:31:25 Creation d'une l'equipe : ...
+27/01/2015 00:31:25 Construction Equipe : ID Equipe: 2 | Niveau total :13 | Personnages :ID:9006; nom : Monster 1; lvl : 1 | ID:9007; nom : Monster 2; lvl : 3 | ID:9008; nom : Monster 3; lvl : 6 | ID:9009; nom : Monster 4; lvl : 3
+27/01/2015 00:31:25 Creation d'une l'equipe : ...
+27/01/2015 00:31:25 Construction Equipe : ID Equipe: 3 | Niveau total :14 | Personnages :ID:9010; nom : Monster 1; lvl : 5 | ID:9011; nom : Monster 2; lvl : 6 | ID:9012; nom : Monster 3; lvl : 3
+27/01/2015 00:31:25 Creation d'une l'equipe : ...
+27/01/2015 00:31:26 Construction Equipe : ID Equipe: 4 | Niveau total :20 | Personnages :ID:9013; nom : Monster 1; lvl : 2 | ID:9014; nom : Monster 2; lvl : 5 | ID:9015; nom : Monster 3; lvl : 6 | ID:9016; nom : Monster 4; lvl : 7
+27/01/2015 00:31:26 Creation d'une l'equipe : ...
+27/01/2015 00:31:26 Construction Equipe : ID Equipe: 5 | Niveau total :19 | Personnages :ID:9017; nom : Monster 1; lvl : 7 | ID:9018; nom : Monster 2; lvl : 6 | ID:9019; nom : Monster 3; lvl : 6
+27/01/2015 00:31:26 Creation d'une l'equipe : ...
+27/01/2015 00:31:26 Construction Equipe : ID Equipe: 6 | Niveau total :19 | Personnages :ID:9020; nom : Monster 1; lvl : 2 | ID:9021; nom : Monster 2; lvl : 2 | ID:9022; nom : Monster 3; lvl : 8 | ID:9023; nom : Monster 4; lvl : 7
+27/01/2015 00:31:26 Creation d'une l'equipe : ...
+27/01/2015 00:31:26 Construction Equipe : ID Equipe: 7 | Niveau total :18 | Personnages :ID:9024; nom : Monster 1; lvl : 5 | ID:9025; nom : Monster 2; lvl : 5 | ID:9026; nom : Monster 3; lvl : 8
+27/01/2015 00:31:26 Creation d'une l'equipe : ...
+27/01/2015 00:31:26 Construction Equipe : ID Equipe: 8 | Niveau total :22 | Personnages :ID:9027; nom : Monster 1; lvl : 4 | ID:9028; nom : Monster 2; lvl : 9 | ID:9029; nom : Monster 3; lvl : 9
+27/01/2015 00:31:26 Creation d'une l'equipe : ...
+27/01/2015 00:31:26 Construction Equipe : ID Equipe: 9 | Niveau total :21 | Personnages :ID:9030; nom : Monster 1; lvl : 3 | ID:9031; nom : Monster 2; lvl : 4 | ID:9032; nom : Monster 3; lvl : 4 | ID:9033; nom : Monster 4; lvl : 3 | ID:9034; nom : Monster 5; lvl : 7
+27/01/2015 00:31:26 Creation d'une l'equipe : ...
+27/01/2015 00:31:26 Construction Equipe : ID Equipe: 10 | Niveau total :20 | Personnages :ID:9035; nom : Monster 1; lvl : 6 | ID:9036; nom : Monster 2; lvl : 4 | ID:9037; nom : Monster 3; lvl : 10
+27/01/2015 00:31:29 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:31:29 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:31:29 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:6; nom : Gizmo; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:31:29 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:31:29 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:31:29 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:4; nom : Chausson 4; lvl : 1
+27/01/2015 00:31:31 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:31:31 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:31:31 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:6; nom : Gizmo; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:31:31 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:31:31 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:31:31 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:4; nom : Chausson 4; lvl : 1
+27/01/2015 00:31:32 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:31:32 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:31:32 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:6; nom : Gizmo; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:31:32 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:31:32 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:31:32 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:4; nom : Chausson 4; lvl : 1
+27/01/2015 00:31:32 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:31:32 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:31:33 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:6; nom : Gizmo; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:31:33 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:31:33 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:31:33 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:4; nom : Chausson 4; lvl : 1
+27/01/2015 00:31:34 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:31:34 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:31:34 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:6; nom : Gizmo; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:31:34 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:31:34 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:31:34 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:4; nom : Chausson 4; lvl : 1
+27/01/2015 00:35:39 Recuperation des personnages de l'equipe d'id : 7
+27/01/2015 00:35:39 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 7
+27/01/2015 00:35:39 Construction Equipe : ID Equipe: 7 | Niveau total :13 | Personnages :ID:6; nom : Gizmo; lvl : 1 | ID:5; nom : Naboo; lvl : 12
+27/01/2015 00:35:39 Recuperation des personnages de l'equipe d'id : 8
+27/01/2015 00:35:39 SELECT id_personnage FROM personnage WHERE id_equipe = :id_equipe order by niveau : 	 8
+27/01/2015 00:35:39 Construction Equipe : ID Equipe: 8 | Niveau total :1 | Personnages :ID:4; nom : Chausson 4; lvl : 1

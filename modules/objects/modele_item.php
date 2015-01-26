@@ -1,5 +1,5 @@
 <?php
-if ( !defined ( 'TEST_INCLUDE' ) )
+if ( ! defined ( 'TEST_INCLUDE' ) )
     exit ( "Vous n'avez pas accès directement à ce fichier" );
 
 
@@ -53,10 +53,11 @@ class Item extends DBMapper {
     /**
      * @param $id_Personnage
      */
-    function faireAction ($id_Personnage) {
-         $this->_actions->make_action($id_Personnage);
+    function faireAction ( $id_Personnage ) {
+        $this->_actions->make_action ( $id_Personnage );
     }
-    function getArray(){
-        return array('id_item'=> $this->_id_item, 'nom' => $this->_nom);
+
+    function getArray () {
+        return array ( 'id_item' => $this->_id_item, 'nom' => $this->_nom );
     }
 }

@@ -6,22 +6,17 @@
  * Time: 13:30
  */
 //TODO TYPE
-class Item_type extends DBMapper
-{
+class Item_type extends DBMapper {
     protected $_id_type; // type d'item, exemple potions
     protected $_nom;
     protected $_actions;// listes des effets de l'item
 
-    function __construct ( $id_type )
-    {
+    function __construct ( $id_type ) {
         //ICI on récupère les informations de l'attaque
         $requete = "SELECT DISTINCT * FROM item_type WHERE id_type = :id_type";
         try {
             $reponse = self::$database->prepare ( $requete );
-            $reponse->execute (
-                    array (
-                            'id_type' => $id_type
-                    ) );
+            $reponse->execute ( array ( 'id_type' => $id_type ) );
         } catch ( PDOException $e ) {
             echo 'Échec lors de la connexion : ' . $e->getMessage ();
         }

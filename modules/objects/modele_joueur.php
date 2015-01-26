@@ -15,59 +15,49 @@ class Joueur extends Participant {
     protected $_items;
 
     /**
-     * @return mixed
-     */
-    public function getIdUser () {
-        return $this->_id_user;
-    }
-	
-    /**
      * On créer un Joueur à partir de la base de données; On verifie d'abbord si le joueur est connecté.
      */
-    function __construct ($id_joueur = NULL) {
-        if(is_null($id_joueur)){
-            if(self::connectee()){
-                $user     = unserialize ( $_SESSION[ 'user' ] );
+    function __construct ( $id_joueur = NULL ) {
+        if ( is_null ( $id_joueur ) ) {
+            if ( self::connectee () ) {
+                $user      = unserialize ( $_SESSION[ 'user' ] );
                 $id_joueur = $user->getIdUser ();
-
-            }else {
+            } else {
                 exit ( 'vous n\'etes pas connecté' );
             }
         }
-            $user     = unserialize ( $_SESSION[ 'user' ] );
-            $resultat = static::requeteFromDB ( "SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user", array ( 'username' => $user->getUsername (), 'id_user' => $id_joueur ) )[ 0 ];
-            //Recuperation infos du joueur
-            $this->_id_user         = $resultat[ 'id_user' ];
-            $this->_username        = $resultat[ 'username' ];
-            $this->_argent          = $resultat[ 'argent' ];
-            $this->_nombre_victoire = $resultat[ 'nombre_victoire' ];
-            $this->_nombre_defaite  = $resultat[ 'nombre_defaite' ];
+        $user     = unserialize ( $_SESSION[ 'user' ] );
+        $resultat = static::requeteFromDB ( "SELECT id_user, username, argent,nombre_victoire, nombre_defaite FROM users WHERE username = :username AND id_user = :id_user", array ( 'username' => $user->getUsername (), 'id_user' => $id_joueur ) )[ 0 ];
+        //Recuperation infos du joueur
+        $this->_id_user         = $resultat[ 'id_user' ];
+        $this->_username        = $resultat[ 'username' ];
+        $this->_argent          = $resultat[ 'argent' ];
+        $this->_nombre_victoire = $resultat[ 'nombre_victoire' ];
+        $this->_nombre_defaite  = $resultat[ 'nombre_defaite' ];
+        // Recuperation de la liste des équipes
+        $listeEquipes   = static::requeteFromDB ( "SELECT id_equipe FROM equipe WHERE id_user = :id_user", array ( 'id_user' => $this->_id_user ) );
+        $this->_equipes = array ();
+        // SI le compte n'a pas deux equipes, alors on lui créer les deux equipes
+        if ( count ( $listeEquipes ) == 0 ) {
+            Equipe::createTwoEquipeForBD ( $this->_id_user );
             // Recuperation de la liste des équipes
-            $listeEquipes   = static::requeteFromDB ( "SELECT id_equipe FROM equipe WHERE id_user = :id_user", array ( 'id_user' => $this->_id_user ) );
-            $this->_equipes = array ();
-            // SI le compte n'a pas deux equipes, alors on lui créer les deux equipes
-            if ( count ( $listeEquipes ) == 0 ) {
-                Equipe::createTwoEquipeForBD ( $this->_id_user );
-                // Recuperation de la liste des équipes
-                $listeEquipes = static::requeteFromDB ( "SELECT id_equipe FROM equipe WHERE id_user = :id_user", array ( 'id_user' => $this->_id_user ) );
-            }
-            foreach ( $listeEquipes as $id_equipe ) {
-                $equipe = Equipe::createEquipeFromBD ( $id_equipe[ 'id_equipe' ] );
-                array_push ( $this->_equipes, $equipe );
-            }
-        $resultat=self::requeteFromDB("select id_item, quantite from inventaire where id_user=:id_user", array('id_user' => $this->_id_user));
-        $this->_items=array();
-        if(count($resultat)>0){
-            foreach($resultat as $itemTab){
-                $item=new Item($itemTab['id_item']);
-                $element=array('item' => $item,
-                               'quantite' => $itemTab['quantite']);
-                array_push($this->_items, $element);
+            $listeEquipes = static::requeteFromDB ( "SELECT id_equipe FROM equipe WHERE id_user = :id_user", array ( 'id_user' => $this->_id_user ) );
+        }
+        foreach ( $listeEquipes as $id_equipe ) {
+            $equipe = Equipe::createEquipeFromBD ( $id_equipe[ 'id_equipe' ] );
+            array_push ( $this->_equipes, $equipe );
+        }
+        $resultat     = self::requeteFromDB ( "select id_item, quantite from inventaire where id_user=:id_user", array ( 'id_user' => $this->_id_user ) );
+        $this->_items = array ();
+        if ( count ( $resultat ) > 0 ) {
+            foreach ( $resultat as $itemTab ) {
+                $item    = new Item( $itemTab[ 'id_item' ] );
+                $element = array ( 'item' => $item, 'quantite' => $itemTab[ 'quantite' ] );
+                array_push ( $this->_items, $element );
             }
         }
         $this->_date_derniere_refresh = time ();
     }
-
 
     public static function connectee () {
         $connectee = FALSE;
@@ -115,19 +105,45 @@ WHERE 1 = 1 order by personnage.niveau DESC, personnage.experience DESC;" );
      * @throws Exception
      */
     static function getAllJoueurClassement () {
-        $listes_user = self::requeteFromDB ( "select id_user, username,connected,nombre_victoire, nombre_defaite from users where  last_connection is not NULL" );
+        $listes_user = self::requeteFromDB ( "select id_user, username,connected,nombre_victoire, nombre_defaite from users where  last_connection is not NULL ORDER BY nombre_victoire ASC" );
         $donnees     = array ();
         foreach ( $listes_user as $user ) {
-            $joueur                = self::requeteFromDB ( "select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
+            $joueur = self::requeteFromDB ( "select SUM(personnage.niveau) as niveauTotal,COUNT(id_personnage) as nombrePerso, MAX(personnage.niveau) as niveauMax from equipe INNER JOIN personnage ON equipe.id_equipe = personnage.id_equipe where equipe.id_user=:id_user;
 ", array ( 'id_user' => $user[ 'id_user' ] ) )[ 0 ];;
-            $joueur[ 'username' ]  = $user[ 'username' ];
-            $joueur[ 'connected' ] = $user[ 'connected' ];
-            $joueur[ 'nombre_victoire'] = $user[ 'nombre_victoire'];
-            $joueur[ 'nombre_defaite'] = $user[ 'nombre_defaite'];
+            $joueur[ 'username' ]        = $user[ 'username' ];
+            $joueur[ 'connected' ]       = $user[ 'connected' ];
+            $joueur[ 'nombre_victoire' ] = $user[ 'nombre_victoire' ];
+            $joueur[ 'nombre_defaite' ]  = $user[ 'nombre_defaite' ];
             array_push ( $donnees, $joueur );
         }
 
         return $donnees;
+    }
+
+    static function getUsernameJoueur ( $id_user ) {
+        $resultat = self::requeteFromDB ( "select username from users where id_user=:id_user", array ( 'id_user' => $id_user ) );
+        if ( count ( $resultat ) > 0 ) {
+            $resultat = $resultat[ 0 ][ 0 ];
+        } else {
+            $resultat = NULL;
+        }
+
+        return $resultat;
+    }
+
+    static function getListesUsers () {
+        return self::requeteFromDB ( "select id_user,username from users where last_connection IS NOT NULL" );
+    }
+
+    static function getListesUsersConnected () {
+        return self::requeteFromDB ( "select id_user,username from users where connected=TRUE" );
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIdUser () {
+        return $this->_id_user;
     }
 
     /**
@@ -158,6 +174,8 @@ WHERE 1 = 1 order by personnage.niveau DESC, personnage.experience DESC;" );
     function __toString () {
         return "Identifiant joueur: " . $this->_id_user . parent::__toString ();
     }
+
+    //TODO a mettre à jour
 
     function getParticipant () {
         return array ( 'id_user' => $this->_id_user, 'username' => $this->_username, 'argent' => $this->_argent, 'equipes' => $this->_equipes );
@@ -195,7 +213,6 @@ WHERE 1 = 1 order by personnage.niveau DESC, personnage.experience DESC;" );
         }
     }
 
-    //TODO a mettre à jour
     function ajouterPourcentExperience ( $pourcentXP ) {
         $this->getEquipeOne ()->ajouterPourcentExperience ( $pourcentXP );
     }
@@ -280,36 +297,17 @@ WHERE 1 = 1 order by personnage.niveau DESC, personnage.experience DESC;" );
         self::requeteFromDB ( "update users set nombre_defaite=:nombre_defaite where id_user = :id_user", array ( 'id_user' => $this->_id_user, 'nombre_defaite' => $this->_nombre_defaite ) );
     }
 
-    static function getUsernameJoueur($id_user){
-        $resultat=self::requeteFromDB("select username from users where id_user=:id_user", array('id_user' => $id_user));
-        if(count($resultat)>0){
-            $resultat=$resultat[0][0];
-
-        }else{
-            $resultat=NULL;
-        }
-        return $resultat;
-    }
-
-    static function getListesUsers(){
-        return self::requeteFromDB("select id_user,username from users where last_connection IS NOT NULL");
-    }
-
-    static function getListesUsersConnected(){
-        return self::requeteFromDB("select id_user,username from users where connected=TRUE");
-    }
-
     // SARAH prend $id de l'item en param, parcrous la liste items du joueur jusqu'à trouver le bon item et fait l'action
-    function utiliserItem($id_item){
 
-        foreach($this->_items as $val){
-            if($val['id']==$id_item){
-                $this->_items->faireAction($this->_id_user);
+    function utiliserItem ( $id_item ) {
+        foreach ( $this->_items as $val ) {
+            if ( $val[ 'id' ] == $id_item ) {
+                $this->_items->faireAction ( $this->_id_user );
             }
         }
     }
 
-    function getItems(){
+    function getItems () {
         return $this->_items;
     }
 }
