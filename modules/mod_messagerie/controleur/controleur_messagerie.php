@@ -14,6 +14,7 @@ require_once MOD_BPATH . "modele" . DIR_SEP . "modele_combat.php";
 */
 require_once "modules/include_objects.php";
 //importation vue
+require_once MOD_BPATH . "modele" . DIR_SEP . "modele_message.php";
 require_once MOD_BPATH . "modele" . DIR_SEP . "modele_messagerie.php";
 require_once MOD_BPATH . DIR_SEP . "vue/vue_messagerie.php";
 

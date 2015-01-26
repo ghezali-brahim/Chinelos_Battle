@@ -22,10 +22,13 @@ class Message extends DBMapper {
     protected $_username_destinataire;
 
     function __construct ( $id_message ) {
-        $resultat               = self::requeteFromDB ( "select objet, contenu, id_expeditaire, id_destinataire, date_envoie, lu from messages where id_message=:id_message", array ( 'id_message' => $id_message ) )[ 0 ];
+        $resultat               = self::requeteFromDB ( "select objet, contenu, id_expeditaire, id_destinataire, date_envoie, lu from messages where id_message=:id_message", array ( 'id_message' => $id_message ) )[0];
+        if($resultat==null){
+            throw new Exception("ID message inconnu : ".$id_message);
+        }
         $this->_objet           = $resultat[ 'objet' ];
         $this->_contenu         = $resultat[ 'contenu' ];
-        $this->_id_destinataire = $resultat[ 'id_expeditaire' ];
+        $this->_id_destinataire = $resultat[ 'id_destinataire' ];
         $this->_id_expeditaire  = $resultat[ 'id_expeditaire' ];
         $this->_date_envoie     = $resultat[ 'date_envoie' ];
         $this->_lu              = $resultat[ 'lu' ];

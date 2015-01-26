@@ -14,12 +14,16 @@ class ModMessagerieModeleMessagerie extends DBMapper {
         $liste_id_messages_envoyer     = self::requeteFromDB ( "select id_message from messages where id_expeditaire=:id_user", array ( 'id_user' => $this->_id_user ) );
         $liste_id_messages_recus       = self::requeteFromDB ( "select id_message from messages where id_destinataire=:id_user", array ( 'id_user' => $this->_id_user ) );
         $this->_liste_messages_envoyer = array ();
-        $this->_liste_message_recus    = array ();
-        foreach ( $liste_id_messages_envoyer as $id_message ) {
-            array_push ( $this->_liste_messages_envoyer, new Message( $id_message ) );
+        $this->_liste_messages_recus    = array ();
+        if(count($liste_id_messages_envoyer)>0){
+            foreach ( $liste_id_messages_envoyer as $message ) {
+                array_push ( $this->_liste_messages_envoyer, new Message( $message['id_message'] ) );
+            }
         }
-        foreach ( $liste_id_messages_recus as $id_message ) {
-            array_push ( $this->_liste_messages_recus, new Message( $id_message ) );
+        if(count($liste_id_messages_recus)>0){
+            foreach ( $liste_id_messages_recus as $message ) {
+                array_push ( $this->_liste_messages_recus, new Message( $message['id_message'] ) );
+            }
         }
     }
 
@@ -33,7 +37,7 @@ class ModMessagerieModeleMessagerie extends DBMapper {
             return array();
         }
         foreach( $this->_liste_messages_envoyer as $message_envoyer){
-            array_push($listesMessagesEnvoyerArray,$message_envoyer->getMessagerieArray());
+            array_push($listesMessagesEnvoyerArray,$message_envoyer->getMessageArray());
         }
         return $listesMessagesEnvoyerArray;
     }
