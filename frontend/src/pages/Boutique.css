@@ -1,0 +1,263 @@
+.boutique-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.profile-summary {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.boutique-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.boutique-tabs button {
+  padding: 12px 24px;
+  border: 2px solid #667eea;
+  background: white;
+  color: #667eea;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.boutique-tabs button.active,
+.boutique-tabs button:hover {
+  background: #667eea;
+  color: white;
+}
+
+.purchase-options {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.purchase-options h2 {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.purchase-options h2:first-child {
+  margin-top: 0;
+}
+
+.purchase-btn {
+  padding: 12px 24px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  margin-bottom: 15px;
+}
+
+.purchase-btn:hover:not(:disabled) {
+  background: #5568d3;
+}
+
+.purchase-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.purchase-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.name-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.name-input-group label {
+  font-weight: 500;
+  color: #333;
+}
+
+.name-input-with-suggestions {
+  display: flex;
+  gap: 8px;
+  align-items: stretch;
+}
+
+.name-input-with-suggestions input {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.name-input-with-suggestions input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.generate-name-btn {
+  padding: 10px 15px;
+  background: #17a2b8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.3s;
+  white-space: nowrap;
+}
+
+.generate-name-btn:hover {
+  background: #138496;
+}
+
+.suggested-names {
+  margin-top: 10px;
+}
+
+.suggested-names-label {
+  display: block;
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.suggested-names-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.suggested-name-btn {
+  padding: 6px 12px;
+  background: white;
+  border: 1px solid #667eea;
+  border-radius: 6px;
+  color: #667eea;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.suggested-name-btn:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.suggested-name-btn.refresh-btn {
+  background: #f8f9fa;
+  border-color: #6c757d;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.suggested-name-btn.refresh-btn:hover {
+  background: #6c757d;
+  color: white;
+}
+
+.element-selection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.element-selection label {
+  font-weight: 500;
+  color: #333;
+}
+
+.purchase-form select {
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  background: white;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.purchase-form select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.purchase-form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.confirm-btn {
+  flex: 1;
+  padding: 12px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.confirm-btn:hover:not(:disabled) {
+  background: #218838;
+}
+
+.confirm-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.cancel-btn {
+  padding: 12px 24px;
+  background: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.cancel-btn:hover {
+  background: #5a6268;
+}
+
+.items-section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+

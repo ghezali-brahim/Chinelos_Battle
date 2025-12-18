@@ -1,0 +1,48 @@
+.inventory {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.inventory-empty {
+  text-align: center;
+  padding: 40px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.inventory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.inventory-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  background: #f9f9f9;
+}
+
+.inventory-item h4 {
+  margin: 0 0 10px 0;
+}
+
+.inventory-item p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.quantity {
+  display: inline-block;
+  padding: 4px 8px;
+  background: #667eea;
+  color: white;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+

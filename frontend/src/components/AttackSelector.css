@@ -1,0 +1,51 @@
+.attack-selector {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.attack-selector h4 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.attack-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.attack-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.attack-option:hover {
+  border-color: #667eea;
+  background: #f0f4ff;
+}
+
+.attack-option.selected {
+  border-color: #667eea;
+  background: #667eea;
+  color: white;
+}
+
+.attack-name {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.attack-details {
+  font-size: 14px;
+  opacity: 0.8;
+}
+

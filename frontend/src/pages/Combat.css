@@ -1,0 +1,119 @@
+.combat-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.combat-page h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.combat-intro {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 1.1em;
+}
+
+.combat-actions {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.start-combat-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.2em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-weight: 500;
+}
+
+.start-combat-btn:hover:not(:disabled) {
+  background: #0056b3;
+}
+
+.start-combat-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.selected-enemy-info {
+  text-align: center;
+  margin-top: 20px;
+  padding: 15px;
+  background: #e7f3ff;
+  border-radius: 8px;
+  color: #0056b3;
+  font-weight: 500;
+}
+
+.loading,
+.error {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.2em;
+}
+
+.error {
+  color: #dc3545;
+}
+
+.error-message {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.retry-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.retry-btn:hover {
+  background: #c82333;
+}
+
+.no-enemies-message {
+  text-align: center;
+  padding: 40px;
+  background: #fff3cd;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.no-enemies-message p {
+  margin-bottom: 20px;
+  color: #856404;
+  font-size: 1.1em;
+}
+
+.go-to-boutique-btn {
+  display: inline-block;
+  background: #007bff;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.go-to-boutique-btn:hover {
+  background: #0056b3;
+}

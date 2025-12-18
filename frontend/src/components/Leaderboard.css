@@ -1,0 +1,36 @@
+.leaderboard {
+  width: 100%;
+}
+
+.leaderboard h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.leaderboard table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.leaderboard th {
+  background-color: #333;
+  color: white;
+  padding: 12px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.leaderboard td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.leaderboard tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.leaderboard tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+

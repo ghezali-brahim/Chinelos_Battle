@@ -1,0 +1,244 @@
+.team-manager {
+  padding: 20px;
+}
+
+.team-manager-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.team-manager-header h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.team-manager-info {
+  color: #666;
+  font-size: 0.95em;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.teams-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.team-section {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.active-team {
+  border: 3px solid #28a745;
+}
+
+.reserve-team {
+  border: 3px solid #6c757d;
+}
+
+.team-header {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.team-header h3 {
+  margin: 0 0 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #333;
+}
+
+.team-badge {
+  background: #667eea;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.85em;
+  font-weight: 600;
+}
+
+.team-stats {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.team-stats span {
+  padding: 4px 8px;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.dead-count {
+  color: #dc3545 !important;
+  background: #ffeaea !important;
+}
+
+.empty-team {
+  text-align: center;
+  padding: 40px 20px;
+  color: #999;
+}
+
+.empty-team-hint {
+  font-size: 0.9em;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.personnages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.personnages-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.group-title {
+  font-size: 1em;
+  margin: 0;
+  padding: 8px 12px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  font-weight: 600;
+  color: #333;
+}
+
+.group-title.dead-title {
+  background: #ffeaea;
+  color: #dc3545;
+}
+
+.personnages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 15px;
+}
+
+.personnage-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.transfer-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.transfer-btn.to-active {
+  background: #28a745;
+  color: white;
+}
+
+.transfer-btn.to-active:hover:not(:disabled) {
+  background: #218838;
+  transform: translateY(-2px);
+}
+
+.transfer-btn.to-reserve {
+  background: #6c757d;
+  color: white;
+}
+
+.transfer-btn.to-reserve:hover:not(:disabled) {
+  background: #5a6268;
+  transform: translateY(-2px);
+}
+
+.transfer-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.selected-personnage-info {
+  position: sticky;
+  bottom: 0;
+  background: white;
+  border-top: 3px solid #667eea;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.selected-personnage-info h4 {
+  margin: 0 0 15px 0;
+  color: #667eea;
+}
+
+.personnage-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.detail-row span:first-child {
+  font-weight: 500;
+  color: #666;
+}
+
+.detail-row span:last-child {
+  font-weight: 600;
+  color: #333;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+}
+
+@media (max-width: 1200px) {
+  .teams-container {
+    grid-template-columns: 1fr;
+  }
+
+  .personnages-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .personnages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-stats {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .personnage-details {
+    grid-template-columns: 1fr;
+  }
+}
+

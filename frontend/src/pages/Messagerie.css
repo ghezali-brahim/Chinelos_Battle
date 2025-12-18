@@ -1,0 +1,29 @@
+.messagerie-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.messagerie-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.messagerie-tabs button {
+  padding: 12px 24px;
+  border: 2px solid #667eea;
+  background: white;
+  color: #667eea;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.messagerie-tabs button.active,
+.messagerie-tabs button:hover {
+  background: #667eea;
+  color: white;
+}
+
