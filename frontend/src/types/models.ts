@@ -28,6 +28,7 @@ export interface Personnage {
   puissance: number
   defense: number
   id_equipe: number | null
+  image_url?: string | null
 }
 
 export interface PersonnageWithAttaques extends Personnage {

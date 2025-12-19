@@ -25,6 +25,8 @@ const CombatArena: React.FC<CombatArenaProps> = ({ combatId, elements, attaques,
   const [rewards, setRewards] = useState<{ argent: number; xpPoints: number; newBalance: number } | null>(null)
   const [isAttacking, setIsAttacking] = useState(false)
   const [attackAnimation, setAttackAnimation] = useState<{ attacker: string; target: string; type: string } | null>(null)
+  const [autoCombat, setAutoCombat] = useState(false)
+  const [combatSpeed, setCombatSpeed] = useState<1 | 2 | 4>(2) // Vitesse par défaut x2
 
   const { data: combatData, refetch, error: combatError } = useQuery({
     queryKey: ['combat', combatId],
@@ -42,8 +44,12 @@ const CombatArena: React.FC<CombatArenaProps> = ({ combatId, elements, attaques,
   useEffect(() => {
     if (combatData) {
       setCombatState(combatData)
+      // Désactiver le mode auto si le combat est terminé
+      if (combatData.finit && autoCombat) {
+        setAutoCombat(false)
+      }
     }
-  }, [combatData])
+  }, [combatData, autoCombat])
 
   // Raccourcis clavier pour les attaques
   useEffect(() => {
@@ -122,21 +128,124 @@ const CombatArena: React.FC<CombatArenaProps> = ({ combatId, elements, attaques,
     return personnage
   }
 
-  const handleAttack = async (attackIndex?: number) => {
-    // Si attackIndex est fourni, l'utiliser directement (attaque rapide)
-    const attackToUse = attackIndex !== undefined ? attackIndex : selectedAttack
-    
-    if (attackToUse === null || selectedEnemy === null || !combatState || isAttacking) return
+  // Fonction pour choisir automatiquement la meilleure attaque
+  const chooseBestAttack = (personnage: Personnage): number => {
+    const attaquesIds = parseAttaques(personnage.attaques)
+    let bestAttackIndex = 0
+    let bestScore = 0
 
-    const currentPersonnage = getCurrentPersonnage()
-    if (!currentPersonnage || currentPersonnage.hp <= 0) {
-      alert('Ce personnage ne peut pas attaquer')
+    attaquesIds.forEach((attaqueId, index) => {
+      const attaque = attaques.find((a) => a.id_attaque === attaqueId)
+      if (!attaque) return
+
+      // Score basé sur les dégâts / coût MP (efficacité)
+      const efficiency = personnage.mp >= attaque.mp_used 
+        ? attaque.degats / (attaque.mp_used || 1)
+        : 0
+      
+      // Préférer les attaques puissantes si on a assez de MP
+      if (personnage.mp >= attaque.mp_used && efficiency > bestScore) {
+        bestScore = efficiency
+        bestAttackIndex = index
+      }
+    })
+
+    return bestAttackIndex
+  }
+
+  // Fonction pour choisir automatiquement la cible
+  const chooseBestTarget = (combatState: CombatState): number => {
+    const aliveEnemies = combatState.enemy_team
+      .map((p, index) => ({ personnage: p, index }))
+      .filter(({ personnage }) => personnage.hp > 0)
+
+    if (aliveEnemies.length === 0) return 0
+
+    // Cibler l'ennemi le plus faible (moins de HP)
+    const weakest = aliveEnemies.reduce((prev, curr) => 
+      curr.personnage.hp < prev.personnage.hp ? curr : prev
+    )
+
+    return weakest.index
+  }
+
+  // Mode automatique
+  useEffect(() => {
+    if (!autoCombat || !combatState || combatState.finit || isAttacking) {
       return
     }
 
-    const targetEnemy = combatState.enemy_team[selectedEnemy]
+    // Attendre seulement si c'est le tour du joueur
+    if (combatState.current_turn === 'joueur') {
+      const currentPersonnage = getCurrentPersonnage()
+      if (!currentPersonnage || currentPersonnage.hp <= 0) {
+        return
+      }
+
+      const aliveEnemies = combatState.enemy_team.filter(p => p.hp > 0)
+      if (aliveEnemies.length === 0) {
+        return
+      }
+
+      // Délai selon la vitesse
+      const delay = combatSpeed === 4 ? 250 : combatSpeed === 2 ? 500 : 1000
+
+      const timer = setTimeout(async () => {
+        const attackIndex = chooseBestAttack(currentPersonnage)
+        const targetIndex = chooseBestTarget(combatState)
+
+        // Vérifier que l'attaque est utilisable
+        const attaquesIds = parseAttaques(currentPersonnage.attaques)
+        const attaqueId = attaquesIds[attackIndex]
+        const attaque = attaques.find((a) => a.id_attaque === attaqueId)
+
+        if (attaque && currentPersonnage.mp >= attaque.mp_used) {
+          // Exécuter l'attaque automatiquement avec l'attaque et la cible choisies
+          await handleAttack(attackIndex, targetIndex)
+        } else {
+          // Si pas assez de MP, utiliser l'attaque gratuite (index 2)
+          const freeAttackIndex = 2
+          const freeAttaqueId = parseAttaques(currentPersonnage.attaques)[freeAttackIndex]
+          const freeAttaque = attaques.find((a) => a.id_attaque === freeAttaqueId)
+          if (freeAttaque && freeAttaque.mp_used === 0) {
+            await handleAttack(freeAttackIndex, targetIndex)
+          }
+        }
+      }, delay)
+
+      return () => clearTimeout(timer)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [autoCombat, combatState?.current_turn, combatState?.nombre_tour, combatState?.finit, isAttacking, combatSpeed, attaques, combatState?.joueur_team, combatState?.enemy_team])
+
+  const handleAttack = async (attackIndex?: number, targetIndex?: number) => {
+    // Si attackIndex est fourni, l'utiliser directement (attaque rapide)
+    const attackToUse = attackIndex !== undefined ? attackIndex : selectedAttack
+    const targetToUse = targetIndex !== undefined ? targetIndex : selectedEnemy
+    
+    if (attackToUse === null || targetToUse === null || !combatState || isAttacking) {
+      return
+    }
+
+    const currentPersonnage = getCurrentPersonnage()
+    if (!currentPersonnage || currentPersonnage.hp <= 0) {
+      if (!autoCombat) {
+        alert('Ce personnage ne peut pas attaquer')
+      }
+      return
+    }
+
+    const targetEnemy = combatState.enemy_team[targetToUse]
     if (!targetEnemy || targetEnemy.hp <= 0) {
-      alert('Cette cible est déjà morte')
+      // En mode auto, choisir une nouvelle cible
+      if (autoCombat && combatState) {
+        const newTarget = chooseBestTarget(combatState)
+        if (combatState.enemy_team[newTarget] && combatState.enemy_team[newTarget].hp > 0) {
+          return handleAttack(attackIndex, newTarget)
+        }
+      } else if (!autoCombat) {
+        alert('Cette cible est déjà morte')
+      }
       return
     }
 
@@ -146,13 +255,15 @@ const CombatArena: React.FC<CombatArenaProps> = ({ combatId, elements, attaques,
     const attaque = attaques.find((a) => a.id_attaque === attaqueId)
     
     if (attaque && currentPersonnage.mp < attaque.mp_used) {
-      alert('Pas assez de MP pour cette attaque')
+      if (!autoCombat) {
+        alert('Pas assez de MP pour cette attaque')
+      }
       return
     }
 
     setIsAttacking(true)
 
-    // Animation d'attaque
+    // Animation d'attaque (plus courte en mode auto)
     const attaqueUsed = attaques.find((a) => a.id_attaque === parseAttaques(currentPersonnage.attaques)[attackToUse])
     setAttackAnimation({
       attacker: currentPersonnage.nom,
@@ -160,14 +271,15 @@ const CombatArena: React.FC<CombatArenaProps> = ({ combatId, elements, attaques,
       type: getAttackType(attaqueUsed?.degats || 0, attaqueUsed?.mp_used || 0),
     })
 
-    // Attendre un peu pour l'animation
-    await new Promise(resolve => setTimeout(resolve, 300))
+    // Attendre un peu pour l'animation (plus court en mode auto)
+    const animationDelay = autoCombat ? (combatSpeed === 4 ? 100 : 150) : 300
+    await new Promise(resolve => setTimeout(resolve, animationDelay))
 
     try {
       const response: AttackResponse = await combatService.executeAttack(
         combatId,
         attackToUse,
-        selectedEnemy
+        targetToUse
       )
 
       // Mettre à jour l'état du combat
@@ -224,15 +336,17 @@ const CombatArena: React.FC<CombatArenaProps> = ({ combatId, elements, attaques,
         }
       }
 
-      // Effacer l'animation
+      // Effacer l'animation (plus rapide en mode auto)
+      const clearDelay = autoCombat ? 200 : 600
       setTimeout(() => {
         setAttackAnimation(null)
-      }, 600)
+      }, clearDelay)
 
       // Attendre un peu avant de rafraîchir pour l'animation
+      const refreshDelay = autoCombat ? (combatSpeed === 4 ? 300 : 400) : 800
       setTimeout(() => {
         refetch()
-      }, 800)
+      }, refreshDelay)
 
       // Gérer les récompenses si le combat est terminé
       if (response.combatState.finit) {
@@ -281,11 +395,51 @@ const CombatArena: React.FC<CombatArenaProps> = ({ combatId, elements, attaques,
   return (
     <div className="combat-arena">
       <div className="combat-header">
-        <h2>Combat #{combatId}</h2>
-        <div className="combat-turn">
-          Tour: {combatState.nombre_tour}
-          {combatState.current_turn === 'joueur' && !combatState.finit && (
-            <span className="turn-indicator"> - Votre tour</span>
+        <div className="combat-header-top">
+          <div>
+            <h2>Combat #{combatId}</h2>
+            <div className="combat-turn">
+              Tour: {combatState.nombre_tour}
+              {combatState.current_turn === 'joueur' && !combatState.finit && (
+                <span className="turn-indicator"> - Votre tour</span>
+              )}
+            </div>
+          </div>
+          {!combatState.finit && combatState.current_turn === 'joueur' && (
+            <div className="auto-combat-controls">
+              <button
+                className={`auto-combat-btn ${autoCombat ? 'active' : ''}`}
+                onClick={() => setAutoCombat(!autoCombat)}
+                title={autoCombat ? 'Désactiver le mode automatique' : 'Activer le mode automatique'}
+              >
+                {autoCombat ? '⏸️ Mode Auto' : '▶️ Mode Auto'}
+              </button>
+              {autoCombat && (
+                <div className="speed-selector">
+                  <button
+                    className={`speed-btn ${combatSpeed === 1 ? 'active' : ''}`}
+                    onClick={() => setCombatSpeed(1)}
+                    title="Vitesse normale (x1)"
+                  >
+                    x1
+                  </button>
+                  <button
+                    className={`speed-btn ${combatSpeed === 2 ? 'active' : ''}`}
+                    onClick={() => setCombatSpeed(2)}
+                    title="Vitesse rapide (x2)"
+                  >
+                    x2
+                  </button>
+                  <button
+                    className={`speed-btn ${combatSpeed === 4 ? 'active' : ''}`}
+                    onClick={() => setCombatSpeed(4)}
+                    title="Vitesse très rapide (x4)"
+                  >
+                    x4
+                  </button>
+                </div>
+              )}
+            </div>
           )}
         </div>
       </div>
@@ -380,7 +534,7 @@ const CombatArena: React.FC<CombatArenaProps> = ({ combatId, elements, attaques,
         </div>
       </div>
 
-      {!combatState.finit && combatState.current_turn === 'joueur' && aliveJoueurTeam.length > 0 && (
+      {!combatState.finit && combatState.current_turn === 'joueur' && aliveJoueurTeam.length > 0 && !autoCombat && (
         <div className="combat-actions">
           {currentPersonnage && currentPersonnage.hp > 0 ? (
             <>
@@ -480,6 +634,13 @@ const CombatArena: React.FC<CombatArenaProps> = ({ combatId, elements, attaques,
       {!combatState.finit && combatState.current_turn === 'enemy' && (
         <div className="enemy-turn-indicator">
           <p>⏳ Tour de l'ennemi en cours...</p>
+        </div>
+      )}
+
+      {autoCombat && !combatState.finit && (
+        <div className="auto-combat-indicator">
+          <p>🤖 Mode automatique activé (vitesse x{combatSpeed})</p>
+          <p className="auto-combat-hint">Le combat se déroule automatiquement. Cliquez sur le bouton pour désactiver.</p>
         </div>
       )}
 

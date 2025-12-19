@@ -10,6 +10,8 @@ import joueurRoutes from './routes/joueur'
 import messagerieRoutes from './routes/messagerie'
 import contactRoutes from './routes/contact'
 import gameRoutes from './routes/game'
+import imageRoutes from './routes/images'
+import imageRoutes from './routes/images'
 
 const app = express()
 const PORT = process.env.PORT || 5000
@@ -33,6 +35,7 @@ app.use('/api/joueur', joueurRoutes)
 app.use('/api/messagerie', messagerieRoutes)
 app.use('/api/contact', contactRoutes)
 app.use('/api', gameRoutes)
+app.use('/api/images', imageRoutes)
 
 // Health check
 app.get('/health', (req: Request, res: Response) => {

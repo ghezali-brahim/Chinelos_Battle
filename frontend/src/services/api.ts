@@ -41,6 +41,27 @@ export const apiService = {
     const { data } = await api.get('/niveau')
     return data
   },
+
+  async generateCharacterImage(idPersonnage: number, element: number, niveau: number, nom: string, isEnemy: boolean = false) {
+    const { data } = await api.post('/images/generate', {
+      id_personnage: idPersonnage,
+      element,
+      niveau,
+      nom,
+      isEnemy,
+    })
+    return data
+  },
+
+  async getCharacterImage(idPersonnage: number) {
+    const { data } = await api.get(`/images/character/${idPersonnage}`)
+    return data
+  },
+
+  async regenerateCharacterImage(idPersonnage: number) {
+    const { data } = await api.post(`/images/regenerate/${idPersonnage}`)
+    return data
+  },
 }
 
 export default api

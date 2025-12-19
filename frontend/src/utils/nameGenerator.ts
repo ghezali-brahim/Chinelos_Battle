@@ -1,96 +1,120 @@
 /**
- * Générateur de noms de personnages
+ * Générateur de noms de personnages - Thème Business/Entrepreneuriat
  */
 
-const prefixes = [
-  'Ace', 'Blade', 'Crimson', 'Dark', 'Echo', 'Flame', 'Ghost', 'Hawk',
-  'Iron', 'Jade', 'Knight', 'Light', 'Moon', 'Night', 'Ocean', 'Phoenix',
-  'Quick', 'Raven', 'Shadow', 'Thunder', 'Ultra', 'Void', 'Wild', 'Zen',
-  'Alpha', 'Beta', 'Gamma', 'Delta', 'Sigma', 'Omega',
-  'Storm', 'Frost', 'Blaze', 'Tide', 'Stone', 'Wind',
+// Prénoms de professionnels
+const firstNames = [
+  'Alexander', 'Benjamin', 'Charlotte', 'David', 'Emma', 'Felix',
+  'Gabrielle', 'Henry', 'Isabella', 'James', 'Kate', 'Lucas',
+  'Maya', 'Nathan', 'Olivia', 'Paul', 'Rachel', 'Samuel',
+  'Sophia', 'Thomas', 'Victoria', 'William', 'Zoe', 'Daniel',
+  'Emily', 'Michael', 'Anna', 'Christopher', 'Jessica', 'Matthew',
+  'Sarah', 'Ryan', 'Lauren', 'Kevin', 'Amanda', 'Robert',
 ]
 
-const suffixes = [
-  'Warrior', 'Mage', 'Knight', 'Rogue', 'Guardian', 'Assassin',
-  'Sorcerer', 'Paladin', 'Ranger', 'Monk', 'Druid', 'Bard',
-  'Fighter', 'Wizard', 'Barbarian', 'Ninja', 'Samurai', 'Viking',
-  'Dragon', 'Tiger', 'Wolf', 'Eagle', 'Lion', 'Bear',
-  'Storm', 'Flame', 'Ice', 'Thunder', 'Shadow', 'Light',
-  'Blade', 'Shield', 'Arrow', 'Spear', 'Axe', 'Bow',
-  'Master', 'Lord', 'King', 'Queen', 'Prince', 'Princess',
+// Noms de famille professionnels
+const lastNames = [
+  'Anderson', 'Brown', 'Chen', 'Davis', 'Evans', 'Foster',
+  'Garcia', 'Harris', 'Jackson', 'Kumar', 'Lee', 'Martinez',
+  'Nguyen', 'Patel', 'Rodriguez', 'Smith', 'Taylor', 'Wilson',
+  'Young', 'Zhang', 'Adams', 'Baker', 'Cooper', 'Dixon',
+  'Edwards', 'Fletcher', 'Gibson', 'Hughes', 'Jones', 'Kelly',
+  'Mitchell', 'Nelson', 'Parker', 'Reed', 'Stewart', 'Turner',
 ]
 
-const middleWords = [
-  'the', 'of', 'Dark', 'Light', 'Fire', 'Ice', 'Storm', 'Thunder',
-  'Shadow', 'Golden', 'Silver', 'Iron', 'Steel', 'Crystal',
+// Titres professionnels
+const businessTitles = [
+  'CEO', 'CTO', 'CFO', 'CMO', 'COO', 'Founder',
+  'Director', 'Manager', 'Lead', 'VP', 'Head', 'Chief',
+  'Executive', 'Senior', 'Principal', 'Partner', 'Owner', 'President',
 ]
 
-const fantasyNames = [
-  'Aragorn', 'Legolas', 'Gandalf', 'Frodo', 'Bilbo', 'Sauron',
-  'Gimli', 'Boromir', 'Merry', 'Pippin', 'Samwise', 'Gollum',
-  'Thorin', 'Balin', 'Dwalin', 'Fili', 'Kili', 'Bofur',
-  'Eragon', 'Murtagh', 'Arya', 'Roran', 'Nasuada', 'Galbatorix',
-  'Geralt', 'Ciri', 'Yennefer', 'Triss', 'Dandelion', 'Zoltan',
-  'Link', 'Zelda', 'Ganondorf', 'Impa', 'Sheik', 'Navi',
-  'Cloud', 'Tifa', 'Aerith', 'Sephiroth', 'Vincent', 'Yuffie',
+// Spécialisations business
+const businessRoles = [
+  'Tech', 'Finance', 'Sales', 'Marketing', 'Operations', 'Strategy',
+  'Innovation', 'Growth', 'Business', 'Product', 'Investment', 'Consulting',
+  'Venture', 'Digital', 'Startup', 'Enterprise', 'Corporate', 'Analytics',
 ]
 
-const simpleNames = [
-  'Alex', 'Jordan', 'Casey', 'Morgan', 'Riley', 'Avery',
-  'Quinn', 'Cameron', 'Dakota', 'Sage', 'River', 'Sky',
-  'Phoenix', 'Storm', 'Blaze', 'Frost', 'Shadow', 'Light',
-  'Kai', 'Zane', 'Luna', 'Nova', 'Orion', 'Vega',
+// Domaines d'expertise
+const expertiseAreas = [
+  'AI', 'FinTech', 'HealthTech', 'EdTech', 'Ecommerce', 'SaaS',
+  'Blockchain', 'Mobile', 'Cloud', 'Data', 'Security', 'IoT',
+  'Energy', 'RealEstate', 'Transport', 'Food', 'Retail', 'Media',
 ]
 
 /**
- * Génère un nom de personnage aléatoire
- * @param style Style du nom: 'fantasy' | 'simple' | 'compound' | 'random'
+ * Génère un nom de personnage aléatoire - Style Business/Entrepreneur
+ * @param style Style du nom: 'full' | 'title' | 'role' | 'random'
  */
-export function generateCharacterName(style: 'fantasy' | 'simple' | 'compound' | 'random' = 'random'): string {
+export function generateCharacterName(style: 'full' | 'title' | 'role' | 'random' = 'random'): string {
   const selectedStyle = style === 'random' 
-    ? (['fantasy', 'simple', 'compound'][Math.floor(Math.random() * 3)] as 'fantasy' | 'simple' | 'compound')
+    ? (['full', 'title', 'role'][Math.floor(Math.random() * 3)] as 'full' | 'title' | 'role')
     : style
 
   let name = ''
 
   switch (selectedStyle) {
-    case 'fantasy':
-      name = fantasyNames[Math.floor(Math.random() * fantasyNames.length)]
+    case 'full':
+      // Prénom + Nom de famille
+      const firstName = firstNames[Math.floor(Math.random() * firstNames.length)]
+      const lastName = lastNames[Math.floor(Math.random() * lastNames.length)]
+      name = `${firstName}_${lastName}`
       break
     
-    case 'simple':
-      name = simpleNames[Math.floor(Math.random() * simpleNames.length)]
+    case 'title':
+      // Titre + Nom ou Titre + Spécialisation
+      if (Math.random() > 0.5) {
+        const title = businessTitles[Math.floor(Math.random() * businessTitles.length)]
+        const lastName = lastNames[Math.floor(Math.random() * lastNames.length)]
+        name = `${title}_${lastName}`
+      } else {
+        const title = businessTitles[Math.floor(Math.random() * businessTitles.length)]
+        const role = businessRoles[Math.floor(Math.random() * businessRoles.length)]
+        name = `${title}_${role}`
+      }
       break
     
-    case 'compound':
-      // Préfixe + Suffixe
-      const prefix = prefixes[Math.floor(Math.random() * prefixes.length)]
-      const suffix = suffixes[Math.floor(Math.random() * suffixes.length)]
-      name = `${prefix}${suffix}`
+    case 'role':
+      // Spécialisation + Nom ou Expertise + Titre
+      if (Math.random() > 0.5) {
+        const role = businessRoles[Math.floor(Math.random() * businessRoles.length)]
+        const lastName = lastNames[Math.floor(Math.random() * lastNames.length)]
+        name = `${role}_${lastName}`
+      } else {
+        const expertise = expertiseAreas[Math.floor(Math.random() * expertiseAreas.length)]
+        const title = businessTitles[Math.floor(Math.random() * businessTitles.length)]
+        name = `${expertise}_${title}`
+      }
       break
     
     default:
-      // Mélange de styles
+      // Mélange de styles business
       const styles = [
-        () => fantasyNames[Math.floor(Math.random() * fantasyNames.length)],
-        () => simpleNames[Math.floor(Math.random() * simpleNames.length)],
         () => {
-          const prefix = prefixes[Math.floor(Math.random() * prefixes.length)]
-          const suffix = suffixes[Math.floor(Math.random() * suffixes.length)]
-          return `${prefix}${suffix}`
+          const firstName = firstNames[Math.floor(Math.random() * firstNames.length)]
+          const lastName = lastNames[Math.floor(Math.random() * lastNames.length)]
+          return `${firstName}_${lastName}`
         },
         () => {
-          // Préfixe + Mot du milieu + Suffixe (sans espaces)
-          const prefix = prefixes[Math.floor(Math.random() * prefixes.length)]
-          const middle = middleWords[Math.floor(Math.random() * middleWords.length)].replace(/\s+/g, '')
-          const suffix = suffixes[Math.floor(Math.random() * suffixes.length)]
-          return `${prefix}${middle}${suffix}`
+          const title = businessTitles[Math.floor(Math.random() * businessTitles.length)]
+          const lastName = lastNames[Math.floor(Math.random() * lastNames.length)]
+          return `${title}_${lastName}`
         },
         () => {
-          // Nom simple + Suffixe (sans espaces)
-          const name = simpleNames[Math.floor(Math.random() * simpleNames.length)]
-          const suffix = suffixes[Math.floor(Math.random() * suffixes.length)]
-          return `${name}${suffix}`
+          const firstName = firstNames[Math.floor(Math.random() * firstNames.length)]
+          const role = businessRoles[Math.floor(Math.random() * businessRoles.length)]
+          return `${firstName}_${role}`
+        },
+        () => {
+          const expertise = expertiseAreas[Math.floor(Math.random() * expertiseAreas.length)]
+          const title = businessTitles[Math.floor(Math.random() * businessTitles.length)]
+          return `${expertise}_${title}`
+        },
+        () => {
+          const role = businessRoles[Math.floor(Math.random() * businessRoles.length)]
+          const lastName = lastNames[Math.floor(Math.random() * lastNames.length)]
+          return `${role}_${lastName}`
         },
       ]
       name = styles[Math.floor(Math.random() * styles.length)]()
@@ -115,7 +139,7 @@ export function generateCharacterName(style: 'fantasy' | 'simple' | 'compound' |
  */
 export function generateMultipleNames(
   count: number = 5,
-  style: 'fantasy' | 'simple' | 'compound' | 'random' = 'random'
+  style: 'full' | 'title' | 'role' | 'random' = 'random'
 ): string[] {
   const names = new Set<string>()
   let attempts = 0
@@ -131,7 +155,7 @@ export function generateMultipleNames(
   
   // Si on n'a pas assez de noms uniques, en générer d'autres
   while (names.size < count) {
-    const name = generateCharacterName('compound')
+    const name = generateCharacterName('full')
     if (name.length >= 4) {
       names.add(name)
     }
@@ -159,7 +183,7 @@ function sanitizeName(name: string): string {
 export function generateUniqueName(
   existingNames: string[] = [],
   maxAttempts: number = 20,
-  style: 'fantasy' | 'simple' | 'compound' | 'random' = 'random'
+  style: 'full' | 'title' | 'role' | 'random' = 'random'
 ): string {
   for (let i = 0; i < maxAttempts; i++) {
     const name = sanitizeName(generateCharacterName(style))

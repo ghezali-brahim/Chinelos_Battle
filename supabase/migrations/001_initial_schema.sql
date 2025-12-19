@@ -118,7 +118,8 @@ CREATE TABLE IF NOT EXISTS personnage (
   mp_max INTEGER DEFAULT 5,
   puissance INTEGER DEFAULT 3,
   defense INTEGER DEFAULT 1,
-  id_equipe INTEGER REFERENCES equipe(id_equipe) ON DELETE SET NULL
+  id_equipe INTEGER REFERENCES equipe(id_equipe) ON DELETE SET NULL,
+  image_url TEXT DEFAULT NULL -- URL de l'image générée
 );
 
 -- Table des combats

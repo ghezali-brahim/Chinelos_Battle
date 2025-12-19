@@ -44,9 +44,19 @@
   box-shadow: 0 4px 16px rgba(102, 126, 234, 0.4);
 }
 
+.combat-character.active .business-avatar {
+  box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.4), 0 8px 24px rgba(76, 175, 80, 0.3);
+  transform: scale(1.05);
+}
+
 .combat-character.selected {
   border: 3px solid #ffc107;
   box-shadow: 0 4px 16px rgba(255, 193, 7, 0.4);
+}
+
+.combat-character.selected .business-avatar {
+  box-shadow: 0 0 0 4px rgba(33, 150, 243, 0.4), 0 8px 24px rgba(33, 150, 243, 0.3);
+  transform: scale(1.03);
 }
 
 .combat-character.dead {
@@ -73,14 +83,128 @@
   position: relative;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
 
-.ally .character-avatar {
-  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+.business-avatar {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  border: 3px solid #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
-.enemy .character-avatar {
-  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+.business-avatar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.2) 0%, transparent 60%);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.business-icon {
+  font-size: 3em;
+  z-index: 2;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  position: relative;
+}
+
+.character-generated-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.generated-avatar {
+  position: relative;
+  overflow: hidden;
+}
+
+.element-overlay-small {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  padding: 4px;
+  z-index: 3;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.image-loading-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  z-index: 10;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.regenerate-image-btn {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background: rgba(102, 126, 234, 0.9);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.regenerate-image-btn:hover:not(:disabled) {
+  background: rgba(102, 126, 234, 1);
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.regenerate-image-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.regenerate-image-btn:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+.ally .business-avatar {
+  background: linear-gradient(135deg, #2c3e50 0%, #27ae60 100%);
+}
+
+.enemy .business-avatar {
+  background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
+}
+
+.enemy .business-avatar::before {
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.15) 0%, transparent 60%);
 }
 
 .element-overlay {

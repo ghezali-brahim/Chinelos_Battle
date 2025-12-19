@@ -1,6 +1,9 @@
 import { Personnage, Element, Attaque, Niveau } from '../types/models'
 import { getElementIcon, getElementName } from '../utils/element'
 import { parseAttaques, getXpPercentage, getXpNeededForNextLevel, getCurrentXpInLevel } from '../utils/personnage'
+import { getBusinessAvatarIcon, getCharacterAvatarStyle } from '../utils/characterImage'
+import { apiService } from '../services/api'
+import { useState, useEffect } from 'react'
 import './PersonnageCard.css'
 
 interface PersonnageCardProps {
@@ -37,16 +40,114 @@ const PersonnageCard: React.FC<PersonnageCardProps> = ({
   const xpNeeded = niveaux ? getXpNeededForNextLevel(niveaux, personnage) : 0
   const currentXpInLevel = niveaux ? getCurrentXpInLevel(niveaux, personnage) : 0
 
+  // Avatar business
+  const businessIcon = getBusinessAvatarIcon(personnage.element, personnage.niveau)
+  const avatarStyle = getCharacterAvatarStyle(personnage.element, personnage.niveau, personnage.nom, false)
+  const [generatedImage, setGeneratedImage] = useState<string | null>(personnage.image_url || null)
+  const [imageLoading, setImageLoading] = useState(false)
+  const [regenerating, setRegenerating] = useState(false)
+
+  // Générer ou charger l'image du personnage
+  useEffect(() => {
+    const loadCharacterImage = async () => {
+      if (personnage.image_url) {
+        setGeneratedImage(personnage.image_url)
+        return
+      }
+
+      if (!imageLoading && !generatedImage) {
+        setImageLoading(true)
+        try {
+          const result = await apiService.getCharacterImage(personnage.id_personnage)
+          if (result?.image_url) {
+            setGeneratedImage(result.image_url)
+          }
+        } catch (error: any) {
+          // Ne pas logger les erreurs si c'est juste qu'il n'y a pas de clé API configurée
+          if (error?.response?.status !== 503) {
+            console.warn('Impossible de charger/générer l\'image:', error)
+          }
+        } finally {
+          setImageLoading(false)
+        }
+      }
+    }
+
+    loadCharacterImage()
+  }, [personnage.id_personnage, personnage.image_url])
+
+  // Fonction pour régénérer l'image
+  const handleRegenerateImage = async (e: React.MouseEvent) => {
+    e.stopPropagation() // Empêcher le clic de se propager
+    setRegenerating(true)
+    try {
+      const result = await apiService.regenerateCharacterImage(personnage.id_personnage)
+      if (result?.image_url) {
+        // Forcer le re-render avec une nouvelle URL pour éviter le cache
+        setGeneratedImage(null)
+        setTimeout(() => setGeneratedImage(result.image_url + '?t=' + Date.now()), 100)
+      }
+    } catch (error: any) {
+      console.error('Erreur lors de la régénération de l\'image:', error)
+      const errorMessage = error?.response?.data?.error || 
+                          error?.response?.status === 503
+                            ? 'Aucune clé API configurée. Configurez OPENAI_API_KEY ou REPLICATE_API_TOKEN dans backend/.env'
+                            : 'Impossible de régénérer l\'image. Vérifiez que les clés API sont configurées.'
+      alert(errorMessage)
+    } finally {
+      setRegenerating(false)
+    }
+  }
+
   return (
     <div
       className={`personnage-card ${selected ? 'selected' : ''} ${personnage.hp <= 0 ? 'dead' : ''}`}
       onClick={onClick}
     >
       <div className="personnage-header">
-        <img src={elementIcon} alt={elementName} className="element-icon" />
+        {generatedImage ? (
+          <div className="business-avatar-small generated-avatar-small">
+            <img
+              src={generatedImage}
+              alt={personnage.nom}
+              className="character-generated-image-small"
+              onError={() => setGeneratedImage(null)}
+            />
+            {imageLoading && <div className="image-loading-spinner-small">⏳</div>}
+            <button
+              className="regenerate-image-btn-small"
+              onClick={handleRegenerateImage}
+              title="Régénérer l'image"
+              disabled={regenerating}
+            >
+              {regenerating ? '⏳' : '🔄'}
+            </button>
+          </div>
+        ) : (
+          <div className="business-avatar-small" style={avatarStyle}>
+            <div className="business-icon-small">{businessIcon}</div>
+            {imageLoading && <div className="image-loading-spinner-small">⏳</div>}
+            {!imageLoading && (
+              <button
+                className="regenerate-image-btn-small"
+                onClick={handleRegenerateImage}
+                title="Générer une image"
+                disabled={regenerating}
+              >
+                {regenerating ? '⏳' : '🎨'}
+              </button>
+            )}
+          </div>
+        )}
         <div className="personnage-info">
           <h4>{personnage.nom}</h4>
-          <span className="level">Niveau {personnage.niveau}</span>
+          <div className="personnage-meta">
+            <span className="level">Niveau {personnage.niveau}</span>
+            <span className="element-badge">
+              <img src={elementIcon} alt={elementName} className="element-icon-small" />
+              {elementName}
+            </span>
+          </div>
         </div>
       </div>
 
